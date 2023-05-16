@@ -591,6 +591,10 @@ button, button:focus, button:hover, button:active {
   justify-content: space-between;
 }
 
+.publications__info:first-child {
+  justify-content: flex-start;
+}
+
 .publications__info:last-child {
   justify-content: center;
 }
