@@ -309,10 +309,12 @@ button, button:focus, button:hover, button:active {
 
 .section__digital {
   display: flex;
+  width: 100%;
   justify-content: space-between;
 }
 
 .section__digital_info {
+  width: 100%;
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
   border-bottom: 1px solid var(--gray-border);
