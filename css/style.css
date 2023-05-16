@@ -326,7 +326,7 @@ button, button:focus, button:hover, button:active {
 }
 
 .digital_anyera {
-  width: 59px;
+  width: 60px;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
@@ -352,21 +352,21 @@ button, button:focus, button:hover, button:active {
 
 /* start showreel */
 
-.showreel__border {
+.showreel__block {
   min-height: 272px;
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
   border-bottom: 1px solid var(--gray-border);
 }
 
-.showreel__block {
+.showreel__circle {
   display: flex;
   max-width: 1415px;
   margin: auto;
   justify-content: flex-end;
 }
 
-.showreel__circle {
+.showreel__button {
   display: block;
   width: 200px;
   height: 200px;
@@ -385,11 +385,11 @@ button, button:focus, button:hover, button:active {
   transition: background-color 0.3s;
 }
 
-.showreel__circle:hover {
+.showreel__button:hover {
   background-color: var(--purple);
 }
 
-.showreel__circle span {
+.showreel__button span {
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
@@ -405,6 +405,60 @@ button, button:focus, button:hover, button:active {
 }
 
 /* end showreel */
+
+/* start development */
+
+.development__block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.development__left {
+  width: 100%;
+  border-right: 1px solid var(--gray-border);
+}
+
+.development__right {
+  max-width: 565px;
+}
+
+.development__left, .development__right {
+  padding: 120px 100px;
+}
+
+.development__head {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 49px;
+}
+
+.development__list {
+  display: flex;
+  gap: 60px;
+}
+
+.development__item {
+  margin: 60px 0 0;
+}
+
+.development__item, .development__item a {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.development__button {
+  margin: 60px 0 0;
+}
+
+/* end development */
+
+
 
 @media (max-width: 1280px) {
 }
