@@ -44,7 +44,6 @@ button, button:focus, button:hover, button:active {
 }
 
 .main {
-  display: flex;
   padding-top: 60px;
 }
 
@@ -88,7 +87,7 @@ button, button:focus, button:hover, button:active {
   transition: color 0.3s linear, background-color 0.3s linear, border-color 0.3s linear;
 }
 
-.header__project:hover {
+.button__project:hover {
   color: var(--page-bg);
   background-color: var(--purple);
   border: 1px solid var(--purple);
@@ -113,6 +112,7 @@ button, button:focus, button:hover, button:active {
   width: 100%;
   position: fixed;
   border-bottom: 1px solid var(--gray-border);
+  background: var(--page-bg);
   z-index: 1;
 }
 
@@ -176,11 +176,11 @@ button, button:focus, button:hover, button:active {
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 0.5s;
-  -moz-transition: -moz-transform 0.5s;
-  -ms-transition: -ms-transform 0.5s;
-  -o-transition: -o-transform 0.5s;
-  transition: transform 0.5s;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -ms-transition: -ms-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  transition: transform 0.3s;
   overflow-y: scroll;
 }
 
@@ -271,40 +271,6 @@ button, button:focus, button:hover, button:active {
 
 /* end header */
 
-/* start aside */
-
-.aside {
-  width: 60px;
-  height: 100%;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-  justify-content: space-between;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.aside__name {
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 15px;
-  writing-mode: vertical-rl;
-  color: var(--page-text);
-}
-
-.aside__text {
-  font-size: 16px;
-  font-weight: 800;
-  line-height: 20px;
-  writing-mode: vertical-rl;
-  color: var(--page-text);
-}
-
-/* end aside */
-
 /* start digital */
 
 .section__digital {
@@ -352,7 +318,87 @@ button, button:focus, button:hover, button:active {
   transform: translate(-188px, -48px);
 }
 
+.section__digital_anyera {
+  width: 59px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.section__digital_anyera_name {
+  margin-top: 47px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  writing-mode: vertical-rl;
+  color: var(--page-text);
+}
+
 /* end digital */
+
+/* start showreel */
+
+.showreel__border {
+  min-height: 272px;
+  margin: 0 60px;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.showreel__block {
+  display: flex;
+  max-width: 1415px;
+  margin: auto;
+  justify-content: flex-end;
+}
+
+.showreel__circle {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--page-text);
+  position: relative;
+  -webkit-transform: rotate(-23.91deg) translateY(-110px);
+  -moz-transform: rotate(-23.91deg) translateY(-110px);
+  -ms-transform: rotate(-23.91deg) translateY(-110px);
+  -o-transform: rotate(-23.91deg) translateY(-110px);
+  transform: rotate(-23.91deg) translateY(-110px);
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.showreel__circle:hover {
+  background-color: var(--purple);
+}
+
+.showreel__circle span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--page-bg);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* end showreel */
 
 @media (max-width: 1280px) {
 }
