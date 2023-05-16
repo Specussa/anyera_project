@@ -5,6 +5,16 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+*::-moz-selection {
+  background-color: var(--page-text);
+  color: var(--page-bg);
+}
+
+*::selection {
+  background-color: var(--page-text);
+  color: var(--page-bg);
+}
+
 :root {
   --blackpure: #000;
   --gray-border: #D3D3D3;
