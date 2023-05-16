@@ -455,9 +455,10 @@ button, button:focus, button:hover, button:active {
   color: var(--page-text);
 }
 
-.development__desc strong,.development__desc b  {
+.development__desc strong, .development__desc b  {
   font-family: var(--lato);
   font-weight: 400;
+  color: var(--page-text);
 }
 
 .development__buttons {
@@ -472,11 +473,12 @@ button, button:focus, button:hover, button:active {
   font-size: 12px;
   font-weight: 300;
   line-height: 14px;
+  color: var(--page-text);
 }
 
 /* end development */
 
-/* end development */
+/* start design */
 
 .design .development__block {
   flex-direction: row-reverse;
@@ -489,10 +491,79 @@ button, button:focus, button:hover, button:active {
 }
 
 .design .development__right {
-  max-width: 33.333%;
+  width: 100%;
+  max-width: 655px;
 }
 
-/* end development */
+/* end design */
+
+/* start design */
+
+.analytics__block {
+  display: flex;
+  align-items: center;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.analytics__info {
+  width: 100%;
+  min-width: 655px;
+  padding: 120px 100px;
+}
+
+.analytics__info:last-child {
+  min-width: auto;
+}
+
+.analytics__info:not(:last-child) {
+  border-right: 1px solid var(--gray-border);
+}
+
+.analytics__head {
+  margin: 0 0 60px;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 44px;
+  color: var(--page-text);
+}
+
+.analytics__item:not(:last-child) {
+  margin: 0 0 30px;
+}
+
+.analytics__item, .analytics__item a {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.analytics__desc {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.analytics__desc strong, .analytics__desc b {
+  font-family: var(--lato);
+  font-weight: 400;
+  color: var(--page-text);
+}
+
+.analytics__buttons {
+  display: flex;
+}
+
+.analytics__button {
+  margin: 46px auto 0;
+}
+
+/* end design */
 
 @media (max-width: 1280px) {
 }
