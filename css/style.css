@@ -11,6 +11,7 @@
   --page-bg: #F8F8F8;
   --page-text: #262626;
   --purple: #644BB1;
+  --lato: 'Roboto', 'Lato', sans-serif;
 }
 
 ::marker {
@@ -313,7 +314,7 @@ button, button:focus, button:hover, button:active {
 
 .digital_desc {
   max-width: 473px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--lato);
   font-size: 14px;
   font-weight: 400;
   line-height: 17px;
@@ -434,6 +435,7 @@ button, button:focus, button:hover, button:active {
   font-size: 40px;
   font-weight: 800;
   line-height: 49px;
+  color: var(--page-text);
 }
 
 .development__list {
@@ -445,20 +447,52 @@ button, button:focus, button:hover, button:active {
   margin: 60px 0 0;
 }
 
-.development__item, .development__item a {
-  font-family: 'Lato', sans-serif;
+.development__item, .development__item a, .development__desc {
+  font-family: var(--lato);
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
+  color: var(--page-text);
 }
 
-.development__button {
+.development__desc strong,.development__desc b  {
+  font-family: var(--lato);
+  font-weight: 400;
+}
+
+.development__buttons {
+  display: flex;
   margin: 60px 0 0;
+  align-items: center;
+  gap: 30px;
+}
+
+.development__buttons_desc {
+  font-family: var(--lato);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
 }
 
 /* end development */
 
+/* end development */
 
+.design .development__block {
+  flex-direction: row-reverse;
+}
+
+.design .development__left {
+  width: 100%;
+  border-right: 0;
+  border-left: 1px solid var(--gray-border);
+}
+
+.design .development__right {
+  max-width: 33.333%;
+}
+
+/* end development */
 
 @media (max-width: 1280px) {
 }
