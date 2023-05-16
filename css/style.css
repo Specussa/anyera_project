@@ -589,6 +589,7 @@ button, button:focus, button:hover, button:active {
   padding: 100px;
   flex-direction: column;
   justify-content: space-between;
+  border-bottom: 1px solid var(--gray-border);
 }
 
 .publications__info:first-child {
@@ -603,8 +604,8 @@ button, button:focus, button:hover, button:active {
   border-right: 1px solid var(--gray-border);
 }
 
-.publications__info:not(:nth-last-child(1)), .publications__info:not(:nth-last-child(2)), .publications__info:not(:nth-last-child(3)) {
-  border-bottom: 1px solid var(--gray-border);
+.publications__info:nth-last-child(1), .publications__info:nth-last-child(2), .publications__info:nth-last-child(3) {
+  border-bottom: 0;
 }
 
 .publications__head {
@@ -612,6 +613,14 @@ button, button:focus, button:hover, button:active {
   font-size: 36px;
   font-weight: 800;
   line-height: 44px;
+  color: var(--page-text);
+}
+
+.publications__heading {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
   color: var(--page-text);
 }
 
