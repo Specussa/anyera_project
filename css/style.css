@@ -698,6 +698,95 @@ button, button:focus, button:hover, button:active {
 
 /* end publications */
 
+/* start projects */
+
+.projects__list {
+  column-count: 2;
+  gap: 0;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.projects__head {
+  margin: 0 0 40px;
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 44px;
+  color: var(--page-text);
+}
+
+.projects__desc {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.projects__item {
+  width: 100%;
+  padding: 57px 100px 51px;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.projects__item:first-child, .projects__item:last-child {
+  padding: 100px;
+}
+
+.projects__item:nth-child(1), .projects__item:nth-child(2), .projects__item:nth-child(3), .projects__item:nth-child(4) {
+  border-right: 1px solid var(--gray-border);
+}
+
+.projects__item:last-child, .projects__item:nth-child(4) {
+  border-bottom: none;
+}
+
+.projects__tags {
+  display: flex;
+  margin: 0 0 20px;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.projects__tag, .projects__tag a {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  color: var(--page-text);
+}
+
+.projects__heading {
+  margin: 0 0 20px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--page-text);
+}
+
+.projects__hover {
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+  position: relative;
+}
+
+.projects__hover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project__buttons {
+  display: flex;
+}
+
+.project__button {
+  margin: 0 auto;
+  padding: 14.5px 47.5px;
+}
+
+/* end projects */
+
 /* start say */
 
 .say__container {
@@ -800,9 +889,14 @@ button, button:focus, button:hover, button:active {
 
 .footer__left, .footer__right {
   display: flex;
-  width: 50%;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
+}
+
+.footer__right {
+  max-width: 790px;
+  gap: 20px;
 }
 
 .footer__copyright, .footer__privacy {
