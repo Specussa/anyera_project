@@ -114,6 +114,44 @@ button, button:focus, button:hover, button:active {
   background: var(--page-bg);
 }
 
+.button__circle {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: var(--page-text);
+  position: relative;
+  -webkit-transform: rotate(-23.91deg);
+  -moz-transform: rotate(-23.91deg);
+  -ms-transform: rotate(-23.91deg);
+  -o-transform: rotate(-23.91deg);
+  transform: rotate(-23.91deg);
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.button__circle:hover {
+  background-color: var(--purple);
+}
+
+.button__circle span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--page-bg);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 /* end buttons */
 
 /* start header */
@@ -293,7 +331,7 @@ button, button:focus, button:hover, button:active {
   position: relative;
 }
 
-.digital_info {
+.digital__info {
   display: flex;
   width: 100%;
   padding: 200px 99px 173px;
@@ -304,7 +342,7 @@ button, button:focus, button:hover, button:active {
   border-bottom: 1px solid var(--gray-border);
 }
 
-.digital_empty {
+.digital__empty {
   width: 60px;
   flex: 0 0 auto;
   border-bottom: 1px solid var(--gray-border);
@@ -313,7 +351,7 @@ button, button:focus, button:hover, button:active {
   right: 0;
 }
 
-.digital_head {
+.digital__head {
   max-width: 905px;
   font-size: 92px;
   font-weight: 800;
@@ -321,7 +359,7 @@ button, button:focus, button:hover, button:active {
   color: var(--page-text);
 }
 
-.digital_desc {
+.digital__desc {
   max-width: 473px;
   font-family: var(--lato);
   font-size: 14px;
@@ -335,7 +373,7 @@ button, button:focus, button:hover, button:active {
   transform: translate(-188px, -48px);
 }
 
-.digital_anyera {
+.digital__anyera {
   width: 60px;
   display: flex;
   flex-direction: column-reverse;
@@ -349,7 +387,7 @@ button, button:focus, button:hover, button:active {
   transform: rotate(180deg);
 }
 
-.digital_anyera_name {
+.digital__anyera_name {
   margin: 47px 0 0;
   font-size: 13px;
   font-weight: 700;
@@ -377,41 +415,11 @@ button, button:focus, button:hover, button:active {
 }
 
 .showreel__button {
-  display: block;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: var(--page-text);
-  position: relative;
   -webkit-transform: rotate(-23.91deg) translateY(-110px);
   -moz-transform: rotate(-23.91deg) translateY(-110px);
   -ms-transform: rotate(-23.91deg) translateY(-110px);
   -o-transform: rotate(-23.91deg) translateY(-110px);
   transform: rotate(-23.91deg) translateY(-110px);
-  -webkit-transition: background-color 0.3s;
-  -moz-transition: background-color 0.3s;
-  -ms-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  transition: background-color 0.3s;
-}
-
-.showreel__button:hover {
-  background-color: var(--purple);
-}
-
-.showreel__button span {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 22px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: var(--page-bg);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 /* end showreel */
@@ -673,6 +681,66 @@ button, button:focus, button:hover, button:active {
 }
 
 /* end publications */
+
+/* start say */
+
+.say__container {
+  display: flex;
+  padding: 0 60px 0 0;
+  position: relative;
+}
+
+.say__public {
+  width: 60px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.say__public_name {
+  margin: 0 0 91px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 15px;
+  writing-mode: vertical-rl;
+  color: var(--page-text);
+}
+
+.say__block {
+  display: flex;
+  width: 100%;
+  padding: 88px 100px 50px;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+}
+
+.say__head {
+  margin: 0 0 20px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+  color: var(--page-text);
+}
+
+.say__desc {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+/* end say */
 
 @media (max-width: 1280px) {
 }
