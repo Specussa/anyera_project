@@ -267,6 +267,54 @@ button, button:focus, button:hover, button:active {
   border-left: 1px solid var(--gray-border);
 }
 
+.header__burger {
+  display: block;
+  width: 61px;
+  height: 59px;
+  padding: 28px 17px 27px 18px;
+  position: relative;
+  top: 0;
+  left: 0;
+  background: var(--page-bg);
+  border-right: 1px solid var(--gray-border);
+}
+
+.header__burger:hover, .header__burger:focus, .header__burger:active {
+  background: var(--page-bg);
+  border-right: 1px solid var(--gray-border);
+}
+
+.header__burger svg {
+  width: 25px;
+  height: 6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  fill: var(--page-text);
+}
+
+.header__burger svg rect {
+  -webkit-transition: width 0.3s linear, height 0.3s linear;
+  -moz-transition: width 0.3s linear, height 0.3s linear;
+  -ms-transition: width 0.3s linear, height 0.3s linear;
+  -o-transition: width 0.3s linear, height 0.3s linear;
+  transition: width 0.3s linear, height 0.3s linear;
+}
+
+.header__burger.active svg rect, .header__burger:hover svg rect {
+  width: 25px;
+  height: 1px;
+}
+
+/* end header */
+
+/* start header__nav */
+
 .header__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -341,50 +389,6 @@ button, button:focus, button:hover, button:active {
   cursor: pointer;
 }
 
-.header__burger {
-  display: block;
-  width: 61px;
-  height: 59px;
-  padding: 28px 17px 27px 18px;
-  position: relative;
-  top: 0;
-  left: 0;
-  background: var(--page-bg);
-  border-right: 1px solid var(--gray-border);
-}
-
-.header__burger:hover, .header__burger:focus, .header__burger:active {
-  background: var(--page-bg);
-  border-right: 1px solid var(--gray-border);
-}
-
-.header__burger svg {
-  width: 25px;
-  height: 6px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  fill: var(--page-text);
-}
-
-.header__burger svg rect {
-  -webkit-transition: width 0.3s linear, height 0.3s linear;
-  -moz-transition: width 0.3s linear, height 0.3s linear;
-  -ms-transition: width 0.3s linear, height 0.3s linear;
-  -o-transition: width 0.3s linear, height 0.3s linear;
-  transition: width 0.3s linear, height 0.3s linear;
-}
-
-.header__burger.active svg rect, .header__burger:hover svg rect {
-  width: 25px;
-  height: 1px;
-}
-
 .header__nav_burger svg {
   height: 100%;
   width: 100%;
@@ -396,7 +400,278 @@ button, button:focus, button:hover, button:active {
   fill: #000;
 }
 
-/* end header */
+/* end header__nav */
+
+/* start header__consultation */
+
+.header__consultation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 60px);
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: var(--page-bg);
+  z-index: 99;
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  overflow-y: scroll;
+}
+
+.header__consultation.active {
+  visibility: visible;
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
+}
+
+.header__consultation::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+.header__consultation::-webkit-scrollbar-thumb {
+  width: 8px;
+  background: var(--page-text);
+}
+
+.header__consultation_container {
+  position: relative;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+}
+
+.header__consultation_burger_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__consultation_burger {
+  display: block;
+  width: 60px;
+  height: 22px;
+  border: none;
+  background: var(--page-bg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.header__consultation_burger svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  fill: #000;
+}
+
+.forms {
+	width: 100%;
+	max-width: 500px;
+  background: #FFFFFF;
+  box-shadow: 4px 4px 25px rgba(14, 76, 121, 0.18);
+  border-radius: 10px;
+}
+
+.forms__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+	padding: 40px 50px 0;
+}
+
+.forms__header img {
+  width: 128px;
+  height: 30px;
+	margin: 0 0 40px;
+}
+
+.forms__header h2 {
+	margin: 0 0 10px;
+  font-family: 'Manrope', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 38px;
+  color: #2B689B;
+}
+
+.forms__form {
+	padding: 40px 50px;	
+}
+
+.forms__form_control {
+  margin: 0 0 24px;
+  padding: 0 0 26px;
+	position: relative;
+}
+
+.forms__form_control.error {
+  margin: 0 0 35px;
+}
+
+.forms__form_control:last-child {
+  margin: 0;
+  padding: 0;
+}
+
+.forms__form_control:last-child.error {
+  margin: 0;
+  padding: 0 0 26px;
+}
+
+.forms__form_control small {
+  height: 0;
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 140%;
+	visibility: hidden;
+}
+
+.forms__form_control.error small {
+  height: 21px;
+	visibility: visible;
+}
+
+.forms__form button {
+	display: block;
+  margin: auto;
+}
+
+.forms__form button:hover {
+}
+
+.forms__form_input {
+  width: 100%;
+  height: 36px;
+  padding: 0 22px 10px;
+  display: block;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #292A2C;
+  background: transparent;
+  border-bottom: 1px solid #2B689B;
+}
+
+#password {
+  padding: 0 42px 10px 22px;
+}
+
+.forms__form_input[type="password"] {
+  letter-spacing: 4px;
+}
+
+.forms__form_input:active, .forms__form_input:focus {
+  border-bottom: 1px solid transparent;
+}
+
+.forms__form_input::placeholder {
+  font-size: 18px;
+  color: #6B95B9;
+  letter-spacing: normal;
+}
+
+.forms__form_input:focus {
+  outline: none;
+}
+
+.forms__form_control::before {
+  content: "* ";
+  position: absolute;
+  top: 0;
+  left: 11px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+  color: #FFB6C1;
+}
+
+.forms__form_bar {
+  position: relative;
+  display: block;
+}
+
+.forms__form_bar:before, .forms__form_bar:after {
+  content: '';
+  height: 1px;
+  width: 0;
+  position: absolute;
+  bottom: 0;
+  background: #5BC3CF;
+  transition: 0.3s ease all;
+  -moz-transition: 0.3s ease all;
+  -webkit-transition: 0.3s ease all;
+}
+
+.forms__form_bar:before {
+  left:50%;
+}
+
+.forms__form_bar:after {
+  right:50%;
+}
+
+.forms__form_input:focus ~ .forms__form_bar:before,.forms__form_input:focus ~ .forms__form_bar:after {
+  width:50%;
+}
+
+.forms__form_control.error .forms__form_input {
+  border-bottom: 1px solid #F57272;
+}
+
+.forms__form_control.success .forms__form_input {
+  border-bottom: 1px solid #FFD970
+}
+
+.forms__form p {
+  display: inline-block;
+  margin: 30px 0;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: #2B689B;
+}
+
+.forms__form p::before {
+  content: "* ";
+  color: #FFB6C1;
+}
+
+/* end header__consultation */
 
 /* start digital */
 
@@ -437,6 +712,10 @@ button, button:focus, button:hover, button:active {
   font-weight: 800;
   line-height: 112px;
   color: var(--page-text);
+}
+
+.digital__head span {
+  overflow: hidden;
 }
 
 .digital__desc {

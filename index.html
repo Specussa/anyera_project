@@ -39,7 +39,7 @@
           </li>
         </ul>
       </nav>
-      <button onclick="document.location='#'" class="button__project header__project">Обсудить проект</button>
+      <button class="button__project header__project">Обсудить проект</button>
       <div class="header__languages">
         <button onclick="document.location='#'" class="button__language button__eng">ENG</button>
         <button onclick="document.location='#'" class="button__language button__ru" style="display: none;">RU</button>
@@ -90,6 +90,44 @@
           </div>
         </div>
       </nav>
+      <nav class="header__consultation">
+        <div class="container header__consultation_container">
+          <div class="header__consultation_burger_flex">
+            <button class="header__consultation_burger" aria-label="Закрыть меню">
+              <svg viewBox="0 0 33 22" fill="#fff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect x="0" y="0" width="33" height="1" rx="0"/>
+                <rect x="0" y="18.68" width="33" height="1" rx="0"/>
+              </svg>
+            </button>
+          </div>
+          <form id="form" class="forms__form">
+            <div class="forms__form_controls">
+              <div class="forms__form_control">
+                <input class="forms__form_input" type="text" minlength="4" maxlength="40" placeholder="Email / Логин" id="username" />
+                <span class="forms__form_bar"></span>
+                <small>Error message</small>
+              </div>
+              <div class="forms__form_control">
+                <input class="forms__form_input" type="text" minlength="12" maxlength="40" placeholder="Контрольная строка" id="control" />
+                <span class="forms__form_bar"></span>
+                <small>Error message</small>
+              </div>
+              <div class="forms__form_control">
+                <input class="forms__form_input" type="password" minlength="6" maxlength="40" placeholder="Новый пароль" id="password" />
+                <span class="forms__form_bar"></span>
+                <small>Error message</small>
+              </div>
+              <div class="forms__form_control">
+                <input class="forms__form_input" type="password" minlength="6" maxlength="40" placeholder="Подтверждение пароля" id="password2" />
+                <span class="forms__form_bar"></span>
+                <small>Error message</small>
+              </div>
+            </div>
+            <p>Обязательные поля</p>
+            <button>Изменить пароль</button>
+          </form>
+        </div>
+      </nav>
     </div>
   </header>
   <main class="main">
@@ -100,7 +138,8 @@
         </div>
         <div class="digital__info">
           <h1 class="digital__head">
-            DIGITAL & DESIGN PRODUCTION
+            <span>DIGITAL & DESIGN </span>
+            <span>PRODUCTION</span>
           </h1>
           <h2 class="digital__desc">
             Команда цифровых специалистов полного цикла, разрабатываем функциональные продукты широкого круга от идеи до реализации.
