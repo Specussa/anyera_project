@@ -18,7 +18,7 @@
     <div class="overlay"></div>
     <div class="container header__container">
       <button class="header__burger" aria-label="Открыть меню">
-        <svg viewBox="0 0 25 5" fill="#fff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <svg viewBox="0 0 25 6" fill="#fff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <rect x="0" y="0" width="25" height="1" rx="0"/>
           <rect x="0" y="4.5" width="21" height="0.5" rx="0"/>
         </svg>
@@ -45,16 +45,49 @@
         <button onclick="document.location='#'" class="button__language button__ru" style="display: none;">RU</button>
       </div>
       <nav class="header__nav">
-        <div class="header__margin">
-          <p>текст</p>
-        </div>
-        <div class="header__nav_burger_flex">
-          <button class="header__nav_burger" aria-label="Закрыть меню">
-            <svg viewBox="0 0 33 22" fill="#fff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <rect x="0" y="0" width="33" height="1" rx="0"/>
-              <rect x="0" y="18.68" width="33" height="1" rx="0"/>
-            </svg>
-          </button>
+        <div class="container header__nav_container">
+          <div class="header__nav_info">
+            <ul class="header__nav_list">
+              <li class="header__nav_item">
+                <a href="" class="header__nav_link">ГЛАВНАЯ</a>
+              </li>
+              <li class="header__nav_item">
+                <a href="" class="header__nav_link">ПРОЕКТЫ</a>
+              </li>
+              <li class="header__nav_item">
+                <a href="" class="header__nav_link">УСЛУГИ</a>
+                <ul class="header__subnav_list">
+                  <li class="header__subnav_item">
+                    <a href="" class="header__subnav_item">Аналитика</a>
+                    <a href="" class="header__subnav_item">Дизайн</a>
+                    <a href="" class="header__subnav_item">Веб-разработка</a>
+                    <a href="" class="header__subnav_item">Поддержка и развитие</a>
+                    <a href="" class="header__subnav_item">Автоматизация</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="header__nav_item">
+                <a href="" class="header__nav_link">КОМАНДА</a>
+              </li>
+              <li class="header__nav_item">
+                <a href="" class="header__nav_link">КАРЬЕРА</a>
+              </li>
+              <li class="header__nav_item">
+                <a href="" class="header__nav_link">КОНТАКТЫ</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__nav_bottom">
+            
+          </div>
+          <div class="header__nav_burger_flex">
+            <button class="header__nav_burger" aria-label="Закрыть меню">
+              <svg viewBox="0 0 33 22" fill="#fff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect x="0" y="0" width="33" height="1" rx="0"/>
+                <rect x="0" y="18.68" width="33" height="1" rx="0"/>
+              </svg>
+            </button>
+          </div>
         </div>
       </nav>
     </div>
@@ -81,7 +114,8 @@
         <div class="showreel__block">
           <div class="showreel__circle">
             <a class="button__circle showreel__button" href="#">
-              <span>SHOWREEL</span>
+              <span class="button__circle_text">SHOWREEL</span>
+              <span class="button__circle_hover"></span>
             </a>
           </div>
         </div>
@@ -172,7 +206,7 @@
     <section class="projects">
       <div class="container projects__container">
         <ul class="projects__list">
-          <li class="projects__item">
+          <li class="projects__item projects__item_first">
             <h4 class="projects__head">Проекты</h4>
             <p class="projects__desc">Здесь несколько наших проектов из последних, для удобства вы можете перейти на страницу проекты и воспользоваться фильтрами</p>
           </li>
@@ -265,7 +299,7 @@
               </div>
             </div>
           </li>
-          <li class="projects__item">
+          <li class="projects__item projects__item_last">
             <div class="project__buttons">
               <button onclick="document.location='#'" class="button__project project__button">Все статьи</button>
             </div>
@@ -348,7 +382,8 @@
           </div>
           <div class="say__right">
             <a class="button__circle say__button" href="#">
-              <span>Написать</span>
+              <span class="button__circle_text">Написать</span>
+              <span class="button__circle_hover"></span>
             </a>
           </div>
         </div>

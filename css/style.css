@@ -147,18 +147,55 @@ button, button:focus, button:hover, button:active {
   -ms-transform: rotate(-23.91deg);
   -o-transform: rotate(-23.91deg);
   transform: rotate(-23.91deg);
-  -webkit-transition: background-color 0.3s linear;
-  -moz-transition: background-color 0.3s linear;
-  -ms-transition: background-color 0.3s linear;
-  -o-transition: background-color 0.3s linear;
-  transition: background-color 0.3s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  overflow: hidden;
 }
 
 .button__circle:hover {
-  background-color: var(--purple);
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 
-.button__circle span {
+.button__circle_hover {
+  content: "";
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translateY(102%);
+  -moz-transform: translateY(102%);
+  -ms-transform: translateY(102%);
+  -o-transform: translateY(102%);
+  transform: translateY(102%);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  background-color: var(--purple);
+  z-index: 0;
+}
+
+.button__circle:hover .button__circle_hover {
+  content: "";
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.button__circle_text {
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
@@ -171,6 +208,7 @@ button, button:focus, button:hover, button:active {
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 /* end buttons */
@@ -235,7 +273,6 @@ button, button:focus, button:hover, button:active {
   display: flex;
   width: 100%;
   height: calc(100% - 60px);
-  padding: 80.34px 21.17px 30px 70px;
   flex-direction: column;
   position: fixed;
   top: 60px;
@@ -275,6 +312,16 @@ button, button:focus, button:hover, button:active {
   background: var(--page-text);
 }
 
+.header__nav_container {
+  position: relative;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+}
+
+.header__nav_info {
+
+}
+
 .header__nav_burger_flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -282,21 +329,20 @@ button, button:focus, button:hover, button:active {
   justify-content: flex-end;
 }
 
-.header__burger, .header__nav_burger {
+.header__nav_burger {
   display: block;
   width: 60px;
   height: 22px;
-  margin: 0;
-  padding: 0;
   border: none;
-  background: transparent;
-  cursor: pointer;
+  background: var(--page-bg);
   position: absolute;
-  top: 50px;
-  z-index: 2;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }
 
 .header__burger {
+  display: block;
   width: 61px;
   height: 59px;
   padding: 28px 17px 27px 18px;
@@ -312,13 +358,9 @@ button, button:focus, button:hover, button:active {
   border-right: 1px solid var(--gray-border);
 }
 
-.header__nav_burger {
-  top: 29.17px;
-}
-
 .header__burger svg {
   width: 25px;
-  height: 5px;
+  height: 6px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -328,6 +370,19 @@ button, button:focus, button:hover, button:active {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   fill: var(--page-text);
+}
+
+.header__burger svg rect {
+  -webkit-transition: width 0.3s linear, height 0.3s linear;
+  -moz-transition: width 0.3s linear, height 0.3s linear;
+  -ms-transition: width 0.3s linear, height 0.3s linear;
+  -o-transition: width 0.3s linear, height 0.3s linear;
+  transition: width 0.3s linear, height 0.3s linear;
+}
+
+.header__burger.active svg rect, .header__burger:hover svg rect {
+  width: 25px;
+  height: 1px;
 }
 
 .header__nav_burger svg {
@@ -346,6 +401,8 @@ button, button:focus, button:hover, button:active {
 /* start digital */
 
 .digital__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0 60px 0 0;
   justify-content: space-between;
@@ -353,6 +410,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .digital__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 200px 99px 173px;
@@ -395,8 +454,10 @@ button, button:focus, button:hover, button:active {
 }
 
 .digital__anyera {
-  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  width: 60px;
   flex-direction: column-reverse;
   align-items: center;
   justify-content: flex-end;
@@ -429,6 +490,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .showreel__circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 1415px;
   margin: auto;
@@ -436,11 +499,19 @@ button, button:focus, button:hover, button:active {
 }
 
 .showreel__button {
-  -webkit-transform: rotate(-23.91deg) translateY(-110px);
-  -moz-transform: rotate(-23.91deg) translateY(-110px);
-  -ms-transform: rotate(-23.91deg) translateY(-110px);
-  -o-transform: rotate(-23.91deg) translateY(-110px);
-  transform: rotate(-23.91deg) translateY(-110px);
+  -webkit-transform: translateY(-100px) rotate(-23.91deg);
+  -moz-transform: translateY(-100px) rotate(-23.91deg);
+  -ms-transform: translateY(-100px) rotate(-23.91deg);
+  -o-transform: translateY(-100px) rotate(-23.91deg);
+  transform: translateY(-100px) rotate(-23.91deg);
+}
+
+.showreel__button:hover {
+  -webkit-transform: translateY(-100px) rotate(0deg);
+  -moz-transform: translateY(-100px) rotate(0deg);
+  -ms-transform: translateY(-100px) rotate(0deg);
+  -o-transform: translateY(-100px) rotate(0deg);
+  transform: translateY(-100px) rotate(0deg);
 }
 
 /* end showreel */
@@ -448,6 +519,8 @@ button, button:focus, button:hover, button:active {
 /* start development */
 
 .development__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -477,6 +550,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .development__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   gap: 60px;
 }
@@ -500,6 +575,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .development__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 60px 0 0;
   align-items: center;
@@ -542,6 +619,8 @@ button, button:focus, button:hover, button:active {
 /* start design */
 
 .analytics__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   align-items: stretch;
   border-left: 1px solid var(--gray-border);
@@ -556,6 +635,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .analytics__info:last-child {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   min-width: auto;
   flex-direction: column;
@@ -601,6 +682,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .analytics__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -614,6 +697,8 @@ button, button:focus, button:hover, button:active {
 /* start publications */
 
 .publications__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
@@ -623,6 +708,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .publications__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 33.333%;
   padding: 100px;
@@ -664,6 +751,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .publications__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -673,6 +762,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .publications__hashtags {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 0 20px;
   flex-wrap: wrap;
@@ -706,6 +797,7 @@ button, button:focus, button:hover, button:active {
 /* start projects */
 
 .projects__list {
+  -moz-column-count: 2;
   column-count: 2;
   gap: 0;
   border-left: 1px solid var(--gray-border);
@@ -790,6 +882,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .projects__tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin: 0 0 20px;
   flex-wrap: wrap;
@@ -842,6 +936,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .projects__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100%;
   gap: 40px;
@@ -875,6 +971,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .project__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -888,14 +986,18 @@ button, button:focus, button:hover, button:active {
 /* start say */
 
 .say__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 0 60px 0 0;
   position: relative;
 }
 
 .say__public {
-  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  width: 60px;
   flex-direction: column-reverse;
   align-items: center;
   justify-content: flex-start;
@@ -917,6 +1019,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .say__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding: 88px 100px 50px;
@@ -954,6 +1058,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .footer__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   max-width: 66.666%;
   padding: 50px 0;
@@ -979,6 +1085,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .footer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -986,6 +1094,8 @@ button, button:focus, button:hover, button:active {
 }
 
 .footer__left, .footer__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   align-items: center;
