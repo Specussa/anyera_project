@@ -33,7 +33,19 @@ body {
   background: var(--page-bg);
 }
 
-a, a:focus, a:hover, a:active {
+a {
+  color: var(--page-text);
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -ms-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  color: var(--purple);
   text-decoration: none;
 }
 
@@ -126,11 +138,11 @@ button, button:focus, button:hover, button:active {
   -ms-transform: rotate(-23.91deg);
   -o-transform: rotate(-23.91deg);
   transform: rotate(-23.91deg);
-  -webkit-transition: background-color 0.3s;
-  -moz-transition: background-color 0.3s;
-  -ms-transition: background-color 0.3s;
-  -o-transition: background-color 0.3s;
-  transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -ms-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
 }
 
 .button__circle:hover {
@@ -227,11 +239,11 @@ button, button:focus, button:hover, button:active {
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
   transform: translateX(-100%);
-  -webkit-transition: -webkit-transform 0.3s;
-  -moz-transition: -moz-transform 0.3s;
-  -ms-transition: -ms-transform 0.3s;
-  -o-transition: -o-transform 0.3s;
-  transition: transform 0.3s;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
   overflow-y: scroll;
 }
 
@@ -741,6 +753,68 @@ button, button:focus, button:hover, button:active {
 }
 
 /* end say */
+
+/* end footer */
+
+.footer__production {
+  padding: 0 100px 88px;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+}
+
+.footer__navigation {
+  display: flex;
+  max-width: 66.666%;
+  padding: 50px 0;
+  justify-content: space-between;
+}
+
+.footer__item_head {
+  margin: 0 0 10px;
+}
+
+.footer__item_head, .footer__item_head .footer__link {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  color: var(--page-text);
+}
+
+.footer__item, .footer__link {
+  font-size: 14px;
+  font-weight: 100;
+  line-height: 28px;
+  color: var(--page-text);
+}
+
+.footer__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer__left, .footer__right {
+  display: flex;
+  width: 50%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footer__copyright, .footer__privacy {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.footer__button {
+  padding: 14px 51px;
+  background-color: var(--page-text);
+  color: var(--page-bg);
+}
+
+/* end footer */
 
 @media (max-width: 1280px) {
 }
