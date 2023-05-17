@@ -28,6 +28,10 @@
   font-size: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   background: var(--page-bg);
