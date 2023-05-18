@@ -286,7 +286,7 @@ button, button:focus, button:hover, button:active {
 
 .header__burger svg {
   width: 25px;
-  height: 6px;
+  height: 5.5px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -397,6 +397,10 @@ button, button:focus, button:hover, button:active {
   font-weight: 800;
   line-height: 44px;
   color: var(--page-text);
+}
+
+.header__nav_link.active {
+  color: var(--purple);
 }
 
 .header__nav_link:not(:last-child) {
