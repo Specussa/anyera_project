@@ -366,6 +366,7 @@ button, button:focus, button:hover, button:active {
   display: flex;
   height: 100%;
   max-width: 1800px;
+  padding: 0 100px 100px;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
@@ -447,6 +448,56 @@ button, button:focus, button:hover, button:active {
 
 .header__nav_contact_item:not(:last-child) {
   margin: 0 0 100px;
+}
+
+.header__nav_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.header__nav_bottom_icons {
+  display: flex;
+  width: 50%;
+  gap: 20px;
+}
+
+.header__nav_bottom_icon {
+  background: transparent;
+}
+
+.header__nav_bottom_icon svg path {
+  fill: var(--gray-border);
+}
+
+.header__nav_bottom_icon.active svg path, .header__nav_bottom_icon:hover svg path, .header__nav_bottom_icon:focus svg path, .header__nav_bottom_icon:active svg path {
+  fill: var(--purple);
+}
+
+.header__nav_bottom_socials {
+  width: 50%;
+}
+
+.header__nav_bottom_head {
+  margin: 0 0 30px;
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.header__nav_bottom_social {
+  display: flex;
+  gap: 80px;
+}
+
+.header__nav_bottom_link {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--page-text);
 }
 
 .header__nav_burger_flex {
@@ -533,6 +584,7 @@ button, button:focus, button:hover, button:active {
 .header__consultation_container {
   height: 100%;
   max-width: 1800px;
+  padding: 0 100px 100px;
   position: relative;
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
