@@ -785,11 +785,11 @@ button, button:focus, button:hover, button:active {
 }
 
 .forms__form_bar:after {
-  right:50%;
+  right: 50%;
 }
 
 .forms__form_input:focus ~ .forms__form_bar:before,.forms__form_input:focus ~ .forms__form_bar:after {
-  width:50%;
+  width: 50%;
 }
 
 .forms__form_control.error .forms__form_input {
@@ -800,7 +800,7 @@ button, button:focus, button:hover, button:active {
   border-bottom: 1px solid var(--green);
 }
 
-.forms__form_name {
+.header__form_name {
   margin: 0 0 5px;
   font-family: var(--lato);
   font-size: 16px;
@@ -816,6 +816,100 @@ button, button:focus, button:hover, button:active {
   position: relative;
   top: -37px;
   z-index: 0;
+}
+
+.header__select_box {
+  display: flex;
+  margin: 0 0 30px;
+  flex-wrap: wrap;
+}
+
+.header__select {
+  position: relative;
+  width: 100%;
+}
+
+.header__select_name {
+  margin: 0 0 5px;
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.header__select_selected_item {
+  display: flex;
+  height: 43px;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--page-text);
+  background: var(--page-bg);
+  border: none;
+  border-bottom: 1px solid var(--gray-border);
+  cursor: pointer;
+}
+
+.header__select_selected-title, .header__select_list_item {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.header__select_arrow {
+  transition: 0.3s;
+}
+
+.header__select_arrow_rotate {
+  transform: rotate(-90deg);
+}
+
+.header__select_list {
+  border: 1px solid transparent;
+  position: absolute;
+  width: 100%;
+  top: 42px;
+  z-index: 1;
+  box-sizing: border-box;
+  transition: 0.3s;
+  overflow: auto;
+  max-height: 0;
+  opacity: 0;
+}
+
+.header__select_list_opened {
+  max-height: 200px;
+  border-color: var(--gray-border);
+  opacity: 1;
+}
+
+.header__select_list::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+
+.header__select_list::-webkit-scrollbar-thumb {
+  width: 8px;
+  background: var(--page-text);
+}
+
+.header__select_list_item {
+  padding: 10px 20px;
+  color: var(--page-text);
+  border-bottom: 1px solid var(--gray-border);
+  background: var(--page-bg);
+  cursor: pointer;
+}
+
+.header__select_list_item:hover {
+  color: var(--page-bg);
+  background: var(--page-text);
+}
+
+.header__select_input {
+  display: none;
 }
 
 .effect-9 {
