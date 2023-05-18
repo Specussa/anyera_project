@@ -592,9 +592,12 @@ button, button:focus, button:hover, button:active {
 }
 
 .header__consultation_container {
+  display: flex;
   height: 100%;
   max-width: 1800px;
   padding: 100px;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
@@ -775,9 +778,11 @@ button, button:focus, button:hover, button:active {
   position: absolute;
   bottom: 0;
   background: var(--purple);
-  transition: 0.3s ease all;
-  -moz-transition: 0.3s ease all;
   -webkit-transition: 0.3s ease all;
+  -moz-transition: 0.3s ease all;
+  -ms-transition: 0.3s ease all;
+  -o-transition: 0.3s ease all;
+  transition: 0.3s ease all;
 }
 
 .forms__form_bar:before {
@@ -859,24 +864,36 @@ button, button:focus, button:hover, button:active {
 }
 
 .header__select_arrow {
-  transition: 0.3s;
+  width: 30px;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
 }
 
 .header__select_arrow_rotate {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
   transform: rotate(-90deg);
 }
 
 .header__select_list {
-  border: 1px solid transparent;
-  position: absolute;
   width: 100%;
-  top: 42px;
-  z-index: 1;
-  box-sizing: border-box;
-  transition: 0.3s;
-  overflow: auto;
   max-height: 0;
   opacity: 0;
+  -webkit-transition: opacity 0.3s linear, max-height 0.2s linear;
+  -moz-transition: opacity 0.3s linear, max-height 0.2s linear;
+  -ms-transition: opacity 0.3s linear, max-height 0.2s linear;
+  -o-transition: opacity 0.3s linear, max-height 0.2s linear;
+  transition: opacity 0.3s linear, max-height 0.2s linear;
+  position: absolute;
+  top: 42px;
+  z-index: 1;
+  overflow: auto;
+  border: 1px solid transparent;
 }
 
 .header__select_list_opened {
@@ -930,11 +947,11 @@ button, button:focus, button:hover, button:active {
 
 .effect-9 ~ .forms__form_border:before, .effect-9 ~ .forms__form_border:after {
   content: "";
+  width: 0;
+  height: 1px;
   position: absolute;
   top: 0px;
   right: 0;
-  width: 0;
-  height: 1px;
   background-color: var(--purple);
   transition: 0.2s;
   transition-delay: 0.2s;
@@ -950,11 +967,11 @@ button, button:focus, button:hover, button:active {
 
 .effect-9 ~ .forms__form_border i:before, .effect-9 ~ .forms__form_border i:after {
   content: "";
+  width: 1px;
+  height: 0;
   position: absolute;
   top: 0;
   left: 0;
-  width: 1px;
-  height: 0;
   background-color: var(--purple);
   transition: 0.2s;
 }
