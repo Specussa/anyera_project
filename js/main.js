@@ -7,7 +7,7 @@ const burgernav_c = document.querySelector('.header__consultation_burger');
 const overlay = document.querySelector('.overlay');
 const form = document.getElementById('form');
 const username = document.getElementById('username');
-const phone = document.getElementById('control');
+const phone = document.getElementById('phone');
 const text = document.getElementById('text');
 
 // start navbar
@@ -125,22 +125,22 @@ const phoneValue = phone.value.trim();
 const textValue = text.value.trim();
 
 if(usernameValue === '') {
-  setErrorFor(username, 'Обязательное поле');
-} else {
-  setSuccessFor(username);
+    setErrorFor(username, 'Обязательное поле');
+  } else {
+    setSuccessFor(username);
 }
 
 if(phoneValue === '') {
-  setErrorFor(phone, 'Обязательное поле');
-} else {
-  setSuccessFor(phone);
+    setErrorFor(phone, 'Обязательное поле');
+  } else {
+    setSuccessFor(phone);
 }
 
 if(textValue === '') {
-  setErrorFor(text, 'Обязательное поле');
-} else {
-  setSuccessFor(text);
-}
+    setErrorFor(text, 'Обязательное поле');
+  } else {
+    setSuccessFor(text);
+  }
 }
 
 function setErrorFor(input, message) {
@@ -153,10 +153,6 @@ function setErrorFor(input, message) {
 function setSuccessFor(input) {
   const formControl = input.parentElement;
   formControl.className = 'forms__form_control success';
-}
-
-function iscontrol(phone) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(phone);
 }
 
 // function iscontrol(control) {
