@@ -21,6 +21,7 @@
   --page-text: #262626;
   --purple: #644BB1;
   --red: #A20109;
+  --green: #a9ff70;
   --gray: #303337;
   --aquamarine: #5C7E88;
   --blue: #526DD4;
@@ -725,12 +726,11 @@ button, button:focus, button:hover, button:active {
 	visibility: visible;
 }
 
-.forms__form button {
-	display: block;
-  margin: auto;
-}
-
-.forms__form button:hover {
+.header__form_button {
+  width: 100%;
+  margin: 30px 0 0;
+  color: var(--page-bg);
+  background-color: var(--page-text);
 }
 
 .forms__form_input {
@@ -739,23 +739,14 @@ button, button:focus, button:hover, button:active {
   padding: 0 22px 10px;
   display: block;
   border: none;
-  color: var(--gray-border);
+  color: var(--page-text);
   background: transparent;
   border-bottom: 1px solid var(--gray-border);
 }
 
-#password {
-  padding: 0 42px 10px 22px;
-}
-
-.forms__form_input[type="password"] {
-  letter-spacing: 4px;
-}
-
 .forms__form_input::placeholder {
   font-size: 18px;
-  color: #6B95B9;
-  letter-spacing: normal;
+  color: var(--gray-border);
 }
 
 .forms__form_input:focus {
@@ -796,7 +787,7 @@ button, button:focus, button:hover, button:active {
 }
 
 .forms__form_control.success .forms__form_input {
-  border-bottom: 1px solid #FFD970
+  border-bottom: 1px solid var(--green);
 }
 
 .effect-9 {
