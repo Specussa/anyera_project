@@ -735,18 +735,13 @@ button, button:focus, button:hover, button:active {
 
 .forms__form_input {
   width: 100%;
-  height: 36px;
+  height: 37px;
   padding: 0 22px 10px;
   display: block;
   border: none;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 140%;
-  color: #292A2C;
+  color: var(--gray-border);
   background: transparent;
-  border-bottom: 1px solid #2B689B;
+  border-bottom: 1px solid var(--gray-border);
 }
 
 #password {
@@ -755,10 +750,6 @@ button, button:focus, button:hover, button:active {
 
 .forms__form_input[type="password"] {
   letter-spacing: 4px;
-}
-
-.forms__form_input:active, .forms__form_input:focus {
-  border-bottom: 1px solid transparent;
 }
 
 .forms__form_input::placeholder {
@@ -771,19 +762,6 @@ button, button:focus, button:hover, button:active {
   outline: none;
 }
 
-.forms__form_control::before {
-  content: "* ";
-  position: absolute;
-  top: 0;
-  left: 11px;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 140%;
-  color: #FFB6C1;
-}
-
 .forms__form_bar {
   position: relative;
   display: block;
@@ -791,11 +769,11 @@ button, button:focus, button:hover, button:active {
 
 .forms__form_bar:before, .forms__form_bar:after {
   content: '';
-  height: 1px;
+  height: 0.5px;
   width: 0;
   position: absolute;
   bottom: 0;
-  background: #5BC3CF;
+  background: var(--purple);
   transition: 0.3s ease all;
   -moz-transition: 0.3s ease all;
   -webkit-transition: 0.3s ease all;
@@ -821,20 +799,76 @@ button, button:focus, button:hover, button:active {
   border-bottom: 1px solid #FFD970
 }
 
-.forms__form p {
-  display: inline-block;
-  margin: 30px 0;
-  font-family: 'Inter', sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 140%;
-  color: #2B689B;
+.effect-9 {
+  width: 100%;
+  padding: 7px 14px 9px;
+  background: transparent;
+  transition:0.4s;
+  border: none;
+  border-bottom: 1px solid var(--gray-border);
 }
 
-.forms__form p::before {
-  content: "* ";
-  color: #FFB6C1;
+.effect-9:hover, .effect-9:focus, .effect-9:active {
+  outline: none;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.effect-9 ~ .forms__form_border:before, .effect-9 ~ .forms__form_border:after {
+  content: "";
+  position: absolute;
+  top: -1px;
+  right: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--purple);
+  transition: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.effect-9 ~ .forms__form_border:after {
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  transition-delay: 0.6s;
+}
+
+.effect-9 ~ .forms__form_border i:before, .effect-9 ~ .forms__form_border i:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 0;
+  background-color: var(--purple);
+  transition: 0.2s;
+}
+
+.effect-9 ~ .forms__form_border i:after {
+  left: auto;
+  right: -1px;
+  top: auto;
+  bottom: 0;
+  transition-delay: 0.4s;
+}
+
+.effect-9:focus ~ .forms__form_border:before, .effect-9:focus ~ .forms__form_border:after, .effect-9:active ~ .forms__form_border:before, .effect-9:active ~ .forms__form_border:after {
+  width: 100%;
+  transition: 0.2s;
+  transition-delay: 0.6s;
+}
+
+.effect-9:focus ~ .forms__form_border:after, .effect-9:active ~ .forms__form_border:after {
+  transition-delay: 0.2s;
+}
+
+.effect-9:focus ~ .forms__form_border i:before, .effect-9:focus ~ .forms__form_border i:after, .effect-9:active ~ .forms__form_border i:before, .effect-9:active ~ .forms__form_border i:after {
+  height: 100%;
+  transition: 0.2s;
+}
+
+.effect-9:focus ~ .forms__form_border i:after, .effect-9:active ~ .forms__form_border i:after {
+  transition-delay: 0.4s;
 }
 
 .header__consultation_burger_flex {
