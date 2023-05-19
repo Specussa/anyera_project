@@ -17,6 +17,7 @@
 
 :root {
   --gray-border: #D3D3D3;
+  --dark-border: #545454;
   --page-bg: #F8F8F8;
   --page-text: #262626;
   --purple: #644BB1;
@@ -36,6 +37,7 @@
   --page-bg: #262626;
   --page-text: #F8F8F8;
   --purple: #0FE397;
+  --gray-border: var(--dark-border);
 }
 
 ::marker {
