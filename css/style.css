@@ -766,6 +766,11 @@ button, button:focus, button:hover, button:active {
   background-color: var(--page-text);
 }
 
+.dark .header__form_button {
+  color: var(--page-text);
+  background-color: var(--page-bg);
+}
+
 .header__form_policy {
   margin: 10px 0 0;
   font-size: 8px;
