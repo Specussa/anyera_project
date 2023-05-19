@@ -694,6 +694,7 @@ button, button:focus, button:hover, button:active {
   margin: 0 0 13px;
   padding: 0 0 17px;
 	position: relative;
+  overflow: hidden;
 }
 
 /* .forms__form_control.error {
@@ -711,15 +712,25 @@ button, button:focus, button:hover, button:active {
   font-weight: 400;
   line-height: 12px;
 	color: var(--error);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
 	opacity: 0;
-  -webkit-transition: opacity 0.3s linear;
-  -moz-transition: opacity 0.3s linear;
-  -ms-transition: opacity 0.3s linear;
-  -o-transition: opacity 0.3s linear;
-  transition: opacity 0.3s linear;
 }
 
 .forms__form_control.error small {
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
 	opacity: 1;
 }
 
