@@ -31,6 +31,12 @@
   --lato: 'Roboto', 'Lato', sans-serif;
 }
 
+.dark {
+  /* Dark mode */
+  --page-bg: #262626;
+  --page-text: #F8F8F8;
+}
+
 ::marker {
   font-size: 0;
 }
@@ -223,7 +229,7 @@ button, button:focus, button:hover, button:active {
   position: fixed;
   border-bottom: 1px solid var(--gray-border);
   background: var(--page-bg);
-  z-index: 1;
+  z-index: 100;
 }
 
 .header__container {

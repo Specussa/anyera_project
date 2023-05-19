@@ -277,3 +277,63 @@ hover.addEventListener('mouseout', function(e) {
   elemHover = null;
 })
 // end hover menu
+
+// start dark mode
+const btnlight = document.querySelector('.button__light');
+const btndark = document.querySelector('.button__dark');
+
+// 1. Проверка темной темы на уровне системных настроек
+if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ) {
+  btndark.classList.add("active");
+  btnlight.classList.remove("active");
+	document.body.classList.add("dark");
+}
+
+// 2. Проверка темной темы в localStorage
+if (localStorage.getItem('darkMode') === 'dark') {
+  btndark.classList.add("active");
+  btnlight.classList.remove("active");
+  document.body.classList.add("dark");
+} else if (localStorage.getItem("darkMode") === "light") {
+  btndark.classList.remove("active");
+  btnlight.classList.add("active");
+  document.body.classList.remove("dark");
+}
+
+// Если меняются системные настройки, меняем тему
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", (event) => {
+  const newColorScheme = event.matches ? "dark" : "light";
+  if (newColorScheme === "dark") {
+    btndark.classList.add("active");
+    btnlight.classList.remove("active");
+    document.body.classList.add("dark");
+    localStorage.setItem("darkMode", "dark");
+  } else {
+    btndark.classList.remove("active");
+    btnlight.classList.add("active");
+    document.body.classList.remove("dark");
+    localStorage.setItem("darkMode", "light");
+  }
+});
+
+// Включение ночного режима по кнопке
+document.querySelector('.button__light').addEventListener('click', function() {
+  if (btndark.classList.contains("active")) {
+    btndark.classList.remove("active");
+    btnlight.classList.add("active");
+  }
+  document.body.classList.remove("dark");
+  localStorage.setItem("darkMode", "light");
+})
+
+document.querySelector('.button__dark').addEventListener('click', function() {
+  if (btnlight.classList.contains("active")) {
+    btnlight.classList.remove("active");
+    btndark.classList.add("active");
+  }
+  document.body.classList.add("dark");
+  localStorage.setItem("darkMode", "dark");
+})
+// end dark mode
