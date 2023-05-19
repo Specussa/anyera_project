@@ -722,7 +722,6 @@ button, button:focus, button:hover, button:active {
   -ms-transition: -ms-transform 0.3s linear;
   -o-transition: -o-transform 0.3s linear;
   transition: transform 0.3s linear;
-	opacity: 0;
 }
 
 .forms__form_control.error small {
@@ -731,7 +730,6 @@ button, button:focus, button:hover, button:active {
   -ms-transform: translateX(0%);
   -o-transform: translateX(0%);
   transform: translateX(0%);
-	opacity: 1;
 }
 
 .header__form_button {
