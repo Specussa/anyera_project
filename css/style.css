@@ -701,7 +701,8 @@ button, button:focus, button:hover, button:active {
 } */
 
 .forms__form_control small {
-  height: 0;
+  height: 12px;
+  margin: 5px 0 0;
 	position: absolute;
 	bottom: 0;
 	left: 0;
@@ -710,13 +711,16 @@ button, button:focus, button:hover, button:active {
   font-weight: 400;
   line-height: 12px;
 	color: var(--error);
-	visibility: hidden;
+	opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
 }
 
 .forms__form_control.error small {
-  height: 12px;
-  margin: 5px 0 0;
-	visibility: visible;
+	opacity: 1;
 }
 
 .header__form_button {
