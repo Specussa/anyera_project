@@ -172,23 +172,23 @@ const OPEN_SELECT = 'selectOpen'
 
 class Select {
   static attach() {
-    const select = new Select()
-    select.init()
+    document.querySelectorAll(SELECT)
+      .forEach(select => new Select().init(select))
   }
 
-  init() {
-    if (this.findSelect()) {
+  init(select) {
+    if (this.findSelect(select)) {
       this.applyListener()
     }
   }
 
   applyListener() {
     document.querySelector('*').addEventListener('click', e => {
-      const element = e.target.closest(SELECT_ACTION)
+      const element = this.select.contains(e.target) && e.target.closest(SELECT_ACTION)
 
       if (this.isCallSelectElement(element)) {
         if (this.isOpened()) {
-          this.closeSelectList()
+          this.closeSelectList();
         } else {
           this.openSelectList()
         }
@@ -204,16 +204,16 @@ class Select {
     })
   }
 
-  isCallSelectElement(element) {
+  isCallSelectElement(element, target) {
     return element && OPEN_SELECT in element.dataset
   }
 
-  isCallSelectItemElement(element) {
+  isCallSelectItemElement(element, target) {
     return element && SELECT_ITEM in element.dataset
   }
 
-  findSelect() {
-    const select = document.querySelector(SELECT)
+  findSelect(select) {
+
 
     if (select) {
       this.select = select
@@ -245,10 +245,35 @@ class Select {
     this.selectInput.value = element.innerHTML
   }
 
-  selectOverlayIsClickedElement(element) {
+  selectOverlayIsClickedElement(element, target) {
     return element && 'select' in element.dataset
   }
 }
 
 Select.attach()
 // end select
+
+// start hover menu
+var hover = document.querySelector('.header__nav_list'),
+elemHover = false;
+
+hover.addEventListener('mouseover', function(e) {
+  if(elemHover) return;
+  var target = e.target.closest('.header__nav_item');
+  if(!target) return;
+
+  elemHover = target;
+  
+  var parent = target.closest('.header__nav_list'),
+  old = parent.querySelector('.active')
+  if(old) old.classList.remove('active')
+  target.classList.add('active')
+})
+
+hover.addEventListener('mouseout', function(e) {
+  if(!elemHover) return
+  var target = e.target.closest('.header__nav_item')
+  
+  elemHover = null;
+})
+// end hover menu

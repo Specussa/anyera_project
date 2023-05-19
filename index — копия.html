@@ -1,0 +1,251 @@
+<html><head>
+  <style>
+      * {
+padding: 0;
+margin: 0;
+}
+
+body {
+font-family: "Roboto", sans-serif;
+display: flex;
+}
+
+.header__select {
+max-width: 280px;
+position: relative;
+width: 100%;
+margin: 20px;
+}
+
+.header__select_selected_item {
+background: #f4f4f4;
+padding: 10px 20px;
+border-radius: 4px;
+border: 2px solid #d8d8d8;
+color: #1e4dba;
+box-sizing: border-box;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.header__select_selected_item:hover {
+cursor: pointer;
+background: #f9f9f9;
+}
+
+.header__select_arrow {
+transition: 0.3s;
+}
+
+.header__select_arrow_rotate {
+transform: rotate(90deg);
+}
+
+.header__select_list {
+border: 2px solid transparent;
+border-radius: 4px;
+position: absolute;
+width: 100%;
+top: 50px;
+z-index: 1;
+box-sizing: border-box;
+transition: 0.3s;
+overflow: auto;
+max-height: 0;
+opacity: 0;
+}
+
+.header__select_list_opened {
+max-height: 200px;
+border-color: #d8d8d8;
+opacity: 1;
+}
+
+.header__select_list_item {
+padding: 10px 20px;
+color: #6f6f6f;
+border-bottom: 1px solid #d8d8d8;
+background: #fff;
+}
+
+.header__select_list_item:hover {
+text-decoration: underline;
+cursor: pointer;
+background: #f9f9f9;
+}
+
+.header__select_list_item:first-child {
+border-radius: 2px 2px 0 0;
+}
+
+.header__select_list_item:last-child {
+border-bottom: none;
+border-radius: 0 0 2px 2px;
+}
+
+.header__select_input {
+display: none;
+}
+  </style>
+  <script src="/scripts/snippet-javascript-console.min.js?v=1"></script><style type="text/css">.as-console-wrapper { position: fixed; bottom: 0; left: 0; right: 0; max-height: 150px; overflow-y: scroll; overflow-x: hidden; border-top: 1px solid #000; display: none; }
+.as-console { background: #e9e9e9; border: 1px solid #ccc; display: table; width: 100%; border-collapse: collapse; }
+.as-console-row { display: table-row; font-family: monospace; font-size: 13px; }
+.as-console-row:after { display: table-cell; padding: 3px 6px; color: rgba(0,0,0,.35); border: 1px solid #ccc; content: attr(data-date); vertical-align: top; }
+.as-console-row + .as-console-row > * { border: 1px solid #ccc; }
+.as-console-row-code { width: 100%; white-space: pre-wrap; padding: 3px 5px; display: table-cell; font-family: monospace; font-size: 13px; vertical-align: middle; }
+.as-console-error:before { content: 'Error: '; color: #f00; }
+.as-console-assert:before { content: 'Assertion failed: '; color: #f00; }
+.as-console-info:before { content: 'Info: '; color: #00f; }
+.as-console-warning:before { content: 'Warning: '; color: #e90 }
+@-webkit-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+@-moz-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+@-ms-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+@keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+.as-console-row-code, .as-console-row:after { -webkit-animation: flash 1s; -moz-animation: flash 1s; -ms-animation: flash 1s; animation: flash 1s; }</style>
+</head>
+<body>
+  <div class="header__select_box">
+<div class="header__select" data-select="">
+  <div class="header__select_selected_item" data-select-action="" data-select-open="">
+    <div class="header__select_selected-title" data-select-title="">
+      Choose item
+    </div>
+    <svg class="header__select_arrow" data-select-arrow="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 12L9 20L7 18L15 10" fill="#1E4DBA"></path>
+                  <path d="M17 12L15 14L7 6L9 4" fill="#1E4DBA"></path>
+              </svg>
+  </div>
+  <div class="header__select_list" data-select-list="">
+    <div class="header__select_list_item" data-select-action="" data-select-item="">First item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Second item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Third item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Fourth item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Fifth item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Sixth item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Eight item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Ninth item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Tenth item</div>
+  </div>
+  <input class="header__select_input" type="text" data-select-input="">
+</div>
+</div>
+<div class="header__select_box">
+<div class="header__select" data-select="">
+  <div class="header__select_selected_item" data-select-action="" data-select-open="">
+    <div class="header__select_selected-title" data-select-title="">
+      Choose item
+    </div>
+    <svg class="header__select_arrow" data-select-arrow="" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M17 12L9 20L7 18L15 10" fill="#1E4DBA"></path>
+                  <path d="M17 12L15 14L7 6L9 4" fill="#1E4DBA"></path>
+              </svg>
+  </div>
+  <div class="header__select_list" data-select-list="">
+    <div class="header__select_list_item" data-select-action="" data-select-item="">First item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Second item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Third item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Fourth item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Fifth item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Sixth item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Eight item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Ninth item</div>
+    <div class="header__select_list_item" data-select-action="" data-select-item="">Tenth item</div>
+  </div>
+  <input class="header__select_input" type="text" data-select-input="">
+</div>
+</div>
+  <script type="text/javascript">
+      const SELECT = '[data-select]'
+const SELECT_LIST = '[data-select-list]'
+const SELECT_ARROW = '[data-select-arrow]'
+const SELECT_ACTION = '[data-select-action]'
+const SELECT_TITLE = '[data-select-title]'
+const SELECT_INPUT = '[data-select-input]'
+const SELECT_ITEM = 'selectItem'
+const OPEN_SELECT = 'selectOpen'
+
+class Select {
+static attach() {
+  document.querySelectorAll(SELECT)
+    .forEach(select => new Select().init(select))
+}
+
+init(select) {
+  if (this.findSelect(select)) {
+    this.applyListener()
+  }
+}
+
+applyListener() {
+  document.querySelector('*').addEventListener('click', e => {
+    const element = this.select.contains(e.target) && e.target.closest(SELECT_ACTION)
+
+    if (this.isCallSelectElement(element)) {
+      if (this.isOpened()) {
+        this.closeSelectList();
+      } else {
+        this.openSelectList()
+      }
+    }
+
+    if (this.isCallSelectItemElement(element)) {
+      this.addSelectedValue(element)
+    }
+
+    if (this.isCallSelectElement(element) !== true && this.selectOverlayIsClickedElement(element) !== true) {
+      this.closeSelectList()
+    }
+  })
+}
+
+isCallSelectElement(element, target) {
+  return element && OPEN_SELECT in element.dataset
+}
+
+isCallSelectItemElement(element, target) {
+  return element && SELECT_ITEM in element.dataset
+}
+
+findSelect(select) {
+
+
+  if (select) {
+    this.select = select
+    this.selectList = this.select.querySelector(SELECT_LIST)
+    this.selectArrow = this.select.querySelector(SELECT_ARROW)
+    this.selectTitle = this.select.querySelector(SELECT_TITLE)
+    this.selectInput = this.select.querySelector(SELECT_INPUT)
+    return true
+  }
+  return false
+}
+
+isOpened() {
+  return this.selectList.classList.contains('header__select_list_opened')
+}
+
+openSelectList() {
+  this.selectList.classList.add('header__select_list_opened')
+  this.selectArrow.classList.add('header__select_arrow_rotate')
+}
+
+closeSelectList() {
+  this.selectList.classList.remove('header__select_list_opened')
+  this.selectArrow.classList.remove('header__select_arrow_rotate')
+}
+
+addSelectedValue(element) {
+  this.selectTitle.innerHTML = element.innerHTML
+  this.selectInput.value = element.innerHTML
+}
+
+selectOverlayIsClickedElement(element, target) {
+  return element && 'select' in element.dataset
+}
+}
+
+Select.attach()
+  </script>
+
+<div class="as-console-wrapper"><div class="as-console"></div></div></body></html>
