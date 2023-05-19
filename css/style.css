@@ -22,7 +22,7 @@
   --purple: #644BB1;
   --red: #A20109;
   --error: #D91717;
-  --green: #a9ff70;
+  --green: #0FE397;
   --gray: #303337;
   --aquamarine: #5C7E88;
   --blue: #526DD4;
@@ -35,6 +35,7 @@
   /* Dark mode */
   --page-bg: #262626;
   --page-text: #F8F8F8;
+  --purple: #0FE397;
 }
 
 ::marker {
@@ -131,6 +132,12 @@ button, button:focus, button:hover, button:active {
 .button__project:hover, .button__project:focus, .button__project:active {
   color: var(--page-bg);
   background-color: var(--purple);
+  border: 1px solid var(--purple);
+}
+
+.dark .button__project:hover, .dark .button__project:focus, .dark .button__project:active {
+  color: var(--purple);
+  background-color: var(--page-bg);
   border: 1px solid var(--purple);
 }
 
@@ -1368,6 +1375,7 @@ button, button:focus, button:hover, button:active {
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
+  color: var(--page-text);
 }
 
 .publications__date {
@@ -1404,6 +1412,7 @@ button, button:focus, button:hover, button:active {
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
+  color: var(--page-text);
 }
 
 .projects__item {
@@ -1422,8 +1431,16 @@ button, button:focus, button:hover, button:active {
   color: var(--page-bg);
 }
 
+.dark .projects__item:hover .projects__tag, .dark .projects__item:hover .projects__tag a, .dark .projects__item:hover .projects__heading {
+  color: var(--page-text);
+}
+
 .projects__item:hover .projects__description, .projects__item:hover .projects__link, .projects__item:hover .projects__link:hover {
   color: var(--page-bg);
+}
+
+.dark .projects__item:hover .projects__description, .dark .projects__item:hover .projects__link, .dark .projects__item:hover .projects__link:hover {
+  color: var(--page-text);
 }
 
 .projects__item:hover .projects__hover img {
@@ -1704,6 +1721,12 @@ button, button:focus, button:hover, button:active {
   padding: 14px 51px;
   background-color: var(--page-text);
   color: var(--page-bg);
+}
+
+.dark .footer__button:hover, .dark .footer__button:focus, .dark .footer__button:active {
+  color: var(--page-bg);
+  background-color: var(--purple);
+  border: 1px solid var(--purple);
 }
 
 /* end footer */
