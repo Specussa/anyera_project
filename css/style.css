@@ -429,6 +429,15 @@ button, button:focus, button:hover, button:active {
   display: flex;
 }
 
+.header__subnav_item {
+  transform: translateY(-100%);
+  transition: transform 0.3s linear;
+}
+
+.header__nav_item.active .header__subnav_item {
+  transform: translateY(0%);
+}
+
 .header__subnav_link {
   font-size: 16px;
   font-weight: 500;

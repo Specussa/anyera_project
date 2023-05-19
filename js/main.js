@@ -4,57 +4,53 @@ const burger = document.querySelector('.header__burger');
 const burger_c = document.querySelector('.header__project');
 const burgernav = document.querySelector('.header__nav_burger');
 const burgernav_c = document.querySelector('.header__consultation_burger');
-const overlay = document.querySelector('.overlay');
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const phone = document.getElementById('phone');
 const text = document.getElementById('text');
+const anchors = document.querySelectorAll(".header__anchor_item")
 
 // start navbar
 document.querySelector('.header__burger').addEventListener('click', function() {
   if (burger.classList.contains("active")) {
     menu.classList.remove("active");
     burger.classList.remove("active");
-    overlay.classList.remove("active");
     document.body.style.overflow = "visible";
     document.body.style.height = "auto";
+    menu_c.classList.remove("active");
+    burger_c.classList.remove("active");
+    burgernav_c.classList.remove("active");
   } else {
     menu.classList.add("active");
     burger.classList.add("active");
-    overlay.classList.add("active");
     document.body.style.overflow = "hidden";
     document.body.style.height = "100vh";
+    menu_c.classList.remove("active");
+    burger_c.classList.remove("active");
+    burgernav_c.classList.remove("active");
   }
-  
   if (burgernav.classList.contains("active")) {
     menu.classList.remove("active");
     burgernav.classList.remove("active");
-    overlay.classList.remove("active");
     document.body.style.overflow = "visible";
     document.body.style.height = "auto";
   } else {
     menu.classList.add("active");
     burgernav.classList.add("active");
-    overlay.classList.add("active");
     document.body.style.overflow = "hidden";
     document.body.style.height = "100vh";
   }
-  
-  overlay.addEventListener('click', () => {
-    menu.classList.remove('active');
-    burger.classList.remove('active');
-    burgernav.classList.remove('active');
-    overlay.classList.remove('active');
+  if (burger_c.classList.contains("active")) {
+    menu_c.classList.remove("active");
+    burger_c.classList.remove("active");
     document.body.style.overflow = "visible";
     document.body.style.height = "auto";
-  });
+  }
 })
-
 document.querySelector('.header__nav_burger').addEventListener('click', function() {
   if (burgernav.classList.contains("active")) {
     menu.classList.remove("active");
     burgernav.classList.remove("active");
-    overlay.classList.remove("active");
     document.body.style.overflow = "visible";
     document.body.style.height = "auto";
   }
@@ -64,50 +60,56 @@ document.querySelector('.header__project').addEventListener('click', function() 
   if (burger_c.classList.contains("active")) {
     menu_c.classList.remove("active");
     burger_c.classList.remove("active");
-    overlay.classList.remove("active");
     document.body.style.overflow = "visible";
     document.body.style.height = "auto";
+    menu.classList.remove("active");
+    burger.classList.remove("active");
+    burgernav.classList.remove("active");
   } else {
     menu_c.classList.add("active");
     burger_c.classList.add("active");
-    overlay.classList.add("active");
     document.body.style.overflow = "hidden";
     document.body.style.height = "100vh";
+    menu.classList.remove("active");
+    burger.classList.remove("active");
+    burgernav.classList.remove("active");
   }
-  
   if (burgernav_c.classList.contains("active")) {
     menu_c.classList.remove("active");
     burgernav_c.classList.remove("active");
-    overlay.classList.remove("active");
     document.body.style.overflow = "visible";
     document.body.style.height = "auto";
   } else {
     menu_c.classList.add("active");
     burgernav_c.classList.add("active");
-    overlay.classList.add("active");
     document.body.style.overflow = "hidden";
     document.body.style.height = "100vh";
   }
-  
-  overlay.addEventListener('click', () => {
-    menu_c.classList.remove('active');
-    burger_c.classList.remove('active');
-    burgernav_c.classList.remove('active');
-    overlay.classList.remove('active');
-    document.body.style.overflow = "visible";
-    document.body.style.height = "auto";
-  });
 })
-
 document.querySelector('.header__consultation_burger').addEventListener('click', function() {
   if (burgernav_c.classList.contains("active")) {
     menu_c.classList.remove("active");
     burgernav_c.classList.remove("active");
-    overlay.classList.remove("active");
     document.body.style.overflow = "visible";
     document.body.style.height = "auto";
   }
 })
+for (const anchor of anchors) {
+  anchor.addEventListener('click', function(event) {
+    if (burgernav_c.classList.contains("active")) {
+      menu_c.classList.remove("active");
+      burgernav_c.classList.remove("active");
+      document.body.style.overflow = "visible";
+      document.body.style.height = "auto";
+    }
+    if (burgernav.classList.contains("active")) {
+      menu.classList.remove("active");
+      burgernav.classList.remove("active");
+      document.body.style.overflow = "visible";
+      document.body.style.height = "auto";
+    }
+  })
+}
 // end navbar
 
 // start validate form
@@ -257,11 +259,22 @@ Select.attach()
 var hover = document.querySelector('.header__nav_list'),
 elemHover = false;
 
+var items = $('.header__subnav_list li');
+items.css('opacity', 1);
+for (var i = 0; i < items.length; i++) {
+  $(items[i]).delay(i * 0).animate({ opacity: 0 }, 0);
+}
+
 hover.addEventListener('mouseover', function(e) {
   if(elemHover) return;
   var target = e.target.closest('.header__nav_item');
   if(!target) return;
 
+  var items = $('.header__subnav_list li');
+  items.css('opacity', 0);
+  for (var i = 0; i < items.length; i++) {
+    $(items[i]).delay(i * 400).animate({ opacity: 1 }, 400);
+  }
   elemHover = target;
   
   var parent = target.closest('.header__nav_list'),
@@ -276,6 +289,13 @@ hover.addEventListener('mouseout', function(e) {
   
   elemHover = null;
 })
+
+// var itemsl = document.querySelector('.header__subnav_list li');
+// itemsl.style.opacity = "0";
+// for (var i = 0; i < itemsl.length; i++) {
+//   document.querySelector(itemsl[i]).style.transition = (i * 400) + "s";
+//   document.querySelector(itemsl[i]).style.opacity = "1";
+// }
 // end hover menu
 
 // start dark mode
