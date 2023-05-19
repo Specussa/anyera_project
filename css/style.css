@@ -544,24 +544,49 @@ button, button:focus, button:hover, button:active {
 
 .header__nav_burger {
   display: block;
-  width: 60px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
+  padding: 30px;
   border: none;
   background: var(--page-bg);
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 48px;
+  right: 47px;
   cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
+}
+
+.header__nav_burger:hover {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .header__nav_burger svg {
-  height: 100%;
-  width: 100%;
+  height: 24px;
+  width: 24px;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.header__nav_burger svg path {
   fill: var(--page-text);
 }
 
@@ -971,24 +996,49 @@ button, button:focus, button:hover, button:active {
 
 .header__consultation_burger {
   display: block;
-  width: 60px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
+  padding: 30px;
   border: none;
   background: var(--page-bg);
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 48px;
+  right: 47px;
   cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
+}
+
+.header__consultation_burger:hover {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
 
 .header__consultation_burger svg {
-  height: 100%;
-  width: 100%;
+  height: 24px;
+  width: 24px;
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.header__consultation_burger svg path {
   fill: var(--page-text);
 }
 
