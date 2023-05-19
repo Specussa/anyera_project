@@ -258,35 +258,26 @@ Select.attach()
 // start hover menu
 var hover = document.querySelector('.header__nav_list'),
 elemHover = false;
-const subnavs = document.getElementsByClassName('header__subnav_item')
 
-var items = $('.header__subnav_list li');
-items.css('opacity', 0);
+// const subnavs = document.getElementsByClassName('header__subnav_item')
+// var items = $('.header__subnav_list li');
+// items.css('opacity', 0);
 // for (var i = 0; i < items.length; i++) {
 //   $(items[i]).delay(i * 0).animate({ opacity: 0 }, 0);
 // }
-
-for ( let i =0 ; i <subnavs.length ; i++ ) {
-  subnavs[i].style.WebkitTransitionDelay = (i * 0) + "s";
-  subnavs[i].style.transitionDelay = (i * 0) + "s";
-  subnavs[i].style.WebkitTransition = "opacity" + " " + (i * 0) + "s linear";
-  subnavs[i].style.transition = "opacity" + " " + (i * 0) + "s linear";
-  subnavs[i].style.transform = 'opacity';
-  subnavs[i].style.opacity = '0';
-}
 hover.addEventListener('mouseover', function(e) {
   if(elemHover) return;
   var target = e.target.closest('.header__nav_item');
   if(!target) return;
 
-  for ( let i =0 ; i <subnavs.length ; i++ ) {
-    subnavs[i].style.WebkitTransitionDelay = (i * 100) + "s";
-    subnavs[i].style.transitionDelay = (i * 100) + "s";
-    subnavs[i].style.WebkitTransition = "opacity" + " " + (i * 100) + "s linear";
-    subnavs[i].style.transition = "opacity" + " " + (i * 100) + "s linear";
-    subnavs[i].style.transform = 'opacity';
-    subnavs[i].style.opacity = '1';
-  }
+  // for ( let i =0 ; i <subnavs.length ; i++ ) {
+  //   subnavs[i].style.WebkitTransitionDelay = (i * 100) + "s";
+  //   subnavs[i].style.transitionDelay = (i * 100) + "s";
+  //   subnavs[i].style.WebkitTransition = "opacity" + " " + (i * 100) + "s linear";
+  //   subnavs[i].style.transition = "opacity" + " " + (i * 100) + "s linear";
+  //   subnavs[i].style.transform = 'opacity';
+  //   subnavs[i].style.opacity = '1';
+  // }
   elemHover = target;
   
   var parent = target.closest('.header__nav_list'),

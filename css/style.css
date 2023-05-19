@@ -1207,6 +1207,7 @@ button, button:focus, button:hover, button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
@@ -1214,8 +1215,7 @@ button, button:focus, button:hover, button:active {
 }
 
 .analytics__info {
-  width: 100%;
-  min-width: 655px;
+  width: 36%;
   padding: 120px 100px;
 }
 
@@ -1223,6 +1223,7 @@ button, button:focus, button:hover, button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 28%;
   min-width: auto;
   flex-direction: column;
   justify-content: center;
@@ -1775,6 +1776,8 @@ button, button:focus, button:hover, button:active {
   .analytics__info:not(:last-child) {
     width: 50%;
     min-width: 50%;
+    border-right: none;
+    border-bottom: 1px solid var(--gray-border);
   }
   .analytics__info:last-child {
     width: 100%;
