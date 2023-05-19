@@ -696,9 +696,9 @@ button, button:focus, button:hover, button:active {
 	position: relative;
 }
 
-.forms__form_control.error {
+/* .forms__form_control.error {
   margin: 0 0 30px;
-}
+} */
 
 .forms__form_control small {
   height: 0;
