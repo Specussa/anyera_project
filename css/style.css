@@ -125,6 +125,7 @@ button, button:focus, button:hover, button:active {
   -ms-transition: color 0.3s linear, background-color 0.3s linear, border-color 0.3s linear;
   -o-transition: color 0.3s linear, background-color 0.3s linear, border-color 0.3s linear;
   transition: color 0.3s linear, background-color 0.3s linear, border-color 0.3s linear;
+  flex: 0 0 auto;
 }
 
 .button__project:hover, .button__project:focus, .button__project:active {
@@ -346,6 +347,7 @@ button, button:focus, button:hover, button:active {
   -ms-transition: -ms-transform 0.3s linear;
   -o-transition: -o-transform 0.3s linear;
   transition: transform 0.3s linear;
+  overflow-x: hidden;
   /* overflow-y: scroll; */
 }
 
@@ -581,6 +583,7 @@ button, button:focus, button:hover, button:active {
   -ms-transition: -ms-transform 0.3s linear;
   -o-transition: -o-transform 0.3s linear;
   transition: transform 0.3s linear;
+  overflow-x: hidden;
   /* overflow-y: scroll; */
 }
 
@@ -1118,7 +1121,9 @@ button, button:focus, button:hover, button:active {
 }
 
 .development__right {
+  display: flex;
   max-width: 565px;
+  align-items: center;
 }
 
 .development__left, .development__right {
@@ -1136,11 +1141,8 @@ button, button:focus, button:hover, button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 60px;
-}
-
-.development__item {
   margin: 60px 0 0;
+  gap: 60px;
 }
 
 .development__item, .development__item a, .development__desc {
@@ -1705,11 +1707,114 @@ button, button:focus, button:hover, button:active {
 
 /* end footer */
 
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
+  .digital__info {
+    padding: 200px 60px 143px;
+  }
+  .development__left, .development__right, .analytics__info {
+    padding: 120px 60px;
+  }
+  .projects__item:first-child, .projects__item:last-child, .publications__info {
+    padding: 100px 60px;
+  }
+  .projects__item {
+    padding: 88px 60px 50px;
+  }
+  .say__block {
+    padding: 88px 60px 50px;
+  }
+  .footer__production {
+    padding: 0 60px 88px;
+  }
+  .development__right {
+    max-width: 359px;
+}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 960px) {
+  .header__anchor {
+    display: none;
+  }
+  .digital__info {
+    padding: 200px 0 130px 30px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .digital__head {
+    max-width: 100%;
+    font-size: 80px;
+    line-height: 98px;
+  }
+  .digital__desc {
+    margin: 30px 0 0;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .showreel__block {
+    min-height: 202px;
+  }
+  .development__block {
+    flex-direction: column;
+  }
+  .development__left, .development__right, .analytics__info {
+    padding: 120px 40px;
+  }
+  .development__left {
+    border-right: none;
+    border-bottom: 1px solid var(--gray-border);
+  }
+  .design .development__block {
+    flex-direction: column;
+  }
+  .analytics__block {
+    flex-wrap: wrap;
+  }
+  .analytics__info:not(:last-child) {
+    width: 50%;
+    min-width: 50%;
+  }
+  .analytics__info:last-child {
+    width: 100%;
+  }
+  .projects__item:first-child, .projects__item:last-child, .publications__info {
+    padding: 100px 40px;
+  }
+  .projects__item {
+    padding: 57px 30px 81px;
+  }
+  .publications__info {
+    width: 50%;
+  }
+  .publications__info:not(:nth-child(3n)) {
+    border-right: none;
+  }
+  .publications__info:not(:nth-child(2n)) {
+    border-right: 1px solid var(--gray-border);
+  }
+  .say__block {
+    padding: 88px 40px 50px;
+  }
+  .footer__navigation {
+    max-width: 100%;
+    padding: 0 0 50px;
+  }
+  .footer__production {
+    padding: 0 40px 88px;
+  }
+  .footer__right {
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    gap: 10px;
+  }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 640px) {
+  
+}
+
+@media (max-width: 480px) {
+
 }
