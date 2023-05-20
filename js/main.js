@@ -148,13 +148,13 @@ if(textValue === '') {
 function setErrorFor(input, message) {
   const formControl = input.parentElement;
   const small = formControl.querySelector('small');
-  formControl.className = 'forms__form_control error';
+  formControl.className = 'header__forms_form_control error';
   small.innerText = message;
 }
 
 function setSuccessFor(input) {
   const formControl = input.parentElement;
-  formControl.className = 'forms__form_control success';
+  formControl.className = 'header__forms_form_control success';
 }
 
 // function iscontrol(control) {
