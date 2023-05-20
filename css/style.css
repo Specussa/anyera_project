@@ -1044,11 +1044,11 @@ svg path {
   display: flex;
   width: 100%;
   padding: 200px 99px 173px;
-  justify-content: center;
   align-items: flex-end;
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
   border-bottom: 1px solid var(--gray-border);
+  overflow: hidden;
 }
 
 .digital__empty {
@@ -1061,7 +1061,8 @@ svg path {
 }
 
 .digital__head {
-  max-width: 905px;
+  width: 905px;
+  flex: 0 0 auto;
   font-size: 92px;
   font-weight: 800;
   line-height: 112px;
@@ -1073,7 +1074,8 @@ svg path {
 }
 
 .digital__desc {
-  max-width: 473px;
+  width: 473px;
+  flex: 0 0 auto;
   font-family: var(--lato);
   font-size: 14px;
   font-weight: 400;
@@ -1126,8 +1128,7 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 1415px;
-  margin: auto;
+  margin: 0 284px 0 0;
   justify-content: flex-end;
 }
 
@@ -1884,21 +1885,17 @@ svg path {
     max-width: 35%;
     min-width: 35%;
   }
-}
-
-@media (max-width: 1199px) {
-  .header__anchor {
-    display: none;
+  .showreel__circle {
+    margin: 0 80px 0 0;
   }
+}
+@media (max-width: 1415px) {
   .digital__info {
-    padding: 200px 0 130px 30px;
     flex-direction: column;
     align-items: flex-start;
   }
   .digital__head {
-    max-width: 100%;
-    font-size: 80px;
-    line-height: 98px;
+    width: 100%;
   }
   .digital__desc {
     margin: 30px 0 0;
@@ -1907,6 +1904,18 @@ svg path {
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
+  }
+}
+@media (max-width: 1199px) {
+  .header__anchor {
+    display: none;
+  }
+  .digital__info {
+    padding: 200px 0 130px 30px;
+  }
+  .digital__head {
+    font-size: 80px;
+    line-height: 98px;
   }
   .showreel__block {
     min-height: 202px;
