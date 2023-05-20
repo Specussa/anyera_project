@@ -46,7 +46,7 @@
       <nav class="header__nav">
         <div class="container header__nav_container">
           <div class="header__nav_burger_flex">
-            <button class="header__nav_burger" aria-label="Закрыть меню">
+            <button class="button__close header__nav_burger" aria-label="Закрыть меню">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5882 24L0 1.41176L1.41176 0L24 22.5882L22.5882 24Z" fill="#262626"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M24 1.41178L1.41176 24L0 22.5883L22.5882 0L24 1.41178Z" fill="#262626"/>
@@ -132,7 +132,7 @@
       <nav class="header__consultation">
         <div class="container header__consultation_container">
           <div class="header__consultation_burger_flex">
-            <button class="header__consultation_burger" aria-label="Закрыть меню">
+            <button class="button__close header__consultation_burger" aria-label="Закрыть меню">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5882 24L0 1.41176L1.41176 0L24 22.5882L22.5882 24Z" fill="#262626"/>
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M24 1.41178L1.41176 24L0 22.5883L22.5882 0L24 1.41178Z" fill="#262626"/>
@@ -170,7 +170,7 @@
                         Выберите способ
                       </div>
                       <svg class="header__select_arrow" data-select-arrow width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6.05 6L1 1" stroke="#262626"/>
+                        <path d="M11 1L6.05 6L1 1"/>
                       </svg>
                     </div>
                     <div class="header__select_list" data-select-list>
@@ -217,346 +217,348 @@
       </nav>
     </div>
   </header>
-  <main class="main">
-    <section class="digital" id="TEAM">
-      <div class="container digital__container">
-        <div class="digital__anyera">
-          <p class="digital__anyera_name">ANYERA DIGITAL & DESIGN</p>
+  <div class="wrapper">
+    <main class="main">
+      <section class="digital" id="TEAM">
+        <div class="container digital__container">
+          <div class="digital__anyera">
+            <p class="digital__anyera_name">ANYERA DIGITAL &amp; DESIGN</p>
+          </div>
+          <div class="digital__info">
+            <h1 class="digital__head">
+              <span>DIGITAL &amp; DESIGN </span>
+              <span>PRODUCTION</span>
+            </h1>
+            <h2 class="digital__desc">
+              Команда цифровых специалистов полного цикла, разрабатываем функциональные продукты широкого круга от идеи до реализации.
+            </h2>
+          </div>
+          <div class="digital__empty"></div>
         </div>
-        <div class="digital__info">
-          <h1 class="digital__head">
-            <span>DIGITAL & DESIGN </span>
-            <span>PRODUCTION</span>
-          </h1>
-          <h2 class="digital__desc">
-            Команда цифровых специалистов полного цикла, разрабатываем функциональные продукты широкого круга от идеи до реализации.
-          </h2>
-        </div>
-        <div class="digital__empty"></div>
-      </div>
-    </section>
-    <section class="showreel">
-      <div class="container container__showreel">
-        <div class="showreel__block">
-          <div class="showreel__circle">
-            <a class="button__circle showreel__button" href="#">
-              <span class="button__circle_text">SHOWREEL</span>
-              <span class="button__circle_hover"></span>
-            </a>
+      </section>
+      <section class="showreel">
+        <div class="container container__showreel">
+          <div class="showreel__block">
+            <div class="showreel__circle">
+              <a class="button__circle showreel__button" href="#">
+                <span class="button__circle_text">SHOWREEL</span>
+                <span class="button__circle_hover"></span>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="development">
-      <div class="container development__container">
-          <div class="development__block">
-            <div class="development__left">
-              <h3 class="development__head">Разработка веб-сайтов и приложений</h3>
-              <ul class="development__list">
-                <li class="development__item">Лендинги</li>
-                <li class="development__item">Корпоративные сайты</li>
-                <li class="development__item">Интернет-магазины</li>
-                <li class="development__item">Сервисы</li>
-              </ul>
-              <div class="development__buttons">
-                <button onclick="document.location='#'" class="button__project development__button">Подробнее</button>
-                <p class="development__buttons_desc"></p>
+      </section>
+      <section class="development">
+        <div class="container development__container">
+            <div class="development__block">
+              <div class="development__left">
+                <h3 class="development__head">Разработка веб-сайтов и приложений</h3>
+                <ul class="development__list">
+                  <li class="development__item">Лендинги</li>
+                  <li class="development__item">Корпоративные сайты</li>
+                  <li class="development__item">Интернет-магазины</li>
+                  <li class="development__item">Сервисы</li>
+                </ul>
+                <div class="development__buttons">
+                  <button onclick="document.location='#'" class="button__project development__button">Подробнее</button>
+                  <p class="development__buttons_desc"></p>
+                </div>
+              </div>
+              <div class="development__right">
+                <p class="development__desc">
+                  Преимущественно работаем
+                  <br>
+                  с 1C-BITRIX для чистой разработки и Tilda publishing для решения no-code задач
+                </p>
               </div>
             </div>
-            <div class="development__right">
-              <p class="development__desc">
-                Преимущественно работаем
-                <br>
-                с 1C-BITRIX для чистой разработки и Tilda publishing для решения no-code задач
+        </div>
+      </section>
+      <section class="design">
+        <div class="container design__container">
+            <div class="development__block">
+              <div class="development__left">
+                <h3 class="development__head">Цифровой Дизайн</h3>
+                <ul class="development__list">
+                  <li class="development__item">UI/UX дизайн</li>
+                  <li class="development__item">Иллюстрации</li>
+                  <li class="development__item">Мультипликация</li>
+                  <li class="development__item">Обложки и постеры</li>
+                </ul>
+                <div class="development__buttons">
+                  <button onclick="document.location='#'" class="button__project development__button">Подробнее</button>
+                  <p class="development__buttons_desc">Нажмите на кнопку подробнее чтобы изучить наш стек технологий и принципы работы.</p>
+                </div>
+              </div>
+              <div class="development__right">
+                <p class="development__desc">
+                  У нас огромный опыт в разработке дизайна 
+                  <br>
+                  для цифровой сферы и не только, участвовали
+                  <br>
+                  в крупных проектах <b>GameDev</b> индустрии, рисовали UI/UX дизайн для игр и <b>мобильных</b> приложений, нарисовали множество <b>артов</b> и <b>портретов</b>, а также обложек для <b>музыкальных</b> коллективов
+                </p>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="analytics" id="SERVICES">
+        <div class="container analytics__container">
+            <div class="analytics__block">
+              <div class="analytics__info">
+                <h4 class="analytics__head">Аналитика</h4>
+                <ul class="analytics__list">
+                  <li class="analytics__item">Анализ конкуренции</li>
+                  <li class="analytics__item">Продуктовый менеджемент</li>
+                  <li class="analytics__item">Исследование пользовательского опыта (UX)</li>
+                </ul>
+              </div>
+              <div class="analytics__info">
+                <h4 class="analytics__head">Маркетинг</h4>
+                <ul class="analytics__list">
+                  <li class="analytics__item">Маркетинговая аналитика</li>
+                  <li class="analytics__item">Контекстная реклама (Яндекс директ и бизнес)</li>
+                  <li class="analytics__item">Базовое SEO ( Семантическое ядро и теги)</li>
+                </ul>
+              </div>
+              <div class="analytics__info">
+                <p class="analytics__desc">Мы поддерживаем наших клиентов <b>от</b> начала <b>и до</b> конца. Разработаем грамотную <b>стратегию</b>, проведем аналитику продвижения на цифровом рынке, <b>организуем</b> поддержку разработанного <b>нами</b> продукта.</p>
+                <div class="analytics__buttons">
+                  <button onclick="document.location='#'" class="button__project analytics__button">Все услуги</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="projects" id="PROJECTS">
+        <div class="container projects__container">
+          <ul class="projects__list">
+            <li class="projects__item projects__item_first">
+              <h4 class="projects__head">Проекты</h4>
+              <p class="projects__desc">Здесь несколько наших проектов из последних, для удобства вы можете перейти на страницу проекты и воспользоваться фильтрами</p>
+            </li>
+            <li class="projects__item">
+              <div class="projects__tags">
+                <p class="projects__tag">UI/UX</p>
+                <p class="projects__tag">1CBITRIX</p>
+                <p class="projects__tag">ПРОЕКТИРОВАНИЕ</p>
+                <p class="projects__tag">БАЗОВОЕ SEO</p>
+              </div>
+              <p class="projects__heading">SPA - сайт волейбольной школы</p>
+              <div class="projects__hover">
+                <img src="img/project/project_1.webp" alt="">
+                <div class="projects__info">
+                  <p class="projects__description">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum текста скатился подпоясал несколько ведущими домах силуэт, пунктуация пор, сих языкового букв, до родного диких свой единственное снова власти.</p>
+                  <a href="#" class="projects__link">Перейти на сайт</a>
+                </div>
+              </div>
+            </li>
+            <li class="projects__item">
+              <div class="projects__tags">
+                <p class="projects__tag">UI/UX</p>
+                <p class="projects__tag">1CBITRIX</p>
+              </div>
+              <p class="projects__heading">Финансовый трекер</p>
+              <div class="projects__hover">
+                <img src="img/project/project_2.webp" alt="">
+                <div class="projects__info">
+                  <p class="projects__description">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Его вдали путь лучше снова все от всех составитель, образ которое взобравшись до строчка. Залетают всеми если текстами взобравшись, жаренные пунктуация.</p>
+                  <a href="#" class="projects__link">Перейти на сайт</a>
+                </div>
+              </div>
+            </li>
+            <li class="projects__item">
+              <div class="projects__tags">
+                <p class="projects__tag">АНАЛИТИКА</p>
+                <p class="projects__tag">UI/UX</p>
+                <p class="projects__tag">ПРОЕКТИРОВАНИЕ</p>
+                <p class="projects__tag">БРЕНДИНГ</p>
+              </div>
+              <p class="projects__heading">Сайт новой студии йоги в Москве</p>
+              <div class="projects__hover">
+                <img src="img/project/project_3.webp" alt="">
+                <div class="projects__info">
+                  <p class="projects__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Снова он сих приставка несколько коварный рукопись залетают использовало лучше, алфавит буквоград страну повстречался грамматики бросил всеми там обеспечивает своих.</p>
+                  <a href="#" class="projects__link">Перейти на сайт</a>
+                </div>
+              </div>
+            </li>
+            <li class="projects__item">
+              <div class="projects__tags">
+                <p class="projects__tag">UI/UX</p>
+                <p class="projects__tag">TILDA</p>
+                <p class="projects__tag">АНИМАЦИЯ</p>
+              </div>
+              <p class="projects__heading">Интернет-каталог премиальных ювелирных изделий</p>
+              <div class="projects__hover">
+                <img src="img/project/project_4.webp" alt="">
+                <div class="projects__info">
+                  <p class="projects__description">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Ведущими переулка вскоре коварный, это то запятых. Взобравшись текст семантика переулка жизни рот путь страну если. Проектах они возвращайся обеспечивает.</p>
+                  <a href="#" class="projects__link">Перейти на сайт</a>
+                </div>
+              </div>
+            </li>
+            <li class="projects__item">
+              <div class="projects__tags">
+                <p class="projects__tag">UI/UX</p>
+                <p class="projects__tag">1CBITRIX</p>
+              </div>
+              <p class="projects__heading">Актерский курс от Актрисы театра и кино Дарьи Пицик</p>
+              <div class="projects__hover">
+                <img src="img/project/project_5.webp" alt="">
+                <div class="projects__info">
+                  <p class="projects__description">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Всемогущая, рукописи инициал он родного предупреждал точках! Агентство подзаголовок оксмокс, lorem она рыбного заглавных но гор что скатился, там это?</p>
+                  <a href="#" class="projects__link">Перейти на сайт</a>
+                </div>
+              </div>
+            </li>
+            <li class="projects__item">
+              <div class="projects__tags">
+                <p class="projects__tag">Иллюстрации</p>
+                <p class="projects__tag">Верстка</p>
+              </div>
+              <p class="projects__heading">Детская книга для ФГУП СПбНИИВС ФМБА России</p>
+              <div class="projects__hover">
+                <img src="img/project/project_6.webp" alt="">
+                <div class="projects__info">
+                  <p class="projects__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Жизни, не повстречался языкового, пояс большого переулка взобравшись там вершину встретил, силуэт ты парадигматическая то рот? Злых речью города букв?</p>
+                  <a href="#" class="projects__link">Перейти на сайт</a>
+                </div>
+              </div>
+            </li>
+            <li class="projects__item projects__item_last">
+              <div class="project__buttons">
+                <button onclick="document.location='#'" class="button__project project__button">Все статьи</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="publications">
+        <div class="container publications__container">
+            <div class="publications__block">
+              <div class="publications__info">
+                <h4 class="publications__head">Публикации</h4>
+                <p class="publications__desc">Текст про статьи lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              </div>
+              <div class="publications__info">
+                <div class="publications__flex">
+                  <div class="publications__hashtags">
+                    <p class="publications__hashtag">#АНИМАЦИЯ</p>
+                    <p class="publications__hashtag">#ДИЗАЙН</p>
+                  </div>
+                  <h5 class="publications__heading">Название статьи название статьи</h5>
+                  <p class="publications__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Собрал, вершину ручеек подзаголовок заглавных продолжил, от всех одна безопасную осталось наш снова лучше толку. Запятых моей маленький заглавных обеспечивает назад.</p>
+                </div>
+                <p class="publications__date">20_03_2023</p>
+              </div>
+              <div class="publications__info">
+                <div class="publications__flex">
+                  <div class="publications__hashtags">
+                    <p class="publications__hashtag">#АНИМАЦИЯ</p>
+                    <p class="publications__hashtag">#ДИЗАЙН</p>
+                  </div>
+                  <h5 class="publications__heading">Название статьи название статьи</h5>
+                  <p class="publications__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+                </div>
+                <p class="publications__date">20_03_2023</p>
+              </div>
+              <div class="publications__info">
+                <div class="publications__flex">
+                  <div class="publications__hashtags">
+                    <p class="publications__hashtag">#АНИМАЦИЯ</p>
+                    <p class="publications__hashtag">#ДИЗАЙН</p>
+                  </div>
+                  <h5 class="publications__heading">Название статьи название статьи</h5>
+                  <p class="publications__desc"></p>
+                </div>
+                <p class="publications__date">20_03_2023</p>
+              </div>
+              <div class="publications__info">
+                <div class="publications__flex">
+                  <div class="publications__hashtags">
+                    <p class="publications__hashtag">#АНИМАЦИЯ</p>
+                    <p class="publications__hashtag">#ДИЗАЙН</p>
+                  </div>
+                  <h5 class="publications__heading">Название статьи название статьи</h5>
+                  <p class="publications__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+                </div>
+                <p class="publications__date">20_03_2023</p>
+              </div>
+              <div class="publications__info">
+                <div class="publications__buttons">
+                  <button onclick="document.location='#'" class="button__project publications__button">Все статьи</button>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <section class="say">
+        <div class="container say__container">
+          <div class="say__public">
+            <p class="say__public_name">Публикации</p>
+          </div>
+          <div class="say__block">
+            <div class="say__left">
+              <h4 class="say__head">
+                Расскажите о вашем проекте
+              </h4>
+              <p class="say__desc">
+                Опишите свою задачу и мы свяжемся с вами в кратчайшие сроки.
               </p>
             </div>
-          </div>
-      </div>
-    </section>
-    <section class="design">
-      <div class="container design__container">
-          <div class="development__block">
-            <div class="development__left">
-              <h3 class="development__head">Цифровой Дизайн</h3>
-              <ul class="development__list">
-                <li class="development__item">UI/UX дизайн</li>
-                <li class="development__item">Иллюстрации</li>
-                <li class="development__item">Мультипликация</li>
-                <li class="development__item">Обложки и постеры</li>
-              </ul>
-              <div class="development__buttons">
-                <button onclick="document.location='#'" class="button__project development__button">Подробнее</button>
-                <p class="development__buttons_desc">Нажмите на кнопку подробнее чтобы изучить наш стек технологий и принципы работы.</p>
-              </div>
+            <div class="say__right">
+              <a class="button__circle say__button" href="#">
+                <span class="button__circle_text">Написать</span>
+                <span class="button__circle_hover"></span>
+              </a>
             </div>
-            <div class="development__right">
-              <p class="development__desc">
-                У нас огромный опыт в разработке дизайна 
-                <br>
-                для цифровой сферы и не только, участвовали
-                <br>
-                в крупных проектах <b>GameDev</b> индустрии, рисовали UI/UX дизайн для игр и <b>мобильных</b> приложений, нарисовали множество <b>артов</b> и <b>портретов</b>, а также обложек для <b>музыкальных</b> коллективов
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="CONTACTS">
+      <div class="container footer__container">
+        <div class="footer__production">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item footer__item_head"><a href="#" class="footer__link">Меню</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">О команде</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Портфолио</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Магазин</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Цены</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__item footer__item_head"><a href="#" class="footer__link">Специализации</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Веб-сайты</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Приложения</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Иллюстрации</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Мультфильмы</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__item footer__item_head"><a href="#" class="footer__link">Прочее</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Вакансии</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Документация</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Брифинг</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer__info">
+            <div class="footer__left">
+              <p class="footer__copyright">
+                © 2023 Визуализируя сердцем все права защищены<br>
+                Индивидуальный Предприниматель Ходулев Владислав Алексеевич
               </p>
             </div>
-          </div>
-      </div>
-    </section>
-    <section class="analytics" id="SERVICES">
-      <div class="container analytics__container">
-          <div class="analytics__block">
-            <div class="analytics__info">
-              <h4 class="analytics__head">Аналитика</h4>
-              <ul class="analytics__list">
-                <li class="analytics__item">Анализ конкуренции</li>
-                <li class="analytics__item">Продуктовый менеджемент</li>
-                <li class="analytics__item">Исследование пользовательского опыта (UX)</li>
-              </ul>
+            <div class="footer__right">
+              <a href="#" class="footer__privacy">Политика конфиденциальности</a>
+              <button onclick="document.location='#'" class="button__project footer__button">В начало</button>
             </div>
-            <div class="analytics__info">
-              <h4 class="analytics__head">Маркетинг</h4>
-              <ul class="analytics__list">
-                <li class="analytics__item">Маркетинговая аналитика</li>
-                <li class="analytics__item">Контекстная реклама (Яндекс директ и бизнес)</li>
-                <li class="analytics__item">Базовое SEO ( Семантическое ядро и теги)</li>
-              </ul>
-            </div>
-            <div class="analytics__info">
-              <p class="analytics__desc">Мы поддерживаем наших клиентов <b>от</b> начала <b>и до</b> конца. Разработаем грамотную <b>стратегию</b>, проведем аналитику продвижения на цифровом рынке, <b>организуем</b> поддержку разработанного <b>нами</b> продукта.</p>
-              <div class="analytics__buttons">
-                <button onclick="document.location='#'" class="button__project analytics__button">Все услуги</button>
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
-    <section class="projects" id="PROJECTS">
-      <div class="container projects__container">
-        <ul class="projects__list">
-          <li class="projects__item projects__item_first">
-            <h4 class="projects__head">Проекты</h4>
-            <p class="projects__desc">Здесь несколько наших проектов из последних, для удобства вы можете перейти на страницу проекты и воспользоваться фильтрами</p>
-          </li>
-          <li class="projects__item">
-            <div class="projects__tags">
-              <p class="projects__tag">UI/UX</p>
-              <p class="projects__tag">1CBITRIX</p>
-              <p class="projects__tag">ПРОЕКТИРОВАНИЕ</p>
-              <p class="projects__tag">БАЗОВОЕ SEO</p>
-            </div>
-            <p class="projects__heading">SPA - сайт волейбольной школы</p>
-            <div class="projects__hover">
-              <img src="img/project/project_1.webp" alt="">
-              <div class="projects__info">
-                <p class="projects__description">Далеко-далеко, за словесными горами в стране гласных и согласных живут рыбные тексты. Ipsum текста скатился подпоясал несколько ведущими домах силуэт, пунктуация пор, сих языкового букв, до родного диких свой единственное снова власти.</p>
-                <a href="#" class="projects__link">Перейти на сайт</a>
-              </div>
-            </div>
-          </li>
-          <li class="projects__item">
-            <div class="projects__tags">
-              <p class="projects__tag">UI/UX</p>
-              <p class="projects__tag">1CBITRIX</p>
-            </div>
-            <p class="projects__heading">Финансовый трекер</p>
-            <div class="projects__hover">
-              <img src="img/project/project_2.webp" alt="">
-              <div class="projects__info">
-                <p class="projects__description">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Его вдали путь лучше снова все от всех составитель, образ которое взобравшись до строчка. Залетают всеми если текстами взобравшись, жаренные пунктуация.</p>
-                <a href="#" class="projects__link">Перейти на сайт</a>
-              </div>
-            </div>
-          </li>
-          <li class="projects__item">
-            <div class="projects__tags">
-              <p class="projects__tag">АНАЛИТИКА</p>
-              <p class="projects__tag">UI/UX</p>
-              <p class="projects__tag">ПРОЕКТИРОВАНИЕ</p>
-              <p class="projects__tag">БРЕНДИНГ</p>
-            </div>
-            <p class="projects__heading">Сайт новой студии йоги в Москве</p>
-            <div class="projects__hover">
-              <img src="img/project/project_3.webp" alt="">
-              <div class="projects__info">
-                <p class="projects__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Снова он сих приставка несколько коварный рукопись залетают использовало лучше, алфавит буквоград страну повстречался грамматики бросил всеми там обеспечивает своих.</p>
-                <a href="#" class="projects__link">Перейти на сайт</a>
-              </div>
-            </div>
-          </li>
-          <li class="projects__item">
-            <div class="projects__tags">
-              <p class="projects__tag">UI/UX</p>
-              <p class="projects__tag">TILDA</p>
-              <p class="projects__tag">АНИМАЦИЯ</p>
-            </div>
-            <p class="projects__heading">Интернет-каталог премиальных ювелирных изделий</p>
-            <div class="projects__hover">
-              <img src="img/project/project_4.webp" alt="">
-              <div class="projects__info">
-                <p class="projects__description">Далеко-далеко за словесными горами, в стране гласных и согласных живут рыбные тексты. Ведущими переулка вскоре коварный, это то запятых. Взобравшись текст семантика переулка жизни рот путь страну если. Проектах они возвращайся обеспечивает.</p>
-                <a href="#" class="projects__link">Перейти на сайт</a>
-              </div>
-            </div>
-          </li>
-          <li class="projects__item">
-            <div class="projects__tags">
-              <p class="projects__tag">UI/UX</p>
-              <p class="projects__tag">1CBITRIX</p>
-            </div>
-            <p class="projects__heading">Актерский курс от Актрисы театра и кино Дарьи Пицик</p>
-            <div class="projects__hover">
-              <img src="img/project/project_5.webp" alt="">
-              <div class="projects__info">
-                <p class="projects__description">Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Всемогущая, рукописи инициал он родного предупреждал точках! Агентство подзаголовок оксмокс, lorem она рыбного заглавных но гор что скатился, там это?</p>
-                <a href="#" class="projects__link">Перейти на сайт</a>
-              </div>
-            </div>
-          </li>
-          <li class="projects__item">
-            <div class="projects__tags">
-              <p class="projects__tag">Иллюстрации</p>
-              <p class="projects__tag">Верстка</p>
-            </div>
-            <p class="projects__heading">Детская книга для ФГУП СПбНИИВС ФМБА России</p>
-            <div class="projects__hover">
-              <img src="img/project/project_6.webp" alt="">
-              <div class="projects__info">
-                <p class="projects__description">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Жизни, не повстречался языкового, пояс большого переулка взобравшись там вершину встретил, силуэт ты парадигматическая то рот? Злых речью города букв?</p>
-                <a href="#" class="projects__link">Перейти на сайт</a>
-              </div>
-            </div>
-          </li>
-          <li class="projects__item projects__item_last">
-            <div class="project__buttons">
-              <button onclick="document.location='#'" class="button__project project__button">Все статьи</button>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="publications">
-      <div class="container publications__container">
-          <div class="publications__block">
-            <div class="publications__info">
-              <h4 class="publications__head">Публикации</h4>
-              <p class="publications__desc">Текст про статьи lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="publications__info">
-              <div class="publications__flex">
-                <div class="publications__hashtags">
-                  <p class="publications__hashtag">#АНИМАЦИЯ</p>
-                  <p class="publications__hashtag">#ДИЗАЙН</p>
-                </div>
-                <h5 class="publications__heading">Название статьи название статьи</h5>
-                <p class="publications__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Собрал, вершину ручеек подзаголовок заглавных продолжил, от всех одна безопасную осталось наш снова лучше толку. Запятых моей маленький заглавных обеспечивает назад.</p>
-              </div>
-              <p class="publications__date">20_03_2023</p>
-            </div>
-            <div class="publications__info">
-              <div class="publications__flex">
-                <div class="publications__hashtags">
-                  <p class="publications__hashtag">#АНИМАЦИЯ</p>
-                  <p class="publications__hashtag">#ДИЗАЙН</p>
-                </div>
-                <h5 class="publications__heading">Название статьи название статьи</h5>
-                <p class="publications__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-              </div>
-              <p class="publications__date">20_03_2023</p>
-            </div>
-            <div class="publications__info">
-              <div class="publications__flex">
-                <div class="publications__hashtags">
-                  <p class="publications__hashtag">#АНИМАЦИЯ</p>
-                  <p class="publications__hashtag">#ДИЗАЙН</p>
-                </div>
-                <h5 class="publications__heading">Название статьи название статьи</h5>
-                <p class="publications__desc"></p>
-              </div>
-              <p class="publications__date">20_03_2023</p>
-            </div>
-            <div class="publications__info">
-              <div class="publications__flex">
-                <div class="publications__hashtags">
-                  <p class="publications__hashtag">#АНИМАЦИЯ</p>
-                  <p class="publications__hashtag">#ДИЗАЙН</p>
-                </div>
-                <h5 class="publications__heading">Название статьи название статьи</h5>
-                <p class="publications__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-              </div>
-              <p class="publications__date">20_03_2023</p>
-            </div>
-            <div class="publications__info">
-              <div class="publications__buttons">
-                <button onclick="document.location='#'" class="button__project publications__button">Все статьи</button>
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
-    <section class="say">
-      <div class="container say__container">
-        <div class="say__public">
-          <p class="say__public_name">Публикации</p>
-        </div>
-        <div class="say__block">
-          <div class="say__left">
-            <h4 class="say__head">
-              Расскажите о вашем проекте
-            </h4>
-            <p class="say__desc">
-              Опишите свою задачу и мы свяжемся с вами в кратчайшие сроки.
-            </p>
-          </div>
-          <div class="say__right">
-            <a class="button__circle say__button" href="#">
-              <span class="button__circle_text">Написать</span>
-              <span class="button__circle_hover"></span>
-            </a>
           </div>
         </div>
       </div>
-    </section>
-  </main>
-  <footer class="footer" id="CONTACTS">
-    <div class="container footer__container">
-      <div class="footer__production">
-        <div class="footer__navigation">
-          <ul class="footer__list">
-            <li class="footer__item footer__item_head"><a href="#" class="footer__link">Меню</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">О команде</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Портфолио</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Магазин</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Цены</a></li>
-          </ul>
-          <ul class="footer__list">
-            <li class="footer__item footer__item_head"><a href="#" class="footer__link">Специализации</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Веб-сайты</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Приложения</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Иллюстрации</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Мультфильмы</a></li>
-          </ul>
-          <ul class="footer__list">
-            <li class="footer__item footer__item_head"><a href="#" class="footer__link">Прочее</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Вакансии</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Документация</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Брифинг</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
-          </ul>
-        </div>
-        <div class="footer__info">
-          <div class="footer__left">
-            <p class="footer__copyright">
-              © 2023 Визуализируя сердцем все права защищены<br>
-              Индивидуальный Предприниматель Ходулев Владислав Алексеевич
-            </p>
-          </div>
-          <div class="footer__right">
-            <a href="#" class="footer__privacy">Политика конфиденциальности</a>
-            <button onclick="document.location='#'" class="button__project footer__button">В начало</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
   <!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha384-i61gTtaoovXtAbKjo903+O55Jkn2+RtzHtvNez+yI49HAASvznhe9sZyjaSHTau9" crossorigin="anonymous"></script> -->
   <script src="js/main.js"></script>
 </body>

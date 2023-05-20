@@ -15,6 +15,10 @@
   color: var(--page-bg);
 }
 
+*::marker {
+  font-size: 0;
+}
+
 :root {
   --gray-border: #D3D3D3;
   --dark-border: #545454;
@@ -40,10 +44,6 @@
   --gray-border: var(--dark-border);
 }
 
-::marker {
-  font-size: 0;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -53,6 +53,9 @@ body {
   background: var(--page-bg);
 }
 
+html, body {
+  height: 100%;
+}
 a {
   color: var(--page-text);
   -webkit-transition: color 0.3s linear;
@@ -79,6 +82,12 @@ button, button:focus, button:hover, button:active {
   cursor: pointer;
 }
 
+svg path {
+  fill: inherit;
+  stroke: inherit;
+  stroke-width: inherit;
+}
+
 .container { 
   width: 100%;
   max-width: 1920px;
@@ -88,6 +97,13 @@ button, button:focus, button:hover, button:active {
 
 .main {
   padding-top: 60px;
+  flex: 1 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .overlay {
@@ -131,13 +147,13 @@ button, button:focus, button:hover, button:active {
   flex: 0 0 auto;
 }
 
-.button__project:hover, .button__project:focus, .button__project:active {
+.button__project:hover, .button__project:focus, .button__project:active, .button__project.active {
   color: var(--page-bg);
   background-color: var(--purple);
   border: 1px solid var(--purple);
 }
 
-.dark .button__project:hover, .dark .button__project:focus, .dark .button__project:active {
+.dark .button__project:hover, .dark .button__project:focus, .dark .button__project:active, .dark .button__project.active {
   color: var(--purple);
   background-color: var(--page-bg);
   border: 1px solid var(--purple);
@@ -214,6 +230,9 @@ button, button:focus, button:hover, button:active {
 }
 
 .button__circle_text {
+  display: flex;
+  width: 100%;
+  justify-content: center;
   font-size: 18px;
   font-weight: 500;
   line-height: 22px;
@@ -227,6 +246,57 @@ button, button:focus, button:hover, button:active {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1;
+}
+
+.button__close {
+  display: block;
+  width: 24px;
+  height: 24px;
+  padding: 30px;
+  border: none;
+  background: var(--page-bg);
+  cursor: pointer;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
+}
+
+.button__close:hover {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.button__close svg {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  fill: var(--page-text);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: fill 0.3s linear;
+  -moz-transition: fill 0.3s linear;
+  -ms-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
+}
+
+.button__close:hover svg {
+  fill: var(--purple);
 }
 
 /* end buttons */
@@ -543,51 +613,9 @@ button, button:focus, button:hover, button:active {
 }
 
 .header__nav_burger {
-  display: block;
-  width: 24px;
-  height: 24px;
-  padding: 30px;
-  border: none;
-  background: var(--page-bg);
   position: absolute;
-  top: 48px;
-  right: 47px;
-  cursor: pointer;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  -moz-transition: -moz-transform 0.3s linear;
-  -ms-transition: -ms-transform 0.3s linear;
-  -o-transition: -o-transform 0.3s linear;
-  transition: transform 0.3s linear;
-}
-
-.header__nav_burger:hover {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.header__nav_burger svg {
-  height: 24px;
-  width: 24px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.header__nav_burger svg path {
-  fill: var(--page-text);
+  top: 33px;
+  right: 33px;
 }
 
 /* end header__nav */
@@ -934,6 +962,10 @@ button, button:focus, button:hover, button:active {
   transition: transform 0.3s linear;
 }
 
+.header__select_arrow {
+  stroke: var(--page-text);
+}
+
 .header__select_arrow_rotate {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
@@ -995,51 +1027,9 @@ button, button:focus, button:hover, button:active {
 }
 
 .header__consultation_burger {
-  display: block;
-  width: 24px;
-  height: 24px;
-  padding: 30px;
-  border: none;
-  background: var(--page-bg);
   position: absolute;
-  top: 30px;
-  right: 30px;
-  cursor: pointer;
-  -webkit-transform: rotate(0deg);
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  transform: rotate(0deg);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  -moz-transition: -moz-transform 0.3s linear;
-  -ms-transition: -ms-transform 0.3s linear;
-  -o-transition: -o-transform 0.3s linear;
-  transition: transform 0.3s linear;
-}
-
-.header__consultation_burger:hover {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
-}
-
-.header__consultation_burger svg {
-  height: 24px;
-  width: 24px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.header__consultation_burger svg path {
-  fill: var(--page-text);
+  top: 33px;
+  right: 33px;
 }
 
 /* end header__consultation */
@@ -1710,7 +1700,90 @@ button, button:focus, button:hover, button:active {
 
 /* end say */
 
-/* end footer */
+/* start 404 */
+
+.error_page {
+  position: relative;
+}
+
+.error__page_close {
+  position: absolute;
+  top: 33px;
+  right: 33px;
+}
+
+.error_page__close {
+  position: absolute;
+  top: 33px;
+  right: 33px;
+}
+
+.error_page__block {
+  display: flex;
+  height: 100%;
+  min-height: calc(100vh - 60px);
+  padding: 120px 100px;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+}
+
+.error_page__width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 945px;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.error_page__head {
+  font-size: 200px;
+  font-weight: 800;
+  line-height: 244px;
+  color: var(--page-text);
+}
+
+.error_page__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.error_page__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 521px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.error_page__heading {
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 66px;
+  color: var(--page-text);
+}
+
+.error_page__desc {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+/* end 404 */
+
+/* start footer */
+
+.footer {
+  flex: 0 0 auto;
+}
 
 .footer__production {
   padding: 0 100px 88px;
