@@ -1773,6 +1773,38 @@ svg path {
 
 /* end 404 */
 
+/* start breadcrumbs */
+
+.breadcrumbs__list {
+  display: flex;
+  padding: 40px 100px;
+  flex-wrap: wrap;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+}
+
+.breadcrumbs__item:not(:last-child):after {
+  content: "/";
+  margin: 0 10px;
+  font-family: var(--lato);
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 14px;
+}
+
+.breadcrumbs__item, .breadcrumbs__link {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+/* end breadcrumbs */
+
+/* start publication */
+
+/* end publication */
+
 /* start footer */
 
 .footer {
