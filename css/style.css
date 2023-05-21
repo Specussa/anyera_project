@@ -1803,6 +1803,64 @@ svg path {
 
 /* start publication */
 
+.publication__block {
+  display: flex;
+  padding: 10px 100px 40px;
+  flex-direction: column;
+  gap: 50px;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+}
+
+.publication__hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.publication__hashtag {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.publication__head {
+  margin: 0 0 50px;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 66px;
+  color: var(--page-text);
+}
+
+.publication__image {
+  width: 100%;
+  height: 700px;
+}
+
+.publication__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.publication__desc {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 29px;
+  color: var(--page-text);
+}
+
+.publication__date {
+  margin: 50px 0 0;
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
 /* end publication */
 
 /* start footer */
@@ -1823,7 +1881,9 @@ svg path {
   display: flex;
   max-width: 66.666%;
   padding: 50px 0;
+  flex-wrap: wrap;
   justify-content: space-between;
+  gap: 20px;
 }
 
 .footer__item_head {
@@ -1920,6 +1980,15 @@ svg path {
   .showreel__circle {
     margin: 0 80px 0 0;
   }
+  .publication__image {
+    height: 560px;
+  }
+  .publication__block {
+    padding: 10px 60px 40px;
+  }
+  .breadcrumbs__list {
+    padding: 40px 60px;
+  }
 }
 @media (max-width: 1415px) {
   .digital__info {
@@ -2011,12 +2080,142 @@ svg path {
     align-items: flex-end;
     gap: 10px;
   }
+  .publication__image {
+    height: 380px;
+  }
+  .publication__block {
+    padding: 10px 40px 40px;
+  }
+  .breadcrumbs__list {
+    padding: 40px 40px;
+  }
 }
 
 @media (max-width: 959px) {
-  
+  .container {
+    padding: 0 40px;
+  }
+  .publication__image {
+    height: 280px;
+  }
+  .publication__block {
+    padding: 10px 0 40px;
+    border-left: none;
+    border-right: none;
+  }
+  .say__block {
+    padding: 88px 0 50px;
+    border-left: none;
+    border-right: none;
+  }
+  .footer__production {
+    padding: 0 0 88px;
+    border-left: none;
+    border-right: none;
+  }
+  .footer__copyright, .footer__privacy {
+    font-size: 10px;
+    line-height: 19px;
+  }
+  .breadcrumbs__list {
+    padding: 40px 0;
+    border-left: none;
+    border-right: none;
+  }
 }
 
 @media (max-width: 639px) {
+  .container {
+    padding: 0 20px;
+  }
+  .publication__block {
+    padding: 10px 0 20px;
+    gap: 30px;
+  }
+  .publication__image {
+    height: 220px;
+  }
+  .publication__hashtag {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .publication__head {
+    margin: 0 0 20px;
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .publication__desc {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .publication__date {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .button__circle {
+    width: 150px;
+    height: 150px;
+  }
+  .say__block {
+    padding: 52px 0 30px;
+  }
+  .say__head {
+    margin: 0 0 10px;
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .say__desc {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .button__circle_text {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .footer__production {
+    padding: 0 0 52px;
+  }
+  .footer__info {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer__right {
+    align-items: flex-start;
+    gap: 30px;
+  }
+  .footer__button {
+    width: 100%;
+  }
+  .footer__copyright, .footer__privacy {
+    font-size: 8px;
+  }
+  .breadcrumbs__list {
+    padding: 20px 0;
+  }
+  .breadcrumbs__item, .breadcrumbs__link {
+    font-size: 10px;
+    line-height: 19px;
+  }
+}
 
+@media (max-width: 479px) {
+  .say__block {
+    flex-direction: column;
+    gap: 50px;
+  }
+  .footer__copyright, .footer__privacy {
+    font-size: 7px;
+  }
+  .breadcrumbs__item, .breadcrumbs__link {
+    line-height: 12px;
+  }
+  .say__block {
+    align-items: flex-start;
+  }
+  .say__right {
+    width: 100%;
+  }
+  .say__button {
+    margin: 0 auto;
+  }
 }
