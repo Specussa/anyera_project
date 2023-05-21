@@ -1869,6 +1869,7 @@ svg path {
   -moz-column-count: 2;
   column-count: 2;
   gap: 0;
+  border-right: 1px solid var(--gray-border);
   border-left: 1px solid var(--gray-border);
   border-bottom: 1px solid var(--gray-border);
 }
@@ -1880,9 +1881,12 @@ svg path {
   flex-direction: column;
   justify-content: space-between;
   gap: 50px;
-  border-right: 1px solid var(--gray-border);
   border-top: 1px solid var(--gray-border);
   background-color: var(--page-bg);
+}
+
+.public__info:nth-child(1), .public__info:nth-child(2), .public__info:nth-child(3), .public__info:nth-child(4), .public__info:nth-child(5) {
+  border-right: 1px solid var(--gray-border);
 }
 
 .public__info:last-child {
@@ -2217,6 +2221,9 @@ svg path {
     font-size: 46px;
     line-height: 56px;
   }
+  .public__info:nth-child(1), .public__info:nth-child(2), .public__info:nth-child(3), .public__info:nth-child(4), .public__info:nth-child(5) {
+    border-right: none;
+  }
 }
 
 @media (max-width: 959px) {
@@ -2350,6 +2357,9 @@ svg path {
   .public__head {
     font-size: 36px;
     line-height: 44px;
+  }
+  .public__buttons, .public__button {
+    width: 100%;
   }
 }
 
