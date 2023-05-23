@@ -50,6 +50,7 @@ document.querySelector('.header__burger').addEventListener('click', function() {
 document.querySelector('.header__nav_burger').addEventListener('click', function() {
   if (burgernav.classList.contains("active")) {
     menu.classList.remove("active");
+    burger.classList.remove("active");
     burgernav.classList.remove("active");
     document.body.style.overflow = "visible";
     document.body.style.height = "auto";
@@ -89,6 +90,7 @@ document.querySelector('.header__project').addEventListener('click', function() 
 document.querySelector('.header__consultation_burger').addEventListener('click', function() {
   if (burgernav_c.classList.contains("active")) {
     menu_c.classList.remove("active");
+    burger_c.classList.remove("active");
     burgernav_c.classList.remove("active");
     document.body.style.overflow = "visible";
     document.body.style.height = "auto";

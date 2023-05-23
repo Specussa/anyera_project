@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
 *::-moz-selection {
@@ -631,6 +632,7 @@ svg path {
   position: absolute;
   top: 33px;
   right: 33px;
+  z-index: 1;
 }
 
 /* end header__nav */
@@ -1023,6 +1025,7 @@ svg path {
   position: absolute;
   top: 33px;
   right: 33px;
+  z-index: 1;
 }
 
 /* end header__consultation */
@@ -1442,7 +1445,6 @@ svg path {
 }
 
 .projects__head {
-  margin: 0 0 40px;
   font-size: 36px;
   font-weight: 800;
   line-height: 44px;
@@ -1515,7 +1517,10 @@ svg path {
 }
 
 .projects__item:first-child, .projects__item:last-child {
+  display: flex;
   padding: 100px;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .projects__item:nth-child(1), .projects__item:nth-child(2), .projects__item:nth-child(3), .projects__item:nth-child(4) {
