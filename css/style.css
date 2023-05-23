@@ -1751,6 +1751,7 @@ svg path {
   position: absolute;
   top: 33px;
   right: 33px;
+  z-index: 1;
 }
 
 .error_page__block {
