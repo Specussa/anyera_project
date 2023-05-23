@@ -2232,7 +2232,10 @@ svg path {
 }
 
 .services__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  width: 100%;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: space-between;
