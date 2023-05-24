@@ -2274,9 +2274,6 @@ svg path {
   .publication__block {
     padding: 40px 60px 40px;
   }
-  .breadcrumbs__list {
-    padding: 40px 0;
-  }
   .public__info {
     padding: 100px 60px 96px;
   }
@@ -2284,7 +2281,7 @@ svg path {
     padding: 100px 60px 78px;
   }
   .services__info {
-    padding: 0 60px 0;
+    padding: 40px 60px 0;
   }
   .services__description {
     max-width: 488px;
@@ -2432,7 +2429,7 @@ svg path {
     max-width: 100%;
   }
   .services__info {
-    padding: 0 40px 0;
+    padding: 40px 40px 0;
   }
   .services__flex {
     padding: 195px 40px 88px;
@@ -2615,9 +2612,6 @@ svg path {
   }
   .footer__copyright, .footer__privacy {
     font-size: 8px;
-  }
-  .breadcrumbs__list {
-    padding: 20px 0;
   }
   .breadcrumbs__item, .breadcrumbs__link {
     font-size: 10px;
