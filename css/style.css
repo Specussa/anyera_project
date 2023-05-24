@@ -2161,20 +2161,12 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  padding: 88px 100px;
   gap: 50px;
+  position: relative;
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
   border-bottom: 1px solid var(--gray-border);
-}
-
-.services__flex_new {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  padding: 88px 100px;
-  justify-content: space-between;
-  gap: 50px;
 }
 
 .services__flex_right, .services__flex_left {
@@ -2193,15 +2185,11 @@ svg path {
   align-items: center;
 }
 
-.services__heading, .services__heading_new {
+.services__heading {
   font-size: 36px;
   font-weight: 700;
   line-height: 56px;
   color: var(--page-text);
-}
-
-.services__heading_new {
-  display: none;
 }
 
 .services__description {
@@ -2213,12 +2201,8 @@ svg path {
   color: var(--page-text);
 }
 
-.services__buttons, .services__buttons_new {
+.services__buttons {
   margin: 25px 0 0;
-}
-
-.services__buttons_new {
-  display: none;
 }
 
 .services__right_block {
@@ -2291,7 +2275,7 @@ svg path {
     padding: 40px 60px 40px;
   }
   .breadcrumbs__list {
-    padding: 40px 60px;
+    padding: 40px 0;
   }
   .public__info {
     padding: 100px 60px 96px;
@@ -2300,7 +2284,7 @@ svg path {
     padding: 100px 60px 78px;
   }
   .services__info {
-    padding: 40px 60px 0;
+    padding: 0 60px 0;
   }
   .services__description {
     max-width: 488px;
@@ -2402,9 +2386,6 @@ svg path {
   .publication__block {
     padding: 40px 40px 40px;
   }
-  .breadcrumbs__list {
-    padding: 40px 40px;
-  }
   .public__block {
     -moz-column-count: 1;
     column-count: 1;
@@ -2451,21 +2432,16 @@ svg path {
     max-width: 100%;
   }
   .services__info {
-    padding: 40px 40px 0;
+    padding: 0 40px 0;
   }
   .services__flex {
-    padding: 88px 40px;
-    flex-direction: column;
-  }
-  .services__flex_new {
-    padding: 0;
+    padding: 195px 40px 88px;
     gap: 20px;
   }
-  .services__heading_new {
-    display: block;
-  }
   .services__heading {
-    display: none;
+    position: absolute;
+    top: 88px;
+    left: 40px;
   }
   .services__list {
     gap: 20px;
@@ -2505,7 +2481,6 @@ svg path {
     line-height: 19px;
   }
   .breadcrumbs__list {
-    padding: 40px 0;
     border-left: none;
     border-right: none;
   }
@@ -2559,7 +2534,7 @@ svg path {
   .services__desc {
     font-size: 14px;
   }
-  .services__heading, .services__heading_new {
+  .services__heading {
     font-size: 32px;
     line-height: 56px;
   }
@@ -2665,25 +2640,26 @@ svg path {
   .public__info {
     padding: 50px 20px 50px;
   }
-  .services__buttons {
-    display: none;
-  }
-  .services__buttons_new {
-    display: block;
-  }
   .services__button {
     width: 100%;
-  }
-  .services__flex_new {
-    flex-direction: column;
   }
   .services__flex_left, .services__flex_right {
     width: 100%;
   }
   .services__flex {
-    padding: 52px 20px;
+    padding: 52px 20px 112px;
     flex-direction: column;
-    gap: 20px;
+  }
+  .services__heading {
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .services__buttons {
+    width: calc(100% - 40px);
+    position: absolute;
+    bottom: 52px;
+    left: 20px;
   }
   .services__list {
     gap: 10px;
@@ -2705,7 +2681,7 @@ svg path {
   .services__desc {
     font-size: 12px;
   }
-  .services__heading, .services__heading_new {
+  .services__heading {
     font-size: 28px;
     line-height: 56px;
   }
