@@ -1805,20 +1805,10 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 100px;
-  flex-wrap: wrap;
-  border-left: 1px solid var(--gray-border);
-  border-right: 1px solid var(--gray-border);
-}
-
-.breadcrumbs_two__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   flex-wrap: wrap;
 }
 
-.breadcrumbs__item:not(:last-child):after, .breadcrumbs_two__item:not(:last-child):after {
+.breadcrumbs__item:not(:last-child):after {
   content: "/";
   margin: 0 10px;
   font-family: var(--lato);
@@ -1827,7 +1817,7 @@ svg path {
   line-height: 14px;
 }
 
-.breadcrumbs__item, .breadcrumbs__link, .breadcrumbs_two__item, .breadcrumbs_two__link {
+.breadcrumbs__item, .breadcrumbs__link {
   font-size: 12px;
   font-weight: 300;
   line-height: 19px;
