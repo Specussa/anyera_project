@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="overlay"></div>
+    <div class="container header__container">
+      <button class="header__burger" aria-label="Открыть меню">
+        <svg viewBox="0 0 25 5.5" fill="#fff" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <rect x="0" y="0" width="25" height="1" rx="0"/>
+          <rect x="0" y="4.5" width="21" height="0.5" rx="0"/>
+        </svg>
+      </button>
+      <nav class="header__anchor">
+        <ul class="header__anchor_list">
+          <li class="header__anchor_item">
+            <a class="header__anchor_link" href="#PROJECTS">ПРОЕКТЫ</a>
+          </li>
+          <li class="header__anchor_item">
+            <a class="header__anchor_link" href="#team">УСЛУГИ</a>
+          </li>
+          <li class="header__anchor_item">
+            <a class="header__anchor_link" href="#TEAM">КОМАНДА</a>
+          </li>
+          <li class="header__anchor_item">
+            <a class="header__anchor_link" href="#CONTACTS">КОНТАКТЫ</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="button__project header__project">Обсудить проект</button>
+      <div class="header__languages">
+        <button onclick="document.location='#'" class="button__language button__eng">ENG</button>
+        <button onclick="document.location='#'" class="button__language button__ru" style="display: none;">RU</button>
+      </div>
+      <nav class="header__nav">
+        <div class="container header__nav_container">
+          <div class="header__nav_burger_flex">
+            <button class="button__close header__nav_burger" aria-label="Закрыть меню">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5882 24L0 1.41176L1.41176 0L24 22.5882L22.5882 24Z" fill="#262626"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 1.41178L1.41176 24L0 22.5883L22.5882 0L24 1.41178Z" fill="#262626"/>
+              </svg>
+            </button>
+          </div>
+          <div class="header__nav_info">
+            <ul class="header__nav_list">
+              <li class="header__nav_item">
+                <a href="" class="header__nav_link">ГЛАВНАЯ</a>
+              </li>
+              <li class="header__nav_item">
+                <a href="" class="header__nav_link">ПРОЕКТЫ</a>
+                <ul class="header__subnav_list">
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Проект 1</a></li>
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Проект 2</a></li>
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Проект 3</a></li>
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Проект 4</a></li>
+                </ul>
+              </li>
+              <li class="header__nav_item active">
+                <a href="" class="header__nav_link">УСЛУГИ</a>
+                <ul class="header__subnav_list">
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Аналитика</a></li>
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Дизайн</a></li>
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Веб-разработка</a></li>
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Поддержка и развитие</a></li>
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Автоматизация</a></li>
+                </ul>
+              </li>
+              <li class="header__nav_item">
+                <a href="" class="header__nav_link">КОМАНДА</a>
+              </li>
+              <li class="header__nav_item">
+                <a href="" class="header__nav_link">КАРЬЕРА</a>
+                <ul class="header__subnav_list">
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Карьера 1</a></li>
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Карьера 2</a></li>
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Карьера 3</a></li>
+                  <li class="header__subnav_item"><a href="" class="header__subnav_link">Карьера 4</a></li>
+                </ul>
+              </li>
+              <li class="header__nav_item">
+                <a href="" class="header__nav_link">КОНТАКТЫ</a>
+              </li>
+            </ul>
+            <ul class="header__nav__contact_list">
+              <li class="header__nav_contact_item">
+                <p class="header__nav_contact_desc">Телефон для связи:</p>
+                <a href="tel:+79270030100" class="header__nav_contact_link">8 927 003 01 00</a>
+              </li>
+              <li class="header__nav_contact_item">
+                <p class="header__nav_contact_desc">По вопросам сотрудничества:</p>
+                <a href="mailto:hello@anyera.ru" class="header__nav_contact_link">HELLO@ANYERA.RU</a>
+              </li>
+            </ul>
+          </div>
+          <div class="header__nav_bottom">
+            <div class="header__nav_bottom_icons">
+              <button class="header__nav_bottom_icon button__dark">
+                <svg width="33" height="36" viewBox="0 0 33 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M26.5833 5.8165L22.3667 9.04984L23.8833 14.1498L19.5 11.1332L15.1167 14.1498L16.6333 9.04984L12.4167 5.8165L17.7333 5.6665L19.5 0.666504L21.2667 5.6665L26.5833 5.8165ZM32.4167 17.3332L29.6833 19.4165L30.6667 22.7165L27.8333 20.7665L25 22.7165L25.9833 19.4165L23.25 17.3332L26.6833 17.2498L27.8333 13.9998L28.9833 17.2498L32.4167 17.3332ZM28.6167 25.5832C30 25.4498 31.4833 27.4165 30.6 28.6665C30.0667 29.4165 29.5 30.1165 28.8 30.7832C22.2833 37.3332 11.7333 37.3332 5.23333 30.7832C-1.28334 24.2832 -1.28334 13.7165 5.23333 7.2165C5.89999 6.54984 6.59999 5.94984 7.34999 5.4165C8.59999 4.53317 10.5667 6.0165 10.4333 7.39984C9.98333 12.1665 11.5833 17.1165 15.25 20.7665C18.9 24.4332 23.8333 26.0332 28.6167 25.5832ZM25.8833 28.9498C21.1667 28.6832 16.5 26.7332 12.8833 23.1665C9.26666 19.5165 7.33333 14.8332 7.06666 10.1332C2.38333 15.3665 2.56666 23.3998 7.58332 28.4332C12.6167 33.4498 20.65 33.6332 25.8833 28.9498Z" fill="#D3D3D3"/>
+                </svg>
+              </button>
+              <button class="header__nav_bottom_icon button__light">
+                <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4.91666 30.8165L7.26666 33.1665L10.2667 30.1832L7.89999 27.8165M19 8.99984C13.4833 8.99984 8.99999 13.4832 8.99999 18.9998C8.99999 24.5165 13.4833 28.9998 19 28.9998C24.5167 28.9998 29 24.5165 29 18.9998C29 13.4665 24.5167 8.99984 19 8.99984ZM32.3333 20.6665H37.3333V17.3332H32.3333M27.7333 30.1832L30.7333 33.1665L33.0833 30.8165L30.1 27.8165M33.0833 7.33317L30.7333 4.99984L27.7333 7.98317L30.1 10.3498M20.6667 0.666504H17.3333V5.6665H20.6667M10.2667 7.98317L7.26666 4.99984L4.91666 7.33317L7.89999 10.3498L10.2667 7.98317ZM0.666656 20.6665H5.66666V17.3332H0.666656M20.6667 32.3332H17.3333V37.3332H20.6667" fill="#D3D3D3"/>
+                </svg>
+              </button>
+            </div>
+            <div class="header__nav_bottom_socials">
+              <p class="header__nav_bottom_head">Мы в социальных сетях:</p>
+              <div class="header__nav_bottom_social">
+                <a href="#" class="header__nav_bottom_link">telegram</a>
+                <a href="#" class="header__nav_bottom_link">vkontakte</a>
+                <a href="#" class="header__nav_bottom_link">Behance</a>
+                <a href="#" class="header__nav_bottom_link">Dribble</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav class="header__consultation">
+        <div class="container header__consultation_container">
+          <div class="header__consultation_burger_flex">
+            <button class="button__close header__consultation_burger" aria-label="Закрыть меню">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5882 24L0 1.41176L1.41176 0L24 22.5882L22.5882 24Z" fill="#262626"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 1.41178L1.41176 24L0 22.5883L22.5882 0L24 1.41178Z" fill="#262626"/>
+              </svg>
+            </button>
+          </div>
+          <div class="header__consultation_block">
+            <div class="header__consultation_info">
+              <div class="header__consultation_say">
+                <p class="header__consultation_head">Расскажите<br>о вашем проекте</p>
+                <p class="header__consultation_desc">Опишите свою задачу и мы свяжемся с вами в кратчайшие сроки.</p>
+              </div>
+              <div class="header__consultation_contacts">
+                <a href="tel:+79270030100" class="header__consultation_tel">8 927 003 01 00</a>
+                <a href="mailto:hello@anyera.ru" class="header__consultation_mail">info@visualhearts.ru</a>
+              </div>
+            </div>
+            <form id="form" class="header__forms_form">
+              <div class="header__forms_form_controls">
+                <div class="header__forms_form_control">
+                  <input class="header__forms_form_input" type="text" minlength="4" maxlength="40" placeholder="Имя" id="username" />
+                  <span class="header__forms_form_bar"></span>
+                  <small>Error message</small>
+                </div>
+                <div class="header__forms_form_control">
+                  <input class="header__forms_form_input" type="tel" minlength="5" maxlength="20" placeholder="Телефон" id="phone" />
+                  <span class="header__forms_form_bar"></span>
+                  <small>Error message</small>
+                </div>
+                <div class="header__select_box">
+                  <span class="header__select_name">Способ связи</span>
+                  <div class="header__select" data-select>
+                    <div class="header__select_selected_item" data-select-action data-select-open>
+                      <div class="header__select_selected-title" data-select-title>
+                        Выберите способ
+                      </div>
+                      <svg class="header__select_arrow" data-select-arrow width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 1L6.05 6L1 1"/>
+                      </svg>
+                    </div>
+                    <div class="header__select_list" data-select-list>
+                      <div value="1" class="header__select_list_item" data-select-action data-select-item>Telegram</div>
+                      <div value="2" class="header__select_list_item" data-select-action data-select-item>Vkontakte</div>
+                      <div value="3" class="header__select_list_item" data-select-action data-select-item>Behance</div>
+                      <div value="4" class="header__select_list_item" data-select-action data-select-item>Dribble</div>
+                    </div>
+                    <input class="header__select_input" type="text" data-select-input>
+                  </div>
+                </div>
+                <div class="header__select_box">
+                  <span class="header__select_name">Бюджет проекта</span>
+                  <div class="header__select" data-select>
+                    <div class="header__select_selected_item" data-select-action data-select-open>
+                      <div class="header__select_selected-title" data-select-title>
+                        Выберите бюджет
+                      </div>
+                      <svg class="header__select_arrow" data-select-arrow width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 1L6.05 6L1 1" stroke="#262626"/>
+                      </svg>
+                    </div>
+                    <div class="header__select_list" data-select-list>
+                      <div value="1" class="header__select_list_item" data-select-action data-select-item>До 100 тыс.</div>
+                      <div value="2" class="header__select_list_item" data-select-action data-select-item>До 250 тыс.</div>
+                      <div value="3" class="header__select_list_item" data-select-action data-select-item>До 500 тыс.</div>
+                      <div value="4" class="header__select_list_item" data-select-action data-select-item>Более 500 тыс.</div>
+                    </div>
+                    <input class="header__select_input" type="text" data-select-input>
+                  </div>
+                </div>
+                <div class="header__forms_form_control">
+                  <span class="header__form_name">Опишите проект</span>
+                  <input class="header__forms_form_input" type="tel" minlength="3" maxlength="20" placeholder="" id="text" />
+                  <span class="header__forms_form_bar"></span>
+                  <small>Error message</small>
+                </div>
+              </div>
+              <button class="button__project header__form_button">Отправить</button>
+              <p class="header__form_policy">Нажимая на кнопку, вы соглашаетесь с условиями <a href="#">политики конфиденциальности</a>.</p>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="wrapper">
+    <main class="main">
+      <section class="team">
+        <div class="container team__container">
+          <div class="team__block">
+            <div class="block__left block__left_text team__left">
+              <p class="block__left_desc team__left_desc">VH PROJECT</p>
+            </div>
+            <div class="team__info">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Команда</a></li>
+              </ul>
+              <div class="team__flex">
+                <div class="team__flex_left">
+                  <h2 class="team__head">
+                    Команда
+                  </h2>
+                  <p class="team__desc">
+                    Мы - единомышленники, которые стремятся создавать уникальные и функциональные продукты на основе аналитики, данных из метрик и исследовании пользовательского опыта.
+                  </p>
+                </div>
+                <div class="team__flex_right">
+                  <a class="button__circle team__button" href="#">
+                    <span class="button__circle_text">Присоединиться</span>
+                    <span class="button__circle_hover"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="block__right team__right"></div>
+          </div>
+          <div class="team__block">
+            <div class="block__left team__left"></div>
+            <div class="team__target_info">
+              <div class="team__target_left">
+                <h3 class="team__target_head">
+                  Наша цель
+                </h3>
+              </div>
+              <div class="team__target_right">
+                <p class="team__target_desc">
+                  Текст про цель Во многих сферах мы уже разрабатывали продукты и уверенны, что сможем добиться в них еще большего результата. lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+            </div>
+            <div class="block__right team__right"></div>
+          </div>
+          <div class="team__block">
+            <div class="block__left block__left_text team__left">
+              <p class="block__left_desc team__left_desc">Принципы</p>
+            </div>
+            <div class="team__principles_info">
+              <div class="team__principles_left">
+                <h3 class="team__principles_head">
+                  Принципы
+                </h3>
+              </div>
+              <div class="team__principles_right">
+                <ul class="team__principles_list">
+                  <li class="team__principles_item">
+                    <p class="team__principles_heading">
+                      Сотрудничество
+                    </p>
+                    <p class="team__principles_desc">
+                      Не бросаем своих клиентов на пол пути, всегда рассчитываем на долгосрочное сотрудничество.
+                    </p>
+                  </li>
+                  <li class="team__principles_item">
+                    <p class="team__principles_heading">
+                      Ответственность
+                    </p>
+                    <p class="team__principles_desc">
+                      Всегда четко выполняем свои обязательства.
+                    </p>
+                  </li>
+                  <li class="team__principles_item">
+                    <p class="team__principles_heading">
+                      Вовлеченность
+                    </p>
+                    <p class="team__principles_desc">
+                      Заинтересованны в создании сильных продуктов.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="block__right team__right"></div>
+          </div>
+          <div class="team__block">
+            <div class="block__left block__left_text team__left">
+              <p class="block__left_desc team__left_desc">Цифры</p>
+            </div>
+            <div class="team__about_info">
+              <div class="team__about_left">
+                <h3 class="team__about_head">
+                  О нас в цифрах
+                </h3>
+                <p class="team__about_desc">
+                  Наша команда существует менее года, не смотря на это мы уже добились колоссальных успехов в сфере веб-разработки и дизайна
+                </p>
+              </div>
+              <div class="team__about_right">
+                <ul class="team__about_list">
+                  <li class="team__about_item">
+                    <p class="team__about_heading">
+                      10+
+                    </p>
+                    <p class="team__about_description">
+                      Экспертов в&nbsp;нашей&nbsp;команде
+                    </p>
+                  </li>
+                  <li class="team__about_item">
+                    <p class="team__about_heading">
+                      100+
+                    </p>
+                    <p class="team__about_description">
+                      Проектов реализовано
+                    </p>
+                  </li>
+                  <li class="team__about_item">
+                    <p class="team__about_heading">
+                      5+&nbsp;лет
+                    </p>
+                    <p class="team__about_description">
+                      Средний&nbsp;коммерческий опыт&nbsp;специалистов
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="block__right team__right"></div>
+          </div>
+          <div class="team__block">
+            <div class="block__left team__left"></div>
+            <div class="team__cooperation_info">
+              <div class="team__cooperation_left">
+                <div class="team__cooperation_left_padding">
+                  <h3 class="team__cooperation_head">
+                    О нас в цифрах
+                  </h3>
+                  <p class="team__cooperation_desc">
+                    Наша команда существует менее года, не смотря на это мы уже добились колоссальных успехов в сфере веб-разработки и дизайна
+                  </p>
+                </div>
+              </div>
+              <div class="team__cooperation_right">
+                <ul class="team__cooperation_list">
+                  <li class="team__cooperation_item">
+                    <p class="team__cooperation_heading">
+                      FIX PRICE
+                    </p>
+                    <p class="team__cooperation_description">
+                      Для задач с предсказуемым сроком и бюджетом.
+                    </p>
+                  </li>
+                  <li class="team__cooperation_item">
+                    <p class="team__cooperation_heading">
+                      TIME &amp; MATERIALS
+                    </p>
+                    <p class="team__cooperation_description">
+                      Для длинных и сложных проектов с гибким планированием.
+                    </p>
+                  </li>
+                  <li class="team__cooperation_item">
+                    <p class="team__cooperation_heading">
+                      RETENTION
+                    </p>
+                    <p class="team__cooperation_description">
+                      Выделенная команда на определенный срок по зафиксированной цене.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="block__right team__right"></div>
+          </div>
+          <div class="team__block">
+            <div class="block__left team__left"></div>
+            <div class="team__ourteam_info">
+              <div class="team__ourteam_left">
+                <h3 class="team__ourteam_head">
+                  Наша команда
+                </h3>
+              </div>
+              <div class="team__ourteam_right">
+                <p class="team__ourteam_desc">
+                  Мы работаем с достаточно крупным количеством цифровых направлений, но все они являются смежными, поэтому мы набираемся опыта и совмещаем его.
+                </p>
+              </div>
+            </div>
+            <div class="block__right team__right"></div>
+          </div>
+          <div class="team__block">
+            <div class="block__left team__photo_left"></div>
+            <div class="team__photo">
+              <ul class="team__photo_slider">
+                <li class="team__photo_item">
+                  <div class="team__photo_block">
+                    <img src="img/team/team_1.jpg" alt="" class="team__photo_image">
+                    <div class="team__photo_bottom">
+                      <p class="team__photo_head">Владислав</p>
+                      <p class="team__photo_desc">Founder / General manager / UI/UX</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="team__photo_item">
+                  <div class="team__photo_block">
+                    <img src="img/team/team_2.jpg" alt="" class="team__photo_image">
+                    <div class="team__photo_bottom">
+                      <p class="team__photo_head">Владислав</p>
+                      <p class="team__photo_desc">Founder / General manager / UI/UX</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="team__photo_item">
+                  <div class="team__photo_block">
+                    <img src="img/team/team_3.jpg" alt="" class="team__photo_image">
+                    <div class="team__photo_bottom">
+                      <p class="team__photo_head">Владислав</p>
+                      <p class="team__photo_desc">Founder / General manager / UI/UX</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="team__photo_item">
+                  <div class="team__photo_block">
+                    <img src="img/team/team_4.jpg" alt="" class="team__photo_image">
+                    <div class="team__photo_bottom">
+                      <p class="team__photo_head">Владислав</p>
+                      <p class="team__photo_desc">Founder / General manager / UI/UX</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="team__photo_item">
+                  <div class="team__photo_block">
+                    <img src="img/team/team_5.jpg" alt="" class="team__photo_image">
+                    <div class="team__photo_bottom">
+                      <p class="team__photo_head">Владислав</p>
+                      <p class="team__photo_desc">Founder / General manager / UI/UX</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="block__right team__photo_right"></div>
+          </div>
+          <div class="team__block">
+            <div class="block__left team__left"></div>
+            <div class="team__review">
+              <div class="team__review_info">
+                <h3 class="team__review_head">
+                  Что говорят о нас
+                </h3>
+              </div>
+              <ul class="team__review_slider">
+                <li class="team__review_item">
+                  <div class="team__review_block">
+                    <p class="team__review_desc">Заказал лэндинг-пейдж, приложив ТЗ со структурой с сайта. Предложили несколько вариантов дизайна, согласовали со мной. Сделали проект на 5+!)Все время были на связи, обсуждали узкие моменты. По просьбе что-то добавить/убрать, отступив от ТЗ, всегда шли на встречу. Дополнительно настроили интеграцию с соц сетями, Яндекс.метрикой, помогли с созданием домена. В общем, я доволен!</p>
+                    <div class="team__review_bottom">
+                      <p class="team__review_name">Максим</p>
+                      <p class="team__review_company">Компания или должность</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="team__review_item">
+                  <div class="team__review_block">
+                    <p class="team__review_desc">Делали сайт тафтинговых ковриков. Результат превзошёл ожидание! Учли все мои комментарии, правки и пожелания. Спасибо за быстро выполненную работу и обратную связь. Все делали чётко и по плану 👌. Спасибо за своевременные советы от команды. Уверен что Владислав лучший в своём деле!</p>
+                    <div class="team__review_bottom">
+                      <p class="team__review_name">Денис</p>
+                      <p class="team__review_company"><a href="#">Tafty.ru</a></p>
+                    </div>
+                  </div>
+                </li>
+                <li class="team__review_item">
+                  <div class="team__review_block">
+                    <p class="team__review_desc">Владислав участвовал в разработке лэндинговых страниц на tilda. Поставленные задачи выполнял быстро, качественно, с творческим подходом. Имеет прекрасные коммуникативные навыки. При поставленных сложных целях и проблемах всегда справляется с ними и предлагает разные варианты реализации.</p>
+                    <div class="team__review_bottom">
+                      <p class="team__review_name">Дарья</p>
+                      <p class="team__review_company">Компания или должность</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="block__right team__right"></div>
+          </div>
+        </div>
+      </section>
+      <section class="say">
+        <div class="container say__container">
+          <div class="block__left say__left"></div>
+          <div class="say__block">
+            <div class="say__block_left">
+              <h4 class="say__head">
+                Расскажите о&nbsp;вашем&nbsp;проекте
+              </h4>
+              <p class="say__desc">
+                Опишите свою задачу и мы свяжемся с вами в кратчайшие сроки.
+              </p>
+            </div>
+            <div class="say__block_right">
+              <a class="button__circle say__button" href="#">
+                <span class="button__circle_text">Написать</span>
+                <span class="button__circle_hover"></span>
+              </a>
+            </div>
+          </div>
+          <div class="block__right say__right"></div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" id="CONTACTS">
+      <div class="container footer__container">
+        <div class="block__left footer__left"></div>
+        <div class="footer__production">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item footer__item_head"><a href="#" class="footer__link">Меню</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">О команде</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Портфолио</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Магазин</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Цены</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__item footer__item_head"><a href="#" class="footer__link">Специализации</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Веб-сайты</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Приложения</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Иллюстрации</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Мультфильмы</a></li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__item footer__item_head"><a href="#" class="footer__link">Прочее</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Вакансии</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Документация</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Брифинг</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="footer__info">
+            <div class="footer__info_left">
+              <p class="footer__copyright">
+                © 2023 Визуализируя сердцем все права защищены<br>
+                Индивидуальный Предприниматель Ходулев Владислав Алексеевич
+              </p>
+            </div>
+            <div class="footer__info_right">
+              <a href="#" class="footer__privacy">Политика конфиденциальности</a>
+              <button onclick="document.location='#'" class="button__project footer__button">В начало</button>
+            </div>
+          </div>
+        </div>
+        <div class="block__right footer__right"></div>
+      </div>
+    </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha384-i61gTtaoovXtAbKjo903+O55Jkn2+RtzHtvNez+yI49HAASvznhe9sZyjaSHTau9" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

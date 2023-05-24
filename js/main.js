@@ -362,3 +362,13 @@ document.querySelector('.button__dark').addEventListener('click', function() {
   localStorage.setItem("darkMode", "dark");
 })
 // end dark mode
+
+// start team photo slider
+// $('.team__photo_slider').slick({
+//   slidesToShow: 1,
+//   variableWidth: true,
+//   centerMode: true,
+//   centerPadding: 0,
+//   arrows:false,
+// });
+// end team photo slider

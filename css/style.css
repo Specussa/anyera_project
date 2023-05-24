@@ -2276,6 +2276,256 @@ svg path {
 
 /* end services */
 
+/* start team */
+
+.team__container {
+  flex-direction: column;
+}
+
+.team__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.team__review {
+  flex-direction: column;
+}
+
+.team__review_info {
+  padding: 149px 100px 80px;
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.team__info {
+  padding: 40px 100px 220px;
+  flex-direction: column;
+  gap: 141px;
+}
+
+.team__target_info, .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo {
+  padding: 120px 100px;
+}
+
+.team__review_item {
+  padding: 100px;
+  border-left: 1px solid var(--gray-border);
+  margin: 0 -1px;
+}
+
+.team__photo {
+  justify-content: center;
+}
+
+.team__about_left, .team__cooperation_left_padding, .team__review_block, .team__review_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.team__review_bottom {
+  gap: 10px;
+}
+
+.team__review_block {
+  height: 100%;
+  justify-content: space-between;
+}
+
+.team__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.team__flex_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1140px;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.team__target_left {
+  width: 30%;
+}
+
+.team__target_right {
+  width: 70%;
+}
+
+.team__principles_left, .team__about_left {
+  width: calc(30% + 40px);
+}
+
+.team__principles_right, .team__about_right {
+  width: calc(70% - 40px);
+}
+
+.team__principles_right , .team__about_right, .team__cooperation_right, .team__ourteam_right {
+  border-left: 1px solid var(--gray-border);
+}
+
+.team__cooperation_left_padding {
+  border-bottom: 1px solid var(--gray-border);
+}
+
+.team__cooperation_left, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right {
+  width: 50%;
+}
+
+.team__principles_list, .team__cooperation_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  gap: 160px;
+}
+
+.team__principles_list {
+  max-width: 664px;
+}
+
+.team__cooperation_list {
+  max-width: 404px;
+}
+
+.team__about_list, .team__review_slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+}
+
+.team__about_list {
+  gap: 20px;
+}
+
+.team__principles_item, .team__about_item, .team__cooperation_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.team__about_item {
+  width: min-content;
+  text-align: center;
+}
+
+.team__head {
+  font-size: 92px;
+  font-weight: 800;
+  line-height: 112px;
+  color: var(--page-text);
+}
+
+.team__target_head, .team__principles_head, .team__principles_heading, .team__about_head, .team__cooperation_head, .team__cooperation_heading, .team__ourteam_head, .team__review_head {
+  font-size: 36px;
+  font-weight: 800;
+  line-height: 44px;
+  color: var(--page-text);
+}
+
+.team__about_heading {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 68px;
+  color: var(--page-text);
+}
+
+.team__desc, .team__review_name {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.team__target_desc, .team__principles_desc, .team__about_desc, .team__about_description, .team__cooperation_desc, .team__cooperation_description, .team__ourteam_desc, .team__photo_head, .team__review_desc, .team__review_company {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.team__review_company {
+  color: var(--gray-border);
+}
+
+.team__photo_slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team__photo_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 204px;
+  height: 100%;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.team__photo_bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  gap: 5px;
+}
+
+.team__photo_image {
+  width: 100%;
+  height: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* .slick-active .team__photo_block {
+  max-width: 224px;
+}
+
+.slick-active .team__photo_image {
+  max-height: 240px;
+} */
+
+.team__photo_desc {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+/* end team */
+
 /* start media 1200+ */
 
 @media (max-width: 1919px) {
@@ -2342,6 +2592,24 @@ svg path {
   }
   .header__project {
     right: 120px;
+  }
+  .team__info {
+    padding: 40px 60px 220px;
+  }
+  .team__target_info, .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo {
+    padding: 120px 60px;
+  }
+  .team__review_info {
+    padding: 149px 60px 80px;
+  }
+  .team__review_item {
+    padding: 100px 60px;
+  }
+  .team__principles_list {
+    max-width: 550px;
+  }
+  .team__cooperation_list {
+    max-width: 370px;
   }
 }
 
@@ -2553,6 +2821,57 @@ svg path {
   .projects__list {
     border-bottom: none;
   }
+  .team__target_info, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo {
+    padding: 120px 40px;
+  }
+  .team__review_info {
+    padding: 149px 40px 80px;
+  }
+  .team__review_item {
+    padding: 100px 40px;
+  }
+  .team__info {
+    padding: 40px 40px 100px;
+  }
+  .team__about_left {
+    padding: 120px 40px 0;
+  }
+  .team__flex {
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .team__principles_info, .team__about_info, .team__cooperation_info {
+    flex-direction: column;
+  }
+  .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left, .team__cooperation_right {
+    width: 100%;
+  }
+  .team__principles_left {
+    padding: 120px 40px 80px;
+  }
+  .team__principles_right {
+    padding: 80px 40px 120px;
+  }
+  .team__principles_right, .team__about_right, .team__cooperation_right {
+    border-left: none;
+  }
+  .team__photo {
+    padding: 120px 0;
+  }
+  .team__photo_left, .team__photo_right {
+    display: none;
+  }
+  .team__photo {
+    border-left: none;
+    border-right: none;
+  }
+  .team__principles_list {
+    max-width: 458px;
+  }
+  .team__cooperation_list {
+    max-width: 368px;
+  }
 }
 
 /* end media 960+ */
@@ -2563,10 +2882,10 @@ svg path {
   .container {
     padding: 0 40px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container {
     padding: 0;
   }
-  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block {
+  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review {
     border-left: none;
     border-right: none;
   }
@@ -2667,6 +2986,12 @@ svg path {
   .development__list {
     gap: 10px 20px;
   }
+  .team__principles_list {
+    max-width: 364px;
+  }
+  .team__cooperation_list {
+    max-width: 326px;
+  }
 }
 
 /* end media 640+ */
@@ -2677,7 +3002,7 @@ svg path {
   .container {
     padding: 0 20px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container {
     padding: 0;
   }
   .publication__block {
@@ -2873,6 +3198,71 @@ svg path {
     font-size: 14px;
     line-height: 17px;
   }
+  .team__info {
+    padding: 20px 20px 80px;
+    gap: 101px;
+  }
+  .team__head {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .team__desc, .team__review_name {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .team__target_desc, .team__principles_desc, .team__about_desc, .team__about_description, .team__cooperation_desc, .team__cooperation_description, .team__ourteam_desc, .team__photo_head, .team__review_desc, .team__review_company {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .team__target_info {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .team__target_left, .team__target_right {
+    width: 100%;
+  }
+  .team__target_info, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right {
+    padding: 80px 20px;
+  }
+  .team__principles_left {
+    padding: 80px 20px 40px;
+  }
+  .team__principles_right {
+    padding: 40px 20px 80px;
+  }
+  .team__about_left {
+    padding: 80px 20px 0;
+  }
+  .team__photo {
+    padding: 80px 0;
+  }
+  .team__review_info {
+    padding: 85px 20px 40px;
+  }
+  .team__review_item {
+    padding: 50px 20px;
+  }
+  .team__target_head, .team__principles_head, .team__principles_heading, .team__about_head, .team__cooperation_head, .team__cooperation_heading, .team__ourteam_head, .team__review_head {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .team__about_heading {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .team__principles_list, .team__cooperation_list {
+    gap: 80px;
+  }
+  .team__button .button__circle_text {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  .team__principles_list {
+    max-width: 320px;
+  }
+  .team__cooperation_list {
+    max-width: 324px;
+  }
 }
 
 /* end media 480+ */
@@ -2938,5 +3328,10 @@ svg path {
   .analytics__info:not(:last-child) {
     width: 100%;
     max-width: 100%;
+  }
+  .team__about_list {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
   }
 }
