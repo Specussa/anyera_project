@@ -1202,7 +1202,12 @@ svg path {
 }
 
 .development__block_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
+  flex-direction: column;
+  gap: 60px;
   border-right: 1px solid var(--gray-border);
 }
 
@@ -1229,8 +1234,8 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 60px 0 0;
-  gap: 60px;
+  flex-wrap: wrap;
+  gap: 30px 60px;
 }
 
 .development__item, .development__item a, .development__desc {
@@ -1251,7 +1256,6 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 60px 0 0;
   align-items: center;
   gap: 30px;
 }
@@ -1302,10 +1306,15 @@ svg path {
 }
 
 .analytics__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
   min-width: 655px;
   max-width: 50%;
   padding: 120px 100px;
+  flex-direction: column;
+  gap: 60px;
 }
 
 .analytics__info:last-child {
@@ -1323,15 +1332,18 @@ svg path {
 }
 
 .analytics__head {
-  margin: 0 0 60px;
   font-size: 36px;
   font-weight: 800;
   line-height: 44px;
   color: var(--page-text);
 }
 
-.analytics__item:not(:last-child) {
-  margin: 0 0 30px;
+.analytics__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  gap: 30px 60px;
 }
 
 .analytics__item, .analytics__item a {
@@ -2364,7 +2376,7 @@ svg path {
     display: none;
   }
   .digital__info {
-    padding: 200px 0 130px 30px;
+    padding: 200px 30px 130px;
   }
   .digital__head {
     font-size: 80px;
@@ -2376,8 +2388,12 @@ svg path {
   .development__block {
     flex-direction: column;
   }
-  .development__block_left, .development__block_right, .analytics__info {
+  .development__block_left, .analytics__info {
     padding: 120px 40px;
+  }
+  .development__block_right {
+    max-width: 100%;
+    padding: 60px 40px;
   }
   .development__block_left {
     border-right: none;
@@ -2411,11 +2427,15 @@ svg path {
   .publications__info {
     width: 50%;
   }
-  .publications__info:not(:nth-child(3n)) {
+  .publications__info:not(:nth-child(3)) {
     border-right: none;
+    border-bottom: 1px solid var(--gray-border);
   }
   .publications__info:not(:nth-child(2n)) {
     border-right: 1px solid var(--gray-border);
+  }
+  .publications__block {
+    border-bottom: none;
   }
   .say__block {
     padding: 88px 40px 50px;
@@ -2521,6 +2541,18 @@ svg path {
     font-size: 46px;
     line-height: 56px;
   }
+  .projects__item:nth-child(1), .projects__item:nth-child(2), .projects__item:nth-child(3), .projects__item:nth-child(4) {
+    border-right: none;
+  }
+  .projects__item:not(:nth-child(2n)) {
+    border-right: 1px solid var(--gray-border);
+  }
+  .projects__item:last-child, .projects__item:nth-child(4) {
+    border-bottom: 1px solid var(--gray-border);
+  }
+  .projects__list {
+    border-bottom: none;
+  }
 }
 
 /* end media 960+ */
@@ -2531,10 +2563,10 @@ svg path {
   .container {
     padding: 0 40px;
   }
-  .header__container, .public__container, .services__container, .projects__container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container {
     padding: 0;
   }
-  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info {
+  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block {
     border-left: none;
     border-right: none;
   }
@@ -2622,6 +2654,19 @@ svg path {
   .header__project {
     right: 100px;
   }
+  .digital__head {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .digital__info {
+    padding: 140px 40px 143px;
+  }
+  .showreel__circle {
+    margin: 0 60px 0 0;
+  }
+  .development__list {
+    gap: 10px 20px;
+  }
 }
 
 /* end media 640+ */
@@ -2632,7 +2677,7 @@ svg path {
   .container {
     padding: 0 20px;
   }
-  .header__container, .public__container, .services__container, .projects__container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container {
     padding: 0;
   }
   .publication__block {
@@ -2779,6 +2824,55 @@ svg path {
     font-size: 14px;
     line-height: 17px;
   }
+  .digital__info {
+    padding: 140px 20px 121px;
+  }
+  .showreel__circle {
+    margin: 0 40px 0 0;
+  }
+  .development__block_left, .analytics__info {
+    padding: 80px 20px;
+    gap: 30px;
+  }
+  .development__block_left {
+    gap: 30px;
+  }
+  .development__block_right {
+    padding: 60px 20px;
+  }
+  .development__buttons {
+    gap: 20px;
+  }
+  .development__list {
+    gap: 10px 40px;
+  }
+  .development__head {
+    font-size: 34px;
+    line-height: 41px;
+  }
+  .development__item, .development__item a, .development__desc {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .publications__block {
+    flex-direction: column;
+  }
+  .publications__info {
+    width: 100%;
+    padding: 50px 20px;
+  }
+  .publications__head {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .publications__heading {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .publications__desc {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 /* end media 480+ */
@@ -2813,5 +2907,36 @@ svg path {
   }
   .header__project {
     right: 70px;
+  }
+  .digital__head {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .digital__info {
+    padding: 91px 20px 41px;
+  }
+  .showreel__circle {
+    margin: 0 20px 0 0;
+  }
+  .digital__desc {
+    max-width: 221px;
+  }
+  .development__buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .development__button {
+    width: 100%;
+  }
+  .development__head {
+    font-size: 22px;
+    line-height: 27px;
+  }
+  .analytics__list {
+    gap: 20px;
+  }
+  .analytics__info:not(:last-child) {
+    width: 100%;
+    max-width: 100%;
   }
 }
