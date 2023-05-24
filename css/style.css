@@ -400,7 +400,7 @@ svg path {
 
 .header__project {
   position: absolute;
-  right: 159px;
+  right: 160px;
 }
 
 .header__languages {
@@ -2328,6 +2328,9 @@ svg path {
   .projects__hover img {
     min-height: 404px;
   }
+  .header__project {
+    right: 120px;
+  }
 }
 
 /* end media 1200+ */
@@ -2616,6 +2619,9 @@ svg path {
   .projects__item:nth-child(1), .projects__item:nth-child(2), .projects__item:nth-child(3), .projects__item:nth-child(4) {
     border-right: none;
   }
+  .header__project {
+    right: 100px;
+  }
 }
 
 /* end media 640+ */
@@ -2802,10 +2808,10 @@ svg path {
   .public__info_flex, .projects__info_flex {
     gap: 10px;
   }
-  .header__project {
-    display: none;
-  }
   .projects__hover img {
     min-height: 192px;
+  }
+  .header__project {
+    right: 70px;
   }
 }
