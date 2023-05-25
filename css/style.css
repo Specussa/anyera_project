@@ -2165,13 +2165,10 @@ svg path {
   padding: 20px 20px 0;
 }
 
-.accordion__button::after {
-  content: "";
+.accordion__button svg {
   display: inline-block;
   width: 30px;
   height: 15px;
-  background: url('../img/accordion__arrow.svg');
-  background-size: 30px 15px;
   -webkit-transform: rotate(0deg);
   -moz-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
@@ -2182,10 +2179,10 @@ svg path {
   -ms-transition: -ms-transform 0.2s linear;
   -o-transition: -o-transform 0.2s linear;
   transition: transform 0.2s linear;
+  stroke: var(--page-text);
 }
 
-.accordion__button.active::after {
-  content: "";
+.accordion__button.active svg {
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
