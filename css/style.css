@@ -216,6 +216,15 @@ svg path {
   line-height: 11px;
   color: var(--page-text);
   background: var(--page-bg);
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -ms-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
+.button__language:hover, .button__language:active, .button__language:focus {
+  color: var(--purple);
 }
 
 .button__circle {
@@ -436,6 +445,15 @@ svg path {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   fill: var(--page-text);
+  -webkit-transition: fill 0.3s linear;
+  -moz-transition: fill 0.3s linear;
+  -ms-transition: fill 0.3s linear;
+  -o-transition: fill 0.3s linear;
+  transition: fill 0.3s linear;
+}
+
+.header__burger:hover svg {
+  fill: var(--purple);
 }
 
 .header__burger svg rect {
