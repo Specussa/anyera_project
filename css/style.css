@@ -2056,6 +2056,187 @@ svg path {
 
 /* end public */
 
+/* start career */
+
+.career__container {
+  flex-direction: column;
+}
+
+.career__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.career__info, .career__agency, .career__vacancy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+}
+
+.career__info {
+  padding: 40px 100px 0;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.career__agency {
+  padding: 80px 100px;
+}
+
+.career__vacancy {
+  padding: 80px 100px;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.career__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 44px;
+  overflow: hidden;
+}
+
+.career__head {
+  font-size: 92px;
+  font-weight: 700;
+  line-height: 112px;
+  color: var(--page-text);
+}
+
+.career__vacancy_head {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 56px;
+  color: var(--page-text);
+}
+
+.career__desc, .career__agency_desc {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+  color: var(--page-text);
+}
+
+.career__agency_desc {
+  max-width: 790px;
+}
+
+/* end career */
+
+/* start accordion */
+
+.accordion__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px 20px 37px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  background-color: transparent;
+  -webkit-transition: 0.3s linear;
+  -moz-transition: 0.3s linear;
+  -ms-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  color: var(--page-text);
+  -webkit-transition: padding 0.2s ease-out;
+  -moz-transition: padding 0.2s ease-out;
+  -ms-transition: padding 0.2s ease-out;
+  -o-transition: padding 0.2s ease-out;
+  transition: padding 0.2s ease-out;
+}
+
+.accordion__button.active {
+  padding: 20px 20px 0;
+}
+
+.accordion__button::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 15px;
+  background: url('../img/accordion__arrow.svg');
+  background-size: 30px 15px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: -webkit-transform 0.2s linear;
+  -moz-transition: -moz-transform 0.2s linear;
+  -ms-transition: -ms-transform 0.2s linear;
+  -o-transition: -o-transform 0.2s linear;
+  transition: transform 0.2s linear;
+}
+
+.accordion__button.active::after {
+  content: "";
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.accordion__panel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-height: 0;
+  padding: 0 20px;
+  flex-direction: column;
+  gap: 20px;
+  -webkit-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+  -moz-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+  -ms-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+  transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+  border-bottom: 1px solid var(--gray-border);
+  overflow: hidden;
+}
+
+.accordion__panel.active {
+  padding: 20px;
+}
+
+.accordion__desc{
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.accordion__desc a {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.accordion__desc a:hover {
+  color: var(--purple);
+}
+
+/* end accordion */
+
 /* start footer */
 
 .footer {
@@ -2096,6 +2277,10 @@ svg path {
   font-weight: 100;
   line-height: 28px;
   color: var(--page-text);
+}
+
+.footer__link:hover {
+  color: var(--purple);
 }
 
 .footer__info {
@@ -2469,8 +2654,12 @@ svg path {
   color: var(--page-text);
 }
 
-.team__review_company {
+.team__review_company, .team__review_company a {
   color: var(--gray-border);
+}
+
+.team__review_company a:hover {
+  color: var(--purple);
 }
 
 .team__photo_slider {

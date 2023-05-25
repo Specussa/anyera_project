@@ -363,12 +363,81 @@ document.querySelector('.button__dark').addEventListener('click', function() {
 })
 // end dark mode
 
+// start accordion
+var acc = document.getElementsByClassName("accordion__button");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function(e) {
+    var accordion = this.nextElementSibling;
+    var courseAccordion = document.getElementsByClassName("accordion__panel");
+    var courseAccordionActive = document.getElementsByClassName("accordion__button active");
+
+    if (accordion.style.maxHeight) {
+      accordion.style.maxHeight = null;
+		  // accordion.style.margin = null;
+      this.classList.remove("active");
+      accordion.classList.remove("active");
+    } else {
+      for (var q = 0; q < courseAccordionActive.length; q++) {
+        courseAccordionActive[q].classList.remove("active");
+        courseAccordion[q].classList.remove("active");
+      }
+      for (var p = 0; p < courseAccordion.length; p++) {
+        this.classList.remove("active");
+        courseAccordion[p].classList.remove("active");
+        courseAccordion[p].style.maxHeight = null;
+        // accordion.style.margin = null;
+      }
+      // accordion.style.margin = "20px";
+      accordion.style.maxHeight = (accordion.scrollHeight + 40) + "px";
+      accordion.classList.add("active");
+      this.classList.add("active");
+    }
+  };
+}
+// end accordion
+
 // start team photo slider
-// $('.team__photo_slider').slick({
-//   slidesToShow: 1,
-//   variableWidth: true,
-//   centerMode: true,
-//   centerPadding: 0,
-//   arrows:false,
-// });
+// var sliderSelector = '.swiper-project',
+//     options = {
+//       autoplay: true,
+//       init: false,
+//       // loop: true,
+//       speed:800,
+//       slidesPerView: 3, // or 'auto'
+//       // spaceBetween: 10,
+//       // centeredSlides : true,
+//       effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+//       coverflowEffect: {
+//         rotate: 50, // Slide rotate in degrees
+//         stretch: 0, // Stretch space between slides (in px)
+//         depth: 100, // Depth offset in px (slides translate in Z axis)
+//         modifier: 1, // Effect multipler
+//         slideShadows : true, // Enables slides shadows
+//       },
+//       grabCursor: true,
+//       pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//       },
+//       navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//       },
+//       breakpoints: {
+//         1023: {
+//           slidesPerView: 1,
+//           spaceBetween: 0
+//         }
+//       },
+//       // Events
+//       on: {
+//         imagesReady: function(){
+//           this.el.classList.remove('loading');
+//         }
+//       }
+//     };
+// var mySwiper = new Swiper(sliderSelector, options);
+// mySwiper.init();
 // end team photo slider
