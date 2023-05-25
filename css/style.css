@@ -3039,6 +3039,9 @@ svg path {
     font-size: 42px;
     line-height: 51px;
   }
+  .error_page__block {
+    padding: 120px 60px;
+  }
 }
 
 /* end media 1200+ */
@@ -3355,6 +3358,9 @@ svg path {
     font-size: 24px;
     line-height: 29px;
   }
+  .error_page__block {
+    padding: 100px 40px;
+  }
 }
 
 /* end media 960+ */
@@ -3365,10 +3371,10 @@ svg path {
   .container {
     padding: 0 40px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container {
     padding: 0;
   }
-  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review, .career__info, .career__agency, .career__vacancy, .contacts__info, .header__consultation_blocks, .header__nav_block {
+  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review, .career__info, .career__agency, .career__vacancy, .contacts__info, .header__consultation_blocks, .header__nav_block, .error_page__block {
     border-left: none;
     border-right: none;
   }
@@ -3504,6 +3510,14 @@ svg path {
     font-size: 18px;
     line-height: 22px;
   }
+  .error_page__bottom {
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+  }
+  .error_page__head {
+    text-align: center;
+  }
 }
 
 /* end media 640+ */
@@ -3514,7 +3528,7 @@ svg path {
   .container {
     padding: 0 20px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container {
     padding: 0;
   }
   .publication__block {
@@ -3864,9 +3878,27 @@ svg path {
   .header__nav_bottom_socials {
     max-width: 174px;
   }
-  .header__nav_burger {
+  .header__nav_burger, .error_page__close, .header__consultation_burger {
     top: 15px;
     right: 15px;
+  }
+  .error_page__block {
+    padding: 60px 20px 94px;
+  }
+  .error_page__head {
+    font-size: 150px;
+    line-height: 183px;
+  }
+  .error_page__heading {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .error_page__desc {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .error_page__width, .error_page__bottom {
+    gap: 30px;
   }
 }
 
@@ -3965,5 +3997,12 @@ svg path {
   }
   .header__nav_block {
     padding: 100px 20px 120px;
+  }
+  .error_page__block {
+    padding: 60px 20px 124px;
+  }
+  .error_page__head {
+    font-size: 100px;
+    line-height: 122px;
   }
 }
