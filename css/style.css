@@ -530,7 +530,8 @@ svg path {
 }
 
 .header__nav_item {
-  width: 50%;
+  width: fit-content;
+  max-width: 50%;
 }
 
 .header__nav_item:not(:last-child) {
@@ -785,6 +786,7 @@ svg path {
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
+  color: var(--page-text);
 }
 
 .header__consultation_contacts {
@@ -796,6 +798,7 @@ svg path {
 }
 
 .header__consultation_tel {
+  width: fit-content;
   font-size: 54px;
   font-weight: 700;
   line-height: 66px;
@@ -803,6 +806,7 @@ svg path {
 }
 
 .header__consultation_mail {
+  width: fit-content;
   font-size: 24px;
   font-weight: 700;
   line-height: 29px;
@@ -2137,6 +2141,108 @@ svg path {
 
 /* end career */
 
+/* start contacts */
+
+.contacts__container {
+  flex-direction: column;
+}
+
+.contacts__block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.contacts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 40px 100px 100px;
+  flex-direction: column;
+  gap: 80px;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+}
+
+.contacts__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.contacts__flex_left, .contacts__flex_right {
+  width: 50%;
+}
+
+.contacts__head {
+  font-size: 92px;
+  font-weight: 700;
+  line-height: 112px;
+  color: var(--page-text);
+}
+
+.contacts__list, .contacts__blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.contacts__item, .contacts__social_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacts__social_flex {
+  width: 50%;
+  margin: 0 0 0 auto;
+}
+
+.contacts_social_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.contacts__desc {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.contacts__number {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+}
+
+.contacts__mail {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+}
+
+.contacts_social_link {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+}
+
+/* end contacts */
+
 /* start accordion */
 
 .accordion__button {
@@ -2879,6 +2985,9 @@ svg path {
   .career__vacancy {
     padding: 40px 60px 0;
   }
+  .contacts__info {
+    padding: 40px 60px 30px;
+  }
 }
 
 /* end media 1200+ */
@@ -2900,6 +3009,10 @@ svg path {
     -ms-transform: translate(0, 0);
     -o-transform: translate(0, 0);
     transform: translate(0, 0);
+  }
+  .contacts__head {
+    font-size: 54px;
+    line-height: 66px;
   }
 }
 
@@ -3149,6 +3262,19 @@ svg path {
   .career__vacancy {
     padding: 35px 40px 0;
   }
+  .contacts__info {
+    padding: 40px 40px 30px;
+  }
+  .contacts__social_flex {
+    width: 100%;
+    margin: 0;
+  }
+  .contacts__blocks {
+    gap: 78px;
+  }
+  .contacts__list {
+    gap: 50px;
+  }
 }
 
 /* end media 960+ */
@@ -3159,10 +3285,10 @@ svg path {
   .container {
     padding: 0 40px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container {
     padding: 0;
   }
-  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review, .career__info, .career__agency, .career__vacancy {
+  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review, .career__info, .career__agency, .career__vacancy, .contacts__info {
     border-left: none;
     border-right: none;
   }
@@ -3273,6 +3399,13 @@ svg path {
     font-size: 54px;
     line-height: 66px;
   }
+  .contacts__flex {
+    flex-direction: column;
+    gap: 80px;
+  }
+  .contacts__flex_left, .contacts__flex_right {
+    width: 100%;
+  }
 }
 
 /* end media 640+ */
@@ -3283,7 +3416,7 @@ svg path {
   .container {
     padding: 0 20px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container {
     padding: 0;
   }
   .publication__block {
@@ -3589,6 +3722,39 @@ svg path {
   .accordion__desc, .accordion__desc a, .accordion__item, .accordion__item a {
     font-size: 14px;
     line-height: 17px;
+  }
+  .contacts__info {
+    padding: 20px 20px 50px;
+    gap: 30px;
+  }
+  .contacts__flex, .contacts__blocks {
+    gap: 50px;
+  }
+  .contacts__head {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .contacts__desc {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .contacts__number {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .contacts__mail {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .contacts_social_link {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .contacts_social_list {
+    gap: 10px 20px;
+  }
+  .contacts__item, .contacts__social_flex {
+    gap: 10px;
   }
 }
 

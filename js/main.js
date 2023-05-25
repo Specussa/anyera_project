@@ -16,7 +16,7 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     menu.classList.remove("active");
     burger.classList.remove("active");
     document.body.style.overflow = "visible";
-    document.body.style.height = "auto";
+    document.body.style.height = "100%";
     menu_c.classList.remove("active");
     burger_c.classList.remove("active");
     burgernav_c.classList.remove("active");
@@ -33,7 +33,7 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     menu.classList.remove("active");
     burgernav.classList.remove("active");
     document.body.style.overflow = "visible";
-    document.body.style.height = "auto";
+    document.body.style.height = "100%";
   } else {
     menu.classList.add("active");
     burgernav.classList.add("active");
@@ -44,7 +44,7 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     menu_c.classList.remove("active");
     burger_c.classList.remove("active");
     document.body.style.overflow = "visible";
-    document.body.style.height = "auto";
+    document.body.style.height = "100%";
   }
 })
 document.querySelector('.header__nav_burger').addEventListener('click', function() {
@@ -53,7 +53,7 @@ document.querySelector('.header__nav_burger').addEventListener('click', function
     burger.classList.remove("active");
     burgernav.classList.remove("active");
     document.body.style.overflow = "visible";
-    document.body.style.height = "auto";
+    document.body.style.height = "100%";
   }
 })
 
@@ -62,7 +62,7 @@ document.querySelector('.header__project').addEventListener('click', function() 
     menu_c.classList.remove("active");
     burger_c.classList.remove("active");
     document.body.style.overflow = "visible";
-    document.body.style.height = "auto";
+    document.body.style.height = "100%";
     menu.classList.remove("active");
     burger.classList.remove("active");
     burgernav.classList.remove("active");
@@ -79,7 +79,7 @@ document.querySelector('.header__project').addEventListener('click', function() 
     menu_c.classList.remove("active");
     burgernav_c.classList.remove("active");
     document.body.style.overflow = "visible";
-    document.body.style.height = "auto";
+    document.body.style.height = "100%";
   } else {
     menu_c.classList.add("active");
     burgernav_c.classList.add("active");
@@ -93,7 +93,7 @@ document.querySelector('.header__consultation_burger').addEventListener('click',
     burger_c.classList.remove("active");
     burgernav_c.classList.remove("active");
     document.body.style.overflow = "visible";
-    document.body.style.height = "auto";
+    document.body.style.height = "100%";
   }
 })
 for (const anchor of anchors) {
@@ -102,13 +102,13 @@ for (const anchor of anchors) {
       menu_c.classList.remove("active");
       burgernav_c.classList.remove("active");
       document.body.style.overflow = "visible";
-      document.body.style.height = "auto";
+      document.body.style.height = "100%";
     }
     if (burgernav.classList.contains("active")) {
       menu.classList.remove("active");
       burgernav.classList.remove("active");
       document.body.style.overflow = "visible";
-      document.body.style.height = "auto";
+      document.body.style.height = "100%";
     }
   })
 }
@@ -375,7 +375,6 @@ for (i = 0; i < acc.length; i++) {
 
     if (accordion.style.maxHeight) {
       accordion.style.maxHeight = null;
-		  // accordion.style.margin = null;
       this.classList.remove("active");
       accordion.classList.remove("active");
     } else {
@@ -387,9 +386,7 @@ for (i = 0; i < acc.length; i++) {
         this.classList.remove("active");
         courseAccordion[p].classList.remove("active");
         courseAccordion[p].style.maxHeight = null;
-        // accordion.style.margin = null;
       }
-      // accordion.style.margin = "20px";
       accordion.style.maxHeight = (accordion.scrollHeight + 40) + "px";
       accordion.classList.add("active");
       this.classList.add("active");
