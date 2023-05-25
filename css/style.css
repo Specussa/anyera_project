@@ -2085,11 +2085,11 @@ svg path {
 }
 
 .career__agency {
-  padding: 80px 100px;
+  padding: 80px 100px 40px;
 }
 
 .career__vacancy {
-  padding: 80px 100px;
+  padding: 40px 100px 0;
   flex-direction: column;
   gap: 50px;
 }
@@ -2150,10 +2150,6 @@ svg path {
   -ms-transition: 0.3s linear;
   -o-transition: 0.3s linear;
   transition: 0.3s linear;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 23px;
-  color: var(--page-text);
   -webkit-transition: padding 0.2s ease-out;
   -moz-transition: padding 0.2s ease-out;
   -ms-transition: padding 0.2s ease-out;
@@ -2198,13 +2194,14 @@ svg path {
   max-height: 0;
   padding: 0 20px;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
   -webkit-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
   -moz-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
   -ms-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
   -o-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
   transition: max-height 0.2s ease-out, padding 0.2s ease-out;
   border-bottom: 1px solid var(--gray-border);
+  color: var(--page-text);
   overflow: hidden;
 }
 
@@ -2212,7 +2209,12 @@ svg path {
   padding: 20px;
 }
 
-.accordion__desc{
+.accordion__panel:not(:last-child) {
+  margin: 0 0 22px;
+}
+
+.accordion__desc {
+  margin: 0 0 10px;
   font-family: var(--lato);
   font-size: 16px;
   font-weight: 300;
@@ -2230,6 +2232,73 @@ svg path {
 
 .accordion__desc a:hover {
   color: var(--purple);
+}
+
+.accordion__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  color: var(--page-text);
+}
+
+.accordion__list:not(:last-child) {
+  margin: 0 0 10px;
+}
+
+.accordion__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.accordion__button, .accordion__head {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  color: var(--page-text);
+}
+
+.accordion__item, .accordion__item a {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.accordion__item a:hover {
+  color: var(--purple);
+}
+
+.accordion__item::before {
+  content: "";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 12px;
+  height: 12px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: var(--page-text);
+}
+
+.accordion__link {
+  width: fit-content;
+  margin: 10px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  text-decoration: underline;
+  color: var(--page-text);
+}
+
+.accordion__link:hover, .accordion__link:active, .accordion__link:focus {
+  text-decoration: underline;
 }
 
 /* end accordion */
@@ -2797,6 +2866,15 @@ svg path {
   .team__cooperation_list {
     max-width: 370px;
   }
+  .career__info {
+    padding: 40px 60px 0px;
+  }
+  .career__agency {
+    padding: 80px 60px 40px;
+  }
+  .career__vacancy {
+    padding: 40px 60px 0;
+  }
 }
 
 /* end media 1200+ */
@@ -3058,6 +3136,15 @@ svg path {
   .team__cooperation_list {
     max-width: 368px;
   }
+  .career__info {
+    padding: 40px 40px 0px;
+  }
+  .career__agency {
+    padding: 80px 40px 35px;
+  }
+  .career__vacancy {
+    padding: 35px 40px 0;
+  }
 }
 
 /* end media 960+ */
@@ -3068,10 +3155,10 @@ svg path {
   .container {
     padding: 0 40px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container {
     padding: 0;
   }
-  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review {
+  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review, .career__info, .career__agency, .career__vacancy {
     border-left: none;
     border-right: none;
   }
@@ -3178,6 +3265,10 @@ svg path {
   .team__cooperation_list {
     max-width: 326px;
   }
+  .career__head {
+    font-size: 54px;
+    line-height: 66px;
+  }
 }
 
 /* end media 640+ */
@@ -3188,7 +3279,7 @@ svg path {
   .container {
     padding: 0 20px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container {
     padding: 0;
   }
   .publication__block {
@@ -3449,6 +3540,52 @@ svg path {
   .team__cooperation_list {
     max-width: 324px;
   }
+  .career__head {
+    font-size: 40px;
+    line-height: 49px;
+  }
+  .career__flex {
+    padding: 10px 0;
+  }
+  .career__info {
+    padding: 20px 20px 0px;
+    gap: 20px;
+  }
+  .career__agency {
+    padding: 50px 20px 25px;
+  }
+  .career__vacancy {
+    padding: 25px 20px 0;
+    gap: 20px;
+  }
+  .career__vacancy_head {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  .accordion__button {
+    padding: 10px 10px 32px;
+  }
+  .accordion__button.active {
+    padding: 10px 10px 0;
+  }
+  .accordion__panel {
+    padding: 0 10px;
+  }
+  .accordion__panel.active {
+    padding: 20px 10px;
+  }
+  .career__desc {
+    font-size: 12px;
+    line-height: 25px;
+  }
+  .career__agency_desc, .accordion__button, .accordion__head, .accordion__link {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .accordion__desc, .accordion__desc a, .accordion__item, .accordion__item a {
+    font-size: 14px;
+    line-height: 17px;
+  }
 }
 
 /* end media 480+ */
@@ -3519,5 +3656,10 @@ svg path {
     flex-direction: column;
     align-items: center;
     gap: 80px;
+  }
+  .career__flex {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
   }
 }
