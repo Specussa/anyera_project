@@ -2069,6 +2069,10 @@ svg path {
   width: 100%;
 }
 
+.career__left_desc {
+  margin: 0 0 40px 0;
+}
+
 .career__info, .career__agency, .career__vacancy {
   display: -webkit-box;
   display: -ms-flexbox;
