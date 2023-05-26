@@ -3130,13 +3130,13 @@ svg path {
 
 .team__review_prev {
   background-image: none;
-  right: 150px;
+  right: 190px;
   left: auto;
 }
 
 .team__review_next {
   background-image: none;
-  right: 80px;
+  right: 120px;
   left: auto;
 }
 
