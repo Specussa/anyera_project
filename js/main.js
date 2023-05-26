@@ -467,6 +467,7 @@ if(!elsliderphoto){} else {
     slideShadows: true,
     autoplay: false,
     init: false,
+    arrow: false,
     // loop: true,
     slidesPerView: 5, // or 'auto'
     spaceBetween: 30,
@@ -493,6 +494,7 @@ if(!elsliderphoto){} else {
       959: {
         slidesPerView: 3,
         spaceBetween: 30,
+        arrow: false,
       }
     },
     // Events

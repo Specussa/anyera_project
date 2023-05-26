@@ -2854,6 +2854,7 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  overflow: hidden;
 }
 
 .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review {
