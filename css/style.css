@@ -2857,7 +2857,7 @@ svg path {
   overflow: hidden;
 }
 
-.team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo_flex, .team__review {
+.team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo_flex, .team__review_flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2867,13 +2867,19 @@ svg path {
   border-bottom: 1px solid var(--gray-border);
 }
 
-.team__review {
-  flex-direction: column;
+.team__review_info, .team__empty {
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
 }
 
 .team__review_info {
   padding: 149px 100px 80px;
   border-bottom: 1px solid var(--gray-border);
+}
+
+.team__empty {
+  width: 100%;
+  padding: 45px;
 }
 
 .team__info {
@@ -2888,8 +2894,10 @@ svg path {
 
 .team__review_item {
   padding: 100px;
+}
+
+.team__review_item:not(:first-child) {
   border-left: 1px solid var(--gray-border);
-  margin: 0 -1px;
 }
 
 .team__photo_flex {
@@ -2907,6 +2915,14 @@ svg path {
 
 .team__review_bottom {
   gap: 10px;
+}
+
+.team__review_blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .team__review_block {
@@ -3092,6 +3108,40 @@ svg path {
 
 .team__photo.swiper-container-3d {
   padding-left: 40px;
+}
+
+.team__review_prev, .team__review_next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: auto;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.team__review_prev svg, .team__review_next svg {
+  stroke: var(--page-text);
+}
+
+.team__review_prev {
+  background-image: none;
+  right: 150px;
+  left: auto;
+}
+
+.team__review_next {
+  background-image: none;
+  right: 80px;
+  left: auto;
+}
+
+.team__review_prev.swiper-button-disabled, .team__review_next.swiper-button-disabled {
+  opacity: 0.35;
 }
 
 /* end team */
@@ -3570,7 +3620,7 @@ svg path {
   .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container, .header__career_container {
     padding: 0;
   }
-  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review, .career__info, .career__agency, .career__vacancy, .contacts__info, .header__consultation_blocks, .header__nav_block, .error_page__block, .header__career_blocks, .team__photo_flex {
+  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review_flex, .career__info, .career__agency, .career__vacancy, .contacts__info, .header__consultation_blocks, .header__nav_block, .error_page__block, .header__career_blocks, .team__photo_flex {
     border-left: none;
     border-right: none;
   }
@@ -3735,6 +3785,15 @@ svg path {
   }
   .team__photo.swiper-container-3d {
     padding-left: 0;
+  }
+  .team__review_info {
+    border-bottom: 0;
+  }
+  .team__review_prev {
+    right: 110px;
+  }
+  .team__review_next {
+    right: 40px;
   }
 }
 
@@ -4163,6 +4222,12 @@ svg path {
   .header__career_desc {
     font-size: 14px;
     line-height: 17px;
+  }
+  .team__review_prev {
+    right: 90px;
+  }
+  .team__review_next {
+    right: 20px;
   }
 }
 

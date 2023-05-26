@@ -21,6 +21,7 @@ const textcareer = document.getElementById('textcareer');
 const linkcareer = document.getElementById('linkcareer');
 const anchors = document.querySelectorAll(".header__anchor_item")
 const elsliderphoto = document.querySelector('.team__photo');
+const elsliderreview = document.querySelector('.team__review');
 
 // start navbar
 // кнопка header__burger
@@ -445,8 +446,8 @@ for (i = 0; i < acc.length; i++) {
 
 // Слайдер
 if(!elsliderphoto){} else {
-  var itemListParent = document.querySelector('.team__photo_slider');
-  var itemList = document.querySelectorAll('.team__photo_item');
+  const itemListParent = document.querySelector('.team__photo_slider');
+  const itemList = document.querySelectorAll('.team__photo_item');
   window.addEventListener('resize', onResizeHandler, false);
   if (document.documentElement.clientWidth >= 960) {
     itemListParent.insertBefore(itemList[0], itemList[3]);
@@ -463,7 +464,6 @@ if(!elsliderphoto){} else {
   const sliderSelector = '.team__photo',
   options = {
     grabCursor: true,
-    slideShadows: true,
     autoplay: false,
     init: false,
     // loop: true,
@@ -481,6 +481,43 @@ if(!elsliderphoto){} else {
     },
     grabCursor: true,
     parallax: true,
+    breakpoints: {
+      959: {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        arrow: false,
+      }
+    },
+    on: {
+      imagesReady: function(){
+        this.el.classList.remove('loading');
+      }
+    }
+  };
+  const mySwiper = new Swiper(sliderSelector, options);
+  mySwiper.init();
+}
+if(!elsliderreview){} else {
+  const sliderSelector = '.team__review',
+  options = {
+    grabCursor: true,
+    autoplay: false,
+    init: false,
+    // loop: true,
+    // centerSlides: true,
+    slidesPerView: 3, // or 'auto'
+    spaceBetween: 0,
+    // centeredSlides : true,
+    effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+    coverflowEffect: {
+      rotate: 0, // Slide rotate in degrees
+      stretch: 0, // Stretch space between slides (in px)
+      depth: 100, // Depth offset in px (slides translate in Z axis)
+      modifier: 0, // Effect multipler
+      slideShadows : false, // Enables slides shadows
+    },
+    grabCursor: true,
+    parallax: true,
     // pagination: {
     //   el: '.swiper-pagination',
     //   clickable: true,
@@ -490,13 +527,17 @@ if(!elsliderphoto){} else {
       prevEl: '.swiper-button-prev',
     },
     breakpoints: {
-      959: {
-        slidesPerView: 3,
-        spaceBetween: 10,
+      1199: {
+        slidesPerView: 2,
+        spaceBetween: 0,
+        arrow: false,
+      },
+      639: {
+        slidesPerView: 1,
+        spaceBetween: 0,
         arrow: false,
       }
     },
-    // Events
     on: {
       imagesReady: function(){
         this.el.classList.remove('loading');
