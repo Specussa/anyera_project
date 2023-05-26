@@ -2857,7 +2857,7 @@ svg path {
   overflow: hidden;
 }
 
-.team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review {
+.team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo_flex, .team__review {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2882,7 +2882,7 @@ svg path {
   gap: 141px;
 }
 
-.team__target_info, .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo {
+.team__target_info, .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo_flex {
   padding: 120px 100px;
 }
 
@@ -2892,7 +2892,7 @@ svg path {
   margin: 0 -1px;
 }
 
-.team__photo {
+.team__photo_flex {
   justify-content: center;
   overflow: hidden;
 }
@@ -3090,6 +3090,10 @@ svg path {
   color: var(--page-text);
 }
 
+.team__photo.swiper-container-3d {
+  padding-left: 40px;
+}
+
 /* end team */
 
 /* start media 1200+ */
@@ -3162,7 +3166,7 @@ svg path {
   .team__info {
     padding: 40px 60px 220px;
   }
-  .team__target_info, .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo {
+  .team__target_info, .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo_flex {
     padding: 120px 60px;
   }
   .team__review_info {
@@ -3422,7 +3426,7 @@ svg path {
   .projects__list {
     border-bottom: none;
   }
-  .team__target_info, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo {
+  .team__target_info, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo_flex {
     padding: 120px 40px;
   }
   .team__review_info {
@@ -3457,15 +3461,11 @@ svg path {
   .team__principles_right, .team__about_right, .team__cooperation_right {
     border-left: none;
   }
-  .team__photo {
+  .team__photo_flex {
     padding: 120px 0;
   }
   .team__photo_left, .team__photo_right {
     display: none;
-  }
-  .team__photo {
-    border-left: none;
-    border-right: none;
   }
   .team__principles_list {
     max-width: 458px;
@@ -3570,7 +3570,7 @@ svg path {
   .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container, .header__career_container {
     padding: 0;
   }
-  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review, .career__info, .career__agency, .career__vacancy, .contacts__info, .header__consultation_blocks, .header__nav_block, .error_page__block, .header__career_blocks {
+  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review, .career__info, .career__agency, .career__vacancy, .contacts__info, .header__consultation_blocks, .header__nav_block, .error_page__block, .header__career_blocks, .team__photo_flex {
     border-left: none;
     border-right: none;
   }
@@ -3732,6 +3732,9 @@ svg path {
     -ms-transform: translateX(0%);
     -o-transform: translateX(0%);
     transform: translateX(0%);
+  }
+  .team__photo.swiper-container-3d {
+    padding-left: 0;
   }
 }
 
@@ -3973,7 +3976,7 @@ svg path {
   .team__about_left {
     padding: 80px 20px 0;
   }
-  .team__photo {
+  .team__photo_flex {
     padding: 80px 0;
   }
   .team__review_info {
