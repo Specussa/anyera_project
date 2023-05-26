@@ -45,7 +45,7 @@
         <button onclick="document.location='#'" class="button__language button__eng">ENG</button>
         <button onclick="document.location='#'" class="button__language button__ru" style="display: none;">RU</button>
       </div>
-      <nav class="header__nav">
+      <div class="header__nav">
         <div class="container header__nav_container">
           <div class="block__left header__nav_left"></div>
           <div class="header__nav_block">
@@ -134,8 +134,8 @@
           </div>
           <div class="block__right header__nav_right"></div>
         </div>
-      </nav>
-      <nav class="header__consultation">
+      </div>
+      <div class="header__consultation">
         <div class="container header__consultation_container">
           <div class="block__left header__consultation_left"></div>
           <div class="header__consultation_blocks">
@@ -224,7 +224,7 @@
           </div>
           <div class="block__right header__consultation_right"></div>
         </div>
-      </nav>
+      </div>
     </div>
   </header>
   <div class="wrapper">
@@ -422,9 +422,9 @@
           </div>
           <div class="team__block">
             <div class="block__left team__photo_left"></div>
-            <div class="team__photo">
-              <ul class="team__photo_slider">
-                <li class="team__photo_item">
+            <div class="team__photo swiper-container swiper-coursework loading">
+              <ul class="team__photo_slider swiper-wrapper">
+                <li class="team__photo_item swiper-slide">
                   <div class="team__photo_block">
                     <img src="img/team/team_1.jpg" alt="" class="team__photo_image">
                     <div class="team__photo_bottom">
@@ -433,7 +433,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="team__photo_item">
+                <li class="team__photo_item swiper-slide">
                   <div class="team__photo_block">
                     <img src="img/team/team_2.jpg" alt="" class="team__photo_image">
                     <div class="team__photo_bottom">
@@ -442,7 +442,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="team__photo_item">
+                <li class="team__photo_item swiper-slide">
                   <div class="team__photo_block">
                     <img src="img/team/team_3.jpg" alt="" class="team__photo_image">
                     <div class="team__photo_bottom">
@@ -451,7 +451,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="team__photo_item">
+                <li class="team__photo_item swiper-slide">
                   <div class="team__photo_block">
                     <img src="img/team/team_4.jpg" alt="" class="team__photo_image">
                     <div class="team__photo_bottom">
@@ -460,7 +460,7 @@
                     </div>
                   </div>
                 </li>
-                <li class="team__photo_item">
+                <li class="team__photo_item swiper-slide">
                   <div class="team__photo_block">
                     <img src="img/team/team_5.jpg" alt="" class="team__photo_image">
                     <div class="team__photo_bottom">
@@ -470,6 +470,9 @@
                   </div>
                 </li>
               </ul>
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev swiper-button-white"></div>
+              <div class="swiper-button-next swiper-button-white"></div>
             </div>
             <div class="block__right team__photo_right"></div>
           </div>

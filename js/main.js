@@ -1,12 +1,15 @@
 const menu = document.querySelector('.header__nav');
 const menu_c = document.querySelector('.header__consultation');
 const menu_v = document.querySelector('.header__career');
+const elmenu_v = document.querySelector('.header__career');
 const burger = document.querySelector('.header__burger');
 const burger_c = document.querySelector('.header__project');
-const burger_v = document.querySelector('.header__project');
+const burger_v = document.querySelector('.career__button');
+const elburger_v = document.querySelector('.career__button');
 const burgernav = document.querySelector('.header__nav_burger');
 const burgernav_c = document.querySelector('.header__consultation_burger');
 const burgernav_v = document.querySelector('.header__career_burger');
+const elburgernav_v = document.querySelector('.header__career_burger');
 const form = document.getElementById('form');
 const formcareer = document.getElementById('formcareer');
 const username = document.getElementById('username');
@@ -17,6 +20,7 @@ const text = document.getElementById('text');
 const textcareer = document.getElementById('textcareer');
 const linkcareer = document.getElementById('linkcareer');
 const anchors = document.querySelectorAll(".header__anchor_item")
+const elsliderphoto = document.querySelector('.swiper-coursework');
 
 // start navbar
 // кнопка header__burger
@@ -29,9 +33,9 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     menu_c.classList.remove("active");
     burger_c.classList.remove("active");
     burgernav_c.classList.remove("active");
-    menu_v.classList.remove("active");
-    burger_v.classList.remove("active");
-    burgernav_v.classList.remove("active");
+    if(!elmenu_v){} else {menu_v.classList.remove("active");}
+    if(!elburger_v){} else {burger_v.classList.remove("active");}
+    if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
   } else {
     menu.classList.add("active");
     burger.classList.add("active");
@@ -40,9 +44,9 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     menu_c.classList.remove("active");
     burger_c.classList.remove("active");
     burgernav_c.classList.remove("active");
-    menu_v.classList.remove("active");
-    burger_v.classList.remove("active");
-    burgernav_v.classList.remove("active");
+    if(!elmenu_v){} else {menu_v.classList.remove("active");}
+    if(!elburger_v){} else {burger_v.classList.remove("active");}
+    if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
   }
   if (burgernav.classList.contains("active")) {
     menu.classList.remove("active");
@@ -82,9 +86,9 @@ document.querySelector('.header__project').addEventListener('click', function() 
     menu.classList.remove("active");
     burger.classList.remove("active");
     burgernav.classList.remove("active");
-    menu_v.classList.remove("active");
-    burger_v.classList.remove("active");
-    burgernav_v.classList.remove("active");
+    if(!elmenu_v){} else {menu_v.classList.remove("active");}
+    if(!elburger_v){} else {burger_v.classList.remove("active");}
+    if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
   } else {
     menu_c.classList.add("active");
     burger_c.classList.add("active");
@@ -93,9 +97,9 @@ document.querySelector('.header__project').addEventListener('click', function() 
     menu.classList.remove("active");
     burger.classList.remove("active");
     burgernav.classList.remove("active");
-    menu_v.classList.remove("active");
-    burger_v.classList.remove("active");
-    burgernav_v.classList.remove("active");
+    if(!elmenu_v){} else {menu_v.classList.remove("active");}
+    if(!elburger_v){} else {burger_v.classList.remove("active");}
+    if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
   }
   if (burgernav_c.classList.contains("active")) {
     menu_c.classList.remove("active");
@@ -119,71 +123,27 @@ document.querySelector('.header__consultation_burger').addEventListener('click',
     document.body.style.height = "100%";
   }
 })
-// кнопка career__button
-document.querySelector('.career__button').addEventListener('click', function() {
-  if (burger_v.classList.contains("active")) {
-    menu_v.classList.remove("active");
-    burger_v.classList.remove("active");
-    document.body.style.overflow = "visible";
-    document.body.style.height = "100%";
-    menu.classList.remove("active");
-    burger.classList.remove("active");
-    burgernav.classList.remove("active");
-    menu_c.classList.remove("active");
-    burger_c.classList.remove("active");
-    burgernav_c.classList.remove("active");
-  } else {
-    menu_v.classList.add("active");
-    burger_v.classList.add("active");
-    document.body.style.overflow = "hidden";
-    document.body.style.height = "100vh";
-    menu.classList.remove("active");
-    burger.classList.remove("active");
-    burgernav.classList.remove("active");
-    menu_c.classList.remove("active");
-    burger_c.classList.remove("active");
-    burgernav_c.classList.remove("active");
-  }
-  if (burgernav_v.classList.contains("active")) {
-    menu_v.classList.remove("active");
-    burgernav_v.classList.remove("active");
-    document.body.style.overflow = "visible";
-    document.body.style.height = "100%";
-  } else {
-    menu_v.classList.add("active");
-    burgernav_v.classList.add("active");
-    document.body.style.overflow = "hidden";
-    document.body.style.height = "100vh";
-  }
-})
-// кнопка закрыть для career__button
-document.querySelector('.header__career_burger').addEventListener('click', function() {
-  if (burgernav_v.classList.contains("active")) {
-    menu_v.classList.remove("active");
-    burger_v.classList.remove("active");
-    burgernav_v.classList.remove("active");
-    document.body.style.overflow = "visible";
-    document.body.style.height = "100%";
-  }
-})
 // закрыть все оверлеии при нажатии на nav menu
 for (const anchor of anchors) {
   anchor.addEventListener('click', function(event) {
     if (burgernav.classList.contains("active")) {
       menu.classList.remove("active");
+      burger.classList.remove("active");
       burgernav.classList.remove("active");
       document.body.style.overflow = "visible";
       document.body.style.height = "100%";
     }
     if (burgernav_c.classList.contains("active")) {
       menu_c.classList.remove("active");
+      burger_c.classList.remove("active");
       burgernav_c.classList.remove("active");
       document.body.style.overflow = "visible";
       document.body.style.height = "100%";
     }
     if (burgernav_v.classList.contains("active")) {
-      menu_v.classList.remove("active");
-      burgernav_v.classList.remove("active");
+      if(!elmenu_v){} else {menu_v.classList.remove("active");}
+      if(!elburger_v){} else {burger_v.classList.remove("active");}
+      if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
       document.body.style.overflow = "visible";
       document.body.style.height = "100%";
     }
@@ -231,47 +191,6 @@ function setSuccessFor(input) {
 // 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(control);
 // }
 // end validate form project
-
-// start validate form career
-formcareer.addEventListener('submit', e => {
-  e.preventDefault();
-  
-  checkInputscareer();
-  });
-  
-  function checkInputscareer() {
-  // trim to remove the whitespaces
-  const usernamecareerValue = usernamecareer.value.trim();
-  const phonecareerValue = phonecareer.value.trim();
-  const textcareerValue = textcareer.value.trim();
-  
-  if(usernamecareerValue === '') {
-      setErrorFor(usernamecareer, 'Обязательное поле'); } else { setSuccessFor(usernamecareer);
-  }
-  if(phonecareerValue === '') {
-      setErrorFor(phonecareer, 'Обязательное поле'); } else { setSuccessFor(phonecareer);
-  }
-  if(textcareerValue === '') {
-      setErrorFor(textcareer, 'Обязательное поле'); } else { setSuccessFor(textcareer);
-    }
-  }
-  
-  function setErrorFor(input, message) {
-    const formcareerControl = input.parentElement;
-    const small = formcareerControl.querySelector('small');
-    formcareerControl.className = 'header__forms_form_control error';
-    small.innerText = message;
-  }
-  
-  function setSuccessFor(input) {
-    const formcareerControl = input.parentElement;
-    formcareerControl.className = 'header__forms_form_control success';
-  }
-  
-  // function iscontrol(control) {
-  // 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(control);
-  // }
-  // end validate form career
 
 // start select
 const SELECT = '[data-select]'
@@ -504,45 +423,86 @@ for (i = 0; i < acc.length; i++) {
 // end accordion
 
 // start team photo slider
-// var sliderSelector = '.swiper-project',
-//     options = {
-//       autoplay: true,
-//       init: false,
-//       // loop: true,
-//       speed:800,
-//       slidesPerView: 3, // or 'auto'
-//       // spaceBetween: 10,
-//       // centeredSlides : true,
-//       effect: 'coverflow', // 'cube', 'fade', 'coverflow',
-//       coverflowEffect: {
-//         rotate: 50, // Slide rotate in degrees
-//         stretch: 0, // Stretch space between slides (in px)
-//         depth: 100, // Depth offset in px (slides translate in Z axis)
-//         modifier: 1, // Effect multipler
-//         slideShadows : true, // Enables slides shadows
-//       },
-//       grabCursor: true,
-//       pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//       },
-//       navigation: {
-//         nextEl: '.swiper-button-next',
-//         prevEl: '.swiper-button-prev',
-//       },
-//       breakpoints: {
-//         1023: {
-//           slidesPerView: 1,
-//           spaceBetween: 0
-//         }
-//       },
-//       // Events
-//       on: {
-//         imagesReady: function(){
-//           this.el.classList.remove('loading');
-//         }
-//       }
-//     };
-// var mySwiper = new Swiper(sliderSelector, options);
-// mySwiper.init();
+// var swiper = new Swiper('.swiper-container', {
+//   effect: 'coverflow',
+//   grabCursor: true,
+//   centeredSlides: true,
+//   slidesPerView: 'auto',
+//   coverflowEffect: {
+//     rotate: 0,
+//     stretch: 0,
+//     depth: 20,
+//     modifier: 5, // slider Design change.
+//     slideShadows: true,
+//   },
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+//   loop: true
+//  });
+
+
+
+// Слайдер
+if(!elsliderphoto){} else {
+  var itemListParent = document.querySelector('.team__photo_slider');
+  var itemList = document.querySelectorAll('.team__photo_item');
+  window.addEventListener('resize', onResizeHandler, false);
+  if (document.documentElement.clientWidth >= 960) {
+    itemListParent.insertBefore(itemList[0], itemList[3]);
+  } else {
+    itemListParent.insertBefore(itemList[0], itemList[2]);
+  };
+  function onResizeHandler() {
+    if (document.documentElement.clientWidth >= 960) {
+      itemListParent.insertBefore(itemList[0], itemList[3]);
+    } else {
+      itemListParent.insertBefore(itemList[0], itemList[2]);
+    };
+  }
+  const sliderSelector = '.swiper-coursework',
+  options = {
+    grabCursor: true,
+    slidesPerView: 'auto',
+    slideShadows: true,
+    autoplay: false,
+    init: false,
+    // loop: true,
+    slidesPerView: 5, // or 'auto'
+    spaceBetween: 30,
+    // centeredSlides : true,
+    effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+    coverflowEffect: {
+      rotate: 0, // Slide rotate in degrees
+      stretch: 0, // Stretch space between slides (in px)
+      depth: 100, // Depth offset in px (slides translate in Z axis)
+      modifier: 1, // Effect multipler
+      slideShadows : false, // Enables slides shadows
+    },
+    grabCursor: true,
+    parallax: true,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    breakpoints: {
+      959: {
+        slidesPerView: 3,
+        spaceBetween: 30,
+      }
+    },
+    // Events
+    on: {
+      imagesReady: function(){
+        this.el.classList.remove('loading');
+      }
+    }
+  };
+  const mySwiper = new Swiper(sliderSelector, options);
+  mySwiper.init();
+}
 // end team photo slider
