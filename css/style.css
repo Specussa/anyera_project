@@ -2894,6 +2894,7 @@ svg path {
 
 .team__photo {
   justify-content: center;
+  overflow: hidden;
 }
 
 .team__about_left, .team__cooperation_left_padding, .team__review_block, .team__review_bottom {

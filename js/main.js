@@ -463,11 +463,9 @@ if(!elsliderphoto){} else {
   const sliderSelector = '.swiper-coursework',
   options = {
     grabCursor: true,
-    slidesPerView: 'auto',
     slideShadows: true,
     autoplay: false,
     init: false,
-    arrow: false,
     // loop: true,
     slidesPerView: 5, // or 'auto'
     spaceBetween: 30,
