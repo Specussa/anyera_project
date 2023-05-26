@@ -924,9 +924,9 @@ svg path {
   background-color: var(--page-text);
 }
 
-.dark .header__form_button {
-  color: var(--page-text);
-  background-color: var(--page-bg);
+.dark .header__form_button:hover, .dark .header__form_button:active, .dark .header__form_button:focus {
+  color: var(--page-bg);
+  background-color: var(--purple);
 }
 
 .header__form_policy {
