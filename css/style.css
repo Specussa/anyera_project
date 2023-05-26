@@ -371,6 +371,7 @@ svg path {
   border-bottom: 1px solid var(--gray-border);
   background: var(--page-bg);
   z-index: 100;
+  overflow: hidden;
 }
 
 .header__container {
