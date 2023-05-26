@@ -20,7 +20,7 @@ const text = document.getElementById('text');
 const textcareer = document.getElementById('textcareer');
 const linkcareer = document.getElementById('linkcareer');
 const anchors = document.querySelectorAll(".header__anchor_item")
-const elsliderphoto = document.querySelector('.swiper-coursework');
+const elsliderphoto = document.querySelector('.team__photo');
 
 // start navbar
 // кнопка header__burger
@@ -460,7 +460,7 @@ if(!elsliderphoto){} else {
       itemListParent.insertBefore(itemList[0], itemList[2]);
     };
   }
-  const sliderSelector = '.swiper-coursework',
+  const sliderSelector = '.team__photo',
   options = {
     grabCursor: true,
     slideShadows: true,
