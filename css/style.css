@@ -1001,7 +1001,7 @@ svg path {
 }
 
 .header__forms_form_control.success .header__forms_form_input {
-  border-bottom: 1px solid var(--green);
+  border-bottom: 1px solid var(--purple);
 }
 
 .header__form_name {
