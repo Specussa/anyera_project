@@ -1,9 +1,12 @@
 const menu = document.querySelector('.header__nav');
 const menu_c = document.querySelector('.header__consultation');
+const menu_v = document.querySelector('.header__career');
 const burger = document.querySelector('.header__burger');
 const burger_c = document.querySelector('.header__project');
+const burger_v = document.querySelector('.header__project');
 const burgernav = document.querySelector('.header__nav_burger');
 const burgernav_c = document.querySelector('.header__consultation_burger');
+const burgernav_v = document.querySelector('.header__career_burger');
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const phone = document.getElementById('phone');
@@ -11,6 +14,7 @@ const text = document.getElementById('text');
 const anchors = document.querySelectorAll(".header__anchor_item")
 
 // start navbar
+// кнопка header__burger
 document.querySelector('.header__burger').addEventListener('click', function() {
   if (burger.classList.contains("active")) {
     menu.classList.remove("active");
@@ -20,6 +24,9 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     menu_c.classList.remove("active");
     burger_c.classList.remove("active");
     burgernav_c.classList.remove("active");
+    menu_v.classList.remove("active");
+    burger_v.classList.remove("active");
+    burgernav_v.classList.remove("active");
   } else {
     menu.classList.add("active");
     burger.classList.add("active");
@@ -28,6 +35,9 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     menu_c.classList.remove("active");
     burger_c.classList.remove("active");
     burgernav_c.classList.remove("active");
+    menu_v.classList.remove("active");
+    burger_v.classList.remove("active");
+    burgernav_v.classList.remove("active");
   }
   if (burgernav.classList.contains("active")) {
     menu.classList.remove("active");
@@ -47,6 +57,7 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     document.body.style.height = "100%";
   }
 })
+// кнопка закрыть для header__burger
 document.querySelector('.header__nav_burger').addEventListener('click', function() {
   if (burgernav.classList.contains("active")) {
     menu.classList.remove("active");
@@ -56,7 +67,7 @@ document.querySelector('.header__nav_burger').addEventListener('click', function
     document.body.style.height = "100%";
   }
 })
-
+// кнопка header__project
 document.querySelector('.header__project').addEventListener('click', function() {
   if (burger_c.classList.contains("active")) {
     menu_c.classList.remove("active");
@@ -66,6 +77,9 @@ document.querySelector('.header__project').addEventListener('click', function() 
     menu.classList.remove("active");
     burger.classList.remove("active");
     burgernav.classList.remove("active");
+    menu_v.classList.remove("active");
+    burger_v.classList.remove("active");
+    burgernav_v.classList.remove("active");
   } else {
     menu_c.classList.add("active");
     burger_c.classList.add("active");
@@ -74,6 +88,9 @@ document.querySelector('.header__project').addEventListener('click', function() 
     menu.classList.remove("active");
     burger.classList.remove("active");
     burgernav.classList.remove("active");
+    menu_v.classList.remove("active");
+    burger_v.classList.remove("active");
+    burgernav_v.classList.remove("active");
   }
   if (burgernav_c.classList.contains("active")) {
     menu_c.classList.remove("active");
@@ -87,6 +104,7 @@ document.querySelector('.header__project').addEventListener('click', function() 
     document.body.style.height = "100vh";
   }
 })
+// кнопка закрыть для header__project
 document.querySelector('.header__consultation_burger').addEventListener('click', function() {
   if (burgernav_c.classList.contains("active")) {
     menu_c.classList.remove("active");
@@ -96,17 +114,71 @@ document.querySelector('.header__consultation_burger').addEventListener('click',
     document.body.style.height = "100%";
   }
 })
+// кнопка career__button
+document.querySelector('.career__button').addEventListener('click', function() {
+  if (burger_v.classList.contains("active")) {
+    menu_v.classList.remove("active");
+    burger_v.classList.remove("active");
+    document.body.style.overflow = "visible";
+    document.body.style.height = "100%";
+    menu.classList.remove("active");
+    burger.classList.remove("active");
+    burgernav.classList.remove("active");
+    menu_c.classList.remove("active");
+    burger_c.classList.remove("active");
+    burgernav_c.classList.remove("active");
+  } else {
+    menu_v.classList.add("active");
+    burger_v.classList.add("active");
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100vh";
+    menu.classList.remove("active");
+    burger.classList.remove("active");
+    burgernav.classList.remove("active");
+    menu_c.classList.remove("active");
+    burger_c.classList.remove("active");
+    burgernav_c.classList.remove("active");
+  }
+  if (burgernav_v.classList.contains("active")) {
+    menu_v.classList.remove("active");
+    burgernav_v.classList.remove("active");
+    document.body.style.overflow = "visible";
+    document.body.style.height = "100%";
+  } else {
+    menu_v.classList.add("active");
+    burgernav_v.classList.add("active");
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100vh";
+  }
+})
+// кнопка закрыть для career__button
+document.querySelector('.header__career_burger').addEventListener('click', function() {
+  if (burgernav_v.classList.contains("active")) {
+    menu_v.classList.remove("active");
+    burger_v.classList.remove("active");
+    burgernav_v.classList.remove("active");
+    document.body.style.overflow = "visible";
+    document.body.style.height = "100%";
+  }
+})
+// закрыть все оверлеии при нажатии на nav menu
 for (const anchor of anchors) {
   anchor.addEventListener('click', function(event) {
+    if (burgernav.classList.contains("active")) {
+      menu.classList.remove("active");
+      burgernav.classList.remove("active");
+      document.body.style.overflow = "visible";
+      document.body.style.height = "100%";
+    }
     if (burgernav_c.classList.contains("active")) {
       menu_c.classList.remove("active");
       burgernav_c.classList.remove("active");
       document.body.style.overflow = "visible";
       document.body.style.height = "100%";
     }
-    if (burgernav.classList.contains("active")) {
-      menu.classList.remove("active");
-      burgernav.classList.remove("active");
+    if (burgernav_v.classList.contains("active")) {
+      menu_v.classList.remove("active");
+      burgernav_v.classList.remove("active");
       document.body.style.overflow = "visible";
       document.body.style.height = "100%";
     }
@@ -217,7 +289,6 @@ class Select {
   }
 
   findSelect(select) {
-
 
     if (select) {
       this.select = select

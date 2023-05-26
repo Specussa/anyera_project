@@ -937,6 +937,10 @@ svg path {
   color: var(--page-text);
 }
 
+.header__form_policy a, .header__form_policy a:hover, .header__form_policy a:active, .header__form_policy a:focus {
+  text-decoration: underline;
+}
+
 .header__forms_form_input {
   width: 100%;
   height: 43px;
@@ -2108,6 +2112,162 @@ svg path {
 
 /* start career */
 
+.header__career {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 60px);
+  flex-direction: column;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background: var(--page-bg);
+  z-index: 99;
+  -webkit-transform: translateY(calc(-100% - 60px));
+  -moz-transform: translateY(calc(-100% - 60px));
+  -ms-transform: translateY(calc(-100% - 60px));
+  -o-transform: translateY(calc(-100% - 60px));
+  transform: translateY(calc(-100% - 60px));
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  overflow-x: hidden;
+  /* overflow-y: scroll; */
+}
+
+.header__career::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  background: transparent;
+}
+
+.header__career::-webkit-scrollbar-thumb {
+  display: none;
+  width: 0px;
+  background: var(--page-text);
+}
+
+.header__career.active {
+  visibility: visible;
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+.header__career_container {
+  height: 100%;
+}
+
+.header__career_burger_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.header__career_burger {
+  position: absolute;
+  top: 33px;
+  right: 33px;
+  z-index: 1;
+}
+
+.header__forms_form {
+  width: 100%;
+  max-width: 510px;
+}
+
+.header__career_blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: max-content;
+  min-height: 100%;
+  max-width: 1800px;
+  padding: 100px;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
+}
+
+.header__career_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.header__career_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: center;
+}
+
+.header__career_say {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header__career_head {
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 66px;
+  color: var(--page-text);
+}
+
+.header__career_desc {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
+.header__career_contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.header__career_tel {
+  width: fit-content;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 66px;
+  color: var(--page-text);
+  white-space: nowrap;
+}
+
+.header__career_mail {
+  width: fit-content;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  color: var(--page-text);
+  white-space: nowrap;
+}
+
 .career__container {
   flex-direction: column;
 }
@@ -3047,6 +3207,9 @@ svg path {
   .header__consultation_blocks {
     padding: 120px 60px;
   }
+  .header__career_blocks {
+    padding: 100px 60px;
+  }
 }
 
 /* end media 1200+ */
@@ -3390,6 +3553,9 @@ svg path {
   .header__consultation_blocks {
     padding: 120px 40px 240px;
   }
+  .header__career_blocks {
+    padding: 100px 40px;
+  }
 }
 
 /* end media 960+ */
@@ -3400,10 +3566,10 @@ svg path {
   .container {
     padding: 0 40px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container, .header__career_container {
     padding: 0;
   }
-  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review, .career__info, .career__agency, .career__vacancy, .contacts__info, .header__consultation_blocks, .header__nav_block, .error_page__block {
+  .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review, .career__info, .career__agency, .career__vacancy, .contacts__info, .header__consultation_blocks, .header__nav_block, .error_page__block, .header__career_blocks {
     border-left: none;
     border-right: none;
   }
@@ -3576,7 +3742,7 @@ svg path {
   .container {
     padding: 0 20px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container, .header__career_container {
     padding: 0;
   }
   .publication__block {
@@ -3926,7 +4092,7 @@ svg path {
   .header__nav_bottom_socials {
     max-width: 174px;
   }
-  .header__nav_burger, .error_page__close, .header__consultation_burger {
+  .header__nav_burger, .error_page__close, .header__consultation_burger, .header__career_burger {
     top: 15px;
     right: 15px;
   }
@@ -3981,8 +4147,19 @@ svg path {
   .header__consultation_contacts {
     left: 20px;
   }
-  .header__consultation_block {
+  .header__consultation_block, .header__career_block {
     gap: 30px;
+  }
+  .header__career_blocks {
+    padding: 60px 20px;
+  }
+  .header__career_head {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .header__career_desc {
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 
@@ -4092,5 +4269,9 @@ svg path {
   .error_page__head {
     font-size: 100px;
     line-height: 122px;
+  }
+  .header__career_head {
+    font-size: 28px;
+    line-height: 34px;
   }
 }
