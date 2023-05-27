@@ -289,12 +289,6 @@ Select.attach()
 var hover = document.querySelector('.header__nav_list'),
 elemHover = false;
 
-// const subnavs = document.getElementsByClassName('header__subnav_item')
-// var items = $('.header__subnav_list li');
-// items.css('opacity', 0);
-// for (var i = 0; i < items.length; i++) {
-//   $(items[i]).delay(i * 0).animate({ opacity: 0 }, 0);
-// }
 hover.addEventListener('mouseover', function(e) {
   if(elemHover) return;
   var target = e.target.closest('.header__nav_item');
@@ -403,28 +397,18 @@ for (i = 0; i < acc.length; i++) {
 }
 // end accordion
 
+// start счетчик для всех листов
+
+const subnav = document.querySelectorAll('.header__subnav_list'); 
+[...subnav].forEach(function (li) { 
+  for (let [index, elem] of [...li.children].entries()){ 
+    elem.style.setProperty('--inc-step', index+1); 
+  } 
+});
+
+// end счетчик для всех листов
+
 // start team photo slider
-// var swiper = new Swiper('.swiper-container', {
-//   effect: 'coverflow',
-//   grabCursor: true,
-//   centeredSlides: true,
-//   slidesPerView: 'auto',
-//   coverflowEffect: {
-//     rotate: 0,
-//     stretch: 0,
-//     depth: 20,
-//     modifier: 5, // slider Design change.
-//     slideShadows: true,
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-//   loop: true
-//  });
-
-
-
-// Слайдер
 if(!elsliderphoto){} else {
   const itemListParent = document.querySelector('.team__photo_slider');
   const itemList = document.querySelectorAll('.team__photo_item');
