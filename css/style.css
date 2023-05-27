@@ -96,12 +96,24 @@ button, button:focus, button:hover, button:active {
   outline: 0;
   border: none;
   cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 svg path {
   fill: inherit;
   stroke: inherit;
   stroke-width: inherit;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .container { 
@@ -306,6 +318,12 @@ svg path {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   z-index: 1;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .button__close {
@@ -1034,6 +1052,12 @@ svg path {
 .header__select {
   position: relative;
   width: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .header__select_name {
@@ -1598,6 +1622,11 @@ svg path {
 .projects__item:hover .projects__hover img {
   opacity: 0;
   z-index: 0;
+  -webkit-transition: opacity 0.1s linear;
+  -moz-transition: opacity 0.1s linear;
+  -ms-transition: opacity 0.1s linear;
+  -o-transition: opacity 0.1s linear;
+  transition: opacity 0.1s linear;
 }
 
 .projects__item:nth-child(2):hover {
@@ -1756,6 +1785,12 @@ svg path {
   display: flex;
   flex-wrap: wrap;
   gap: 36px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .projects__info_flex .header__select {
