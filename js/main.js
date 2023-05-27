@@ -299,38 +299,18 @@ hover.addEventListener('mouseover', function(e) {
   if(elemHover) return;
   var target = e.target.closest('.header__nav_item');
   if(!target) return;
-
-  // for ( let i =0 ; i <subnavs.length ; i++ ) {
-  //   subnavs[i].style.WebkitTransitionDelay = (i * 100) + "s";
-  //   subnavs[i].style.transitionDelay = (i * 100) + "s";
-  //   subnavs[i].style.WebkitTransition = "opacity" + " " + (i * 100) + "s linear";
-  //   subnavs[i].style.transition = "opacity" + " " + (i * 100) + "s linear";
-  //   subnavs[i].style.transform = 'opacity';
-  //   subnavs[i].style.opacity = '1';
-  // }
   elemHover = target;
-  
   var parent = target.closest('.header__nav_list'),
   old = parent.querySelector('.active')
   if(old) old.classList.remove('active')
   target.classList.add('active')
 })
-
 hover.addEventListener('mouseout', function(e) {
   if(!elemHover) return
   var target = e.target.closest('.header__nav_item')
   
   elemHover = null;
 })
-
-// var itemsl = document.querySelector('.header__subnav_list li');
-// itemsl.style.opacity = "0";
-// for (var i = 0; i < itemsl.length; i++) {
-//   document.querySelector(itemsl[i]).style.transition = (i * 400) + "s";
-//   document.querySelector(itemsl[i]).style.opacity = "1";
-// }
-// end hover menu
-
 // start dark mode
 const btnlight = document.querySelector('.button__light');
 const btndark = document.querySelector('.button__dark');
