@@ -606,7 +606,17 @@ svg path {
   position: absolute;
   top: 0;
   left: 50%;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
   overflow: hidden;
+}
+
+.header__nav_item.active .header__subnav_list {
+  opacity: 1;
 }
 
 .header__subnav_item {
