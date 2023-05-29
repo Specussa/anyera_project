@@ -37,8 +37,7 @@ body {
   display:inline-flex;
   align-items:center;
   border-radius:1.5rem;
-  padding:0 1.5rem;
-  height:3rem;
+  padding: 10px 15px;
   color:#262626;
   border:none;
   background-color:none;
@@ -64,7 +63,7 @@ body {
 
 .btn__text {
   position: relative;
-  margin-top:.0625rem;
+  font-size: 14px;
   z-index:1;
 }
 
@@ -94,7 +93,7 @@ body {
 
 .btn__number {
   display:inline-block;
-  font-size:.625rem;
+  font-size:8px;
   transform:translate(3px, -5px);
 }
 
@@ -150,6 +149,7 @@ body {
 }
 
 .filter__button svg {
+  margin-left: 5px;
   stroke: #262626;
   transform: rotate(0deg);
   transition: transform 0.3s;
@@ -193,14 +193,36 @@ form {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 30px;
-  /* position: absolute; */
+  position: relative;
   left: 0;
+  overflow: hidden;
 }
 
 .custom-checkbox {
   position: absolute;
   z-index: -1;
   opacity: 0;
+}
+
+.header__button {
+  position: relative;
+  left: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s linear, left 0.3s linear;
+  -moz-transition: opacity 0.3s linear, left 0.3s linear;
+  -ms-transition: opacity 0.3s linear, left 0.3s linear;
+  -o-transition: opacity 0.3s linear, left 0.3s linear;
+  transition: opacity 0.3s linear, left 0.3s linear;
+}
+
+form.active .header__button {
+  left: 0;
+  opacity: 1;
+  -webkit-transition-delay: calc(var(--inc-step)*0.1s);
+  -moz-transition-delay: calc(var(--inc-step)*0.1s);
+  -ms-transition-delay: calc(var(--inc-step)*0.1s);
+  -o-transition-delay: calc(var(--inc-step)*0.1s);
+  transition-delay: calc(var(--inc-step)*0.1s);
 }
   </style>
 </head>
@@ -213,7 +235,7 @@ form {
           <path d="M7 0.5L4.03 4.5L1 0.5" stroke="#262626" stroke-width="0.4"/>
         </svg>
       </button>
-      <form>
+      <form class="form active">
         <label class="header__button label__visible">
           <div class="btn">
             <input class="custom-checkbox" type="checkbox" name="fl-colour" value="red" id="red">
@@ -271,7 +293,7 @@ form {
           <path d="M7 0.5L4.03 4.5L1 0.5" stroke="#262626" stroke-width="0.4"/>
         </svg>
       </button>
-      <form>
+      <form class="form active">
         <label class="header__button label__visible">
           <div class="btn">
             <input class="custom-checkbox" type="checkbox" name="fl-size" value="tiny" id="tiny">
@@ -321,7 +343,7 @@ form {
           <path d="M7 0.5L4.03 4.5L1 0.5" stroke="#262626" stroke-width="0.4"/>
         </svg>
       </button>
-      <form>
+      <form class="form active">
         <label class="header__button label__visible">
           <div class="btn">
             <input class="custom-checkbox" type="checkbox" name="fl-cont" value="africa" id="africa">
