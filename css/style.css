@@ -213,7 +213,7 @@ svg path {
   overflow: hidden;
 }
 
-.button__project:hover, .button__project:focus, .button__project:active, .button__project.active {
+.button__project:hover, .button__project.active {
   color: var(--page-bg);
   border: 1px solid var(--purple);
 }
