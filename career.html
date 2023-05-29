@@ -39,7 +39,10 @@
           </li>
         </ul>
       </nav>
-      <button class="button__project header__project">Обсудить проект</button>
+      <button class="button__project header__project">
+        <span class="button__text">Обсудить проект</span>
+        <span class="button__hover"></span>
+      </button>
       <div class="header__languages">
         <button onclick="document.location='#'" class="button__language button__eng">ENG</button>
         <button onclick="document.location='#'" class="button__language button__ru" style="display: none;">RU</button>
@@ -48,14 +51,6 @@
         <div class="container header__nav_container">
           <div class="block__left header__nav_left"></div>
           <div class="header__nav_block">
-            <div class="header__nav_burger_flex">
-              <button class="button__close header__nav_burger" aria-label="Закрыть меню">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5882 24L0 1.41176L1.41176 0L24 22.5882L22.5882 24Z" fill="#262626"/>
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 1.41178L1.41176 24L0 22.5883L22.5882 0L24 1.41178Z" fill="#262626"/>
-                </svg>
-              </button>
-            </div>
             <div class="header__nav_info">
               <ul class="header__nav_list">
                 <li class="header__nav_item">
@@ -231,7 +226,10 @@
                     <small>Error message</small>
                   </div>
                 </div>
-                <button class="button__project header__form_button">Отправить</button>
+                <button class="button__project header__form_button">
+                  <span class="button__text">Отправить</span>
+                  <span class="button__hover"></span>
+                </button>
                 <p class="header__form_policy">Нажимая на кнопку, вы соглашаетесь с условиями <a href="#">политики конфиденциальности</a>.</p>
               </form>
             </div>

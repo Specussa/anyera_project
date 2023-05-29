@@ -49,30 +49,9 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     if(!elburger_v){} else {burger_v.classList.remove("active");}
     if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
   }
-  if (burgernav.classList.contains("active")) {
-    menu.classList.remove("active");
-    burgernav.classList.remove("active");
-    document.body.style.overflow = "visible";
-    document.body.style.height = "100%";
-  } else {
-    menu.classList.add("active");
-    burgernav.classList.add("active");
-    document.body.style.overflow = "hidden";
-    document.body.style.height = "100vh";
-  }
   if (burger_c.classList.contains("active")) {
     menu_c.classList.remove("active");
     burger_c.classList.remove("active");
-    document.body.style.overflow = "visible";
-    document.body.style.height = "100%";
-  }
-})
-// кнопка закрыть для header__burger
-document.querySelector('.header__nav_burger').addEventListener('click', function() {
-  if (burgernav.classList.contains("active")) {
-    menu.classList.remove("active");
-    burger.classList.remove("active");
-    burgernav.classList.remove("active");
     document.body.style.overflow = "visible";
     document.body.style.height = "100%";
   }
@@ -86,7 +65,6 @@ document.querySelector('.header__project').addEventListener('click', function() 
     document.body.style.height = "100%";
     menu.classList.remove("active");
     burger.classList.remove("active");
-    burgernav.classList.remove("active");
     if(!elmenu_v){} else {menu_v.classList.remove("active");}
     if(!elburger_v){} else {burger_v.classList.remove("active");}
     if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
@@ -97,7 +75,6 @@ document.querySelector('.header__project').addEventListener('click', function() 
     document.body.style.height = "100vh";
     menu.classList.remove("active");
     burger.classList.remove("active");
-    burgernav.classList.remove("active");
     if(!elmenu_v){} else {menu_v.classList.remove("active");}
     if(!elburger_v){} else {burger_v.classList.remove("active");}
     if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
@@ -127,26 +104,27 @@ document.querySelector('.header__consultation_burger').addEventListener('click',
 // закрыть все оверлеии при нажатии на nav menu
 for (const anchor of anchors) {
   anchor.addEventListener('click', function(event) {
-    if (burgernav.classList.contains("active")) {
+    if (burger.classList.contains("active")) {
       menu.classList.remove("active");
       burger.classList.remove("active");
-      burgernav.classList.remove("active");
       document.body.style.overflow = "visible";
       document.body.style.height = "100%";
     }
-    if (burgernav_c.classList.contains("active")) {
+    if (burger_c.classList.contains("active")) {
       menu_c.classList.remove("active");
       burger_c.classList.remove("active");
       burgernav_c.classList.remove("active");
       document.body.style.overflow = "visible";
       document.body.style.height = "100%";
     }
-    if (burgernav_v.classList.contains("active")) {
-      if(!elmenu_v){} else {menu_v.classList.remove("active");}
-      if(!elburger_v){} else {burger_v.classList.remove("active");}
-      if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
-      document.body.style.overflow = "visible";
-      document.body.style.height = "100%";
+    if(!burgernav_v){} else {
+      if (burgernav_v.classList.contains("active")) {
+        menu_v.classList.remove("active");
+        burger_v.classList.remove("active");
+        burgernav_v.classList.remove("active");
+        document.body.style.overflow = "visible";
+        document.body.style.height = "100%";
+      }
     }
   })
 }

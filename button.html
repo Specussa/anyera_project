@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 вариант</title>
+  <style>
+.button__project {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  background: none;
+	-webkit-box-shadow: inset 0 0 0 1px rgba(33,33,33,.1);
+	-moz-box-shadow: inset 0 0 0 1px rgba(33,33,33,.1);
+	box-shadow: inset 0 0 0 1px rgba(33,33,33,.1);
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  overflow: hidden;
+  border: 1px solid var(--gray-border);
+  padding: 100px;
+}
+
+.button__project:hover .button__hover {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.button__project:hover .button__hover:after {
+  -webkit-transform: skew(0,-8deg);
+  -ms-transform: skew(0,-8deg);
+  transform: skew(0,-8deg);
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+}
+
+.button__hover {
+  display: block;
+  left: 0;
+  -webkit-transform: translateY(102%);
+  -ms-transform: translateY(102%);
+  transform: translateY(102%);
+}
+
+.button__hover, .button__hover:after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: #f4f4f4;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+}
+
+.button__hover:after {
+  content: "";
+  right: 0;
+}
+  </style>
+</head>
+<body>
+  <div class="button__project">
+    <span class="button__text">purple</span>
+    <span class="button__hover"></span>
+  </div>
+</body>
+</html>
