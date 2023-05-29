@@ -2929,6 +2929,11 @@ svg path {
   border-bottom: 1px solid var(--gray-border);
 }
 
+.team__photo_flex .swiper-container {
+  width: 100%;
+  margin: 0;
+}
+
 .team__review_info, .team__empty {
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
@@ -2983,6 +2988,7 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   flex-direction: column;
   overflow: hidden;
 }
@@ -3155,7 +3161,7 @@ svg path {
 
 .team__photo_image {
   width: 100%;
-  height: 100%;
+  height: auto;
   max-height: 240px;
   object-fit: cover;
   border-radius: 5px;
