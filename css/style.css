@@ -504,25 +504,6 @@ svg path {
   border-right: 1px solid var(--gray-border);
 }
 
-.header__burger svg {
-  width: 25px;
-  height: 5.5px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  fill: var(--page-text);
-  -webkit-transition: fill 0.3s linear;
-  -moz-transition: fill 0.3s linear;
-  -ms-transition: fill 0.3s linear;
-  -o-transition: fill 0.3s linear;
-  transition: fill 0.3s linear;
-}
-
 .header__burger:hover svg {
   fill: var(--purple);
 }
@@ -538,6 +519,125 @@ svg path {
 .header__burger.active svg rect, .header__burger:hover svg rect {
   width: 25px;
   height: 1px;
+}
+
+.header__burger svg {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: -10px;
+  left: -1px;
+  fill: var(--page-text);
+  -webkit-transform: rotate(-360deg);
+  -moz-transform: rotate(-360deg);
+  -ms-transform: rotate(-360deg);
+  -o-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+  -webkit-transition: -webkit-transform 0.3s, fill 0.3s linear;
+  -moz-transition: -moz-transform 0.3s, fill 0.3s linear;
+  -ms-transition: -ms-transform 0.3s, fill 0.3s linear;
+  -o-transition: -o-transform 0.3s, fill 0.3s linear;
+  transition: transform 0.3s, fill 0.3s linear;
+}
+
+.header__burger.active svg {
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  -ms-transform: rotate(0);
+  -o-transform: rotate(0);
+  transform: rotate(0);
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -ms-transition: -ms-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  transition: transform 0.3s;
+  -webkit-transition-delay: 0.20s;
+  -moz-transition-delay: 0.20s;
+  -ms-transform-delay: 0.20s;
+  -o-transition-delay: 0.20s;
+  transition-delay: 0.20s;
+}
+
+.header__burger rect:nth-of-type(1) {
+  -webkit-transform: translateX(0) translateY(0) rotate(0);
+  -moz-transform: translateX(0) translateY(0) rotate(0);
+  -ms-transform: translateX(0) translateY(0) rotate(0);
+  -o-transform: translateX(0) translateY(0) rotate(0);
+  transform: translateX(0) translateY(0) rotate(0);
+  -webkit-transition: -webkit-transform 0.3s, -webkit-transform-origin 0.3s;
+  -moz-transition: -moz-transform 0.3s, -moz-transform-origin 0.3s;
+  -ms-transition: -ms-transform 0.3s, -ms-transform-origin 0.3s;
+  -o-transition: -o-transform 0.3s, -o-transform-origin 0.3s;
+  transition: transform 0.3s, transform-origin 0.3s;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition-delay: 0.20s;
+  -moz-transition-delay: 0.20s;
+  -ms-transform-delay: 0.20s;
+  -o-transition-delay: 0.20s;
+  transition-delay: 0.20s;
+}
+
+.header__burger rect:nth-of-type(2) {
+  -webkit-transform: translateX(0) translateY(0) rotate(0);
+  -moz-transform: translateX(0) translateY(0) rotate(0);
+  -ms-transform: translateX(0) translateY(0) rotate(0);
+  -o-transform: translateX(0) translateY(0) rotate(0);
+  transform: translateX(0) translateY(0) rotate(0);
+  -webkit-transition: -webkit-transform 0.3s, -webkit-transform-origin 0.3s;
+  -moz-transition: -moz-transform 0.3s, -moz-transform-origin 0.3s;
+  -ms-transition: -ms-transform 0.3s, -ms-transform-origin 0.3s;
+  -o-transition: -o-transform 0.3s, -o-transform-origin 0.3s;
+  transition: transform 0.3s, transform-origin 0.3s;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transition-delay: 0.20s;
+  -moz-transition-delay: 0.20s;
+  -ms-transform-delay: 0.20s;
+  -o-transition-delay: 0.20s;
+  transition-delay: 0.20s;
+}
+
+.header__burger.active rect:nth-of-type(1) {
+  -webkit-transform: translateX(4px) translateY(0.5px) rotate(45deg);
+  -moz-transform: translateX(4px) translateY(0.5px) rotate(45deg);
+  -ms-transform: translateX(4px) translateY(0.5px) rotate(45deg);
+  -o-transform: translateX(4px) translateY(0.5px) rotate(45deg);
+  transform: translateX(4px) translateY(0.5px) rotate(45deg);
+  -webkit-transition: -webkit-transform 0.3s, -webkit-transform-origin 0.3s;
+  -moz-transition: -moz-transform 0.3s, -moz-transform-origin 0.3s;
+  -ms-transition: -ms-transform 0.3s, -ms-transform-origin 0.3s;
+  -o-transition: -o-transform 0.3s, -o-transform-origin 0.3s;
+  transition: transform 0.3s, transform-origin 0.3s;
+  -webkit-transform-origin: 8px -3px;
+  -moz-transform-origin: 8px -3px;
+  -ms-transform-origin: 8px -3px;
+  -o-transform-origin: 8px -3px;
+  transform-origin: 8px -3px;
+}
+
+.header__burger.active rect:nth-of-type(2) {
+  -webkit-transform: translateX(1px) translateY(-3.5px) rotate(-45deg);
+  -moz-transform: translateX(1px) translateY(-3.5px) rotate(-45deg);
+  -ms-transform: translateX(1px) translateY(-3.5px) rotate(-45deg);
+  -o-transform: translateX(1px) translateY(-3.5px) rotate(-45deg);
+  transform: translateX(1px) translateY(-3.5px) rotate(-45deg);
+  -webkit-transition: -webkit-transform 0.3s, -webkit-transform-origin 0.3s;
+  -moz-transition: -moz-transform 0.3s, -moz-transform-origin 0.3s;
+  -ms-transition: -ms-transform 0.3s, -ms-transform-origin 0.3s;
+  -o-transition: -o-transform 0.3s, -o-transform-origin 0.3s;
+  transition: transform 0.3s, transform-origin 0.3s;
+  -webkit-transform-origin: 14px 7px;
+  -moz-transform-origin: 14px 7px;
+  -ms-transform-origin: 14px 7px;
+  -o-transform-origin: 14px 7px;
+  transform-origin: 14px 7px;
 }
 
 /* end header */
