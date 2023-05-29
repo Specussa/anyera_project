@@ -289,29 +289,32 @@ form {
 		document.querySelectorAll('.flower').forEach(a=>a.style.display="none");
 		$filteredResults.forEach(a=>a.style.display="");
 		if(this.tagName){
-			document.querySelectorAll("strong .btn__number").forEach(a=>a.classList[a.closest(".cat").contains(this)?"add":"remove"]("label__active"));			
+			document.querySelectorAll(".btn__number").forEach(a=>{
+				let cl = a.closest(".header__button") || a.closest(".cat");
+				if(cl)cl.classList[cl.contains(this)?"toggle":"remove"]("label__active");	
+			});				
 			filterCheckboxes.forEach(a=>{
-				if(a!=this && !a.checked){
-					a.checked=true;
-					let l = a.closest("label");
-					let r = filterFunc();
-					a.dataset.c=r.filter(c=>c.getAttribute("data-category").indexOf(a.value)!=-1).length;
-					//l.style.display=a.dataset.c>0?"":"";
-					l.classList[["add","remove"][Number(a.dataset.c>0)]]("label__hidden");
-					l=l.querySelector(".btn__number");
-					if(l)l.textContent=a.dataset.c;
-					a.checked=false; 
-					filterFunc();
-				}
+				a.checked=!a.checked;
+				let l = a.closest("label"); 
+				let r = filterFunc();
+				a.dataset.c=r.filter(c=>c.getAttribute("data-category").indexOf(a.value)!=-1).length;
+				//l.style.display=a.dataset.c>0?"":"";
+				l.classList[["add","remove"][Number(a.dataset.c>0)]]("label__hidden");
+				l.classList[["remove","add"][Number(a.dataset.c>0)]]("label__visible");
+				l=l.querySelector(".btn__number");
+				if(l)l.textContent=a.dataset.c;
+				a.checked=!a.checked;
+				filterFunc();
 			}); 
 			document.querySelectorAll('form').forEach(a=>{
 				let s = a.previousElementSibling.querySelector(".btn__number");
-				if(s)s.textContent=s.textContent.split(/:|\(/)[0]+"("+Array.from(a.querySelectorAll("input")).reduce((a, b) => a + parseInt(b.dataset.c), 0)+"):";		 
+				if(s)s.textContent=Array.from(a.querySelectorAll("input")).reduce((a, b) => a + parseInt(b.dataset.c), 0);		 
 			});
-			const subnav = document.querySelectorAll('form'); 
+			const subnav = document.querySelectorAll('form '); 
 			[...subnav].forEach(function (label__visible) { 
+				let i = 0;
 				for (let [index, elem] of [...label__visible.children].entries()){ 
-					elem.style.setProperty('--inc-step', index+1); 
+					elem.style.setProperty('--inc-step', elem.classList.contains("label__visible")?++i:0); 
 				} 
 			});
 			let save = {};
@@ -328,9 +331,12 @@ form {
 		filterFunc.bind(clear)();
 	};
 	clear.addEventListener("click",cf);
-	let load = JSON.parse(localStorage.getItem('save'));
-	if(load) for(let a in load)document.getElementById(a).checked=load[a];
-	cf();
+	let load = JSON.parse(localStorage.getItem('save'));console.log(load);
+	if(load) for(let a in load){
+		document.getElementById(a).checked=load[a];
+	}
+	filterFunc.bind(clear)();
+
 	
 </script>
 </body>
