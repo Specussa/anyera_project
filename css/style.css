@@ -303,11 +303,11 @@ svg path {
   -ms-transform: rotate(-23.91deg);
   -o-transform: rotate(-23.91deg);
   transform: rotate(-23.91deg);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  -moz-transition: -moz-transform 0.3s linear;
-  -ms-transition: -ms-transform 0.3s linear;
-  -o-transition: -o-transform 0.3s linear;
-  transition: transform 0.3s linear;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  -moz-transition: -moz-transform 0.2s linear;
+  -ms-transition: -ms-transform 0.2s linear;
+  -o-transition: -o-transform 0.2s linear;
+  transition: transform 0.2s linear;
   overflow: hidden;
 }
 
@@ -333,11 +333,11 @@ svg path {
   -ms-transform: translateY(102%);
   -o-transform: translateY(102%);
   transform: translateY(102%);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  -moz-transition: -moz-transform 0.3s linear;
-  -ms-transition: -ms-transform 0.3s linear;
-  -o-transition: -o-transform 0.3s linear;
-  transition: transform 0.3s linear;
+  -webkit-transition: -webkit-transform 0.2s linear;
+  -moz-transition: -moz-transform 0.2s linear;
+  -ms-transition: -ms-transform 0.2s linear;
+  -o-transition: -o-transform 0.2s linear;
+  transition: transform 0.2s linear;
   background-color: var(--purple);
   z-index: 0;
 }
