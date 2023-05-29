@@ -129,7 +129,6 @@ svg path {
 }
 
 .main {
-  padding-top: 60px;
   flex: 1 0 auto;
 }
 
@@ -1258,7 +1257,7 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding: 200px 99px 173px;
+  padding: 260px 99px 173px;
   align-items: flex-end;
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
@@ -3268,7 +3267,7 @@ svg path {
 
 @media (max-width: 1919px) {
   .digital__info {
-    padding: 200px 60px 143px;
+    padding: 260px 60px 143px;
   }
   .development__block_left, .development__block_right, .analytics__info {
     padding: 120px 60px;
@@ -3417,7 +3416,7 @@ svg path {
     display: none;
   }
   .digital__info {
-    padding: 200px 30px 130px;
+    padding: 260px 30px 130px;
   }
   .digital__head {
     font-size: 80px;
@@ -3831,7 +3830,7 @@ svg path {
     line-height: 49px;
   }
   .digital__info {
-    padding: 140px 40px 143px;
+    padding: 200px 40px 143px;
   }
   .showreel__circle {
     margin: 0 60px 0 0;
@@ -4071,7 +4070,7 @@ svg path {
     line-height: 17px;
   }
   .digital__info {
-    padding: 140px 20px 121px;
+    padding: 200px 20px 121px;
   }
   .showreel__circle {
     margin: 0 40px 0 0;
@@ -4410,7 +4409,7 @@ svg path {
     line-height: 34px;
   }
   .digital__info {
-    padding: 91px 20px 41px;
+    padding: 150px 20px 40px;
   }
   .showreel__circle {
     margin: 0 20px 0 0;
