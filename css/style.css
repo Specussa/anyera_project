@@ -1646,6 +1646,7 @@ svg path {
 /* start projects */
 
 .projects__list {
+  padding: 60px 0 0;
   -moz-column-count: 2;
   column-count: 2;
   gap: 0;
@@ -1954,7 +1955,7 @@ svg path {
   width: 100%;
   height: 100%;
   min-height: calc(100vh - 60px);
-  padding: 120px 100px;
+  padding: 180px 100px 120px;
   flex-direction: column;
   justify-content: center;
   position: relative;
@@ -2046,7 +2047,7 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 100px 40px;
+  padding: 100px 100px 40px;
   flex-direction: column;
   gap: 50px;
   border-left: 1px solid var(--gray-border);
@@ -2109,6 +2110,7 @@ svg path {
 /* start public */
 
 .public__block {
+  padding: 60px 0 0;
   -moz-column-count: 2;
   column-count: 2;
   gap: 0;
@@ -2411,7 +2413,7 @@ svg path {
 }
 
 .career__info {
-  padding: 40px 100px 0;
+  padding: 100px 100px 0;
   flex-direction: column;
   gap: 60px;
 }
@@ -2483,7 +2485,7 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding: 40px 100px 100px;
+  padding: 100px 100px 100px;
   flex-direction: column;
   gap: 80px;
   border-left: 1px solid var(--gray-border);
@@ -2837,7 +2839,7 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  padding: 40px 100px 0;
+  padding: 100px 100px 0;
   flex-direction: column;
   gap: 60px;
   border-left: 1px solid var(--gray-border);
@@ -2998,7 +3000,7 @@ svg path {
 }
 
 .team__info {
-  padding: 40px 100px 220px;
+  padding: 100px 100px 220px;
   flex-direction: column;
   gap: 141px;
 }
@@ -3306,7 +3308,7 @@ svg path {
     height: 560px;
   }
   .publication__block {
-    padding: 40px 60px 40px;
+    padding: 100px 60px 40px;
   }
   .public__info {
     padding: 100px 60px 96px;
@@ -3315,7 +3317,7 @@ svg path {
     padding: 100px 60px 78px;
   }
   .services__info {
-    padding: 40px 60px 0;
+    padding: 100px 60px 0;
   }
   .services__description {
     max-width: 488px;
@@ -3336,7 +3338,7 @@ svg path {
     right: 120px;
   }
   .team__info {
-    padding: 40px 60px 220px;
+    padding: 100px 60px 220px;
   }
   .team__target_info, .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo_flex {
     padding: 120px 60px;
@@ -3354,7 +3356,7 @@ svg path {
     max-width: 370px;
   }
   .career__info {
-    padding: 40px 60px 0px;
+    padding: 100px 60px 0px;
   }
   .career__agency {
     padding: 80px 60px 40px;
@@ -3363,7 +3365,7 @@ svg path {
     padding: 40px 60px 0;
   }
   .contacts__info {
-    padding: 40px 60px 30px;
+    padding: 100px 60px 30px;
   }
   .header__nav_block {
     padding: 60px 60px 120px;
@@ -3373,7 +3375,7 @@ svg path {
     line-height: 51px;
   }
   .error_page__block {
-    padding: 120px 60px;
+    padding: 180px 60px 120px;
   }
   .header__consultation_blocks {
     padding: 120px 60px;
@@ -3501,7 +3503,7 @@ svg path {
     height: 380px;
   }
   .publication__block {
-    padding: 40px 40px 40px;
+    padding: 100px 40px 40px;
   }
   .public__block {
     -moz-column-count: 1;
@@ -3549,7 +3551,7 @@ svg path {
     max-width: 100%;
   }
   .services__info {
-    padding: 40px 40px 0;
+    padding: 100px 40px 0;
   }
   .services__flex {
     padding: 195px 40px 88px;
@@ -3608,7 +3610,7 @@ svg path {
     padding: 100px 40px;
   }
   .team__info {
-    padding: 40px 40px 100px;
+    padding: 100px 40px 100px;
   }
   .team__about_left {
     padding: 120px 40px 0;
@@ -3646,7 +3648,7 @@ svg path {
     max-width: 368px;
   }
   .career__info {
-    padding: 40px 40px 0px;
+    padding: 100px 40px 0px;
   }
   .career__agency {
     padding: 80px 40px 35px;
@@ -3655,7 +3657,7 @@ svg path {
     padding: 35px 40px 0;
   }
   .contacts__info {
-    padding: 40px 40px 30px;
+    padding: 100px 40px 30px;
   }
   .contacts__social_flex {
     width: 100%;
@@ -3697,7 +3699,7 @@ svg path {
     line-height: 29px;
   }
   .error_page__block {
-    padding: 100px 40px;
+    padding: 160px 40px 100px;
   }
   .header__consultation_block {
     flex-direction: column;
@@ -3750,7 +3752,7 @@ svg path {
     height: 280px;
   }
   .publication__block {
-    padding: 40px 0 40px;
+    padding: 100px 0 40px;
   }
   .say__block {
     padding: 88px 0 50px;
@@ -3797,7 +3799,7 @@ svg path {
     gap: 38px;
   }
   .services__info {
-    padding: 20px 40px 0;
+    padding: 80px 40px 0;
   }
   .services__desc {
     font-size: 14px;
@@ -3931,7 +3933,7 @@ svg path {
     padding: 0;
   }
   .publication__block {
-    padding: 20px 0 20px;
+    padding: 80px 0 20px;
     gap: 30px;
   }
   .publication__image {
@@ -4037,7 +4039,7 @@ svg path {
     gap: 10px;
   }
   .services__info {
-    padding: 20px 20px 0;
+    padding: 80px 20px 0;
     gap: 20px;
   }
   .services__info_block {
@@ -4124,7 +4126,7 @@ svg path {
     line-height: 17px;
   }
   .team__info {
-    padding: 20px 20px 80px;
+    padding: 80px 20px 80px;
     gap: 101px;
   }
   .team__head {
@@ -4195,7 +4197,7 @@ svg path {
     padding: 10px 0;
   }
   .career__info {
-    padding: 20px 20px 0px;
+    padding: 80px 20px 0px;
     gap: 20px;
   }
   .career__agency {
@@ -4234,7 +4236,7 @@ svg path {
     line-height: 17px;
   }
   .contacts__info {
-    padding: 20px 20px 50px;
+    padding: 80px 20px 50px;
     gap: 30px;
   }
   .contacts__flex, .contacts__blocks {
@@ -4281,7 +4283,7 @@ svg path {
     right: 15px;
   }
   .error_page__block {
-    padding: 60px 20px 94px;
+    padding: 120px 20px 94px;
   }
   .error_page__head {
     font-size: 150px;
@@ -4454,7 +4456,7 @@ svg path {
     padding: 60px 20px 120px;
   }
   .error_page__block {
-    padding: 60px 20px 124px;
+    padding: 120px 20px 124px;
   }
   .error_page__head {
     font-size: 100px;
