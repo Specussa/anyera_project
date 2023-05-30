@@ -2787,11 +2787,11 @@ svg path {
   padding: 0 20px;
   flex-direction: column;
   gap: 10px;
-  -webkit-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
-  -moz-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
-  -ms-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
-  -o-transition: max-height 0.2s ease-out, padding 0.2s ease-out;
-  transition: max-height 0.2s ease-out, padding 0.2s ease-out;
+  -webkit-transition: max-height 0.8s ease-out, padding 0.2s ease-out;
+  -moz-transition: max-height 0.8s ease-out, padding 0.2s ease-out;
+  -ms-transition: max-height 0.8s ease-out, padding 0.2s ease-out;
+  -o-transition: max-height 0.8s ease-out, padding 0.2s ease-out;
+  transition: max-height 0.8s ease-out, padding 0.2s ease-out;
   border-bottom: 1px solid var(--gray-border);
   color: var(--page-text);
   overflow: hidden;
@@ -4439,14 +4439,11 @@ svg path {
   }
   .services__desc {
     font-size: 12px;
-    .services__desc {
-      font-size: 14px;
-      -webkit-transform: translateY(0);
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -o-transform: translateY(0);
-      transform: translateY(0);
-    }
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
   }
   .services__heading {
     font-size: 28px;
