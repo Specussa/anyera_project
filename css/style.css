@@ -1513,6 +1513,12 @@ svg path {
   background: transparent;
 }
 
+.showreel__modal_close svg, .showreel__modal_close:hover svg, .showreel__modal_close:active svg, .showreel__modal_close:focus svg {
+  width: 40px;
+  height: 40px;
+  fill: var(--page-bg);
+}
+
 .showreel__modal_visible {
   display: block;
 }
@@ -4428,6 +4434,10 @@ svg path {
     -ms-transform: translateX(15px);
     -o-transform: translateX(15px);
     transform: translateX(15px);
+  }
+  .showreel__modal_close {
+    top: 30px;
+    right: 30px;
   }
 }
 
