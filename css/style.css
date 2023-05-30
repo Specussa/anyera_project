@@ -3161,8 +3161,12 @@ svg path {
   gap: 141px;
 }
 
-.team__target_info, .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo_flex {
+.team__target_info, .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right {
   padding: 120px 100px;
+}
+
+.team__photo_flex {
+  padding: 120px 200px;
 }
 
 .team__review_item {
@@ -3356,8 +3360,9 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 224px;
+  max-width: 240px;
   height: 100%;
+  margin-right: 30px;
   flex-direction: column;
   gap: 17px;
 }
@@ -3373,8 +3378,7 @@ svg path {
 
 .team__photo_image {
   width: 100%;
-  height: auto;
-  max-height: 240px;
+  height: 100%;
   object-fit: cover;
   border-radius: 5px;
 }
@@ -3747,6 +3751,12 @@ svg path {
   }
   .team__principles_left, .team__about_left {
     width: calc(30% + 30px);
+  }
+  .team__photo_block {
+    margin-right: 20px;
+  }
+  .services__flex {
+    padding: 88px 60px;
   }
 }
 
@@ -4281,6 +4291,9 @@ svg path {
   .team__review_next {
     right: 40px;
   }
+  .team__photo_block {
+    max-width: 280px;
+  }
 }
 
 /* end media 640+ */
@@ -4715,6 +4728,20 @@ svg path {
   .team__review_next {
     right: 20px;
   }
+  .team__photo_block {
+    margin-right: 15px;
+  }
+  .team__ourteam_info {
+    flex-direction: column;
+  }
+  .team__ourteam_left {
+    width: 100%;
+    padding: 80px 20px 15px;
+  }
+  .team__ourteam_right {
+    width: 100%;
+    padding: 15px 20px 80px;
+  }
 }
 
 /* end media 480+ */
@@ -4827,5 +4854,8 @@ svg path {
   .header__career_head {
     font-size: 28px;
     line-height: 34px;
+  }
+  .team__photo_block {
+    margin-right: 10px;
   }
 }

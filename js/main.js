@@ -588,7 +588,7 @@ if(!elsliderphoto){} else {
     // loop: true,
     // centerSlides: true,
     slidesPerView: 5, // or 'auto'
-    spaceBetween: 40,
+    spaceBetween: 0,
     // centeredSlides : true,
     effect: 'coverflow', // 'cube', 'fade', 'coverflow',
     coverflowEffect: {
@@ -603,7 +603,7 @@ if(!elsliderphoto){} else {
     breakpoints: {
       959: {
         slidesPerView: 3,
-        spaceBetween: 10,
+        spaceBetween: 0,
         arrow: false,
       }
     },
