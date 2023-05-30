@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -17,52 +17,9 @@
     <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/services.html" target="_blank">Услуги</a></li>
     <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/team.html" target="_blank">Команда</a></li>
     <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/contacts.html" target="_blank">Контакты</a></li>
+    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/policy.html" target="_blank">Политика</a></li>
+    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/filter_category.html" target="_blank">Фильтр</a></li>
+    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/projects-new.html" target="_blank">Новые проекты</a></li>
   </ul>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <div id="zzz">
-    <div class="getmore">1</div>
-    <div class="getmore">2</div>
-    <div class="getmore">3</div>
-    <div class="getmore" id="refer">4</div>
-  </div>
-<script>
-var elementsWithoutRefer = $('#zzz .getmore:not(#refer)');
-elementsWithoutRefer.css('color', 'red');
-
-console.log(elementsWithoutRefer.map((i, el) => el.outerHTML).get().join(''));
-</script>
 </body>
-</html> -->
-<style>
-:root {
-  --inc-step: 1; /* css переменная для шага инкремента в списке*/
-}
-
-ul {
-  counter-reset: my-counter; /* инициируем счетчик */
-  list-style: none; /* прячем маркеры */
-  padding-left: 0; 
-}
-
-li {
-  transition-delay: (calc(var(--inc-step)*0.1s)); /* выводим значение */
-}
-
-li::before{
-  counter-increment: my-counter var(--inc-step); /* увеличиваем счетчик*/
-  content: counter(my-counter); /* выводим значение */
-}
-</style>
-<ul class="count">
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
-<script>
-  const root = document.documentElement;
-  root.style.setProperty('--inc-step', 1);
-</script>
+</html>
