@@ -3170,10 +3170,6 @@ svg path {
   padding: 120px 100px;
 }
 
-.team__photo_flex {
-  padding: 120px 200px;
-}
-
 .team__review_item {
   padding: 100px;
 }
@@ -3183,7 +3179,9 @@ svg path {
 }
 
 .team__photo_flex {
+  padding: 120px 200px;
   justify-content: center;
+  position: relative;
   overflow: hidden;
 }
 
@@ -3397,6 +3395,48 @@ svg path {
 
 .team__photo.swiper-container-3d {
   padding-left: 40px;
+}
+
+.team__photo_prev, .team__photo_next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: auto;
+  right: auto;
+  left: 50%;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+}
+
+.team__photo_prev svg, .team__photo_next svg {
+  stroke: var(--page-text);
+}
+
+.team__photo_prev {
+  -webkit-transform: translateX(-50px);
+  -moz-transform: translateX(-50px);
+  -ms-transform: translateX(-50px);
+  -o-transform: translateX(-50px);
+  transform: translateX(-50px);
+  background-image: none;
+}
+
+.team__photo_next {
+  -webkit-transform: translateX(30px);
+  -moz-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  -o-transform: translateX(30px);
+  transform: translateX(30px);
+  background-image: none;
+}
+
+.team__photo_prev.swiper-button-disabled, .team__photo_next.swiper-button-disabled {
+  opacity: 0.35;
 }
 
 .team__review_prev, .team__review_next {
@@ -4304,6 +4344,20 @@ svg path {
   .team__photo_block {
     max-width: 280px;
   }
+  .team__photo_prev {
+    -webkit-transform: translateX(-65px);
+    -moz-transform: translateX(-65px);
+    -ms-transform: translateX(-65px);
+    -o-transform: translateX(-65px);
+    transform: translateX(-65px);
+  }
+  .team__photo_next {
+    -webkit-transform: translateX(15px);
+    -moz-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    -o-transform: translateX(15px);
+    transform: translateX(15px);
+  }
 }
 
 /* end media 640+ */
@@ -4756,6 +4810,9 @@ svg path {
   .team__ourteam_right {
     width: 100%;
     padding: 15px 20px 80px;
+  }
+  .team__photo_prev, .team__photo_next {
+    bottom: 15px;
   }
 }
 

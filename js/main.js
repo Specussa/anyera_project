@@ -600,6 +600,10 @@ if(!elsliderphoto){} else {
     },
     grabCursor: true,
     parallax: true,
+    navigation: {
+      nextEl: '.team__photo_next',
+      prevEl: '.team__photo_prev',
+    },
     breakpoints: {
       959: {
         slidesPerView: 3,
@@ -642,8 +646,8 @@ if(!elsliderreview){} else {
     //   clickable: true,
     // },
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.team__review_next',
+      prevEl: '.team__review_prev',
     },
     breakpoints: {
       1199: {
