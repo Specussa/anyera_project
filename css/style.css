@@ -3031,6 +3031,11 @@ svg path {
   font-weight: 300;
   line-height: 25px;
   color: var(--page-text);
+  -webkit-transform: translateY(7px);
+  -moz-transform: translateY(7px);
+  -ms-transform: translateY(7px);
+  -o-transform: translateY(7px);
+  transform: translateY(7px);
 }
 
 .services__flex {
@@ -4175,6 +4180,11 @@ svg path {
   }
   .services__desc {
     font-size: 14px;
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
+    transform: translateY(4px);
   }
   .services__heading {
     font-size: 32px;
@@ -4429,6 +4439,14 @@ svg path {
   }
   .services__desc {
     font-size: 12px;
+    .services__desc {
+      font-size: 14px;
+      -webkit-transform: translateY(0);
+      -moz-transform: translateY(0);
+      -ms-transform: translateY(0);
+      -o-transform: translateY(0);
+      transform: translateY(0);
+    }
   }
   .services__heading {
     font-size: 28px;
