@@ -20,6 +20,10 @@ const anchors = document.querySelectorAll(".header__anchor_item")
 const filtercategory = document.querySelector('.filter__category');
 const elsliderphoto = document.querySelector('.team__photo');
 const elsliderreview = document.querySelector('.team__review');
+var preview = document.querySelector('.showreel__button'),
+video = document.querySelector('#showreel__video'),
+modal = document.querySelector('.showreel__modal'),
+modalClose = document.querySelector('.showreel__modal_close');
 
 // start navbar
 // кнопка header__burger
@@ -671,3 +675,22 @@ if(!elsliderreview){} else {
   mySwiper.init();
 }
 // end team photo slider
+
+// start video
+if(!showreel__video){} else {
+  preview.onclick = function(e) {
+  e.preventDefault();
+  modal.classList.add('showreel__modal_visible');
+  video.play();
+  document.body.style.overflow = "hidden";
+  document.body.style.height = "100vh";
+  }
+  modalClose.onclick = function() {
+  modal.classList.remove('showreel__modal_visible');
+  video.pause();
+  video.currentTime = 0;
+  document.body.style.overflow = "visible";
+  document.body.style.height = "100%";
+  }
+}
+// end video
