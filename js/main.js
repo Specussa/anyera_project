@@ -133,12 +133,12 @@ for (const anchor of anchors) {
 // end navbar
 
 // start validate form project
+if(!form){} else {
 form.addEventListener('submit', e => {
 e.preventDefault();
 
 checkInputs();
 });
-
 function checkInputs() {
 // trim to remove the whitespaces
 const usernameValue = username.value.trim();
@@ -172,7 +172,7 @@ function setSuccessFor(input) {
 // 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(control);
 // }
 // end validate form project
-
+}
 // start career
 if(!burger_v){} else {
   // кнопка career__button
