@@ -1,15 +1,12 @@
 const menu = document.querySelector('.header__nav');
 const menu_c = document.querySelector('.header__consultation');
 const menu_v = document.querySelector('.header__career');
-const elmenu_v = document.querySelector('.header__career');
 const burger = document.querySelector('.header__burger');
 const burger_c = document.querySelector('.header__project');
 const burger_v = document.querySelector('.career__button');
-const elburger_v = document.querySelector('.career__button');
 const burgernav = document.querySelector('.header__nav_burger');
 const burgernav_c = document.querySelector('.header__consultation_burger');
 const burgernav_v = document.querySelector('.header__career_burger');
-const elburgernav_v = document.querySelector('.header__career_burger');
 const form = document.getElementById('form');
 const formcareer = document.getElementById('formcareer');
 const username = document.getElementById('username');
@@ -20,6 +17,7 @@ const text = document.getElementById('text');
 const textcareer = document.getElementById('textcareer');
 const linkcareer = document.getElementById('linkcareer');
 const anchors = document.querySelectorAll(".header__anchor_item")
+const filtercategory = document.querySelector('.filter__category');
 const elsliderphoto = document.querySelector('.team__photo');
 const elsliderreview = document.querySelector('.team__review');
 
@@ -34,9 +32,9 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     menu_c.classList.remove("active");
     burger_c.classList.remove("active");
     burgernav_c.classList.remove("active");
-    if(!elmenu_v){} else {menu_v.classList.remove("active");}
-    if(!elburger_v){} else {burger_v.classList.remove("active");}
-    if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
+    if(!menu_v){} else {menu_v.classList.remove("active");}
+    if(!burger_v){} else {burger_v.classList.remove("active");}
+    if(!burgernav_v){} else {burgernav_v.classList.remove("active");}
   } else {
     menu.classList.add("active");
     burger.classList.add("active");
@@ -45,9 +43,9 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     menu_c.classList.remove("active");
     burger_c.classList.remove("active");
     burgernav_c.classList.remove("active");
-    if(!elmenu_v){} else {menu_v.classList.remove("active");}
-    if(!elburger_v){} else {burger_v.classList.remove("active");}
-    if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
+    if(!menu_v){} else {menu_v.classList.remove("active");}
+    if(!burger_v){} else {burger_v.classList.remove("active");}
+    if(!burgernav_v){} else {burgernav_v.classList.remove("active");}
   }
   if (burger_c.classList.contains("active")) {
     menu_c.classList.remove("active");
@@ -65,9 +63,9 @@ document.querySelector('.header__project').addEventListener('click', function() 
     document.body.style.height = "100%";
     menu.classList.remove("active");
     burger.classList.remove("active");
-    if(!elmenu_v){} else {menu_v.classList.remove("active");}
-    if(!elburger_v){} else {burger_v.classList.remove("active");}
-    if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
+    if(!menu_v){} else {menu_v.classList.remove("active");}
+    if(!burger_v){} else {burger_v.classList.remove("active");}
+    if(!burgernav_v){} else {burgernav_v.classList.remove("active");}
   } else {
     menu_c.classList.add("active");
     burger_c.classList.add("active");
@@ -75,9 +73,9 @@ document.querySelector('.header__project').addEventListener('click', function() 
     document.body.style.height = "100vh";
     menu.classList.remove("active");
     burger.classList.remove("active");
-    if(!elmenu_v){} else {menu_v.classList.remove("active");}
-    if(!elburger_v){} else {burger_v.classList.remove("active");}
-    if(!elburgernav_v){} else {burgernav_v.classList.remove("active");}
+    if(!menu_v){} else {menu_v.classList.remove("active");}
+    if(!burger_v){} else {burger_v.classList.remove("active");}
+    if(!burgernav_v){} else {burgernav_v.classList.remove("active");}
   }
   if (burgernav_c.classList.contains("active")) {
     menu_c.classList.remove("active");
@@ -170,6 +168,97 @@ function setSuccessFor(input) {
 // 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(control);
 // }
 // end validate form project
+
+// start career
+if(!burger_v){} else {
+  // кнопка career__button
+  burger_v.addEventListener('click', function() {
+    if (burger_v.classList.contains("active")) {
+      menu_v.classList.remove("active");
+      burger_v.classList.remove("active");
+      document.body.style.overflow = "visible";
+      document.body.style.height = "100%";
+      menu.classList.remove("active");
+      burger.classList.remove("active");
+      menu_c.classList.remove("active");
+      burger_c.classList.remove("active");
+      burgernav_c.classList.remove("active");
+    } else {
+      menu_v.classList.add("active");
+      burger_v.classList.add("active");
+      document.body.style.overflow = "hidden";
+      document.body.style.height = "100vh";
+      menu.classList.remove("active");
+      burger.classList.remove("active");
+      menu_c.classList.remove("active");
+      burger_c.classList.remove("active");
+      burgernav_c.classList.remove("active");
+    }
+    if (burgernav_v.classList.contains("active")) {
+      menu_v.classList.remove("active");
+      burgernav_v.classList.remove("active");
+      document.body.style.overflow = "visible";
+      document.body.style.height = "100%";
+    } else {
+      menu_v.classList.add("active");
+      burgernav_v.classList.add("active");
+      document.body.style.overflow = "hidden";
+      document.body.style.height = "100vh";
+    }
+  })
+  // кнопка закрыть для career__button
+  burgernav_v.addEventListener('click', function() {
+    if (burgernav_v.classList.contains("active")) {
+      menu_v.classList.remove("active");
+      burger_v.classList.remove("active");
+      burgernav_v.classList.remove("active");
+      document.body.style.overflow = "visible";
+      document.body.style.height = "100%";
+    }
+  })
+  // start validate form career
+  formcareer.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    checkInputscareer();
+    });
+    
+    function checkInputscareer() {
+    // trim to remove the whitespaces
+    const usernamecareerValue = usernamecareer.value.trim();
+    const phonecareerValue = phonecareer.value.trim();
+    const textcareerValue = textcareer.value.trim();
+    
+    if(usernamecareerValue === '') {
+        setErrorFor(usernamecareer, 'Обязательное поле'); } else { setSuccessFor(usernamecareer);
+    }
+    if(phonecareerValue === '') {
+        setErrorFor(phonecareer, 'Обязательное поле'); } else { setSuccessFor(phonecareer);
+    }
+    if(textcareerValue === '') {
+        setErrorFor(textcareer, 'Обязательное поле'); } else { setSuccessFor(textcareer);
+      }
+    }
+    
+    function setErrorFor(input, message) {
+      const formcareerControl = input.parentElement;
+      const small = formcareerControl.querySelector('small');
+      formcareerControl.className = 'header__forms_form_control error';
+      small.innerText = message;
+    }
+    
+    function setSuccessFor(input) {
+      const formcareerControl = input.parentElement;
+      formcareerControl.className = 'header__forms_form_control success';
+    }
+    
+    // function iscontrol(control) {
+    // 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(control);
+    // }
+    // end validate form career
+}
+// end career
+
 
 // start select
 const SELECT = '[data-select]'
@@ -385,6 +474,94 @@ const subnav = document.querySelectorAll('.header__subnav_list');
 });
 
 // end счетчик для всех листов
+
+// start filter projects
+if(!filtercategory){} else {
+	var filterCheckboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+	var clear = document.querySelector("#clear");
+	var filterFunc = function(start=false){
+		var selectedFilters = {};
+		filterCheckboxes.filter(a=>a.checked).forEach(a=>{
+			if (!selectedFilters.hasOwnProperty(a.name)) {
+			  selectedFilters[a.name] = [];
+			}
+			selectedFilters[a.name].push(a.value);
+		});
+		clear.style.display=Object.keys(selectedFilters).length>0?"":"none";
+		var filteredResults = Array.from(document.querySelectorAll('.projects__item'));
+		Object.entries(selectedFilters).forEach(a=>{
+			filteredResults = filteredResults.filter(b=>{
+				var matched = false,
+				currentFilterValues = b.getAttribute("data-category").split(' ');
+				currentFilterValues.forEach(currentFilterValue=>{
+					if (a[1].indexOf(currentFilterValue) != -1) {
+						matched = true;
+						return false;
+					}
+				});
+			  return matched;
+			});
+		});
+		document.querySelectorAll('.projects__item').forEach(a=>a.style.display="none");
+		filteredResults.forEach(a=>a.style.display="");
+		if(this.tagName){
+			document.querySelectorAll(".button__number").forEach(a=>{
+				let cl = a.closest(".filter__category");
+				if(cl)cl.classList[cl.contains(this)?"add":"remove"]("active");	
+			});	
+			let th = this.closest(".filter__label");
+			if(th)th.classList[this.checked?"add":"remove"]("active");
+			filterCheckboxes.forEach(a=>{
+				let ob = a.checked;
+				a.checked=true;
+				let l = a.closest("label"); 
+				let r = filterFunc();
+				a.dataset.c=r.filter(c=>c.getAttribute("data-category").indexOf(a.value)!=-1).length;
+				l.classList[["add","remove"][Number(a.dataset.c>0)]]("hidden");
+				l.classList[["remove","add"][Number(a.dataset.c>0)]]("visible");
+				l=l.querySelector(".button__number");
+				if(l)l.textContent=a.dataset.c;
+				a.checked=ob;
+				filterFunc();
+			}); 
+			document.querySelectorAll('.filter__form').forEach(a=>{
+				let s = a.previousElementSibling;
+				if(s)s=s.querySelector(".button__number");
+				if(s)s.textContent=Array.from(a.querySelectorAll("input")).reduce((a, b) => a + parseInt(b.dataset.c), 0);		 
+			});
+			const subnav = document.querySelectorAll('.filter__form '); 
+			[...subnav].forEach(function (visible) { 
+				let i = 0;
+				for (let [index, elem] of [...visible.children].entries()){ 
+					elem.style.setProperty('--inc-step', elem.classList.contains("visible")?++i:0); 
+				} 
+			});
+			let save = {};
+			filterCheckboxes.forEach(a=>save[a.id]=a.checked);
+			console.log(save);
+			localStorage.setItem("save",JSON.stringify(save));
+
+		}
+		return filteredResults;
+	}
+
+	filterCheckboxes.forEach(a=>a.addEventListener('change', filterFunc));   
+	let cf = ()=>{
+		filterCheckboxes.forEach(a=>a.checked=false);
+		document.querySelectorAll(".active").forEach(a=>a.classList.remove("active"));
+		filterFunc.bind(clear)();
+	};
+	clear.addEventListener("click",cf);
+	let load = JSON.parse(localStorage.getItem('save'));console.log(load);
+	for(let a in load){
+		let e = document.getElementById(a);
+		e.checked=load[a];
+		filterFunc.bind(e)();
+	}
+	let fb = document.querySelectorAll(".filter__button");
+	fb.forEach(a=>a.onclick=b=>fb.forEach(c=>c.parentNode.classList[c==b.target?"toggle":"remove"]("selected")));
+}
+// end filter projects
 
 // start team photo slider
 if(!elsliderphoto){} else {

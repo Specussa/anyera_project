@@ -225,8 +225,8 @@
                     <small>Error message</small>
                   </div>
                 </div>
-                <button class="button__project header__project">
-                  <span class="button__text">Обсудить проект</span>
+                <button class="button__project header__form_button">
+                  <span class="button__text">Отправить</span>
                   <span class="button__hover"></span>
                 </button>
                 <p class="header__form_policy">Нажимая на кнопку, вы соглашаетесь с условиями <a href="#">политики конфиденциальности</a>.</p>
@@ -240,215 +240,42 @@
   </header>
   <div class="wrapper">
     <main class="main">
-      <section class="projects">
-        <div class="container">
-          <div class="block__left filter__left"></div>
-          <div class="block__right filter__right"></div>
+      <section class="publication">
+        <div class="container publication__container">
+          <div class="block__left publication__left"></div>
+          <div class="publication__block">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+              <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Публикации</a></li>
+            </ul>
+            <p class="publication__desc">Lorem ipsum dolor sit amet consectetur. Nibh feugiat hendrerit fusce felis. Massa cras tempor nibh nunc maecenas aliquam nisl diam. In eu tempus at enim ac nullam ut. Nunc amet elementum neque in.<br>Ultrices sit a ornare scelerisque aliquet. Nullam orci in vel aliquam lectus turpis. Vel eu mollis etiam arcu elit adipiscing vel pellentesque. Venenatis est duis malesuada egestas sit. Sed integer lacinia posuere in rhoncus sed mauris nisl. Nunc mi pellentesque mi scelerisque. Vitae non ultrices sit pulvinar aliquam eu adipiscing risus aenean. Sodales cursus mi sit integer neque. Pharetra tristique sed sapien hac sit nunc augue augue sagittis. Dignissim nisl enim arcu pulvinar vivamus. Nunc elit nunc tempus at in nec sit egestas. Velit enim sed urna velit augue malesuada elementum volutpat condimentum. Duis aenean tristique volutpat risus elementum sagittis augue orci erat. Viverra in purus semper pellentesque tortor ullamcorper quis at.</p>
+            <p class="publication__desc">Ullamcorper eu scelerisque purus eget egestas malesuada. Amet maecenas rutrum at libero pulvinar arcu lorem. Iaculis ac dictum vulputate eu id ligula tellus libero. Gravida ultrices in ut pretium molestie euismod a. Nibh non arcu habitant id. Consectetur elementum habitasse non venenatis nullam augue. Dictum scelerisque sed donec tortor tincidunt maecenas scelerisque vel. Commodo felis nunc quam et massa. Felis aenean ullamcorper mattis et fermentum lorem malesuada. Consequat id gravida aliquam tempor ultrices velit tincidunt. Quam sed urna ultricies vulputate et nibh in turpis. Amet scelerisque suspendisse condimentum justo urna scelerisque. Lacus euismod hac non turpis sagittis sapien. Hendrerit risus venenatis est ut netus dui. Mauris nulla pellentesque faucibus amet in magna.</p>
+            <p class="publication__desc">Nisl quisque maecenas consectetur venenatis proin enim amet pharetra. Tortor lacus nunc sed at porttitor sapien. Lorem eget morbi integer phasellus lectus. Platea curabitur sed morbi volutpat. Vestibulum enim aliquet at auctor sapien elementum enim sed. Varius commodo diam aliquet enim senectus eu morbi.</p>
+            <p class="publication__desc">Feugiat enim non vel consequat pellentesque phasellus dapibus ipsum placerat. Sit nibh augue magna donec urna in sit dolor tortor. In pharetra convallis quis tempus scelerisque sagittis convallis mauris. Scelerisque amet nisl pellentesque semper massa fames sed sed nec. Urna vitae placerat curabitur enim adipiscing consectetur vel.</p>
+          </div>
+          <div class="block__right publication__right"></div>
         </div>
       </section>
-      <section class="projects" id="PROJECTS">
-        <div class="container projects__container">
-          <div class="block__left projects__left block__left_text"><p class="block__left_desc projects__left_desc">Проекты</p></div>
-          <div class="projects__list_filter">
-            <div class="filter__category">
-              <button class="filter__button">
-                Filter projects__list by colour:<span class="button__text button__number"></span>
-                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 0.5L4.03 4.5L1 0.5" stroke="#262626" stroke-width="0.4"/>
-                </svg>
-              </button>
-              <form class="filter__form">
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-colour" value="red" id="red">
-                    <span class="button__text">Red</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-colour" value="yellow" id="yellow">
-                    <span class="button__text">yellow</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-colour" value="pink" id="pink">
-                    <span class="button__text">pink</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-colour" value="purple" id="purple">
-                    <span class="button__text">purple</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-colour" value="green" id="green">
-                    <span class="button__text">green</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-colour" value="other" id="other">
-                    <span class="button__text">other</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-              </form>
+      <section class="say">
+        <div class="container say__container">
+          <div class="block__left say__left"></div>
+          <div class="say__block">
+            <div class="say__block_left">
+              <h4 class="say__head">
+                Расскажите о&nbsp;вашем&nbsp;проекте
+              </h4>
+              <p class="say__desc">
+                Опишите свою задачу и мы свяжемся с вами в кратчайшие сроки.
+              </p>
             </div>
-            <div class="filter__category">
-              <button class="filter__button">
-                Filter projects__list by size:<span class="button__text button__number"></span>
-                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 0.5L4.03 4.5L1 0.5" stroke="#262626" stroke-width="0.4"/>
-                </svg>
-              </button>
-              <form class="filter__form">
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-size" value="tiny" id="tiny">
-                    <span class="button__text">tiny</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-size" value="small" id="small">
-                    <span class="button__text">small</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-size" value="medium" id="medium">
-                    <span class="button__text">medium</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-size" value="large" id="large">
-                    <span class="button__text">large</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-size" value="giant" id="giant">
-                    <span class="button__text">giant</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-              </form> 
-            </div>
-            <div class="filter__category">
-              <button class="filter__button">
-                Filter projects__list by continents:<span class="button__text button__number"></span>
-                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 0.5L4.03 4.5L1 0.5" stroke="#262626" stroke-width="0.4"/>
-                </svg>
-              </button>
-              <form class="filter__form">
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-cont" value="africa" id="africa">
-                    <span class="button__text">africa</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-cont" value="europe" id="europe">
-                    <span class="button__text">europe</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-cont" value="asia" id="asia">
-                    <span class="button__text">asia</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-cont" value="north-america" id="north-america">
-                    <span class="button__text">north-america</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-cont" value="south-america" id="south-america">
-                    <span class="button__text">south-america</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-cont" value="antarctica" id="antarctica">
-                    <span class="button__text">antarctica</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-                <label class="filter__label visible">
-                  <div class="button__gray">
-                    <input class="filter__checkbox" type="checkbox" name="fl-cont" value="australasia" id="australasia">
-                    <span class="button__text">australasia</span>
-                    <span class="button__text button__number"></span>
-                    <span class="button__gray_hover"></span>
-                  </div>
-                </label>
-              </form>
-            </div>
-            <button class="button__clear" id="clear">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5882 32L8 9.41176L9.41176 8L32 30.5882L30.5882 32Z" fill="#262626"/>
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M32 9.41178L9.41176 32L8 30.5883L30.5882 8L32 9.41178Z" fill="#262626"/>
-              </svg>
-              Стереть все
-            </button>
-            <div class="projects__list">
-              <div class="projects__item" data-id="aloe" data-category="green small medium africa">Aloe</div>
-              <div class="projects__item" data-id="lavendar" data-category="purple green medium africa europe">Lavender</div>
-              <div class="projects__item" data-id="stinging-nettle" data-category="green large africa europe asia">Stinging Nettle</div>
-              <div class="projects__item" data-id="gorse" data-category="green yellow large europe">Gorse</div>  
-              <div class="projects__item" data-id="hemp" data-category="green large asia">Hemp</div>  
-              <div class="projects__item" data-id="titan-arum" data-category="purple other giant asia">Titan Arum</div>  
-              <div class="projects__item" data-id="golden-wattle" data-category="green yellow large australasia">Golden Wattle</div>  
-              <div class="projects__item" data-id="purple-prairie-clover" data-category="purple green other medium north-america">Purple Prairie Clover</div> 
-              <div class="projects__item" data-id="camellia" data-category="pink other large north-america">Camellia</div> 
-              <div class="projects__item" data-id="scarlet-carnation" data-category="red medium north-america">Scarlet Carnation</div> 
-              <div class="projects__item" data-id="indian-paintbrush" data-category="red medium north-america">Indian Paintbrush</div>  
-              <div class="projects__item" data-id="moss-verbena" data-category="purple other small south-america">Moss Verbena</div>  
-              <div class="projects__item" data-id="climbing-dayprojects__item" data-category="blue tiny south-america">Climbing Dayprojects__item</div>  
-              <div class="projects__item" data-id="antarctic-pearlwort" data-category="green yellow large antarctica">Antarctic Pearlwort</div>                 	
+            <div class="say__block_right">
+              <a class="button__circle say__button" href="#">
+                <span class="button__circle_text">Написать</span>
+                <span class="button__circle_hover"></span>
+              </a>
             </div>
           </div>
-          <div class="block__right projects__right"></div>
+          <div class="block__right say__right"></div>
         </div>
       </section>
     </main>
