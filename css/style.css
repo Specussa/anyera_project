@@ -2105,11 +2105,11 @@ svg path {
 }
 
 .projects__item:hover .projects_back {
-  -webkit-transform: translateY(-10%);
-  -moz-transform: translateY(-10%);
-  -ms-transform: translateY(-10%);
-  -o-transform: translateY(-10%);
-  transform: translateY(-10%);
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
   -webkit-transition-delay: 0.1s;
   -moz-transition-delay: 0.1s;
   -ms-transition-delay: 0.1s;
@@ -2118,7 +2118,6 @@ svg path {
 }
 
 .projects__item:hover .projects__back_color {
-  height: 120%;
   -webkit-transform: skew(0,-8deg);
   -moz-transform: skew(0,-8deg);
   -ms-transform: skew(0,-8deg);
@@ -2134,6 +2133,11 @@ svg path {
   -ms-transform: translateY(102%);
   -o-transform: translateY(102%);
   transform: translateY(102%);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
 }
 
 .projects_back, .projects__back_color {
