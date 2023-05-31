@@ -1876,10 +1876,11 @@ svg path {
 /* start projects */
 
 .projects__list {
-  padding: 60px 0 0;
+  padding: 59px 0 0;
   -moz-column-count: 2;
   column-count: 2;
   gap: 0;
+  column-rule: solid 1px var(--gray-border);
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
   border-bottom: 1px solid var(--gray-border);
@@ -1905,9 +1906,12 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  float: left;
+  page-break-inside: avoid;
+  break-inside: avoid;
   padding: 57px 100px 51px;
   flex-direction: column;
-  border-bottom: 1px solid var(--gray-border);
+  border-top: 1px solid var(--gray-border);
   background-color: var(--page-bg);
   -webkit-transition: background-color 0.3s linear;
   -moz-transition: background-color 0.3s linear;
@@ -1973,10 +1977,6 @@ svg path {
   padding: 100px;
   flex-direction: column;
   gap: 40px;
-}
-
-.projects__item:nth-child(1), .projects__item:nth-child(2), .projects__item:nth-child(3), .projects__item:nth-child(4) {
-  border-right: 1px solid var(--gray-border);
 }
 
 .projects__item:last-child, .projects__item:nth-child(4) {
@@ -3563,6 +3563,12 @@ svg path {
   z-index: 1;
   cursor: pointer;
   overflow: hidden;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .button__gray:hover .button__gray_hover, .filter__label.active .button__gray_hover {
@@ -3720,7 +3726,7 @@ svg path {
   transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
   border-bottom: 0px solid var(--gray-border);
   overflow: hidden;
-  z-index: 0;
+  z-index: 10;
 }
 
 .filter__category.selected .filter__form {
@@ -3732,7 +3738,7 @@ svg path {
   -o-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
   transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
   border-bottom: 1px solid var(--gray-border);
-  z-index: 1;
+  z-index: 11;
 }
 
 .filter__checkbox {
@@ -4091,9 +4097,6 @@ svg path {
     font-size: 46px;
     line-height: 56px;
   }
-  .projects__item:nth-child(1), .projects__item:nth-child(2), .projects__item:nth-child(3), .projects__item:nth-child(4) {
-    border-right: none;
-  }
   .projects__item:not(:nth-child(2n)) {
     border-right: 1px solid var(--gray-border);
   }
@@ -4333,9 +4336,6 @@ svg path {
   .projects__item {
     width: 100%;
     padding: 57px 40px;
-  }
-  .projects__item:nth-child(1), .projects__item:nth-child(2), .projects__item:nth-child(3), .projects__item:nth-child(4) {
-    border-right: none;
   }
   .header__project {
     right: 100px;
