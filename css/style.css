@@ -2027,11 +2027,11 @@ svg path {
   border-radius: 5px;
   position: relative;
   z-index: 1;
-  -webkit-transition: opacity 0.1s linear;
-  -moz-transition: opacity 0.1s linear;
-  -ms-transition: opacity 0.1s linear;
-  -o-transition: opacity 0.1s linear;
-  transition: opacity 0.1s linear;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
   -webkit-transition-delay: 0.3s;
   -moz-transition-delay: 0.3s;
   -ms-transition-delay: 0.3s;
