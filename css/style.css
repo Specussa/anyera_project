@@ -1952,11 +1952,11 @@ svg path {
   color: var(--page-text);
 }
 
-.projects__item:hover .projects__description {
+.projects__item:hover .projects__description, .projects__item:hover .projects__link, .projects__item:hover .projects__link:hover {
   color: var(--page-bg);
 }
 
-.dark .projects__item:hover .projects__description {
+.dark .projects__item:hover .projects__description, .dark .projects__item:hover .projects__link, .dark .projects__item:hover .projects__link:hover {
   color: var(--page-text);
 }
 
@@ -2084,11 +2084,11 @@ svg path {
   transition: color 0.3s linear, transform 0.3s linear;
 }
 
-.projects__link {
+.projects__link, .projects__link:hover, .projects__link:focus, .projects__link:active {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  color: var(--page-text);
+  color: transparent;
 }
 
 .project__buttons {
@@ -2115,24 +2115,6 @@ svg path {
   width: 100%;
   height: 100%;
   z-index: 1;
-  -webkit-transform: translateY(0px);
-  -moz-transform: translateY(0px);
-  -ms-transform: translateY(0px);
-  -o-transform: translateY(0px);
-  transform: translateY(0px);
-  -webkit-transition: transform 0.3s linear;
-  -moz-transition: transform 0.3s linear;
-  -ms-transition: transform 0.3s linear;
-  -o-transition: transform 0.3s linear;
-  transition: transform 0.3s linear;
-}
-
-.projects__item:hover .projects__background {
-  -webkit-transform: translateY(-120px);
-  -moz-transform: translateY(-120px);
-  -ms-transform: translateY(-120px);
-  -o-transform: translateY(-120px);
-  transform: translateY(-120px);
 }
 
 .projects__item:first-child .projects__background, .projects__item:last-child .projects__background {
