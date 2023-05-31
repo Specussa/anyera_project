@@ -20,10 +20,10 @@ const anchors = document.querySelectorAll(".header__anchor_item")
 const filtercategory = document.querySelector('.filter__category');
 const elsliderphoto = document.querySelector('.team__photo');
 const elsliderreview = document.querySelector('.team__review');
-var preview = document.querySelector('.showreel__button'),
-video = document.querySelector('#showreel__video'),
-modal = document.querySelector('.showreel__modal'),
-modalClose = document.querySelector('.showreel__modal_close');
+const preview = document.querySelector('.showreel__button');
+const showreelvideo = document.getElementById('showreel__video');
+const showreelmodal = document.querySelector('.showreel__modal');
+const showreelmodalClose = document.querySelector('.showreel__modal_close');
 
 // start navbar
 // кнопка header__burger
@@ -171,8 +171,8 @@ function setSuccessFor(input) {
 // function iscontrol(control) {
 // 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(control);
 // }
-// end validate form project
 }
+// end validate form project
 // start career
 if(!burger_v){} else {
   // кнопка career__button
@@ -677,20 +677,20 @@ if(!elsliderreview){} else {
 // end team photo slider
 
 // start video
-if(!showreel__video){} else {
+if(!showreelvideo){} else {
   preview.onclick = function(e) {
-  e.preventDefault();
-  modal.classList.add('showreel__modal_visible');
-  video.play();
-  document.body.style.overflow = "hidden";
-  document.body.style.height = "100vh";
+    e.preventDefault();
+    showreelmodal.classList.add('showreel__modal_visible');
+    showreelvideo.play();
+    document.body.style.overflow = "hidden";
+    document.body.style.height = "100vh";
   }
-  modalClose.onclick = function() {
-  modal.classList.remove('showreel__modal_visible');
-  video.pause();
-  video.currentTime = 0;
-  document.body.style.overflow = "visible";
-  document.body.style.height = "100%";
+  showreelmodalClose.onclick = function() {
+    showreelmodal.classList.remove('showreel__modal_visible');
+    showreelvideo.pause();
+    showreelvideo.currentTime = 0;
+    document.body.style.overflow = "visible";
+    document.body.style.height = "100%";
   }
 }
 // end video

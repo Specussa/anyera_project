@@ -1969,7 +1969,7 @@ svg path {
 .projects__item:first-child, .projects__item:last-child {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
+  display: flex !important;
   padding: 100px;
   flex-direction: column;
   gap: 40px;
@@ -3687,43 +3687,54 @@ svg path {
 }
 
 .filter__button .button__number {
+  min-width: 10px;
   margin-right: 5px;
 }
 
-.projects__list_filter {
+.projects__filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: calc(50% - 262px);
   padding: 100px 0;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 20px;
-  position: relative;
+  position: absolute;
+  top: 320px;
+  left: 160px;
 }
 
 .filter__form {
   display: flex;
-  background: #fff;
-  width: 100%;
+  width: calc(100% + 200px);
   max-height: 0;
-  padding: 0;
+  padding: 0 100px;
   flex-wrap: wrap;
   gap: 10px 30px;
   position: absolute;
-  left: 0;
-  -webkit-transition: max-height 0.3s linear, padding 0.3s linear;
-  -moz-transition: max-height 0.3s linear, padding 0.3s linear;
-  -ms-transition: max-height 0.3s linear, padding 0.3s linear;
-  -o-transition: max-height 0.3s linear, padding 0.3s linear;
-  transition: max-height 0.3s linear, padding 0.3s linear;
+  left: -99px;
+  background-color: var(--page-bg);
+  -webkit-transition: max-height 0.3s ease-in-out, padding 0.3s step-end, border-bottom 0.3s linear;
+  -moz-transition: max-height 0.3s ease-in-out, padding 0.3s step-end, border-bottom 0.3s linear;
+  -ms-transition: max-height 0.3s ease-in-out, padding 0.3s step-end, border-bottom 0.3s linear;
+  -o-transition: max-height 0.3s ease-in-out, padding 0.3s step-end, border-bottom 0.3s linear;
+  transition: max-height 0.3s ease-in-out, padding 0.3s step-end, border-bottom 0.3s linear;
+  border-bottom: none;
   overflow: hidden;
   z-index: 1;
 }
 
 .filter__category.selected .filter__form {
   max-height: 100%;
-  padding: 20px 0;
+  padding: 20px 100px;
+  -webkit-transition: max-height 0.3s ease-in-out, padding 0.3s step-start, border-bottom 0.3s linear;
+  -moz-transition: max-height 0.3s ease-in-out, padding 0.3s step-start, border-bottom 0.3s linear;
+  -ms-transition: max-height 0.3s ease-in-out, padding 0.3s step-start, border-bottom 0.3s linear;
+  -o-transition: max-height 0.3s ease-in-out, padding 0.3s step-start, border-bottom 0.3s linear;
+  transition: max-height 0.3s ease-in-out, padding 0.3s step-start, border-bottom 0.3s linear;
+  border-bottom: 1px solid var(--gray-border);
+  z-index: 0;
 }
 
 .filter__checkbox {
