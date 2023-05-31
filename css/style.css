@@ -2100,7 +2100,7 @@ svg path {
   z-index: 1;
 }
 
-.projects__item:first-child .projects__back_color, .projects__item:last-child .projects__back_color {
+.projects__item:first-child .projects__back_color, .projects__item:last-child .projects__back_color, .projects__item:first-child .projects__back, .projects__item:last-child .projects__back {
   background-color: var(--page-bg) !important;
 }
 
