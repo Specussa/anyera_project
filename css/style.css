@@ -1974,13 +1974,15 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex !important;
+  height: 480px;
   padding: 100px;
   flex-direction: column;
   gap: 40px;
 }
 
-.projects__item:last-child, .projects__item:nth-child(4) {
-  border-bottom: none;
+.projects__item:last-child {
+  align-items: center;
+  justify-content: center;
 }
 
 .projects__tags {
@@ -4096,12 +4098,6 @@ svg path {
   .projects__head {
     font-size: 46px;
     line-height: 56px;
-  }
-  .projects__item:not(:nth-child(2n)) {
-    border-right: 1px solid var(--gray-border);
-  }
-  .projects__item:last-child, .projects__item:nth-child(4) {
-    border-bottom: 1px solid var(--gray-border);
   }
   .projects__list {
     border-bottom: none;
