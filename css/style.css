@@ -1967,7 +1967,7 @@ svg path {
   display: flex !important;
 }
 
-.projects__item_first .projects__item_block, .projects__item_last .projects__item_block {
+.projects__item_first .projects__item_block, .projects__item_last {
   height: 480px;
   padding: 100px;
   flex-direction: column;
@@ -3757,7 +3757,7 @@ svg path {
   max-height: 0;
   padding: 0 100px;
   flex-wrap: wrap;
-  gap: 10px 30px;
+  gap: 10px;
   position: absolute;
   left: -99px;
   background-color: var(--page-bg);
@@ -3862,7 +3862,7 @@ svg path {
   .projects__left_desc {
     margin: 0 0 400px;
   }
-  .projects__item_first .projects__item_block, .projects__item_last .projects__item_block {
+  .projects__item_first .projects__item_block, .projects__item_last {
     height: 430px;
     padding: 40px 60px 82px;
   }
@@ -4144,7 +4144,7 @@ svg path {
   .services__right {
     align-items: flex-start;
   }
-  .projects__item_first .projects__item_block, .projects__item_last .projects__item_block {
+  .projects__item_first .projects__item_block, .projects__item_last {
     height: 400px;
     padding: 40px 30px 61px;
   }
@@ -4404,7 +4404,7 @@ svg path {
   .projects__hover img {
     min-height: 394px;
   }
-  .projects__item_first .projects__item_block, .projects__item_last .projects__item_block {
+  .projects__item_first .projects__item_block, .projects__item_last {
     height: 360px;
     padding: 40px 40px 82px;
   }
@@ -4696,7 +4696,7 @@ svg path {
   .projects__hover img {
     min-height: 327px;
   }
-  .projects__item_first .projects__item_block, .projects__item_last .projects__item_block {
+  .projects__item_first .projects__item_block, .projects__item_last {
     padding: 20px 20px 60px;
   }
   .projects__item_block {
@@ -5134,7 +5134,7 @@ svg path {
     flex-direction: column;
     gap: 10px;
   }
-  .projects__item_first .projects__item_block, .projects__item_last .projects__item_block {
+  .projects__item_first .projects__item_block, .projects__item_last {
     height: 430px;
   }
 }
@@ -5144,7 +5144,7 @@ svg path {
 /* start media 300+ */
 
 @media (max-width: 300px) {
-  .projects__item_first .projects__item_block, .projects__item_last .projects__item_block {
+  .projects__item_first .projects__item_block, .projects__item_last {
     height: 475px;
   }
   .projects__filter {
