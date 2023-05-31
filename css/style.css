@@ -1917,16 +1917,31 @@ svg path {
   float: left;
   page-break-inside: avoid;
   break-inside: avoid;
-  padding: 57px 100px 51px;
   flex-direction: column;
   border-top: 1px solid var(--gray-border);
   background-color: var(--page-bg);
   position: relative;
+  overflow: hidden;
+}
+
+.projects__item_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 57px 100px 51px;
+  flex-direction: column;
+  background-color: var(--page-bg);
   -webkit-transition: background-color 0.3s linear;
   -moz-transition: background-color 0.3s linear;
   -ms-transition: background-color 0.3s linear;
   -o-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
+  position: relative;
+  z-index: 2;
+}
+
+.projects__item:hover .projects__item_block {
+  background-color: transparent;
 }
 
 .projects__item:hover .projects__tag, .projects__item:hover .projects__tag a, .projects__item:hover .projects__heading {
@@ -1937,12 +1952,20 @@ svg path {
   color: var(--page-text);
 }
 
-.projects__item:hover .projects__description, .projects__item:hover .projects__link, .projects__item:hover .projects__link:hover {
+.projects__item:hover .projects__description {
   color: var(--page-bg);
 }
 
-.dark .projects__item:hover .projects__description, .dark .projects__item:hover .projects__link, .dark .projects__item:hover .projects__link:hover {
+.dark .projects__item:hover .projects__description {
   color: var(--page-text);
+}
+
+.projects__item:hover .projects__description {
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
 }
 
 .projects__item:hover .projects__hover img {
@@ -1960,6 +1983,9 @@ svg path {
   display: -ms-flexbox;
   display: flex !important;
   height: 480px;
+}
+
+.projects__item:first-child .projects__item_block, .projects__item:last-child .projects__item_block {
   padding: 100px;
   flex-direction: column;
   gap: 40px;
@@ -2046,18 +2072,23 @@ svg path {
   font-weight: 400;
   line-height: 19px;
   color: transparent;
-  -webkit-transition: color 0.3s linear;
-  -moz-transition: color 0.3s linear;
-  -ms-transition: color 0.3s linear;
-  -o-transition: color 0.3s linear;
-  transition: color 0.3s linear;
+  -webkit-transform: translateY(50px);
+  -moz-transform: translateY(50px);
+  -ms-transform: translateY(50px);
+  -o-transform: translateY(50px);
+  transform: translateY(50px);
+  -webkit-transition: color 0.3s linear, -webkit-transform 0.3s linear;
+  -moz-transition: color 0.3s linear, -moz-transform 0.3s linear;
+  -ms-transition: color 0.3s linear, -ms-transform 0.3s linear;
+  -o-transition: color 0.3s linear, -o-transform 0.3s linear;
+  transition: color 0.3s linear, transform 0.3s linear;
 }
 
-.projects__link, .projects__link:hover, .projects__link:focus, .projects__link:active {
+.projects__link {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
-  color: transparent;
+  color: var(--page-text);
 }
 
 .project__buttons {
@@ -2077,6 +2108,35 @@ svg path {
 
 .projects__left_desc {
   margin: 0 0 580px;
+}
+
+.projects__background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -webkit-transform: translateY(0px);
+  -moz-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  -o-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: transform 0.3s linear;
+  -moz-transition: transform 0.3s linear;
+  -ms-transition: transform 0.3s linear;
+  -o-transition: transform 0.3s linear;
+  transition: transform 0.3s linear;
+}
+
+.projects__item:hover .projects__background {
+  -webkit-transform: translateY(-120px);
+  -moz-transform: translateY(-120px);
+  -ms-transform: translateY(-120px);
+  -o-transform: translateY(-120px);
+  transform: translateY(-120px);
+}
+
+.projects__item:first-child .projects__background, .projects__item:last-child .projects__background {
+  background-color: var(--page-bg) !important;
 }
 
 /* end projects */
@@ -3738,10 +3798,10 @@ svg path {
   .development__block_left, .development__block_right, .analytics__info {
     padding: 120px 60px;
   }
-  .projects__item:first-child, .projects__item:last-child, .publications__info {
+  .projects__item:first-child .projects__item_block, .projects__item:last-child .projects__item_block, .publications__info {
     padding: 100px 60px;
   }
-  .projects__item {
+  .projects__item_block {
     padding: 88px 60px 50px;
   }
   .say__block {
@@ -3784,10 +3844,10 @@ svg path {
   .projects__left_desc {
     margin: 0 0 400px;
   }
-  .projects__item:first-child, .projects__item:last-child {
+  .projects__item:first-child .projects__item_block, .projects__item:last-child .projects__item_block {
     padding: 40px 60px 82px;
   }
-  .projects__item {
+  .projects__item_block {
     padding: 57px 60px;
   }
   .projects__hover img {
@@ -3933,7 +3993,7 @@ svg path {
   .design .development__block_right {
     max-width: 100%;
   }
-  .projects__item:first-child, .projects__item:last-child, .publications__info {
+  .projects__item:first-child .projects__item_block, .projects__item:last-child .projects__item_block, .publications__info {
     padding: 100px 40px;
   }
   .projects__item {
@@ -4036,10 +4096,10 @@ svg path {
   .services__right {
     align-items: flex-start;
   }
-  .projects__item:first-child, .projects__item:last-child {
+  .projects__item:first-child .projects__item_block, .projects__item:last-child .projects__item_block {
     padding: 40px 30px 61px;
   }
-  .projects__item {
+  .projects__item_block {
     width: 50%;
     padding: 57px 30px 61px;
   }
@@ -4283,10 +4343,10 @@ svg path {
   .projects__hover img {
     min-height: 394px;
   }
-  .projects__item:first-child, .projects__item:last-child {
+  .projects__item:first-child .projects__item_block, .projects__item:last-child .projects__item_block {
     padding: 40px 40px 82px;
   }
-  .projects__item {
+  .projects__item_block {
     width: 100%;
     padding: 57px 40px;
   }
@@ -4549,10 +4609,10 @@ svg path {
   .projects__hover img {
     min-height: 327px;
   }
-  .projects__item:first-child, .projects__item:last-child {
+  .projects__item:first-child .projects__item_block, .projects__item:last-child .projects__item_block {
     padding: 20px 20px 60px;
   }
-  .projects__item {
+  .projects__item_block {
     padding: 30px 20px;
   }
   .projects__head {
