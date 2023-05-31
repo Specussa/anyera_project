@@ -24,6 +24,7 @@ const preview = document.querySelector('.showreel__button');
 const showreelvideo = document.getElementById('showreel__video');
 const showreelmodal = document.querySelector('.showreel__modal');
 const showreelmodalClose = document.querySelector('.showreel__modal_close');
+const filtervi = document.querySelectorAll('.filter__form ');
 
 // start navbar
 // кнопка header__burger
@@ -483,6 +484,12 @@ const subnav = document.querySelectorAll('.header__subnav_list');
 if(!filtercategory){} else {
 	var filterCheckboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
 	var clear = document.querySelector("#clear");
+  [...filtervi].forEach(function (visible) {
+    let i = 0;
+    for (let [index, elemi] of [...visible.children].entries()){
+      elemi.style.setProperty('--inc-step', elemi.classList.contains("visible")?++i:0); 
+    }
+  });
 	var filterFunc = function(start=false){
 		var selectedFilters = {};
 		filterCheckboxes.filter(a=>a.checked).forEach(a=>{
@@ -533,12 +540,11 @@ if(!filtercategory){} else {
 				if(s)s=s.querySelector(".button__number");
 				if(s)s.textContent=Array.from(a.querySelectorAll("input")).reduce((a, b) => a + parseInt(b.dataset.c), 0);		 
 			});
-			const subnav = document.querySelectorAll('.filter__form '); 
-			[...subnav].forEach(function (visible) { 
+			[...filtervi].forEach(function (visible) {
 				let i = 0;
-				for (let [index, elem] of [...visible.children].entries()){ 
-					elem.style.setProperty('--inc-step', elem.classList.contains("visible")?++i:0); 
-				} 
+				for (let [index, elemi] of [...visible.children].entries()){
+					elemi.style.setProperty('--inc-step', elemi.classList.contains("visible")?++i:0); 
+				}
 			});
 			let save = {};
 			filterCheckboxes.forEach(a=>save[a.id]=a.checked);

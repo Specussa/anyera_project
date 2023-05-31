@@ -1921,6 +1921,7 @@ svg path {
   flex-direction: column;
   border-top: 1px solid var(--gray-border);
   background-color: var(--page-bg);
+  position: relative;
   -webkit-transition: background-color 0.3s linear;
   -moz-transition: background-color 0.3s linear;
   -ms-transition: background-color 0.3s linear;
@@ -1952,30 +1953,6 @@ svg path {
   -ms-transition: opacity 0.1s linear;
   -o-transition: opacity 0.1s linear;
   transition: opacity 0.1s linear;
-}
-
-.projects__item:nth-child(2):hover {
-  background-color: var(--gray);
-}
-
-.projects__item:nth-child(3):hover {
-  background-color: var(--aquamarine);
-}
-
-.projects__item:nth-child(4):hover {
-  background-color: var(--blue);
-}
-
-.projects__item:nth-child(5):hover {
-  background-color: var(--red);
-}
-
-.projects__item:nth-child(6):hover {
-  background-color: var(--cherry);
-}
-
-.projects__item:nth-child(7):hover {
-  background-color: var(--dark-blue);
 }
 
 .projects__item:first-child, .projects__item:last-child {
@@ -2100,29 +2077,6 @@ svg path {
 
 .projects__left_desc {
   margin: 0 0 580px;
-}
-
-.projects__info_flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 36px;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.projects__info_flex .header__select {
-  width: auto;
-  flex: 0 0 auto;
-}
-
-.projects__info_flex .header__select_selected_item {
-  border-bottom: none;
 }
 
 /* end projects */
@@ -3715,6 +3669,7 @@ svg path {
   position: absolute;
   top: 350px;
   left: 160px;
+  z-index: 20;
 }
 
 .filter__form {
@@ -3741,11 +3696,6 @@ svg path {
 .filter__category.selected .filter__form {
   max-height: 1000px;
   padding: 20px 100px;
-  -webkit-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
-  -moz-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
-  -ms-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
-  -o-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
-  transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
   border-bottom: 1px solid var(--gray-border);
   z-index: 11;
 }
@@ -4955,9 +4905,6 @@ svg path {
   }
   .say__button {
     margin: 0 auto;
-  }
-  .public__info_flex, .projects__info_flex {
-    gap: 10px;
   }
   .projects__hover img {
     min-height: 192px;
