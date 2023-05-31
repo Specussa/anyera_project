@@ -3693,18 +3693,19 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: calc(50% - 262px);
-  padding: 100px 0;
+  padding: 0 0 10px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   gap: 20px;
   position: absolute;
-  top: 320px;
+  top: 410px;
   left: 160px;
 }
 
 .filter__form {
   display: flex;
   width: calc(100% + 200px);
+  height: fit-content;
   max-height: 0;
   padding: 0 100px;
   flex-wrap: wrap;
@@ -3712,24 +3713,24 @@ svg path {
   position: absolute;
   left: -99px;
   background-color: var(--page-bg);
-  -webkit-transition: max-height 0.3s linear, padding 0.3s step-end, border-bottom 0.3s linear;
-  -moz-transition: max-height 0.3s linear, padding 0.3s step-end, border-bottom 0.3s linear;
-  -ms-transition: max-height 0.3s linear, padding 0.3s step-end, border-bottom 0.3s linear;
-  -o-transition: max-height 0.3s linear, padding 0.3s step-end, border-bottom 0.3s linear;
-  transition: max-height 0.3s linear, padding 0.3s step-end, border-bottom 0.3s linear;
+  -webkit-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
+  -moz-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
+  -ms-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
+  -o-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
+  transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
   border-bottom: 0px solid var(--gray-border);
   overflow: hidden;
   z-index: 0;
 }
 
 .filter__category.selected .filter__form {
-  max-height: 100%;
+  max-height: 1000px;
   padding: 20px 100px;
-  -webkit-transition: max-height 0.3s linear, padding 0.3s step-start, border-bottom 0.3s linear;
-  -moz-transition: max-height 0.3s linear, padding 0.3s step-start, border-bottom 0.3s linear;
-  -ms-transition: max-height 0.3s linear, padding 0.3s step-start, border-bottom 0.3s linear;
-  -o-transition: max-height 0.3s linear, padding 0.3s step-start, border-bottom 0.3s linear;
-  transition: max-height 0.3s linear, padding 0.3s step-start, border-bottom 0.3s linear;
+  -webkit-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
+  -moz-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
+  -ms-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
+  -o-transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
+  transition: max-height 0.3s linear, padding 0.3s linear, border-bottom 0.3s linear;
   border-bottom: 1px solid var(--gray-border);
   z-index: 1;
 }
