@@ -250,149 +250,349 @@
       <section class="public">
         <div class="container public__container">
           <div class="block__left public__left"></div>
+          <div class="projects__list_filter">
+            <div class="projects__filter">
+              <div class="filter__category">
+                <button class="filter__button">
+                  Filter color:<span class="button__text button__number"></span>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 0.5L4.03 4.5L1 0.5" stroke="#262626" stroke-width="0.4"/>
+                  </svg>
+                </button>
+                <form class="filter__form">
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-colour" value="red" id="red">
+                      <span class="button__text">Red</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-colour" value="yellow" id="yellow">
+                      <span class="button__text">yellow</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-colour" value="pink" id="pink">
+                      <span class="button__text">pink</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-colour" value="purple" id="purple">
+                      <span class="button__text">purple</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-colour" value="green" id="green">
+                      <span class="button__text">green</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-colour" value="other" id="other">
+                      <span class="button__text">other</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                </form>
+              </div>
+              <div class="filter__category">
+                <button class="filter__button">
+                  Filter size:<span class="button__text button__number"></span>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 0.5L4.03 4.5L1 0.5" stroke="#262626" stroke-width="0.4"/>
+                  </svg>
+                </button>
+                <form class="filter__form">
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-size" value="tiny" id="tiny">
+                      <span class="button__text">tiny</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-size" value="small" id="small">
+                      <span class="button__text">small</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-size" value="medium" id="medium">
+                      <span class="button__text">medium</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-size" value="large" id="large">
+                      <span class="button__text">large</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-size" value="giant" id="giant">
+                      <span class="button__text">giant</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                </form> 
+              </div>
+              <div class="filter__category">
+                <button class="filter__button">
+                  Filter continents:<span class="button__text button__number"></span>
+                  <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7 0.5L4.03 4.5L1 0.5" stroke="#262626" stroke-width="0.4"/>
+                  </svg>
+                </button>
+                <form class="filter__form">
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-cont" value="africa" id="africa">
+                      <span class="button__text">africa</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-cont" value="europe" id="europe">
+                      <span class="button__text">europe</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-cont" value="asia" id="asia">
+                      <span class="button__text">asia</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-cont" value="north-america" id="north-america">
+                      <span class="button__text">north-america</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-cont" value="south-america" id="south-america">
+                      <span class="button__text">south-america</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-cont" value="antarctica" id="antarctica">
+                      <span class="button__text">antarctica</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                  <label class="filter__label visible">
+                    <div class="button__gray">
+                      <input class="filter__checkbox" type="checkbox" name="fl-cont" value="australasia" id="australasia">
+                      <span class="button__text">australasia</span>
+                      <span class="button__text button__number"></span>
+                      <span class="button__gray_hover"></span>
+                    </div>
+                  </label>
+                </form>
+              </div>
+              <button class="button__clear" id="clear" style="display: none;">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M30.5882 32L8 9.41176L9.41176 8L32 30.5882L30.5882 32Z" fill="#262626"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M32 9.41178L9.41176 32L8 30.5883L30.5882 8L32 9.41178Z" fill="#262626"/>
+                </svg>
+                Стереть все
+              </button>
+            </div>
             <ul class="public__block">
+              <li class="public__info public__info_first" data-id="" data-category="">
+                <div class="public__info_block">
+                  <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
+                    <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Публикации</a></li>
+                  </ul>
+                  <h4 class="public__head">Публикации</h4>
+                  <p class="public__desc">текст про статьи lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  <div class="public__info_flex"></div>
+                </div>
+                <div class="projects_back">
+                  <div class="projects__back_color"></div>
+                </div>
+              </li>
               <li class="public__info">
-                <ul class="breadcrumbs__list">
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Главная</a></li>
-                  <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Публикации</a></li>
-                </ul>
-                <h4 class="public__head">Публикации</h4>
-                <p class="public__desc">текст про статьи lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                <div class="public__info_flex">
-                  <div class="header__select" data-select>
-                    <div class="header__select_selected_item" data-select-action data-select-open>
-                      <div class="header__select_selected-title" data-select-title>
-                        Тип публикации
-                      </div>
-                      <svg class="header__select_arrow" data-select-arrow width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6.05 6L1 1" stroke="#262626"/>
-                      </svg>
+                <div class="public__info_block" data-id="antarctic-pearlwort" data-category="green yellow large antarctica">
+                  <div class="public__flex">
+                    <div class="public__hashtags">
+                      <p class="public__hashtag">#АНИМАЦИЯ</p>
+                      <p class="public__hashtag">#ДИЗАЙН</p>
                     </div>
-                    <div class="header__select_list" data-select-list>
-                      <div value="1" class="header__select_list_item" data-select-action data-select-item>До 100 тыс.</div>
-                      <div value="2" class="header__select_list_item" data-select-action data-select-item>До 250 тыс.</div>
-                      <div value="3" class="header__select_list_item" data-select-action data-select-item>До 500 тыс.</div>
-                      <div value="4" class="header__select_list_item" data-select-action data-select-item>Более 500 тыс.</div>
+                    <h5 class="public__heading">Название статьи название статьи</h5>
+                    <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Собрал, вершину ручеек подзаголовок заглавных продолжил, от всех одна безопасную осталось наш снова лучше толку. Запятых моей маленький заглавных обеспечивает назад.</p>
+                  </div>
+                  <p class="public__date">20_03_2023</p>
+                </div>
+                <div class="projects_back">
+                  <div class="projects__back_color"></div>
+                </div>
+              </li>
+              <li class="public__info">
+                <div class="public__info_block" data-id="climbing-dayprojects__item" data-category="blue tiny south-america">
+                  <div class="public__flex">
+                    <div class="public__hashtags">
+                      <p class="public__hashtag">#АНИМАЦИЯ</p>
+                      <p class="public__hashtag">#ДИЗАЙН</p>
                     </div>
-                    <input class="header__select_input" type="text" data-select-input>
+                    <h5 class="public__heading">Название статьи название статьи</h5>
+                    <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
                   </div>
-                  <div class="header__select" data-select>
-                    <div class="header__select_selected_item" data-select-action data-select-open>
-                      <div class="header__select_selected-title" data-select-title>
-                        Сортировка
-                      </div>
-                      <svg class="header__select_arrow" data-select-arrow width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M11 1L6.05 6L1 1" stroke="#262626"/>
-                      </svg>
+                  <p class="public__date">20_03_2023</p>
+                </div>
+                <div class="projects_back">
+                  <div class="projects__back_color"></div>
+                </div>
+              </li>
+              <li class="public__info">
+                <div class="public__info_block" data-id="moss-verbena" data-category="purple other small south-america">
+                  <div class="public__flex">
+                    <div class="public__hashtags">
+                      <p class="public__hashtag">#АНИМАЦИЯ</p>
+                      <p class="public__hashtag">#ДИЗАЙН</p>
                     </div>
-                    <div class="header__select_list" data-select-list>
-                      <div value="1" class="header__select_list_item" data-select-action data-select-item>До 100 тыс.</div>
-                      <div value="2" class="header__select_list_item" data-select-action data-select-item>До 250 тыс.</div>
-                      <div value="3" class="header__select_list_item" data-select-action data-select-item>До 500 тыс.</div>
-                      <div value="4" class="header__select_list_item" data-select-action data-select-item>Более 500 тыс.</div>
+                    <h5 class="public__heading">Название статьи название статьи</h5>
+                    <p class="public__desc"></p>
+                  </div>
+                  <p class="public__date">20_03_2023</p>
+                </div>
+                <div class="projects_back">
+                  <div class="projects__back_color"></div>
+                </div>
+              </li>
+              <li class="public__info">
+                <div class="public__info_block" data-id="indian-paintbrush" data-category="red medium north-america">
+                  <div class="public__flex">
+                    <div class="public__hashtags">
+                      <p class="public__hashtag">#АНИМАЦИЯ</p>
+                      <p class="public__hashtag">#ДИЗАЙН</p>
                     </div>
-                    <input class="header__select_input" type="text" data-select-input>
+                    <h5 class="public__heading">Название статьи название статьи</h5>
+                    <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
                   </div>
+                  <p class="public__date">20_03_2023</p>
+                </div>
+                <div class="projects_back">
+                  <div class="projects__back_color"></div>
                 </div>
               </li>
               <li class="public__info">
-                <div class="public__flex">
-                  <div class="public__hashtags">
-                    <p class="public__hashtag">#АНИМАЦИЯ</p>
-                    <p class="public__hashtag">#ДИЗАЙН</p>
+                <div class="public__info_block" data-id="scarlet-carnation" data-category="red medium north-america">
+                  <div class="public__flex">
+                    <div class="public__hashtags">
+                      <p class="public__hashtag">#АНИМАЦИЯ</p>
+                      <p class="public__hashtag">#ДИЗАЙН</p>
+                    </div>
+                    <h5 class="public__heading">Название статьи название статьи</h5>
+                    <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
                   </div>
-                  <h5 class="public__heading">Название статьи название статьи</h5>
-                  <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Собрал, вершину ручеек подзаголовок заглавных продолжил, от всех одна безопасную осталось наш снова лучше толку. Запятых моей маленький заглавных обеспечивает назад.</p>
+                  <p class="public__date">20_03_2023</p>
                 </div>
-                <p class="public__date">20_03_2023</p>
+                <div class="projects_back">
+                  <div class="projects__back_color"></div>
+                </div>
               </li>
               <li class="public__info">
-                <div class="public__flex">
-                  <div class="public__hashtags">
-                    <p class="public__hashtag">#АНИМАЦИЯ</p>
-                    <p class="public__hashtag">#ДИЗАЙН</p>
+                <div class="public__info_block" data-id="camellia" data-category="pink other large north-america">
+                  <div class="public__flex">
+                    <div class="public__hashtags">
+                      <p class="public__hashtag">#АНИМАЦИЯ</p>
+                      <p class="public__hashtag">#ДИЗАЙН</p>
+                    </div>
+                    <h5 class="public__heading">Название статьи название статьи</h5>
+                    <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
                   </div>
-                  <h5 class="public__heading">Название статьи название статьи</h5>
-                  <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+                  <p class="public__date">20_03_2023</p>
                 </div>
-                <p class="public__date">20_03_2023</p>
+                <div class="projects_back">
+                  <div class="projects__back_color"></div>
+                </div>
               </li>
               <li class="public__info">
-                <div class="public__flex">
-                  <div class="public__hashtags">
-                    <p class="public__hashtag">#АНИМАЦИЯ</p>
-                    <p class="public__hashtag">#ДИЗАЙН</p>
+                <div class="public__info_block" data-id="purple-prairie-clover" data-category="purple green other medium north-america">
+                  <div class="public__flex">
+                    <div class="public__hashtags">
+                      <p class="public__hashtag">#АНИМАЦИЯ</p>
+                      <p class="public__hashtag">#ДИЗАЙН</p>
+                    </div>
+                    <h5 class="public__heading">Название статьи название статьи</h5>
+                    <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
                   </div>
-                  <h5 class="public__heading">Название статьи название статьи</h5>
-                  <p class="public__desc"></p>
+                  <p class="public__date">20_03_2023</p>
                 </div>
-                <p class="public__date">20_03_2023</p>
+                <div class="projects_back">
+                  <div class="projects__back_color"></div>
+                </div>
               </li>
               <li class="public__info">
-                <div class="public__flex">
-                  <div class="public__hashtags">
-                    <p class="public__hashtag">#АНИМАЦИЯ</p>
-                    <p class="public__hashtag">#ДИЗАЙН</p>
+                <div class="public__info_block" data-id="golden-wattle" data-category="green yellow large australasia">
+                  <div class="public__flex">
+                    <div class="public__hashtags">
+                      <p class="public__hashtag">#АНИМАЦИЯ</p>
+                      <p class="public__hashtag">#ДИЗАЙН</p>
+                    </div>
+                    <h5 class="public__heading">Название статьи название статьи</h5>
+                    <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
                   </div>
-                  <h5 class="public__heading">Название статьи название статьи</h5>
-                  <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
+                  <p class="public__date">20_03_2023</p>
                 </div>
-                <p class="public__date">20_03_2023</p>
+                <div class="projects_back">
+                  <div class="projects__back_color"></div>
+                </div>
               </li>
-              <li class="public__info">
-                <div class="public__flex">
-                  <div class="public__hashtags">
-                    <p class="public__hashtag">#АНИМАЦИЯ</p>
-                    <p class="public__hashtag">#ДИЗАЙН</p>
+              <li class="public__info public__info_last" data-id="" data-category="">
+                <div class="public__info_block">
+                  <div class="public__buttons">
+                    <button onclick="document.location='#'" class="button__project public__button">
+                      <span class="button__text">Все статьи</span>
+                      <span class="button__hover"></span>
+                    </button>
                   </div>
-                  <h5 class="public__heading">Название статьи название статьи</h5>
-                  <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
                 </div>
-                <p class="public__date">20_03_2023</p>
-              </li>
-              <li class="public__info">
-                <div class="public__flex">
-                  <div class="public__hashtags">
-                    <p class="public__hashtag">#АНИМАЦИЯ</p>
-                    <p class="public__hashtag">#ДИЗАЙН</p>
-                  </div>
-                  <h5 class="public__heading">Название статьи название статьи</h5>
-                  <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-                </div>
-                <p class="public__date">20_03_2023</p>
-              </li>
-              <li class="public__info">
-                <div class="public__flex">
-                  <div class="public__hashtags">
-                    <p class="public__hashtag">#АНИМАЦИЯ</p>
-                    <p class="public__hashtag">#ДИЗАЙН</p>
-                  </div>
-                  <h5 class="public__heading">Название статьи название статьи</h5>
-                  <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-                </div>
-                <p class="public__date">20_03_2023</p>
-              </li>
-              <li class="public__info">
-                <div class="public__flex">
-                  <div class="public__hashtags">
-                    <p class="public__hashtag">#АНИМАЦИЯ</p>
-                    <p class="public__hashtag">#ДИЗАЙН</p>
-                  </div>
-                  <h5 class="public__heading">Название статьи название статьи</h5>
-                  <p class="public__desc">Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.</p>
-                </div>
-                <p class="public__date">20_03_2023</p>
-              </li>
-              <li class="public__info">
-                <div class="public__buttons">
-                  <button onclick="document.location='#'" class="button__project public__button">
-                    <span class="button__text">Все статьи</span>
-                    <span class="button__hover"></span>
-                  </button>
+                <div class="projects_back">
+                  <div class="projects__back_color"></div>
                 </div>
               </li>
             </ul>
-            <div class="block__right public__right"></div>
+          </div>
+          <div class="block__right public__right"></div>
         </div>
       </section>
       <section class="say">
