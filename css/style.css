@@ -250,7 +250,6 @@ svg path {
 }
 
 .button__text {
-  color: var(--page-text);
   position: relative;
   margin: auto;
   z-index: 1;
