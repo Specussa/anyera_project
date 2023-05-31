@@ -1887,7 +1887,7 @@ svg path {
   margin: -1px 0 0;
   -moz-column-count: 2;
   column-count: 2;
-  gap: 0;
+  gap: 1px;
   column-rule: solid 1px var(--gray-border);
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
