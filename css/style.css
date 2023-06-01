@@ -1757,38 +1757,41 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 33.333%;
-  padding: 100px;
-  flex-direction: column;
-  justify-content: space-between;
   border-bottom: 1px solid var(--gray-border);
   -webkit-transition: background-color 0.3s linear;
   -moz-transition: background-color 0.3s linear;
   -ms-transition: background-color 0.3s linear;
   -o-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
+  position: relative;
+  overflow: hidden;
 }
 
-.publications__info:hover {
-  background-color: var(--page-text);
-}
-
-.publications__info:last-child:hover, .publications__info:first-child:hover {
-  background-color: var(--page-bg);
+.publications__info_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 100px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
 }
 
 .publications__info:hover .publications__hashtag, .publications__info:hover .publications__heading, .publications__info:hover .publications__desc, .publications__info:hover .publications__date {
   color: var(--page-bg);
 }
 
-.publications__info:first-child:hover .publications__hashtag, .publications__info:first-child:hover .publications__heading, .publications__info:first-child:hover .publications__desc, .publications__info:first-child:hover .publications__date {
+.publications__info:first-child:hover .publications__head, .publications__info:first-child:hover .publications__desc {
   color: var(--page-text);
 }
 
-.publications__info:first-child {
+.publications__info:first-child .publications__info_block {
   justify-content: flex-start;
 }
 
-.publications__info:last-child {
+.publications__info:last-child .publications__info_block {
   justify-content: center;
 }
 
@@ -2105,7 +2108,7 @@ svg path {
   background-color: var(--page-bg) !important;
 }
 
-.projects__item:hover .projects_back, .public__info:hover .projects_back {
+.projects__item:hover .projects_back, .public__info:hover .projects_back, .publications__info:hover .projects_back {
   -webkit-transform: translateY(0%);
   -moz-transform: translateY(0%);
   -ms-transform: translateY(0%);
@@ -2113,7 +2116,7 @@ svg path {
   transform: translateY(0%);
 }
 
-.projects__item:hover .projects__back_color, .public__info:hover .projects__back_color {
+.projects__item:hover .projects__back_color, .public__info:hover .projects__back_color, .publications__info:hover .projects__back_color {
   -webkit-transform: skew(0,-8deg);
   -moz-transform: skew(0,-8deg);
   -ms-transform: skew(0,-8deg);
@@ -3843,7 +3846,7 @@ svg path {
   .development__block_left, .development__block_right, .analytics__info {
     padding: 120px 60px;
   }
-  .publications__info {
+  .publications__info_block {
     padding: 100px 60px;
   }
   .projects__item_block {
@@ -4059,9 +4062,6 @@ svg path {
   .design .development__block_right {
     max-width: 100%;
   }
-  .publications__info {
-    padding: 100px 40px;
-  }
   .projects__filter {
     width: calc(50% - 122px);
     top: 300px;
@@ -4084,6 +4084,9 @@ svg path {
   }
   .publications__info:not(:nth-child(2n)) {
     border-right: 1px solid var(--gray-border);
+  }
+  .publications__info_block {
+    padding: 100px 40px;
   }
   .publications__block {
     border-bottom: none;
@@ -4752,6 +4755,8 @@ svg path {
   }
   .publications__info {
     width: 100%;
+  }
+  .publications__info_block {
     padding: 50px 20px;
   }
   .publications__head {
