@@ -5,6 +5,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="preloader">
@@ -14,18 +20,28 @@
       </path>
     </svg>
   </div>
-  <ul class="accordion__list">
-    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/index.html" target="_blank">Главная</a></li>
-    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/404.html" target="_blank">404</a></li>
-    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/career.html" target="_blank">Карьера</a></li>
-    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/projects.html" target="_blank">Проекты</a></li>
-    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/public.html" target="_blank">Публикации</a></li>
-    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/publication.html" target="_blank">Публикация</a></li>
-    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/services.html" target="_blank">Услуги</a></li>
-    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/team.html" target="_blank">Команда</a></li>
-    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/contacts.html" target="_blank">Контакты</a></li>
-    <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/policy.html" target="_blank">Политика</a></li>
-  </ul>
+  <section class="publication">
+    <div class="container publication__container">
+      <div class="block__left block__left_text publication__left">
+        <p class="block__left_desc publication__left_desc">Навигация</p>
+      </div>
+      <div class="publication__block">
+        <ul class="accordion__list">
+          <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/index.html" target="_blank">Главная</a></li>
+          <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/404.html" target="_blank">404</a></li>
+          <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/career.html" target="_blank">Карьера</a></li>
+          <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/projects.html" target="_blank">Проекты</a></li>
+          <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/public.html" target="_blank">Публикации</a></li>
+          <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/publication.html" target="_blank">Публикация</a></li>
+          <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/services.html" target="_blank">Услуги</a></li>
+          <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/team.html" target="_blank">Команда</a></li>
+          <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/contacts.html" target="_blank">Контакты</a></li>
+          <li class="accordion__item"><a href="https://specussa.github.io/anyera_project/policy.html" target="_blank">Политика</a></li>
+        </ul>
+      </div>
+      <div class="block__right publication__right"></div>
+    </div>
+  </section>
   <script>
     window.onload = function () {
       document.body.classList.add('loaded_hiding');

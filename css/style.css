@@ -2471,6 +2471,7 @@ svg path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   padding: 40px 100px 40px;
   flex-direction: column;
   gap: 50px;
