@@ -130,6 +130,7 @@ svg path {
 
 .main {
   flex: 1 0 auto;
+  overflow: hidden;
 }
 
 .wrapper {
@@ -1137,6 +1138,7 @@ svg path {
 
 .header__form_button {
   width: 100%;
+  justify-content: center;
   margin: 30px 0 0;
   color: var(--page-bg);
   background-color: var(--page-text);
@@ -1406,8 +1408,31 @@ svg path {
   color: var(--page-text);
 }
 
-.digital__head span {
+.digital__head_block {
+  display: block;
   overflow: hidden;
+}
+
+.digital__head_block span {
+  display: block;
+  -webkit-transform: translateY(102%);
+  -moz-transform: translateY(102%);
+  -ms-transform: translateY(102%);
+  -o-transform: translateY(102%);
+  transform: translateY(102%);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  -moz-transition: -moz-transform 0.5s linear;
+  -ms-transition: -ms-transform 0.5s linear;
+  -o-transition: -o-transform 0.5s linear;
+  transition: transform 0.5s linear;
+}
+
+.digital__info.animate .digital__head_block span {
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
 }
 
 .digital__desc {
@@ -1418,6 +1443,19 @@ svg path {
   font-weight: 400;
   line-height: 17px;
   color: var(--page-text);
+  -webkit-transform: translate(202%, -48px);
+  -moz-transform: translate(202%, -48px);
+  -ms-transform: translate(202%, -48px);
+  -o-transform: translate(202%, -48px);
+  transform: translate(202%, -48px);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  -moz-transition: -moz-transform 0.5s linear;
+  -ms-transition: -ms-transform 0.5s linear;
+  -o-transition: -o-transform 0.5s linear;
+  transition: transform 0.5s linear;
+}
+
+.digital__info.animate .digital__desc {
   -webkit-transform: translate(-188px, -48px);
   -moz-transform: translate(-188px, -48px);
   -ms-transform: translate(-188px, -48px);
@@ -1454,11 +1492,16 @@ svg path {
 }
 
 .showreel__button {
-  -webkit-transform: translateY(-100px) rotate(-23.91deg);
-  -moz-transform: translateY(-100px) rotate(-23.91deg);
-  -ms-transform: translateY(-100px) rotate(-23.91deg);
-  -o-transform: translateY(-100px) rotate(-23.91deg);
-  transform: translateY(-100px) rotate(-23.91deg);
+  -webkit-transform: translateY(-100px) translateX(202%) rotate(360deg);
+  -moz-transform: translateY(-100px) translateX(202%) rotate(360deg);
+  -ms-transform: translateY(-100px) translateX(202%) rotate(360deg);
+  -o-transform: translateY(-100px) translateX(202%) rotate(360deg);
+  transform: translateY(-100px) translateX(202%) rotate(360deg);
+  -webkit-transition: -webkit-transform 0.5s linear;
+  -moz-transition: -moz-transform 0.5s linear;
+  -ms-transition: -ms-transform 0.5s linear;
+  -o-transition: -o-transform 0.5s linear;
+  transition: transform 0.5s linear;
 }
 
 .showreel__button:hover {
@@ -1467,6 +1510,14 @@ svg path {
   -ms-transform: translateY(-100px) rotate(0deg);
   -o-transform: translateY(-100px) rotate(0deg);
   transform: translateY(-100px) rotate(0deg);
+}
+
+.showreel__button.animate {
+  -webkit-transform: translateY(-100px) translateX(0) rotate(-23.91deg);
+  -moz-transform: translateY(-100px) translateX(0) rotate(-23.91deg);
+  -ms-transform: translateY(-100px) translateX(0) rotate(-23.91deg);
+  -o-transform: translateY(-100px) translateX(0) rotate(-23.91deg);
+  transform: translateY(-100px) translateX(0) rotate(-23.91deg);
 }
 
 .showreel__modal {
@@ -1521,7 +1572,7 @@ svg path {
   background: transparent;
 }
 
-.showreel__modal_close svg, .showreel__modal_close:hover svg, .showreel__modal_close:active svg, .showreel__modal_close:focus svg {
+.showreel__modal_close svg, .showreel__modal_close:hover svg, .showreel__modal_close:active svg, .showreel__modal_close:focus svg, .dark .showreel__modal_close svg, .dark .showreel__modal_close:hover svg, .dark .showreel__modal_close:active svg, .dark .showreel__modal_close:focus svg {
   width: 40px;
   height: 40px;
   fill: var(--page-bg);

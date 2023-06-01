@@ -699,3 +699,26 @@ if(!showreelvideo){} else {
   }
 }
 // end video
+
+// start index animation
+(function () {
+  var square = document.querySelector('.digital');
+  var observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {var entrySquare = entry.target.querySelector('.digital__info');
+  if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
+  if (entry.isIntersecting) {
+    entrySquare.classList.add('animate');return;}
+    entrySquare.classList.remove('animate');});});
+    observer.observe(square);
+})();
+(function () {
+  var square = document.querySelector('.showreel');
+  var observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {var entrySquare = entry.target.querySelector('.showreel__button');
+  if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
+  if (entry.isIntersecting) {
+    entrySquare.classList.add('animate');return;}
+    entrySquare.classList.remove('animate');});});
+    observer.observe(square);
+})();
+// end index animation
