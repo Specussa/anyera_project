@@ -499,7 +499,7 @@ if(!filtercategory){} else {
 			selectedFilters[a.name].push(a.value);
 		});
 		clear.style.display=Object.keys(selectedFilters).length>0?"":"none";
-		var filteredResults = Array.from(document.querySelectorAll('.projects__item'));
+		var filteredResults = Array.from(document.querySelectorAll('.filter__item'));
 		Object.entries(selectedFilters).forEach(a=>{
 			filteredResults = filteredResults.filter(b=>{
 				var matched = false,
@@ -513,7 +513,7 @@ if(!filtercategory){} else {
 			  return matched;
 			});
 		});
-		document.querySelectorAll('.projects__item').forEach(a=>a.style.display="none");
+		document.querySelectorAll('.filter__item').forEach(a=>a.style.display="none");
 		filteredResults.forEach(a=>a.style.display="");
 		if(this.tagName){
 			document.querySelectorAll(".button__number").forEach(a=>{
@@ -548,7 +548,6 @@ if(!filtercategory){} else {
 			});
 			let save = {};
 			filterCheckboxes.forEach(a=>save[a.id]=a.checked);
-			console.log(save);
 			localStorage.setItem("save",JSON.stringify(save));
 
 		}
@@ -562,7 +561,7 @@ if(!filtercategory){} else {
 		filterFunc.bind(clear)();
 	};
 	clear.addEventListener("click",cf);
-	let load = JSON.parse(localStorage.getItem('save'));console.log(load);
+	let load = JSON.parse(localStorage.getItem('save'));
 	for(let a in load){
 		let e = document.getElementById(a);
 		e.checked=load[a];
