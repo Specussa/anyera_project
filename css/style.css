@@ -1420,11 +1420,11 @@ svg path {
   -ms-transform: translateY(102%);
   -o-transform: translateY(102%);
   transform: translateY(102%);
-  -webkit-transition: -webkit-transform 0.5s linear;
-  -moz-transition: -moz-transform 0.5s linear;
-  -ms-transition: -ms-transform 0.5s linear;
-  -o-transition: -o-transform 0.5s linear;
-  transition: transform 0.5s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
 }
 
 .digital__info.animate .digital__head_block span {
@@ -1448,11 +1448,11 @@ svg path {
   -ms-transform: translate(202%, -48px);
   -o-transform: translate(202%, -48px);
   transform: translate(202%, -48px);
-  -webkit-transition: -webkit-transform 0.5s linear;
-  -moz-transition: -moz-transform 0.5s linear;
-  -ms-transition: -ms-transform 0.5s linear;
-  -o-transition: -o-transform 0.5s linear;
-  transition: transform 0.5s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
 }
 
 .digital__info.animate .digital__desc {
@@ -1474,6 +1474,10 @@ svg path {
 /* end digital */
 
 /* start showreel */
+
+.showreel__container {
+  padding: 0;
+}
 
 .showreel__block {
   width: 100%;
@@ -1497,19 +1501,19 @@ svg path {
   -ms-transform: translateY(-100px) translateX(202%) rotate(360deg);
   -o-transform: translateY(-100px) translateX(202%) rotate(360deg);
   transform: translateY(-100px) translateX(202%) rotate(360deg);
-  -webkit-transition: -webkit-transform 0.5s linear;
-  -moz-transition: -moz-transform 0.5s linear;
-  -ms-transition: -ms-transform 0.5s linear;
-  -o-transition: -o-transform 0.5s linear;
-  transition: transform 0.5s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
 }
 
-.showreel__button:hover {
-  -webkit-transform: translateY(-100px) rotate(0deg);
-  -moz-transform: translateY(-100px) rotate(0deg);
-  -ms-transform: translateY(-100px) rotate(0deg);
-  -o-transform: translateY(-100px) rotate(0deg);
-  transform: translateY(-100px) rotate(0deg);
+.showreel__button.animate:hover {
+  -webkit-transform: translateY(-100px) translateX(0) rotate(0deg);
+  -moz-transform: translateY(-100px) translateX(0) rotate(0deg);
+  -ms-transform: translateY(-100px) translateX(0) rotate(0deg);
+  -o-transform: translateY(-100px) translateX(0) rotate(0deg);
+  transform: translateY(-100px) translateX(0) rotate(0deg);
 }
 
 .showreel__button.animate {
@@ -4158,6 +4162,13 @@ svg path {
   }
   .digital__desc {
     margin: 30px 0 0;
+    -webkit-transform: translate(-100%, 0);
+    -moz-transform: translate(-100%, 0);
+    -ms-transform: translate(-100%, 0);
+    -o-transform: translate(-100%, 0);
+    transform: translate(-100%, 0);
+  }
+  .digital__info.animate .digital__desc {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
@@ -4492,7 +4503,7 @@ svg path {
   .container {
     padding: 0 40px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container, .header__career_container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container, .header__career_container, .showreel__container {
     padding: 0;
   }
   .projects__list, .publication__block, .say__block, .footer__production, .breadcrumbs__list, .public__block, .services__flex, .services__info, .digital__info, .showreel__block, .development__block, .analytics__block, .publications__block, .team__info, .team__info, .team__target_info, .team__principles_info, .team__about_info, .team__cooperation_info, .team__ourteam_info, .team__photo, .team__review_flex, .career__info, .career__agency, .career__vacancy, .contacts__info, .header__consultation_blocks, .header__nav_block, .error_page__block, .header__career_blocks, .team__photo_flex, .padding_top__info {
@@ -4713,6 +4724,9 @@ svg path {
   .contacts__bottom_desc {
     max-width: 100%;
   }
+  .design .development__block_left {
+    border-left: none;
+  }
 }
 
 /* end media 640+ */
@@ -4735,7 +4749,7 @@ svg path {
   .container {
     padding: 0 20px;
   }
-  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container, .header__career_container {
+  .header__container, .public__container, .services__container, .projects__container, .digital__container, .development__container, .design__container, .analytics__container, .publications__container, .team__container, .career__container, .contacts__container, .header__nav_container, .header__consultation_container, .error__page_container, .header__career_container, .showreel__container {
     padding: 0;
   }
   .publication__block {
@@ -4814,7 +4828,7 @@ svg path {
     font-size: 14px;
     line-height: 17px;
   }
-  .public__info_first .public__info_block, .public__info_last .public__info_block {
+  .public__info_first .public__info_block {
     height: 360px;
     padding: 20px 20px 50px;
   }
@@ -4874,9 +4888,13 @@ svg path {
   .projects__hover img {
     min-height: 327px;
   }
-  .projects__item_first .projects__item_block, .projects__item_last .projects__item_block {
+  .projects__item_first .projects__item_block {
     height: 360px;
     padding: 20px 20px 60px;
+  }
+  .projects__item_last .projects__item_block, .public__info_last .public__info_block {
+    height: 200px;
+    padding: 20px;
   }
   .projects__item_block {
     padding: 30px 20px;
@@ -5307,7 +5325,7 @@ svg path {
     flex-direction: column;
     gap: 10px;
   }
-  .projects__item_first .projects__item_block, .projects__item_last .projects__item_block, .public__info_first .public__info_block, .public__info_last .public__info_block {
+  .projects__item_first .projects__item_block, .public__info_first .public__info_block {
     height: 430px;
   }
   .contacts__number, .contacts__mail {
