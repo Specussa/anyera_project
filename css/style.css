@@ -2798,17 +2798,75 @@ svg path {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  gap: 20px;
   justify-content: space-between;
+  position: relative;
 }
 
 .contacts__flex_left, .contacts__flex_right {
   width: 50%;
 }
 
+.contacts__bottom_flex .contacts__description, .contacts__bottom_flex .contacts__description {
+  width: calc(50% - 20px);
+}
+
+.contacts__flex_left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+
+.contacts__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: calc(50% - 40px);
+  flex-direction: column;
+  gap: 14px;
+  position: absolute;
+  top: 180px;
+}
+
+.contacts__bottom_desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 583px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contacts__bottom_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contacts__description {
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--page-text);
+}
+
 .contacts__head {
   font-size: 92px;
   font-weight: 700;
   line-height: 112px;
+  color: var(--page-text);
+}
+
+.contacts__bottom_head {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
   color: var(--page-text);
 }
 
@@ -2820,17 +2878,16 @@ svg path {
   gap: 55px;
 }
 
+.contacts__blocks {
+  padding: 0 0 140px;
+}
+
 .contacts__item, .contacts__social_flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   gap: 20px;
-}
-
-.contacts__social_flex {
-  width: 50%;
-  margin: 0 0 0 auto;
 }
 
 .contacts_social_list {
@@ -2849,23 +2906,19 @@ svg path {
   color: var(--page-text);
 }
 
-.contacts__number {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 44px;
-}
-
-.contacts__mail {
-  font-family: var(--lato);
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 19px;
+.contacts__number, .contacts__mail {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 68px;
+  color: var(--page-text);
 }
 
 .contacts_social_link {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 29px;
+  font-family: var(--lato);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19px;
+  color: var(--page-text);
 }
 
 /* end contacts */
@@ -3983,6 +4036,13 @@ svg path {
   .team__photo_block {
     max-width: 280px;
   }
+  .contacts__blocks {
+    padding: 0 0 160px;
+  }
+  .contacts__number, .contacts__mail {
+    font-size: 36px;
+    line-height: 44px;
+  }
 }
 
 /* end media 1200+ */
@@ -4220,10 +4280,6 @@ svg path {
   .contacts__info {
     padding: 40px 40px 30px;
   }
-  .contacts__social_flex {
-    width: 100%;
-    margin: 0;
-  }
   .contacts__blocks {
     gap: 78px;
   }
@@ -4291,6 +4347,9 @@ svg path {
   }
   .team__target_info {
     gap: 30px;
+  }
+  .contacts__blocks {
+    padding: 0 0 270px;
   }
 }
 
@@ -4543,6 +4602,17 @@ svg path {
   }
   .filter__category.selected .filter__form {
     padding: 20px 40px;
+  }
+  .contacts__blocks {
+    padding: 0;
+  }
+  .contacts__bottom {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+  .contacts__bottom_desc {
+    max-width: 100%;
   }
 }
 
@@ -4896,17 +4966,9 @@ svg path {
     font-size: 14px;
     line-height: 17px;
   }
-  .contacts__number {
+  .contacts__number, .contacts__mail {
     font-size: 28px;
     line-height: 34px;
-  }
-  .contacts__mail {
-    font-size: 14px;
-    line-height: 17px;
-  }
-  .contacts_social_link {
-    font-size: 18px;
-    line-height: 22px;
   }
   .contacts_social_list {
     gap: 10px 20px;
@@ -5149,6 +5211,20 @@ svg path {
   .projects__item_first .projects__item_block, .projects__item_last .projects__item_block, .public__info_first .public__info_block, .public__info_last .public__info_block {
     height: 430px;
   }
+  .contacts__number, .contacts__mail {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .contacts__bottom_flex {
+    flex-direction: column;
+  }
+  .contacts__bottom_flex .contacts__description, .contacts__bottom_flex .contacts__description {
+    width: 100%;
+  }
+  .contacts__description {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
 /* end media 320+ */
@@ -5165,4 +5241,10 @@ svg path {
   .projects__filter {
     width: 100%;
   }
+  .contacts__number, .contacts__mail {
+    font-size: 18px;
+  }.button__circle {
+    width: 130px;
+    height: 130px;
+}
 }

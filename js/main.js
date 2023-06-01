@@ -25,6 +25,8 @@ const showreelvideo = document.getElementById('showreel__video');
 const showreelmodal = document.querySelector('.showreel__modal');
 const showreelmodalClose = document.querySelector('.showreel__modal_close');
 const filtervi = document.querySelectorAll('.filter__form ');
+const btnlight = document.querySelector('.button__light');
+const btndark = document.querySelector('.button__dark');
 
 // start navbar
 // кнопка header__burger
@@ -378,9 +380,6 @@ hover.addEventListener('mouseout', function(e) {
   elemHover = null;
 })
 // start dark mode
-const btnlight = document.querySelector('.button__light');
-const btndark = document.querySelector('.button__dark');
-
 // 1. Проверка темной темы на уровне системных настроек
 if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ) {
   btndark.classList.add("active");
@@ -417,7 +416,7 @@ window
   }
 });
 
-// Включение ночного режима по кнопке
+// Включение дневного режима по кнопке
 document.querySelector('.button__light').addEventListener('click', function() {
   if (btndark.classList.contains("active")) {
     btndark.classList.remove("active");
@@ -427,6 +426,7 @@ document.querySelector('.button__light').addEventListener('click', function() {
   localStorage.setItem("darkMode", "light");
 })
 
+// Включение ночного режима по кнопке
 document.querySelector('.button__dark').addEventListener('click', function() {
   if (btnlight.classList.contains("active")) {
     btnlight.classList.remove("active");
