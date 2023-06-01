@@ -701,24 +701,28 @@ if(!showreelvideo){} else {
 // end video
 
 // start index animation
-(function () {
-  var square = document.querySelector('.digital');
-  var observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {var entrySquare = entry.target.querySelector('.digital__info');
-  if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
-  if (entry.isIntersecting) {
-    entrySquare.classList.add('animate');return;}
-    entrySquare.classList.remove('animate');});});
-    observer.observe(square);
-})();
-(function () {
-  var square = document.querySelector('.showreel');
-  var observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {var entrySquare = entry.target.querySelector('.showreel__button');
-  if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
-  if (entry.isIntersecting) {
-    entrySquare.classList.add('animate');return;}
-    entrySquare.classList.remove('animate');});});
-    observer.observe(square);
-})();
+document.addEventListener('DOMContentLoaded', function(){
+
+  var digital = document.querySelector('.digital');
+  var showreel = document.querySelector('.showreel');
+  (function () {
+    var observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {var entryDigital = entry.target.querySelector('.digital__info');
+    if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
+    if (entry.isIntersecting) {
+      entryDigital.classList.add('animate');return;}
+      entryDigital.classList.remove('animate');});});
+      observer.observe(digital);
+  })();
+  (function () {
+    var observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {var entryShowreel = entry.target.querySelector('.showreel__button');
+    if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
+    if (entry.isIntersecting) {
+      entryShowreel.classList.add('animate');return;}
+      entryShowreel.classList.remove('animate');});});
+      observer.observe(showreel);
+  })();
+
+}, false);
 // end index animation
