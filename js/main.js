@@ -851,17 +851,5 @@ document.addEventListener('DOMContentLoaded', function(){
         observer.observe(showreel);
     })();}, 300);
   }
-  // const observer = new IntersectionObserver(entries => {
-  //   entries.forEach(entry => {
-  //     const square = entry.target.querySelector('.square');
-  //     if (entry.isIntersecting) {
-  //       square.classList.add('square-animation');
-  //     return;
-  //     }
-  //     square.classList.remove('square-animation');
-  //   });
-  // });
-  // observer.observe(document.querySelector('.square-wrapper'));
-
 }, false);
 // end index animation
