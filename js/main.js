@@ -464,8 +464,8 @@ class Select {
   }
 
   addSelectedValue(element) {
-    this.selectTitle.innerHTML = element.innerHTML
-    this.selectInput.value = element.innerHTML
+    this.selectTitle.innerHTML = element.innerHTML;
+    this.selectInput.innerHTML = element.innerHTML;
   }
 
   selectOverlayIsClickedElement(element, target) {
@@ -829,8 +829,8 @@ year.remove();
 document.addEventListener('DOMContentLoaded', function(){
   if(!digital){} else {
     setTimeout(() => {(function () {
-      var observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {var entryDigital = entry.target.querySelector('.digital__info');
+      var observer = new IntersectionObserver(digitals => {
+        digitals.forEach(entry => {var entryDigital = entry.target.querySelector('.digital__info');
       if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
       if (entry.isIntersecting) {
         entryDigital.classList.add('animate');return;}
@@ -841,8 +841,8 @@ document.addEventListener('DOMContentLoaded', function(){
   }
   if(!showreel){} else {
     setTimeout(() => {(function () {
-      var observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {var entryShowreel = entry.target.querySelector('.showreel__button');
+      var observer = new IntersectionObserver(showreels => {
+        showreels.forEach(entry => {var entryShowreel = entry.target.querySelector('.showreel__button');
       if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
       if (entry.isIntersecting) {
         entryShowreel.classList.add('animate');return;}
