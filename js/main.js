@@ -701,6 +701,15 @@ if(!showreelvideo){} else {
 // end video
 
 // start index animation
+const year = document.querySelector('.footer__year');
+if(!year){} else {
+const currentYear = new Date().getFullYear();
+year.insertAdjacentText('beforebegin', currentYear);
+year.remove();
+}
+// start index animation
+
+// start index animation
 document.addEventListener('DOMContentLoaded', function(){
 
   var digital = document.querySelector('.digital');
@@ -723,6 +732,19 @@ document.addEventListener('DOMContentLoaded', function(){
       entryShowreel.classList.remove('animate');});});
       observer.observe(showreel);
   })();
+
+
+  // const observer = new IntersectionObserver(entries => {
+  //   entries.forEach(entry => {
+  //     const square = entry.target.querySelector('.square');
+  //     if (entry.isIntersecting) {
+  //       square.classList.add('square-animation');
+  //     return;
+  //     }
+  //     square.classList.remove('square-animation');
+  //   });
+  // });
+  // observer.observe(document.querySelector('.square-wrapper'));
 
 }, false);
 // end index animation
