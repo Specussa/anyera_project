@@ -465,7 +465,8 @@ class Select {
 
   addSelectedValue(element) {
     this.selectTitle.innerHTML = element.innerHTML;
-    this.selectInput.innerHTML = element.innerHTML;
+    this.selectInput.value = element.innerHTML;
+    this.selectInput.setAttribute('value', this.selectInput.value);
   }
 
   selectOverlayIsClickedElement(element, target) {
