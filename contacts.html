@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Контакты</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap" rel="stylesheet">
@@ -72,7 +72,7 @@
                     <li class="header__subnav_item"><a href="projects.html" class="header__subnav_link">Проект 4</a></li>
                   </ul>
                 </li>
-                <li class="header__nav_item active">
+                <li class="header__nav_item">
                   <a href="services.html" class="header__nav_link">УСЛУГИ</a>
                   <ul class="header__subnav_list">
                     <li class="header__subnav_item"><a href="services.html" class="header__subnav_link">Аналитика</a></li>
@@ -84,9 +84,6 @@
                 </li>
                 <li class="header__nav_item">
                   <a href="team.html" class="header__nav_link">КОМАНДА</a>
-                </li>
-                <li class="header__nav_item">
-                  <a href="career.html" class="header__nav_link">КАРЬЕРА</a>
                   <ul class="header__subnav_list">
                     <li class="header__subnav_item"><a href="career.html" class="header__subnav_link">Карьера 1</a></li>
                     <li class="header__subnav_item"><a href="career.html" class="header__subnav_link">Карьера 2</a></li>
@@ -95,7 +92,7 @@
                   </ul>
                 </li>
                 <li class="header__nav_item">
-                  <a href="public.html" class="header__nav_link">Публикации</a>
+                  <a href="public.html" class="header__nav_link">ПУБЛИКАЦИИ</a>
                   <ul class="header__subnav_list">
                     <li class="header__subnav_item"><a href="publication.html" class="header__subnav_link">Публикация 1</a></li>
                     <li class="header__subnav_item"><a href="publication.html" class="header__subnav_link">Публикация 2</a></li>
@@ -323,15 +320,58 @@
               <p class="say__desc">Опишите свою задачу и мы свяжемся с вами в кратчайшие сроки.</p>
             </div>
             <div class="say__block_right">
-              <a class="button__circle say__button" href="#">
+              <button class="button__circle say__button">
                 <span class="button__circle_text">Написать</span>
                 <span class="button__circle_hover"></span>
-              </a>
+              </button>
             </div>
           </div>
           <div class="block__right say__right"></div>
         </div>
       </section>
+      <div class="header__say">
+        <div class="container header__career_container">
+          <div class="block__left header__career_left"></div>
+          <div class="header__career_blocks">
+            <div class="header__career_burger_flex">
+              <button class="button__close header__say_burger" aria-label="Закрыть меню">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M22.5882 24L0 1.41176L1.41176 0L24 22.5882L22.5882 24Z" fill="#262626"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M24 1.41178L1.41176 24L0 22.5883L22.5882 0L24 1.41178Z" fill="#262626"/>
+                </svg>
+              </button>
+            </div>
+            <div class="header__career_block">
+              <div class="header__career_info">
+                <div class="header__career_say">
+                  <p class="header__career_head">Оставьте контакты</p>
+                  <p class="header__career_desc">Мы свяжемся с вами в кратчайшие сроки.</p>
+                </div>
+              </div>
+              <form id="formsay" class="header__forms_form">
+                <div class="header__forms_form_controls">
+                  <div class="header__forms_form_control">
+                    <input class="header__forms_form_input" type="text" minlength="4" maxlength="40" placeholder="Имя" id="usernamesay" />
+                    <span class="header__forms_form_bar"></span>
+                    <small>Error message</small>
+                  </div>
+                  <div class="header__forms_form_control">
+                    <input class="header__forms_form_input" type="tel" minlength="5" maxlength="20" placeholder="Телефон" id="phonesay" />
+                    <span class="header__forms_form_bar"></span>
+                    <small>Error message</small>
+                  </div>
+                </div>
+                <button class="button__project header__form_button">
+                  <span class="button__text">Отправить</span>
+                  <span class="button__hover"></span>
+                </button>
+                <p class="header__form_policy">Нажимая на кнопку, вы соглашаетесь с условиями <a href="#">политики конфиденциальности</a>.</p>
+              </form>
+            </div>
+          </div>
+          <div class="block__right header__career_right"></div>
+        </div>
+      </div>
     </main>
     <footer class="footer" id="CONTACTS">
       <div class="container footer__container">

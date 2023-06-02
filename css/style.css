@@ -1945,7 +1945,7 @@ svg path {
   margin: -1px 0 0;
   -moz-column-count: 2;
   column-count: 2;
-  gap: 2px;
+  gap: 3px;
   column-rule: solid 1px var(--gray-border);
   border-left: 1px solid var(--gray-border);
   border-right: 1px solid var(--gray-border);
@@ -2206,6 +2206,13 @@ svg path {
   transition-duration: 0.2s;
 }
 
+.publication__link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+}
+
 /* end projects */
 
 /* start public */
@@ -2214,7 +2221,7 @@ svg path {
   margin: -1px 0 0;
   -moz-column-count: 2;
   column-count: 2;
-  gap: 2px;
+  gap: 3px;
   column-rule: solid 1px var(--gray-border);
   border-right: 1px solid var(--gray-border);
   border-left: 1px solid var(--gray-border);
@@ -2362,6 +2369,13 @@ svg path {
   -ms-transition: color 0.3s linear;
   -o-transition: color 0.3s linear;
   transition: color 0.3s linear;
+}
+
+.public__link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
 }
 
 /* end public */
@@ -2589,7 +2603,7 @@ svg path {
 
 /* start career */
 
-.header__career {
+.header__career, .header__say {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2616,19 +2630,19 @@ svg path {
   /* overflow-y: scroll; */
 }
 
-.header__career::-webkit-scrollbar {
+.header__career::-webkit-scrollbar, .header__say::-webkit-scrollbar {
   display: none;
   width: 0px;
   background: transparent;
 }
 
-.header__career::-webkit-scrollbar-thumb {
+.header__career::-webkit-scrollbar-thumb, .header__say::-webkit-scrollbar-thumb {
   display: none;
   width: 0px;
   background: var(--page-text);
 }
 
-.header__career.active {
+.header__career.active, .header__say.active {
   visibility: visible;
   -webkit-transform: translateY(0%);
   -moz-transform: translateY(0%);
@@ -2648,7 +2662,7 @@ svg path {
   justify-content: flex-end;
 }
 
-.header__career_burger {
+.header__career_burger, .header__say_burger {
   position: absolute;
   top: 33px;
   right: 33px;
@@ -5103,7 +5117,7 @@ svg path {
   .header__nav_bottom_socials {
     max-width: 174px;
   }
-  .header__nav_burger, .error_page__close, .header__consultation_burger, .header__career_burger {
+  .header__nav_burger, .error_page__close, .header__consultation_burger, .header__career_burger, .header__say_burger {
     top: 15px;
     right: 15px;
   }

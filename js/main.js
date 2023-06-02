@@ -1,18 +1,23 @@
 const menu = document.querySelector('.header__nav');
 const menu_c = document.querySelector('.header__consultation');
 const menu_v = document.querySelector('.header__career');
+const menu_s = document.querySelector('.header__say');
 const burger = document.querySelector('.header__burger');
 const burger_c = document.querySelector('.header__project');
 const burger_v = document.querySelector('.career__button');
+const burger_s = document.querySelector('.say__button');
 const burgernav = document.querySelector('.header__nav_burger');
 const burgernav_c = document.querySelector('.header__consultation_burger');
 const burgernav_v = document.querySelector('.header__career_burger');
+const burgernav_s = document.querySelector('.header__say_burger');
 const form = document.getElementById('form');
 const formcareer = document.getElementById('formcareer');
 const username = document.getElementById('username');
 const usernamecareer = document.getElementById('usernamecareer');
+const usernamesay = document.getElementById('usernamesay');
 const phone = document.getElementById('phone');
 const phonecareer = document.getElementById('phonecareer');
+const phonesay = document.getElementById('phonesay');
 const text = document.getElementById('text');
 const textcareer = document.getElementById('textcareer');
 const linkcareer = document.getElementById('linkcareer');
@@ -27,6 +32,9 @@ const showreelmodalClose = document.querySelector('.showreel__modal_close');
 const filtervi = document.querySelectorAll('.filter__form ');
 const btnlight = document.querySelector('.button__light');
 const btndark = document.querySelector('.button__dark');
+var digital = document.querySelector('.digital');
+var showreel = document.querySelector('.showreel');
+const year = document.querySelector('.footer__year');
 
 // start navbar
 // кнопка header__burger
@@ -42,6 +50,9 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     if(!menu_v){} else {menu_v.classList.remove("active");}
     if(!burger_v){} else {burger_v.classList.remove("active");}
     if(!burgernav_v){} else {burgernav_v.classList.remove("active");}
+    if(!menu_s){} else {menu_s.classList.remove("active");}
+    if(!burger_s){} else {burger_s.classList.remove("active");}
+    if(!burgernav_s){} else {burgernav_s.classList.remove("active");}
   } else {
     menu.classList.add("active");
     burger.classList.add("active");
@@ -53,6 +64,9 @@ document.querySelector('.header__burger').addEventListener('click', function() {
     if(!menu_v){} else {menu_v.classList.remove("active");}
     if(!burger_v){} else {burger_v.classList.remove("active");}
     if(!burgernav_v){} else {burgernav_v.classList.remove("active");}
+    if(!menu_s){} else {menu_s.classList.remove("active");}
+    if(!burger_s){} else {burger_s.classList.remove("active");}
+    if(!burgernav_s){} else {burgernav_s.classList.remove("active");}
   }
   if (burger_c.classList.contains("active")) {
     menu_c.classList.remove("active");
@@ -73,6 +87,9 @@ document.querySelector('.header__project').addEventListener('click', function() 
     if(!menu_v){} else {menu_v.classList.remove("active");}
     if(!burger_v){} else {burger_v.classList.remove("active");}
     if(!burgernav_v){} else {burgernav_v.classList.remove("active");}
+    if(!menu_s){} else {menu_s.classList.remove("active");}
+    if(!burger_s){} else {burger_s.classList.remove("active");}
+    if(!burgernav_s){} else {burgernav_s.classList.remove("active");}
   } else {
     menu_c.classList.add("active");
     burger_c.classList.add("active");
@@ -83,6 +100,9 @@ document.querySelector('.header__project').addEventListener('click', function() 
     if(!menu_v){} else {menu_v.classList.remove("active");}
     if(!burger_v){} else {burger_v.classList.remove("active");}
     if(!burgernav_v){} else {burgernav_v.classList.remove("active");}
+    if(!menu_s){} else {menu_s.classList.remove("active");}
+    if(!burger_s){} else {burger_s.classList.remove("active");}
+    if(!burgernav_s){} else {burgernav_s.classList.remove("active");}
   }
   if (burgernav_c.classList.contains("active")) {
     menu_c.classList.remove("active");
@@ -190,6 +210,9 @@ if(!burger_v){} else {
       menu_c.classList.remove("active");
       burger_c.classList.remove("active");
       burgernav_c.classList.remove("active");
+      if(!menu_s){} else {menu_s.classList.remove("active");}
+      if(!burger_s){} else {burger_s.classList.remove("active");}
+      if(!burgernav_s){} else {burgernav_s.classList.remove("active");}
     } else {
       menu_v.classList.add("active");
       burger_v.classList.add("active");
@@ -200,6 +223,9 @@ if(!burger_v){} else {
       menu_c.classList.remove("active");
       burger_c.classList.remove("active");
       burgernav_c.classList.remove("active");
+      if(!menu_s){} else {menu_s.classList.remove("active");}
+      if(!burger_s){} else {burger_s.classList.remove("active");}
+      if(!burgernav_s){} else {burgernav_s.classList.remove("active");}
     }
     if (burgernav_v.classList.contains("active")) {
       menu_v.classList.remove("active");
@@ -266,6 +292,97 @@ if(!burger_v){} else {
 }
 // end career
 
+// start say
+if(!burger_s){} else {
+  // кнопка say__button
+  burger_s.addEventListener('click', function() {
+    if (burger_s.classList.contains("active")) {
+      menu_s.classList.remove("active");
+      burger_s.classList.remove("active");
+      document.body.style.overflow = "visible";
+      document.body.style.height = "100%";
+      menu.classList.remove("active");
+      burger.classList.remove("active");
+      menu_c.classList.remove("active");
+      burger_c.classList.remove("active");
+      burgernav_c.classList.remove("active");
+      if(!menu_v){} else {menu_v.classList.remove("active");}
+      if(!burger_v){} else {burger_v.classList.remove("active");}
+      if(!burgernav_v){} else {burgernav_v.classList.remove("active");}
+    } else {
+      menu_s.classList.add("active");
+      burger_s.classList.add("active");
+      document.body.style.overflow = "hidden";
+      document.body.style.height = "100vh";
+      menu.classList.remove("active");
+      burger.classList.remove("active");
+      menu_c.classList.remove("active");
+      burger_c.classList.remove("active");
+      burgernav_c.classList.remove("active");
+      if(!menu_v){} else {menu_v.classList.remove("active");}
+      if(!burger_v){} else {burger_v.classList.remove("active");}
+      if(!burgernav_v){} else {burgernav_v.classList.remove("active");}
+    }
+    if (burgernav_s.classList.contains("active")) {
+      menu_s.classList.remove("active");
+      burgernav_s.classList.remove("active");
+      document.body.style.overflow = "visible";
+      document.body.style.height = "100%";
+    } else {
+      menu_s.classList.add("active");
+      burgernav_s.classList.add("active");
+      document.body.style.overflow = "hidden";
+      document.body.style.height = "100vh";
+    }
+  })
+  // кнопка закрыть для say__button
+  burgernav_s.addEventListener('click', function() {
+    if (burgernav_s.classList.contains("active")) {
+      menu_s.classList.remove("active");
+      burger_s.classList.remove("active");
+      burgernav_s.classList.remove("active");
+      document.body.style.overflow = "visible";
+      document.body.style.height = "100%";
+    }
+  })
+  // start validate form say
+  formsay.addEventListener('submit', e => {
+    e.preventDefault();
+    
+    checkInputssay();
+    });
+    
+    function checkInputssay() {
+    // trim to remove the whitespaces
+    const usernamesayValue = usernamesay.value.trim();
+    const phonesayValue = phonesay.value.trim();
+    
+    if(usernamesayValue === '') {
+        setErrorFor(usernamesay, 'Обязательное поле'); } else { setSuccessFor(usernamesay);
+    }
+    if(phonesayValue === '') {
+        setErrorFor(phonesay, 'Обязательное поле'); } else { setSuccessFor(phonesay);
+    }
+    }
+    
+    function setErrorFor(input, message) {
+      const formsayControl = input.parentElement;
+      const small = formsayControl.querySelector('small');
+      formsayControl.className = 'header__forms_form_control error';
+      small.innerText = message;
+    }
+    
+    function setSuccessFor(input) {
+      const formsayControl = input.parentElement;
+      formsayControl.className = 'header__forms_form_control success';
+    }
+    
+    // function iscontrol(control) {
+    // 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(control);
+    // }
+    // end validate form say
+}
+// end say
 
 // start select
 const SELECT = '[data-select]'
@@ -700,38 +817,38 @@ if(!showreelvideo){} else {
 }
 // end video
 
-// start index animation
-const year = document.querySelector('.footer__year');
+// start year
 if(!year){} else {
 const currentYear = new Date().getFullYear();
 year.insertAdjacentText('beforebegin', currentYear);
 year.remove();
 }
-// start index animation
+// end year
 
 // start index animation
 document.addEventListener('DOMContentLoaded', function(){
-
-  var digital = document.querySelector('.digital');
-  var showreel = document.querySelector('.showreel');
-  (function () {
-    var observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {var entryDigital = entry.target.querySelector('.digital__info');
-    if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
-    if (entry.isIntersecting) {
-      entryDigital.classList.add('animate');return;}
-      entryDigital.classList.remove('animate');});});
-      observer.observe(digital);
-  })();
-  (function () {
-    var observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {var entryShowreel = entry.target.querySelector('.showreel__button');
-    if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
-    if (entry.isIntersecting) {
-      entryShowreel.classList.add('animate');return;}
-      entryShowreel.classList.remove('animate');});});
-      observer.observe(showreel);
-  })();
+  if(!digital){} else {
+    (function () {
+      var observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {var entryDigital = entry.target.querySelector('.digital__info');
+      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
+      if (entry.isIntersecting) {
+        entryDigital.classList.add('animate');return;}
+        entryDigital.classList.remove('animate');});});
+        observer.observe(digital);
+    })();
+  }
+  if(!showreel){} else {
+    (function () {
+      var observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {var entryShowreel = entry.target.querySelector('.showreel__button');
+      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
+      if (entry.isIntersecting) {
+        entryShowreel.classList.add('animate');return;}
+        entryShowreel.classList.remove('animate');});});
+        observer.observe(showreel);
+    })();
+  }
 
 
   // const observer = new IntersectionObserver(entries => {
