@@ -1420,11 +1420,11 @@ svg path {
   -ms-transform: translateY(102%);
   -o-transform: translateY(102%);
   transform: translateY(102%);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  -moz-transition: -moz-transform 0.3s linear;
-  -ms-transition: -ms-transform 0.3s linear;
-  -o-transition: -o-transform 0.3s linear;
-  transition: transform 0.3s linear;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  -moz-transition: -moz-transform 0.5s linear;
+  -ms-transition: -ms-transform 0.5s linear;
+  -o-transition: -o-transform 0.5s linear;
+  transition: transform 0.5s linear;
 }
 
 .digital__info.animate .digital__head_block span {
@@ -1448,11 +1448,11 @@ svg path {
   -ms-transform: translate(202%, -48px);
   -o-transform: translate(202%, -48px);
   transform: translate(202%, -48px);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  -moz-transition: -moz-transform 0.3s linear;
-  -ms-transition: -ms-transform 0.3s linear;
-  -o-transition: -o-transform 0.3s linear;
-  transition: transform 0.3s linear;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  -moz-transition: -moz-transform 0.5s linear;
+  -ms-transition: -ms-transform 0.5s linear;
+  -o-transition: -o-transform 0.5s linear;
+  transition: transform 0.5s linear;
 }
 
 .digital__info.animate .digital__desc {
@@ -1496,11 +1496,11 @@ svg path {
 }
 
 .showreel__button {
-  -webkit-transform: translateY(-100px) translateX(202%) rotate(360deg);
-  -moz-transform: translateY(-100px) translateX(202%) rotate(360deg);
-  -ms-transform: translateY(-100px) translateX(202%) rotate(360deg);
-  -o-transform: translateY(-100px) translateX(202%) rotate(360deg);
-  transform: translateY(-100px) translateX(202%) rotate(360deg);
+  -webkit-transform: translateY(-100px) translateX(1000%) rotate(360deg);
+  -moz-transform: translateY(-100px) translateX(1000%) rotate(360deg);
+  -ms-transform: translateY(-100px) translateX(1000%) rotate(360deg);
+  -o-transform: translateY(-100px) translateX(1000%) rotate(360deg);
+  transform: translateY(-100px) translateX(1000%) rotate(360deg);
   -webkit-transition: -webkit-transform 0.3s linear;
   -moz-transition: -moz-transform 0.3s linear;
   -ms-transition: -ms-transform 0.3s linear;

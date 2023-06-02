@@ -828,29 +828,29 @@ year.remove();
 // start index animation
 document.addEventListener('DOMContentLoaded', function(){
   if(!digital){} else {
-    (function () {
+    setTimeout(() => {(function () {
       var observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {var entryDigital = entry.target.querySelector('.digital__info');
       if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
       if (entry.isIntersecting) {
         entryDigital.classList.add('animate');return;}
-        entryDigital.classList.remove('animate');});});
+        // entryDigital.classList.remove('animate');
+      });});
         observer.observe(digital);
-    })();
+    })();}, 300);
   }
   if(!showreel){} else {
-    (function () {
+    setTimeout(() => {(function () {
       var observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {var entryShowreel = entry.target.querySelector('.showreel__button');
       if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
       if (entry.isIntersecting) {
         entryShowreel.classList.add('animate');return;}
-        entryShowreel.classList.remove('animate');});});
+        // entryShowreel.classList.remove('animate');
+      });});
         observer.observe(showreel);
-    })();
+    })();}, 300);
   }
-
-
   // const observer = new IntersectionObserver(entries => {
   //   entries.forEach(entry => {
   //     const square = entry.target.querySelector('.square');
