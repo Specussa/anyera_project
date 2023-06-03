@@ -1576,8 +1576,11 @@ svg path {
   height: 100vh;
   min-width: 100%;
   object-fit: cover;
-  animation-name: grow;  
-  animation-duration: .3s;
+  -webkit-animation: grow 0.3s infinite linear;
+  -moz-animation: grow 0.3s infinite linear;
+  -ms-animation: grow 0.3s infinite linear;
+  -o-animation: grow 0.3s infinite linear;
+  animation: grow 0.3s infinite linear;
 }
 
 .showreel__modal_close {
@@ -3981,10 +3984,9 @@ svg path {
   top: 0;
   right: 0;
   bottom: 0;
-  overflow: hidden;
-  /* фоновый цвет */
   background: var(--page-bg);
   z-index: 1001;
+  overflow: hidden;
 }
 
 .preloader__image {
@@ -3996,22 +3998,44 @@ svg path {
   margin-top: -35px;
   margin-left: -35px;
   text-align: center;
+  -webkit-animation: preloader-rotate 2s infinite linear;
+  -moz-animation: preloader-rotate 2s infinite linear;
+  -ms-animation: preloader-rotate 2s infinite linear;
+  -o-animation: preloader-rotate 2s infinite linear;
   animation: preloader-rotate 2s infinite linear;
+}
+
+.loaded_hiding .preloader {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  -ms-transition: opacity 0.3s;
+  -o-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
 
 .preloader__image {
   fill: var(--page-text);
 }
 
-@keyframes preloader-rotate {
+@-webkit-keyframes preloader-rotate {
   100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
 
-.loaded_hiding .preloader {
-  transition: 0.3s opacity;
-  opacity: 0;
+@keyframes preloader-rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 .loaded .preloader {
