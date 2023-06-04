@@ -492,6 +492,10 @@ svg path {
   position: relative;
 }
 
+.header__anchor {
+  display: none;
+}
+
 .header__anchor_list {
   display: -webkit-box;
   display: -ms-flexbox;
