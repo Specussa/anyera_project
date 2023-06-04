@@ -1576,11 +1576,11 @@ svg path {
   height: 100vh;
   min-width: 100%;
   object-fit: cover;
-  -webkit-animation: grow 0.3s infinite linear;
-  -moz-animation: grow 0.3s infinite linear;
-  -ms-animation: grow 0.3s infinite linear;
-  -o-animation: grow 0.3s infinite linear;
-  animation: grow 0.3s infinite linear;
+  -webkit-animation: grow 0.3s linear;
+  -moz-animation: grow 0.3s linear;
+  -ms-animation: grow 0.3s linear;
+  -o-animation: grow 0.3s linear;
+  animation: grow 0.3s linear;
 }
 
 .showreel__modal_close {
@@ -1602,14 +1602,50 @@ svg path {
   display: block;
 }
 
-@keyframes grow {
+@-webkit-keyframes grow {
   0% {
+    -webkit-transform: scale(.01,.05);
+    -moz-transform: scale(.01,.05);
+    -ms-transform: scale(.01,.05);
+    -o-transform: scale(.01,.05);
     transform: scale(.01,.05);
   }
   70% {
+    -webkit-transform: scale(.01,1);
+    -moz-transform: scale(.01,1);
+    -ms-transform: scale(.01,1);
+    -o-transform: scale(.01,1);
     transform: scale(.01,1);
   }
   100% {
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform: scale(1,1);
+    transform: scale(1,1);
+  }
+}
+
+@keyframes grow {
+  0% {
+    -webkit-transform: scale(.01,.05);
+    -moz-transform: scale(.01,.05);
+    -ms-transform: scale(.01,.05);
+    -o-transform: scale(.01,.05);
+    transform: scale(.01,.05);
+  }
+  70% {
+    -webkit-transform: scale(.01,1);
+    -moz-transform: scale(.01,1);
+    -ms-transform: scale(.01,1);
+    -o-transform: scale(.01,1);
+    transform: scale(.01,1);
+  }
+  100% {
+    -webkit-transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -ms-transform: scale(1,1);
+    -o-transform: scale(1,1);
     transform: scale(1,1);
   }
 }
