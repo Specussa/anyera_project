@@ -155,47 +155,6 @@ for (const anchor of anchors) {
 }
 // end navbar
 
-// start validate form project
-if(!form){} else {
-form.addEventListener('submit', e => {
-e.preventDefault();
-
-checkInputs();
-});
-function checkInputs() {
-// trim to remove the whitespaces
-const usernameValue = username.value.trim();
-const phoneValue = phone.value.trim();
-const textValue = text.value.trim();
-
-if(usernameValue === '') {
-    setErrorFor(username, 'Обязательное поле'); } else { setSuccessFor(username);
-}
-if(phoneValue === '') {
-    setErrorFor(phone, 'Обязательное поле'); } else { setSuccessFor(phone);
-}
-if(textValue === '') {
-    setErrorFor(text, 'Обязательное поле'); } else { setSuccessFor(text);
-  }
-}
-
-function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector('small');
-  formControl.className = 'header__forms_form_control error';
-  small.innerText = message;
-}
-
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = 'header__forms_form_control success';
-}
-
-// function iscontrol(control) {
-// 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(control);
-// }
-}
-// end validate form project
 // start career
 if(!burger_v){} else {
   // кнопка career__button
@@ -249,46 +208,6 @@ if(!burger_v){} else {
       document.body.style.height = "100%";
     }
   })
-  // start validate form career
-  formcareer.addEventListener('submit', e => {
-    e.preventDefault();
-    
-    checkInputscareer();
-    });
-    
-    function checkInputscareer() {
-    // trim to remove the whitespaces
-    const usernamecareerValue = usernamecareer.value.trim();
-    const phonecareerValue = phonecareer.value.trim();
-    const textcareerValue = textcareer.value.trim();
-    
-    if(usernamecareerValue === '') {
-        setErrorFor(usernamecareer, 'Обязательное поле'); } else { setSuccessFor(usernamecareer);
-    }
-    if(phonecareerValue === '') {
-        setErrorFor(phonecareer, 'Обязательное поле'); } else { setSuccessFor(phonecareer);
-    }
-    if(textcareerValue === '') {
-        setErrorFor(textcareer, 'Обязательное поле'); } else { setSuccessFor(textcareer);
-      }
-    }
-    
-    function setErrorFor(input, message) {
-      const formcareerControl = input.parentElement;
-      const small = formcareerControl.querySelector('small');
-      formcareerControl.className = 'header__forms_form_control error';
-      small.innerText = message;
-    }
-    
-    function setSuccessFor(input) {
-      const formcareerControl = input.parentElement;
-      formcareerControl.className = 'header__forms_form_control success';
-    }
-    
-    // function iscontrol(control) {
-    // 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(control);
-    // }
-    // end validate form career
 }
 // end career
 
@@ -1092,11 +1011,6 @@ function wrapPlayers() {
       wrapper.appendChild(video);
   });
 }
-// video.addEventListener("canplay", function() {
-//     controls.hasHours = (video.duration / 3600) >= 1.0;                    
-//     controls.duration.text(formatTime(video.duration, controls.hasHours));
-//     controls.currentTime.text(formatTime(0),controls.hasHours);
-// }, false);
 function formatTime(time, hours) {
   if (hours) {
       var h = Math.floor(time / 3600);
