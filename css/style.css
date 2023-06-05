@@ -1991,7 +1991,7 @@ video {
 
 .spec #progress__duration {
   position: absolute;
-  right: 20px;
+  right: 30px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 14px;
@@ -2001,7 +2001,7 @@ video {
 
 .spec #progress__currenttime {
   position: absolute;
-  left: 20px;
+  left: 30px;
   top: 50%;
   transform: translateY(-50%);
   font-size: 14px;
