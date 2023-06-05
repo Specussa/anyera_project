@@ -1073,11 +1073,11 @@ function handleProgress(video, progressBar) {
   var chours = Math.floor(video.currentTime / 60 / 60);
   var cminutes = Math.floor(video.currentTime / 60) - (chours * 60);
   var cseconds = Math.floor(video.currentTime % 60);
-  progress__currenttime.innerHTML = cminutes + ':' + cseconds;
+  progress__currenttime.innerHTML = [cminutes,cseconds.toString().padStart(2, '0')].join(':');
   var dhours = Math.floor(video.duration / 60 / 60);
   var dminutes = Math.floor(video.duration / 60) - (dhours * 60);
   var dseconds = Math.floor(video.duration % 60);
-  progress__duration.innerHTML = dminutes + ':' + dseconds;
+  progress__duration.innerHTML = [dminutes,dseconds.toString().padStart(2, '0')].join(':');
 }
 function scrub(e, video, progress) {
   var scrubTime = e.offsetX / progress.offsetWidth * video.duration;
