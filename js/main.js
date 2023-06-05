@@ -967,14 +967,6 @@ function updateButton(video, toggle) {
     var tseconds = Math.floor((e.offsetX / progress.offsetWidth * video.duration) % 60);
     progress__time.innerHTML = [tminutes,tseconds.toString().padStart(2, '0')].join(':');
   });
-  setInterval(function(){
-    progress__currenttime.innerHTML = [cminutes,cseconds.toString().padStart(2, '0')].join(':');
-  }, 1000)
-  progress__duration = document.getElementById("progress__duration");
-  progress__currenttime = document.getElementById("progress__currenttime");
-  var chours = Math.floor(video.currentTime / 60 / 60);
-  var cminutes = Math.floor(video.currentTime / 60) - (chours * 60);
-  var cseconds = Math.floor(video.currentTime % 60);
   var dhours = Math.floor(video.duration / 60 / 60);
   var dminutes = Math.floor(video.duration / 60) - (dhours * 60);
   var dseconds = Math.floor(video.duration % 60);
@@ -1005,6 +997,12 @@ function handleRangeUpdate() {
 function handleProgress(video, progressBar) {
   var percent = video.currentTime / video.duration * 100;
   progressBar.style.flexBasis = percent + '%';
+  progress__duration = document.getElementById("progress__duration");
+  progress__currenttime = document.getElementById("progress__currenttime");
+  var chours = Math.floor(video.currentTime / 60 / 60);
+  var cminutes = Math.floor(video.currentTime / 60) - (chours * 60);
+  var cseconds = Math.floor(video.currentTime % 60);
+  progress__currenttime.innerHTML = [cminutes,cseconds.toString().padStart(2, '0')].join(':');
 }
 function scrub(e, video, progress) {
   var scrubTime = e.offsetX / progress.offsetWidth * video.duration;
