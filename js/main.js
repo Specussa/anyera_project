@@ -1068,6 +1068,16 @@ function handleRangeUpdate() {
 function handleProgress(video, progressBar) {
   var percent = video.currentTime / video.duration * 100;
   progressBar.style.flexBasis = percent + '%';
+  progress__duration = document.getElementById("progress__duration");
+  progress__currenttime = document.getElementById("progress__currenttime");
+  var chours = Math.floor(video.currentTime / 60 / 60);
+  var cminutes = Math.floor(video.currentTime / 60) - (chours * 60);
+  var cseconds = Math.floor(video.currentTime % 60);
+  progress__currenttime.innerHTML = cminutes + ':' + cseconds;
+  var dhours = Math.floor(video.duration / 60 / 60);
+  var dminutes = Math.floor(video.duration / 60) - (dhours * 60);
+  var dseconds = Math.floor(video.duration % 60);
+  progress__duration.innerHTML = dminutes + ':' + dseconds;
 }
 function scrub(e, video, progress) {
   var scrubTime = e.offsetX / progress.offsetWidth * video.duration;
@@ -1082,12 +1092,41 @@ function wrapPlayers() {
       wrapper.appendChild(video);
   });
 }
+// video.addEventListener("canplay", function() {
+//     controls.hasHours = (video.duration / 3600) >= 1.0;                    
+//     controls.duration.text(formatTime(video.duration, controls.hasHours));
+//     controls.currentTime.text(formatTime(0),controls.hasHours);
+// }, false);
+function formatTime(time, hours) {
+  if (hours) {
+      var h = Math.floor(time / 3600);
+      time = time - h * 3600;
+                  
+      var m = Math.floor(time / 60);
+      var s = Math.floor(time % 60);
+                  
+      return h.lead0(2)  + ":" + m.lead0(2) + ":" + s.lead0(2);
+  } else {
+      var m = Math.floor(time / 60);
+      var s = Math.floor(time % 60);
+                  
+      return m.lead0(2) + ":" + s.lead0(2);
+  }
+}
+          
+Number.prototype.lead0 = function(n) {
+  var nz = "" + this;
+  while (nz.length < n) {
+      nz = "0" + nz;
+  }
+  return nz;
+};
 function buildControls(skin) {
   var html = [];
   html.push('<button class="' + skin + '__button--big toggle">' + iconPlay + '</button>');
   html.push('<div class="' + skin + '__border"></div>');
   html.push('<div class="' + skin + '__controls spec__controls">');
-  html.push('<button class="' + skin + '__button toggle">' + iconPlay + '</button>', '<div class="progress">', '<div class="progress__filled"></div>', '<div class="progress__line"></div>', '</div>', '<button class="' + skin + '__button volume">' + iconVolumeMedium + '</button>', '<button class="' + skin + '__button fullscreen" title="Full Screen">' + iconExpand + '</button>');
+  html.push('<button class="' + skin + '__button toggle">' + iconPlay + '</button>', '<div class="progress">', '<div class="progress__filled"></div>', '<div class="progress__line"></div>', '<div id="progress__duration"></div>', '<div id="progress__currenttime"></div>', '</div>', '<button class="' + skin + '__button volume">' + iconVolumeMedium + '</button>', '<button class="' + skin + '__button fullscreen" title="Full Screen">' + iconExpand + '</button>');
   html.push('</div>');
   return html.join('');
 }

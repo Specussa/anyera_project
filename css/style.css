@@ -1982,10 +1982,31 @@ video {
   position: absolute;
   display: none;
   pointer-events: none;
+  z-index: 2;
 }
 
 .spec .progress:hover .progress__line {
   display: block;
+}
+
+.spec #progress__duration {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #fff;
+  z-index: -1;
+}
+
+.spec #progress__currenttime {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #fff;
+  z-index: -1;
 }
 
 .spec .progress__filled {
@@ -2000,6 +2021,7 @@ video {
   -ms-transition: flex-basis 0.1s linear;
   -o-transition: flex-basis 0.1s linear;
   transition: flex-basis 0.1s linear;
+  z-index: 2;
 }
 
 .minimal {
