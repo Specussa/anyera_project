@@ -1968,7 +1968,12 @@ video {
   display: -ms-flexbox;
   display: flex;
   height: 80px;
-  transition: height 0.3s;
+  margin-left: -1px;
+  -webkit-transition: height 0.3s linear;
+  -moz-transition: height 0.3s linear;
+  -ms-transition: height 0.3s linear;
+  -o-transition: height 0.3s linear;
+  transition: height 0.3s linear;
   background: transparent;
   border-top: 1px solid hsla(0,0%,100%,.2);
   border-bottom: 1px solid hsla(0,0%,100%,.2);
@@ -2051,7 +2056,11 @@ video {
   bottom: 0;
   right: 0;
   border-radius: 5px;
-  transition: opacity .2s;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
   opacity: 1;
   visibility: visible;
 }
@@ -2102,6 +2111,10 @@ video {
   -ms-transform: translate(-50%, -50%) scale(1);
       transform: translate(-50%, -50%) scale(1);
   font-size: 64px;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
   transition: all .2s ease-in;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
@@ -2119,6 +2132,10 @@ video {
   bottom: 0;
   right: 0;
   left: 0;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
   transition: all .3s;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -2166,7 +2183,11 @@ video {
   display: -ms-flexbox;
   display: flex;
   height: 10px;
-  transition: height 0.3s;
+  -webkit-transition: height 0.3s linear;
+  -moz-transition: height 0.3s linear;
+  -ms-transition: height 0.3s linear;
+  -o-transition: height 0.3s linear;
+  transition: height 0.3s linear;
   background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   border-radius: 4px;
@@ -2199,7 +2220,11 @@ video {
   bottom: 0;
   right: 0;
   border-radius: 5px;
-  transition: opacity .2s;
+  -webkit-transition: opacity 0.3s linear;
+  -moz-transition: opacity 0.3s linear;
+  -ms-transition: opacity 0.3s linear;
+  -o-transition: opacity 0.3s linear;
+  transition: opacity 0.3s linear;
   opacity: 1;
   visibility: visible;
 }
@@ -2249,6 +2274,10 @@ video {
   -ms-transform: translate(-50%, -50%) scale(1);
       transform: translate(-50%, -50%) scale(1);
   font-size: 64px;
+  -webkit-transition: all .2s ease-in;
+  -moz-transition: all .2s ease-in;
+  -ms-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
   transition: all .2s ease-in;
   -ms-touch-action: manipulation;
       touch-action: manipulation;
@@ -2267,6 +2296,10 @@ video {
   bottom: 0;
   right: 0;
   left: 50%;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
   transition: all .3s;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
@@ -2314,7 +2347,11 @@ video {
   display: -ms-flexbox;
   display: flex;
   height: 10px;
-  transition: height 0.3s;
+  -webkit-transition: height 0.3s linear;
+  -moz-transition: height 0.3s linear;
+  -ms-transition: height 0.3s linear;
+  -o-transition: height 0.3s linear;
+  transition: height 0.3s linear;
   background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
   border-radius: 4px;
