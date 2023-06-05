@@ -1976,17 +1976,18 @@ video {
 }
 
 .spec .progress__line {
-  background: #fff;
+  display: none;
   width: 1px;
   height: 100%;
   position: absolute;
-  display: none;
+  justify-content: center;
   pointer-events: none;
+  background: #fff;
   z-index: 2;
 }
 
 .spec .progress:hover .progress__line {
-  display: block;
+  display: flex;
 }
 
 .spec #progress__duration {
@@ -1994,6 +1995,14 @@ video {
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
+  font-size: 14px;
+  color: #fff;
+  z-index: -1;
+}
+
+.spec #progress__time {
+  position: relative;
+  transform: translateY(-30px);
   font-size: 14px;
   color: #fff;
   z-index: -1;

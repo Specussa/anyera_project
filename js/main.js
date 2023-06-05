@@ -734,7 +734,7 @@ if(!showreelvideo){} else {
         clearTimeout(t)
         t = 0
       }
-      t = setTimeout(() => showreelmodal.classList.add('hide'), 1000)
+      t = setTimeout(() => showreelmodal.classList.add('hide'), 1500)
     });
     const progress = document.querySelector('.progress');
     const progressLine = document.querySelector('.progress__line');
@@ -900,8 +900,6 @@ players.forEach(function (player) {
   var progress = player.querySelector('.progress');
   var progressBar = player.querySelector('.progress__filled');
   var toggle = player.querySelectorAll('.toggle');
-  var skipButtons = player.querySelectorAll('[data-skip]');
-  var ranges = player.querySelectorAll('.' + skin + '__slider');
   var volumeButton = player.querySelector('.volume');
   var fullScreenButton = player.querySelector('.fullscreen');
   if (obj.browserName === "IE" && (obj.browserVersion === 8 || obj.browserVersion === 9)) {
@@ -997,6 +995,14 @@ function handleProgress(video, progressBar) {
   var dminutes = Math.floor(video.duration / 60) - (dhours * 60);
   var dseconds = Math.floor(video.duration % 60);
   progress__duration.innerHTML = [dminutes,dseconds.toString().padStart(2, '0')].join(':');
+  const progress = document.querySelector('.progress');
+  const progress__time = document.getElementById("progress__time");
+  progress.addEventListener('mousemove', (e) => {
+    var thours = Math.floor((e.offsetX / progress.offsetWidth * video.duration) / 60 / 60);
+    var tminutes = Math.floor((e.offsetX / progress.offsetWidth * video.duration) / 60) - (thours * 60);
+    var tseconds = Math.floor((e.offsetX / progress.offsetWidth * video.duration) % 60);
+    progress__time.innerHTML = [tminutes,tseconds.toString().padStart(2, '0')].join(':');
+  });
 }
 function scrub(e, video, progress) {
   var scrubTime = e.offsetX / progress.offsetWidth * video.duration;
@@ -1011,23 +1017,6 @@ function wrapPlayers() {
       wrapper.appendChild(video);
   });
 }
-function formatTime(time, hours) {
-  if (hours) {
-      var h = Math.floor(time / 3600);
-      time = time - h * 3600;
-                  
-      var m = Math.floor(time / 60);
-      var s = Math.floor(time % 60);
-                  
-      return h.lead0(2)  + ":" + m.lead0(2) + ":" + s.lead0(2);
-  } else {
-      var m = Math.floor(time / 60);
-      var s = Math.floor(time % 60);
-                  
-      return m.lead0(2) + ":" + s.lead0(2);
-  }
-}
-          
 Number.prototype.lead0 = function(n) {
   var nz = "" + this;
   while (nz.length < n) {
@@ -1040,7 +1029,7 @@ function buildControls(skin) {
   html.push('<button class="' + skin + '__button--big toggle">' + iconPlay + '</button>');
   html.push('<div class="' + skin + '__border"></div>');
   html.push('<div class="' + skin + '__controls spec__controls">');
-  html.push('<button class="' + skin + '__button toggle">' + iconPlay + '</button>', '<div class="progress">', '<div class="progress__filled"></div>', '<div class="progress__line"></div>', '<div id="progress__duration"></div>', '<div id="progress__currenttime"></div>', '</div>', '<button class="' + skin + '__button volume">' + iconVolumeMedium + '</button>', '<button class="' + skin + '__button fullscreen" title="Full Screen">' + iconExpand + '</button>');
+  html.push('<button class="' + skin + '__button toggle">' + iconPlay + '</button>', '<div class="progress">', '<div class="progress__filled"></div>', '<div class="progress__line"><div id="progress__time"></div></div>', '<div id="progress__duration"></div>', '<div id="progress__currenttime"></div>', '</div>', '<button class="' + skin + '__button volume">' + iconVolumeMedium + '</button>', '<button class="' + skin + '__button fullscreen" title="Full Screen">' + iconExpand + '</button>');
   html.push('</div>');
   return html.join('');
 }
