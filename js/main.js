@@ -959,6 +959,14 @@ function updateButton(video, toggle) {
   toggle.forEach(function (button) {
       return button.innerHTML = icon;
   });
+  const progress = document.querySelector('.progress');
+  const progress__time = document.getElementById("progress__time");
+  progress.addEventListener('mousemove', (e) => {
+    var thours = Math.floor((e.offsetX / progress.offsetWidth * video.duration) / 60 / 60);
+    var tminutes = Math.floor((e.offsetX / progress.offsetWidth * video.duration) / 60) - (thours * 60);
+    var tseconds = Math.floor((e.offsetX / progress.offsetWidth * video.duration) % 60);
+    progress__time.innerHTML = [tminutes,tseconds.toString().padStart(2, '0')].join(':');
+  });
 }
 function skip() {
   video.currentTime += parseFloat(this.dataset.skip);
@@ -995,14 +1003,6 @@ function handleProgress(video, progressBar) {
   var dminutes = Math.floor(video.duration / 60) - (dhours * 60);
   var dseconds = Math.floor(video.duration % 60);
   progress__duration.innerHTML = [dminutes,dseconds.toString().padStart(2, '0')].join(':');
-  const progress = document.querySelector('.progress');
-  const progress__time = document.getElementById("progress__time");
-  progress.addEventListener('mousemove', (e) => {
-    var thours = Math.floor((e.offsetX / progress.offsetWidth * video.duration) / 60 / 60);
-    var tminutes = Math.floor((e.offsetX / progress.offsetWidth * video.duration) / 60) - (thours * 60);
-    var tseconds = Math.floor((e.offsetX / progress.offsetWidth * video.duration) % 60);
-    progress__time.innerHTML = [tminutes,tseconds.toString().padStart(2, '0')].join(':');
-  });
 }
 function scrub(e, video, progress) {
   var scrubTime = e.offsetX / progress.offsetWidth * video.duration;
