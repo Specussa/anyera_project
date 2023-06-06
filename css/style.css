@@ -258,6 +258,9 @@ svg path {
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
+  -webkit-transition-delay:.1s;
+  -o-transition-delay:.1s;
+  transition-delay:.1s;
 }
 
 .button__project:hover .button__hover:after {
@@ -272,6 +275,11 @@ svg path {
   position: relative;
   margin: auto;
   z-index: 1;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 
 .button__hover {
@@ -282,6 +290,15 @@ svg path {
   -ms-transform: translateY(102%);
   -o-transform: translateY(102%);
   transform: translateY(102%);
+  -webkit-transition-property:-webkit-transform;
+  transition-property:-webkit-transform;
+  -o-transition-property:transform;
+  transition-property:transform;
+  transition-property:transform,-webkit-transform;
+  will-change:transform;
+  -webkit-transition-timing-function:ease-out;
+  -o-transition-timing-function:ease-out;
+  transition-timing-function:ease-out;
 }
 
 .button__hover, .button__hover:after {
@@ -300,6 +317,12 @@ svg path {
 .button__hover:after {
   content: "";
   right: 0;
+  -webkit-transform-origin:0 0;
+  -ms-transform-origin:0 0;
+  transform-origin:0 0;
+  -webkit-transition-delay:.1s;
+  -o-transition-delay:.1s;
+  transition-delay:.1s;
 }
 
 .button__language {
@@ -3003,6 +3026,9 @@ video {
   -ms-transform: translateY(0%);
   -o-transform: translateY(0%);
   transform: translateY(0%);
+  -webkit-transition-delay:0s;
+  -o-transition-delay:0s;
+  transition-delay:0s;
 }
 
 .projects__item:hover .projects__back_color, .public__info:hover .projects__back_color, .publications__info:hover .projects__back_color {
@@ -3011,11 +3037,14 @@ video {
   -ms-transform: skew(0,-8deg);
   -o-transform: skew(0,-8deg);
   transform: skew(0,-8deg);
+  -webkit-transition-delay:.1s;
+  -o-transition-delay:.1s;
+  transition-delay:.1s;
 }
 
 .projects_back {
   display: block;
-  left: 0;
+  right: 0;
   -webkit-transform: translateY(102%);
   -moz-transform: translateY(102%);
   -ms-transform: translateY(102%);
@@ -3026,6 +3055,15 @@ video {
   -ms-transition: -ms-transform 0.3s linear;
   -o-transition: -o-transform 0.3s linear;
   transition: transform 0.3s linear;
+  -webkit-transition-property:-webkit-transform;
+  transition-property:-webkit-transform;
+  -o-transition-property:transform;
+  transition-property:transform;
+  transition-property:transform,-webkit-transform;
+  will-change:transform;
+  -webkit-transition-timing-function:ease-out;
+  -o-transition-timing-function:ease-out;
+  transition-timing-function:ease-out;
 }
 
 .projects_back, .projects__back_color {
@@ -3033,17 +3071,26 @@ video {
   width: 100%;
   height: 100%;
   top: 0;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -ms-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -webkit-transition-duration:.3s;
+  -o-transition-duration:.3s;
+  transition-duration:.3s;
+}
+
+.projects__back_color {
+  -webkit-transform-origin:0 0;
+  -ms-transform-origin:0 0;
+  transform-origin:0 0;
+  -webkit-transition-timing-function:ease-out;
+  -o-transition-timing-function:ease-out;
+  transition-timing-function:ease-out;
 }
 
 .publication__link {
   width: 100%;
   height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: 10;
 }
 
