@@ -1387,6 +1387,63 @@ svg path {
 
 /* end header__consultation */
 
+/* start formsuccess */
+
+.formsuccess {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  padding: 100px;
+  border: 1px solid var(--gray-border);
+  background: var(--page-bg);
+  -webkit-transform: translate(-50%, -350%);
+  -moz-transform: translate(-50%, -350%);
+  -ms-transform: translate(-50%, -350%);
+  -o-transform: translate(-50%, -350%);
+  transform: translate(-50%, -350%);
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
+  z-index: 1000;
+}
+
+.formsuccess.active {
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.formsuccess__info {
+  font-size: 20px;
+  line-height: 100%;
+  color: var(--page-text);
+}
+
+.formsuccess__burger_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.formsuccess__burger {
+  position: absolute;
+  top: 33px;
+  right: 33px;
+  z-index: 1;
+}
+
+/* end formsuccess */
+
 /* start digital */
 
 .digital__info {

@@ -35,6 +35,8 @@ const btndark = document.querySelector('.button__dark');
 var digital = document.querySelector('.digital');
 var showreel = document.querySelector('.showreel');
 const year = document.querySelector('.footer__year');
+const formsuccess = document.querySelector('.formsuccess');
+const formsuccessb = document.querySelector('.formsuccess__burger');
 
 // start navbar
 // кнопка header__burger
@@ -154,6 +156,16 @@ for (const anchor of anchors) {
   })
 }
 // end navbar
+
+// start navbar
+if(!formsuccess){} else {
+  formsuccessb.addEventListener('click', function() {
+    if (formsuccess.classList.contains("active")) {
+      formsuccess.classList.remove("active");
+    }
+  })
+}
+// end career
 
 // start career
 if(!burger_v){} else {
