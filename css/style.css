@@ -2866,6 +2866,14 @@ video {
   transition-delay: .1s;
 }
 
+.projects__item:hover .projects__description {
+  -webkit-transition: color 0.3s linear;
+  -moz-transition: color 0.3s linear;
+  -ms-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+
 .dark .projects__item:hover .projects__description, .dark .projects__item:hover .projects__link, .dark .projects__item:hover .projects__link:hover {
   color: var(--page-text);
 }
@@ -2979,11 +2987,11 @@ video {
   font-weight: 400;
   line-height: 19px;
   color: transparent;
-  -webkit-transition: color 0.3s linear;
-  -moz-transition: color 0.3s linear;
-  -ms-transition: color 0.3s linear;
-  -o-transition: color 0.3s linear;
-  transition: color 0.3s linear;
+  -webkit-transition: color 0.1s linear;
+  -moz-transition: color 0.1s linear;
+  -ms-transition: color 0.1s linear;
+  -o-transition: color 0.1s linear;
+  transition: color 0.1s linear;
 }
 
 .projects__link, .projects__link:hover, .projects__link:focus, .projects__link:active {
