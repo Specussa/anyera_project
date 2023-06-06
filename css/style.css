@@ -2861,6 +2861,9 @@ video {
 
 .projects__item:hover .projects__description, .projects__item:hover .projects__link, .projects__item:hover .projects__link:hover {
   color: var(--page-bg);
+  -webkit-transition-delay: .1s;
+  -o-transition-delay: .1s;
+  transition-delay: .1s;
 }
 
 .dark .projects__item:hover .projects__description, .dark .projects__item:hover .projects__link, .dark .projects__item:hover .projects__link:hover {
