@@ -3038,9 +3038,12 @@ video {
   -ms-transform: translateY(0%);
   -o-transform: translateY(0%);
   transform: translateY(0%);
-  -webkit-transition-delay:0s;
-  -o-transition-delay:0s;
-  transition-delay:0s;
+  -webkit-transition-timing-function:ease-out;
+  -o-transition-timing-function:ease-out;
+  transition-timing-function:ease-out;
+  -webkit-transition-delay:.2s;
+  -o-transition-delay:.2s;
+  transition-delay:.2s;
 }
 
 .projects__item:hover .projects__back_color, .public__info:hover .projects__back_color, .publications__info:hover .projects__back_color {
@@ -3049,9 +3052,6 @@ video {
   -ms-transform: skew(0,-8deg);
   -o-transform: skew(0,-8deg);
   transform: skew(0,-8deg);
-  -webkit-transition-delay:.1s;
-  -o-transition-delay:.1s;
-  transition-delay:.1s;
 }
 
 .projects_back {
@@ -3092,9 +3092,9 @@ video {
   -webkit-transform-origin:0 0;
   -ms-transform-origin:0 0;
   transform-origin:0 0;
-  -webkit-transition-timing-function:ease-out;
-  -o-transition-timing-function:ease-out;
-  transition-timing-function:ease-out;
+  -webkit-transition-delay:.2s;
+  -o-transition-delay:.2s;
+  transition-delay:.2s;
 }
 
 .publication__link {
