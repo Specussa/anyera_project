@@ -3478,6 +3478,27 @@ video {
   object-fit: cover;
 }
 
+.policy__head {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 29px;
+  color: var(--page-text);
+}
+
+.policy__heading {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  color: var(--page-text);
+}
+
+.policy__desc {
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 29px;
+  color: var(--page-text);
+}
+
 .publication__desc {
   font-size: 24px;
   font-weight: 300;
