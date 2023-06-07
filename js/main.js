@@ -1142,7 +1142,6 @@ year.remove();
 // start index animation
 document.addEventListener('DOMContentLoaded', function(){
   if(!digital){} else {
-    setTimeout(() => {(function () {
       var observer = new IntersectionObserver(digitals => {
         digitals.forEach(entry => {var entryDigital = entry.target.querySelector('.digital__info');
       if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
@@ -1151,10 +1150,8 @@ document.addEventListener('DOMContentLoaded', function(){
         // entryDigital.classList.remove('animate');
       });});
         observer.observe(digital);
-    })();}, 300);
   }
   if(!showreel){} else {
-    setTimeout(() => {(function () {
       var observer = new IntersectionObserver(showreels => {
         showreels.forEach(entry => {var entryShowreel = entry.target.querySelector('.showreel__button');
       if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
@@ -1163,7 +1160,6 @@ document.addEventListener('DOMContentLoaded', function(){
         // entryShowreel.classList.remove('animate');
       });});
         observer.observe(showreel);
-    })();}, 300);
   }
 }, false);
 // end index animation
