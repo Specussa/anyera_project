@@ -3492,6 +3492,10 @@ video {
   color: var(--page-text);
 }
 
+.policy__list {
+  margin-left: 40px;
+}
+
 .policy__desc {
   font-size: 20px;
   font-weight: 300;
@@ -6158,6 +6162,10 @@ video {
     width: calc(100% - 20px);
     top: 270px;
     left: 20px;
+  }
+
+  .policy__list {
+    margin-left: 20px;
   }
 }
 
