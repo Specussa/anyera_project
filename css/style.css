@@ -1524,7 +1524,8 @@ svg path {
 }
 
 .digital__desc {
-  width: 473px;
+  width: 100%;
+  max-width: 473px;
   flex: 0 0 auto;
   font-family: var(--lato);
   font-size: 14px;
@@ -3035,11 +3036,11 @@ video {
 }
 
 .projects__item:hover .projects_back, .public__info:hover .projects_back, .publications__info:hover .projects_back {
-  -webkit-transform: translateY(0%);
-  -moz-transform: translateY(0%);
-  -ms-transform: translateY(0%);
-  -o-transform: translateY(0%);
-  transform: translateY(0%);
+  -webkit-transform: translateY(0%) scale(1, -1) rotate(180deg);
+  -moz-transform: translateY(0%) scale(1, -1) rotate(180deg);
+  -ms-transform: translateY(0%) scale(1, -1) rotate(180deg);
+  -o-transform: translateY(0%) scale(1, -1) rotate(180deg);
+  transform: translateY(0%) scale(1, -1) rotate(180deg);
   -webkit-transition-timing-function:ease-out;
   -o-transition-timing-function:ease-out;
   transition-timing-function:ease-out;
@@ -3049,21 +3050,21 @@ video {
 }
 
 .projects__item:hover .projects__back_color, .public__info:hover .projects__back_color, .publications__info:hover .projects__back_color {
-  -webkit-transform: skew(0,-8deg);
-  -moz-transform: skew(0,-8deg);
-  -ms-transform: skew(0,-8deg);
-  -o-transform: skew(0,-8deg);
-  transform: skew(0,-8deg);
+  -webkit-transform: skew(0,-10deg);
+  -moz-transform: skew(0,-10deg);
+  -ms-transform: skew(0,-10deg);
+  -o-transform: skew(0,-10deg);
+  transform: skew(0,-10deg);
 }
 
 .projects_back {
   display: block;
   right: 0;
-  -webkit-transform: translateY(102%);
-  -moz-transform: translateY(102%);
-  -ms-transform: translateY(102%);
-  -o-transform: translateY(102%);
-  transform: translateY(102%);
+  -webkit-transform: translateY(102%) scale(1, -1) rotate(180deg);
+  -moz-transform: translateY(102%) scale(1, -1) rotate(180deg);
+  -ms-transform: translateY(102%) scale(1, -1) rotate(180deg);
+  -o-transform: translateY(102%) scale(1, -1) rotate(180deg);
+  transform: translateY(102%) scale(1, -1) rotate(180deg);
   -webkit-transition: -webkit-transform 0.3s linear;
   -moz-transition: -moz-transform 0.3s linear;
   -ms-transition: -ms-transform 0.3s linear;
@@ -3993,7 +3994,8 @@ video {
   margin: 0 0 22px;
 }
 
-.accordion__desc {
+.accordion__des, .accordion__panel i {
+  font-style: normal;
   margin: 0 0 10px;
   font-family: var(--lato);
   font-size: 16px;
@@ -4002,19 +4004,26 @@ video {
   color: var(--page-text);
 }
 
-.accordion__desc a {
+.accordion__desc a, .accordion__panel i a {
+  font-style: normal;
   font-family: var(--lato);
   font-size: 16px;
   font-weight: 400;
   line-height: 19px;
   color: var(--page-text);
+  text-decoration: none;
 }
 
 .accordion__desc a:hover {
   color: var(--purple);
 }
 
-.accordion__list {
+.accordion__panel i a:hover, .accordion__panel i a:focus, .accordion__panel i a:active {
+  color: var(--purple);
+  text-decoration: none;
+}
+
+.accordion__list, .accordion__panel ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4024,11 +4033,11 @@ video {
   color: var(--page-text);
 }
 
-.accordion__list:not(:last-child) {
+.accordion__list:not(:last-child), .accordion__panel ul:not(:last-child) {
   margin: 0 0 10px;
 }
 
-.accordion__item {
+.accordion__item, .accordion__panel li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4036,14 +4045,14 @@ video {
   gap: 20px;
 }
 
-.accordion__button, .accordion__head {
+.accordion__button, .accordion__head, .accordion__panel b {
   font-size: 18px;
   font-weight: 700;
   line-height: 23px;
   color: var(--page-text);
 }
 
-.accordion__item, .accordion__item a {
+.accordion__item, .accordion__item a, .accordion__panel li, .accordion__panel li a {
   font-family: var(--lato);
   font-size: 16px;
   font-weight: 300;
@@ -4051,11 +4060,11 @@ video {
   color: var(--page-text);
 }
 
-.accordion__item a:hover {
+.accordion__item a:hover, .accordion__panel li a:hover {
   color: var(--purple);
 }
 
-.accordion__item::before {
+.accordion__item::before, .accordion__panel li::before {
   content: "";
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4067,7 +4076,7 @@ video {
   background: var(--page-text);
 }
 
-.accordion__link {
+.accordion__link, .accordion__panel a {
   width: fit-content;
   margin: 10px 0 0;
   font-size: 18px;
@@ -4077,7 +4086,8 @@ video {
   color: var(--page-text);
 }
 
-.accordion__link:hover, .accordion__link:active, .accordion__link:focus {
+.accordion__link:hover, .accordion__link:active, .accordion__link:focus, .accordion__panel a:hover, .accordion__panel a:active .accordion__panel a:focus {
+  color: var(--purple);
   text-decoration: underline;
 }
 
@@ -5117,13 +5127,13 @@ video {
   }
   .digital__desc {
     margin: 30px 0 0;
-    -webkit-transform: translate(-100%, 0);
-    -moz-transform: translate(-100%, 0);
-    -ms-transform: translate(-100%, 0);
-    -o-transform: translate(-100%, 0);
-    transform: translate(-100%, 0);
+    -webkit-transform: translate(calc(-100% - 40px), 0);
+    -moz-transform: translate(calc(-100% - 40px), 0);
+    -ms-transform: translate(calc(-100% - 40px), 0);
+    -o-transform: translate(calc(-100% - 40px), 0);
+    transform: translate(calc(-100% - 40px), 0);
   }
-  .digital__info.animate .digital__desc {
+  .loaded .digital__info.animate .digital__desc {
     -webkit-transform: translate(0, 0);
     -moz-transform: translate(0, 0);
     -ms-transform: translate(0, 0);
@@ -6015,11 +6025,11 @@ video {
     font-size: 12px;
     line-height: 25px;
   }
-  .career__agency_desc, .accordion__button, .accordion__head, .accordion__link {
+  .career__agency_desc, .accordion__button, .accordion__head, .accordion__link, .accordion__desc b, .accordion__panel a, .accordion__panel i a {
     font-size: 14px;
     line-height: 18px;
   }
-  .accordion__desc, .accordion__desc a, .accordion__item, .accordion__item a {
+  .accordion__desc, .accordion__desc a, .accordion__item, .accordion__item a, .accordion__panel li, .accordion__panel li a {
     font-size: 14px;
     line-height: 17px;
   }
