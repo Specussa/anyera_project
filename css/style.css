@@ -5266,6 +5266,13 @@ video {
   .team__photo_flex {
     padding: 120px 100px;
   }
+  .projects__item:hover .projects__back_color, .public__info:hover .projects__back_color, .publications__info:hover .projects__back_color {
+    -webkit-transform: skew(0,-17deg);
+    -moz-transform: skew(0,-17deg);
+    -ms-transform: skew(0,-17deg);
+    -o-transform: skew(0,-17deg);
+    transform: skew(0,-17deg);
+  }
 }
 
 /* end media 1700 */
