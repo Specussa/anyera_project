@@ -4402,8 +4402,10 @@ video {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
+  padding: 0 100px;
   flex-direction: column;
-  border: 1px solid var(--gray-border);
+  border-left: 1px solid var(--gray-border);
+  border-right: 1px solid var(--gray-border);
   overflow: hidden;
 }
 
@@ -5249,6 +5251,9 @@ video {
   .certificates__info {
     padding: 40px 60px 120px;
   }
+  .certificates__review_blocks {
+    padding: 0 60px;
+  }
 }
 
 /* end media 1200+ */
@@ -5597,6 +5602,9 @@ video {
   .certificates__info {
     padding: 40px 40px 100px;
     gap: 80px;
+  }
+  .certificates__review_blocks {
+    padding: 0 40px;
   }
 }
 
@@ -6370,6 +6378,9 @@ video {
   .certificates__info {
     padding: 20px 20px 40px;
     gap: 40px;
+  }
+  .certificates__review_blocks {
+    padding: 0 20px;
   }
 }
 
