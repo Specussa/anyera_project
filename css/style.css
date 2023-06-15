@@ -6261,6 +6261,9 @@ video {
   .policy__list {
     margin-left: 20px;
   }
+  .team__photo_image {
+    max-height: 216px;
+  }
 }
 
 /* end media 480+ */
