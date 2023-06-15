@@ -25,6 +25,7 @@ const anchors = document.querySelectorAll(".header__anchor_item")
 const filtercategory = document.querySelector('.filter__category');
 const elsliderphoto = document.querySelector('.team__photo');
 const elsliderreview = document.querySelector('.team__review');
+const elslidercertificates = document.querySelector('.certificates__review');
 const preview = document.querySelector('.showreel__button');
 const showreelvideo = document.getElementById('showreel__video');
 const showreelmodal = document.querySelector('.showreel__modal');
@@ -678,6 +679,9 @@ if(!elsliderphoto){} else {
   const mySwiper = new Swiper(sliderSelector, options);
   mySwiper.init();
 }
+// end team photo slider
+
+// start team review slider
 if(!elsliderreview){} else {
   const sliderSelector = '.team__review',
   options = {
@@ -728,7 +732,60 @@ if(!elsliderreview){} else {
   const mySwiper = new Swiper(sliderSelector, options);
   mySwiper.init();
 }
-// end team photo slider
+// end team review slider
+
+// start certificates review slider
+if(!elslidercertificates){} else {
+  const sliderSelector = '.certificates__review',
+  options = {
+    grabCursor: true,
+    autoplay: false,
+    init: false,
+    // loop: true,
+    // centerSlides: true,
+    slidesPerView: 3, // or 'auto'
+    spaceBetween: 20,
+    // centeredSlides : true,
+    effect: 'coverflow', // 'cube', 'fade', 'coverflow',
+    coverflowEffect: {
+      rotate: 0, // Slide rotate in degrees
+      stretch: 0, // Stretch space between slides (in px)
+      depth: 100, // Depth offset in px (slides translate in Z axis)
+      modifier: 0, // Effect multipler
+      slideShadows : false, // Enables slides shadows
+    },
+    grabCursor: true,
+    parallax: true,
+    // pagination: {
+    //   el: '.swiper-pagination',
+    //   clickable: true,
+    // },
+    navigation: {
+      nextEl: '.certificates__review_next',
+      prevEl: '.certificates__review_prev',
+    },
+    breakpoints: {
+      1199: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        arrow: false,
+      },
+      639: {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        arrow: false,
+      }
+    },
+    on: {
+      imagesReady: function(){
+        this.el.classList.remove('loading');
+      }
+    }
+  };
+  const mySwiper = new Swiper(sliderSelector, options);
+  mySwiper.init();
+}
+// end certificates review slider
 
 // start video
 if(!showreelvideo){} else {
