@@ -1511,11 +1511,11 @@ svg path {
   -ms-transform: translateY(102%);
   -o-transform: translateY(102%);
   transform: translateY(102%);
-  -webkit-transition: -webkit-transform 0.5s linear;
-  -moz-transition: -moz-transform 0.5s linear;
-  -ms-transition: -ms-transform 0.5s linear;
-  -o-transition: -o-transform 0.5s linear;
-  transition: transform 0.5s linear;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  -moz-transition: -moz-transform 0.3s linear;
+  -ms-transition: -ms-transform 0.3s linear;
+  -o-transition: -o-transform 0.3s linear;
+  transition: transform 0.3s linear;
 }
 
 .loaded .digital__info.animate .digital__head_block span {
@@ -1535,24 +1535,31 @@ svg path {
   font-weight: 400;
   line-height: 17px;
   color: var(--page-text);
-  -webkit-transform: translate(202%, -48px);
-  -moz-transform: translate(202%, -48px);
-  -ms-transform: translate(202%, -48px);
-  -o-transform: translate(202%, -48px);
-  transform: translate(202%, -48px);
-  -webkit-transition: -webkit-transform 0.3s linear;
-  -moz-transition: -moz-transform 0.3s linear;
-  -ms-transition: -ms-transform 0.3s linear;
-  -o-transition: -o-transform 0.3s linear;
-  transition: transform 0.3s linear;
+  -webkit-transform: translate(-188px, 50px);
+  -moz-transform: translate(-188px, 50px);
+  -ms-transform: translate(-188px, 50px);
+  -o-transform: translate(-188px, 50px);
+  transform: translate(-188px, 50px);
+  -webkit-transition: -webkit-transform 0.3s linear, opacity 0.1s linear;
+  -moz-transition: -moz-transform 0.3s linear, opacity 0.1s linear;
+  -ms-transition: -ms-transform 0.3s linear, opacity 0.1s linear;
+  -o-transition: -o-transform 0.3s linear, opacity 0.1s linear;
+  transition: transform 0.3s linear, opacity 0.1s linear;
+  opacity: 0;
 }
 
 .loaded .digital__info.animate .digital__desc {
+  opacity: 1;
   -webkit-transform: translate(-188px, -48px);
   -moz-transform: translate(-188px, -48px);
   -ms-transform: translate(-188px, -48px);
   -o-transform: translate(-188px, -48px);
   transform: translate(-188px, -48px);
+  -webkit-transition-delay: 0.3s;
+  -moz-transition-delay: 0.3s;
+  -ms-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 
 .digital__left {
@@ -1589,11 +1596,11 @@ svg path {
 
 .showreel__button {
   opacity: 0;
-  -webkit-transform: translateY(-100px) translateX(1000%) rotate(360deg);
-  -moz-transform: translateY(-100px) translateX(1000%) rotate(360deg);
-  -ms-transform: translateY(-100px) translateX(1000%) rotate(360deg);
-  -o-transform: translateY(-100px) translateX(1000%) rotate(360deg);
-  transform: translateY(-100px) translateX(1000%) rotate(360deg);
+  -webkit-transform: translateY(-100px) translateX(0%) rotate(360deg) scale(0);
+  -moz-transform: translateY(-100px) translateX(0%) rotate(360deg) scale(0);
+  -ms-transform: translateY(-100px) translateX(0%) rotate(360deg) scale(0);
+  -o-transform: translateY(-100px) translateX(0%) rotate(360deg) scale(0);
+  transform: translateY(-100px) translateX(0%) rotate(360deg) scale(0);
   -webkit-transition: -webkit-transform 0.3s linear, opacity 0.3s linear;
   -moz-transition: -moz-transform 0.3s linear, opacity 0.3s linear;
   -ms-transition: -ms-transform 0.3s linear, opacity 0.3s linear;
@@ -1611,11 +1618,16 @@ svg path {
 
 .loaded .showreel__button.animate {
   opacity: 1;
-  -webkit-transform: translateY(-100px) translateX(0) rotate(-23.91deg);
-  -moz-transform: translateY(-100px) translateX(0) rotate(-23.91deg);
-  -ms-transform: translateY(-100px) translateX(0) rotate(-23.91deg);
-  -o-transform: translateY(-100px) translateX(0) rotate(-23.91deg);
-  transform: translateY(-100px) translateX(0) rotate(-23.91deg);
+  -webkit-transform: translateY(-100px) translateX(0) rotate(-23.91deg) scale(1);
+  -moz-transform: translateY(-100px) translateX(0) rotate(-23.91deg) scale(1);
+  -ms-transform: translateY(-100px) translateX(0) rotate(-23.91deg) scale(1);
+  -o-transform: translateY(-100px) translateX(0) rotate(-23.91deg) scale(1);
+  transform: translateY(-100px) translateX(0) rotate(-23.91deg) scale(1);
+  -webkit-transition-delay: 0.5s;
+  -moz-transition-delay: 0.5s;
+  -ms-transition-delay: 0.5s;
+  -o-transition-delay: 0.5s;
+  transition-delay: 0.5s;
 }
 
 .showreel__modal {
@@ -2869,7 +2881,7 @@ video {
 
 .projects__item:hover .projects__hover img {
   opacity: 0;
-  transform: scale(0);
+  transform: scale(0.8);
   z-index: 0;
   -webkit-transition: opacity 0.2s linear, transform 0.2s ease-in;
   -moz-transition: opacity 0.2s linear, transform 0.2s ease-in;
