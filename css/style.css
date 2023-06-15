@@ -4604,7 +4604,7 @@ video {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 240px;
+  max-width: 224px;
   height: 100%;
   margin-right: 30px;
   flex-direction: column;
@@ -5096,8 +5096,11 @@ video {
   .team__info {
     padding: 40px 60px 220px;
   }
-  .team__target_info, .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right, .team__photo_flex {
+  .team__target_info, .team__principles_left, .team__principles_right, .team__about_left, .team__about_right, .team__cooperation_left_padding, .team__cooperation_right, .team__ourteam_left, .team__ourteam_right {
     padding: 120px 60px;
+  }
+  .team__photo_flex {
+    padding: 120px 170px;
   }
   .team__review_info {
     padding: 149px 60px 80px;
@@ -5148,9 +5151,6 @@ video {
   .services__flex {
     padding: 88px 60px;
   }
-  .team__photo_block {
-    max-width: 280px;
-  }
   .contacts__blocks {
     padding: 0 0 160px;
   }
@@ -5170,6 +5170,16 @@ video {
 }
 
 /* end media 1200+ */
+
+/* start media 1700+ */
+
+@media (max-width: 1700px) {
+  .team__photo_flex {
+    padding: 120px 100px;
+  }
+}
+
+/* end media 1700 */
 
 /* start media 1415 */
 
@@ -5206,6 +5216,9 @@ video {
     -ms-transform: skew(0,-20deg);
     -o-transform: skew(0,-20deg);
     transform: skew(0,-20deg);
+  }
+  .team__photo_flex {
+    padding: 120px 0;
   }
 }
 
@@ -5398,7 +5411,7 @@ video {
     border-left: none;
   }
   .team__photo_flex {
-    padding: 120px 0;
+    padding: 120px 60px;
   }
   .team__photo_left, .team__photo_right {
     display: none;
@@ -5727,9 +5740,6 @@ video {
   .team__review_next {
     right: 40px;
   }
-  .team__photo_block {
-    max-width: 280px;
-  }
   .team__photo_prev {
     -webkit-transform: translateX(-65px);
     -moz-transform: translateX(-65px);
@@ -5774,6 +5784,9 @@ video {
   }
   .design .development__block_left {
     border-left: none;
+  }
+  .team__photo_flex {
+    padding: 120px 0;
   }
 }
 
@@ -6228,6 +6241,7 @@ video {
     right: 20px;
   }
   .team__photo_block {
+    max-width: 200px;
     margin-right: 15px;
   }
   .team__ourteam_info {
