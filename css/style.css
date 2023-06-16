@@ -5730,6 +5730,7 @@ video {
   }
   .projects__link_new {
     height: 25.5%;
+    padding: 57px 60px;
   }
   .projects__hover img {
     min-height: 404px;
@@ -6257,6 +6258,7 @@ video {
   }
   .projects__link_new {
     height: 37%;
+    padding: 57px 30px 61px;
   }
 }
 
@@ -6565,6 +6567,7 @@ video {
   }
   .projects__link_new {
     height: 25%;
+    padding: 57px 40px;
   }
 }
 
@@ -7066,6 +7069,9 @@ video {
   }
   .certificates__review_blocks {
     padding: 0 20px;
+  }
+  .projects__link_new {
+    padding: 30px 20px;
   }
 }
 
