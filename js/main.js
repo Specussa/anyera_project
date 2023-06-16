@@ -33,8 +33,6 @@ const showreelmodalClose = document.querySelector('.showreel__modal_close');
 const filtervi = document.querySelectorAll('.filter__form ');
 const btnlight = document.querySelector('.button__light');
 const btndark = document.querySelector('.button__dark');
-var digital = document.querySelector('.digital');
-var showreel = document.querySelector('.showreel');
 const year = document.querySelector('.footer__year');
 const formsuccess = document.querySelector('.formsuccess');
 const formsuccessb = document.querySelector('.formsuccess__burger');
@@ -1198,25 +1196,103 @@ year.remove();
 
 // start index animation
 document.addEventListener('DOMContentLoaded', function(){
+  let digital = document.querySelector('.digital');
+  let digitalinfo = document.querySelectorAll('.digital__info');
   if(!digital){} else {
-      var observer = new IntersectionObserver(digitals => {
-        digitals.forEach(entry => {var entryDigital = entry.target.querySelector('.digital__info');
-      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
-      if (entry.isIntersecting) {
-        entryDigital.classList.add('animate');return;}
-        // entryDigital.classList.remove('animate');
-      });});
-        observer.observe(digital);
-  }
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let digitalopt = {threshold: [0.5] };
+        let digitalserv = new IntersectionObserver(onEntry, digitalopt);
+        for (let elm of digitalinfo) {digitalserv.observe(elm);}
+        const digitalhead = document.querySelectorAll('.digital__head_block'); 
+        [...digitalhead].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.style.setProperty('--inc-step', index+1);}});
+      }
+  let showreel = document.querySelector('.showreel');
+  let showreelbutton = document.querySelectorAll('.showreel__button');
   if(!showreel){} else {
-      var observer = new IntersectionObserver(showreels => {
-        showreels.forEach(entry => {var entryShowreel = entry.target.querySelector('.showreel__button');
-      if (typeof getCurrentAnimationPreference === 'function' && !getCurrentAnimationPreference()) {return;}
-      if (entry.isIntersecting) {
-        entryShowreel.classList.add('animate');return;}
-        // entryShowreel.classList.remove('animate');
-      });});
-        observer.observe(showreel);
-  }
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let showreelopt = {threshold: [0.5] };
+        let showreelserv = new IntersectionObserver(onEntry, showreelopt);
+        for (let elm of showreelbutton) {showreelserv.observe(elm);}
+      }
+  let development = document.querySelector('.development');
+  let developmentr = document.querySelectorAll('.development .development__block_right');
+  let developmentl = document.querySelectorAll('.development .development__block_left');
+  if(!development){} else {
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let devoptr = {threshold: [0.5] };
+        let devservr = new IntersectionObserver(onEntry, devoptr);
+        for (let elm of developmentr) {devservr.observe(elm);}
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let devoptl = {threshold: [0.5] };
+        let devservl = new IntersectionObserver(onEntry, devoptl);
+        for (let elm of developmentl) {devservl.observe(elm);}
+        const developmentlist = document.querySelectorAll('.development__list'); 
+        [...developmentlist].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.style.setProperty('--inc-step', index+1);}});
+      }
+  let design = document.querySelector('.design');
+  let designr = document.querySelectorAll('.design .development__block_right');
+  let designl = document.querySelectorAll('.design .development__block_left');
+  if(!design){} else {
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let desoptr = {threshold: [0.5] };
+        let desservr = new IntersectionObserver(onEntry, desoptr);
+        for (let elm of designr) {desservr.observe(elm);}
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let desoptl = {threshold: [0.5] };
+        let desservl = new IntersectionObserver(onEntry, desoptl);
+        for (let elm of designl) {desservl.observe(elm);}
+      }
+  let analytic = document.querySelector('.analytics');
+  let analytics = document.querySelectorAll('.analytics__info');
+  if(!analytic){} else {
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let analyticopt = {threshold: [0.5] };
+        let analyticserv = new IntersectionObserver(onEntry, analyticopt);
+        for (let elm of analytics) {analyticserv.observe(elm);}
+        const analyticlist = document.querySelectorAll('.analytics__list'); 
+        [...analyticlist].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.style.setProperty('--inc-step', index+1);}});
+      }
+  let project = document.querySelector('.projects');
+  let projects = document.querySelectorAll('.projects__item');
+  if(!project){} else {
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let projectopt = {threshold: [0.5] };
+        let projectserv = new IntersectionObserver(onEntry, projectopt);
+        for (let elm of projects) {projectserv.observe(elm);}
+        const ptags = document.querySelectorAll('.projects__tags'); 
+        [...ptags].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.style.setProperty('--inc-step', index+1);}});
+      }
+  let publication = document.querySelector('.publications');
+  let publications = document.querySelectorAll('.publications__info');
+  if(!publication){} else {
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let publicationopt = {threshold: [0.5] };
+        let publicationserv = new IntersectionObserver(onEntry, publicationopt);
+        for (let elm of publications) {publicationserv.observe(elm);}
+        const publicationblock = document.querySelectorAll('.publications__hashtags'); 
+        [...publicationblock].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.style.setProperty('--inc-step', index+1);}});
+      }
+  let say = document.querySelector('.say');
+  let sayblock = document.querySelectorAll('.say__block');
+  if(!say){} else {
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let sayopt = {threshold: [0.5] };
+        let sayserv = new IntersectionObserver(onEntry, sayopt);
+        for (let elm of sayblock) {sayserv.observe(elm);}
+      }
+  let footer = document.querySelector('.footer');
+  let footerlist = document.querySelectorAll('.footer__list');
+  let footerinfo = document.querySelectorAll('.footer__info');
+  if(!footer){} else {
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let footerlistopt = {threshold: [0.5] };
+        let footerlistserv = new IntersectionObserver(onEntry, footerlistopt);
+        for (let elm of footerlist) {footerlistserv.observe(elm);}
+        [...footerlist].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.style.setProperty('--inc-step', index+1);}});
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let footerinfoopt = {threshold: [0.5] };
+        let footerinfoserv = new IntersectionObserver(onEntry, footerinfoopt);
+        for (let elm of footerinfo) {footerinfoserv.observe(elm);}
+      }
 }, false);
 // end index animation
