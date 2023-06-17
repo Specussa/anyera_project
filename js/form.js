@@ -1,4 +1,13 @@
-
+const form = document.getElementById('form');
+const username = document.getElementById('username');
+const usernamecareer = document.getElementById('usernamecareer');
+const usernamesay = document.getElementById('usernamesay');
+const phone = document.getElementById('phone');
+const phonecareer = document.getElementById('phonecareer');
+const phonesay = document.getElementById('phonesay');
+const text = document.getElementById('text');
+const textcareer = document.getElementById('textcareer');
+const linkcareer = document.getElementById('linkcareer');
 // start validate form project
 if(!form){} else {
   form.addEventListener('submit', e => {
@@ -42,6 +51,7 @@ if(!form){} else {
 // end validate form project
   
 // start validate form career
+const formcareer = document.getElementById('formcareer');
 if(!burger_v){} else {
   formcareer.addEventListener('submit', e => {
     e.preventDefault();

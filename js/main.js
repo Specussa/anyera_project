@@ -1,3 +1,4 @@
+// start navbar
 const menu = document.querySelector('.header__nav');
 const menu_c = document.querySelector('.header__consultation');
 const menu_v = document.querySelector('.header__career');
@@ -10,34 +11,6 @@ const burgernav = document.querySelector('.header__nav_burger');
 const burgernav_c = document.querySelector('.header__consultation_burger');
 const burgernav_v = document.querySelector('.header__career_burger');
 const burgernav_s = document.querySelector('.header__say_burger');
-const form = document.getElementById('form');
-const formcareer = document.getElementById('formcareer');
-const username = document.getElementById('username');
-const usernamecareer = document.getElementById('usernamecareer');
-const usernamesay = document.getElementById('usernamesay');
-const phone = document.getElementById('phone');
-const phonecareer = document.getElementById('phonecareer');
-const phonesay = document.getElementById('phonesay');
-const text = document.getElementById('text');
-const textcareer = document.getElementById('textcareer');
-const linkcareer = document.getElementById('linkcareer');
-const anchors = document.querySelectorAll(".header__anchor_item")
-const filtercategory = document.querySelector('.filter__category');
-const elsliderphoto = document.querySelector('.team__photo');
-const elsliderreview = document.querySelector('.team__review');
-const elslidercertificates = document.querySelector('.certificates__review');
-const preview = document.querySelector('.showreel__button');
-const showreelvideo = document.getElementById('showreel__video');
-const showreelmodal = document.querySelector('.showreel__modal');
-const showreelmodalClose = document.querySelector('.showreel__modal_close');
-const filtervi = document.querySelectorAll('.filter__form ');
-const btnlight = document.querySelector('.button__light');
-const btndark = document.querySelector('.button__dark');
-const year = document.querySelector('.footer__year');
-const formsuccess = document.querySelector('.formsuccess');
-const formsuccessb = document.querySelector('.formsuccess__burger');
-
-// start navbar
 // кнопка header__burger
 document.querySelector('.header__burger').addEventListener('click', function() {
   if (burger.classList.contains("active")) {
@@ -128,6 +101,7 @@ document.querySelector('.header__consultation_burger').addEventListener('click',
   }
 })
 // закрыть все оверлеии при нажатии на nav menu
+const anchors = document.querySelectorAll(".header__anchor_item")
 for (const anchor of anchors) {
   anchor.addEventListener('click', function(event) {
     if (burger.classList.contains("active")) {
@@ -157,6 +131,8 @@ for (const anchor of anchors) {
 // end navbar
 
 // start navbar
+const formsuccess = document.querySelector('.formsuccess');
+const formsuccessb = document.querySelector('.formsuccess__burger');
 if(!formsuccess){} else {
   formsuccessb.addEventListener('click', function() {
     if (formsuccess.classList.contains("active")) {
@@ -275,42 +251,6 @@ if(!burger_s){} else {
       document.body.style.height = "100%";
     }
   })
-  // start validate form say
-  formsay.addEventListener('submit', e => {
-    e.preventDefault();
-    
-    checkInputssay();
-    });
-    
-    function checkInputssay() {
-    // trim to remove the whitespaces
-    const usernamesayValue = usernamesay.value.trim();
-    const phonesayValue = phonesay.value.trim();
-    
-    if(usernamesayValue === '') {
-        setErrorFor(usernamesay, 'Обязательное поле'); } else { setSuccessFor(usernamesay);
-    }
-    if(phonesayValue === '') {
-        setErrorFor(phonesay, 'Обязательное поле'); } else { setSuccessFor(phonesay);
-    }
-    }
-    
-    function setErrorFor(input, message) {
-      const formsayControl = input.parentElement;
-      const small = formsayControl.querySelector('small');
-      formsayControl.className = 'header__forms_form_control error';
-      small.innerText = message;
-    }
-    
-    function setSuccessFor(input) {
-      const formsayControl = input.parentElement;
-      formsayControl.className = 'header__forms_form_control success';
-    }
-    
-    // function iscontrol(control) {
-    // 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(control);
-    // }
-    // end validate form say
 }
 // end say
 
@@ -428,6 +368,8 @@ hover.addEventListener('mouseout', function(e) {
   elemHover = null;
 })
 // start dark mode
+const btnlight = document.querySelector('.button__light');
+const btndark = document.querySelector('.button__dark');
 // 1. Проверка темной темы на уровне системных настроек
 if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ) {
   btndark.classList.add("active");
@@ -529,15 +471,12 @@ const subnav = document.querySelectorAll('.header__subnav_list');
 // end счетчик для всех листов
 
 // start filter projects
-if(!filtercategory){} else {
+const filtercategoryone = document.querySelector('.filter__category_one');
+const filtervi = document.querySelectorAll('.filter__form ');
+if(!filtercategoryone){} else {
 	var filterCheckboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
 	var clear = document.querySelector("#clear");
-  [...filtervi].forEach(function (visible) {
-    let i = 0;
-    for (let [index, elemi] of [...visible.children].entries()){
-      elemi.style.setProperty('--inc-step', elemi.classList.contains("visible")?++i:0); 
-    }
-  });
+  [...filtervi].forEach(function (visible) {let i = 0;for (let [index, elemi] of [...visible.children].entries()){elemi.style.setProperty('--inc-step', elemi.classList.contains("visible")?++i:0);}});
 	var filterFunc = function(start=false){
 		var selectedFilters = {};
 		filterCheckboxes.filter(a=>a.checked).forEach(a=>{
@@ -546,6 +485,18 @@ if(!filtercategory){} else {
 			}
 			selectedFilters[a.name].push(a.value);
 		});
+    var pitem = document.querySelectorAll('.projects__item');
+    for (var i = 0; i < pitem.length; i++) {
+      pitem[i].classList.remove('animate');
+      pitem[i].setAttribute("style", "display:none");
+      document.querySelector('.projects__item_first').classList.add('animate');
+    }
+    let projects = document.querySelectorAll('.projects__item');
+    function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+    let projectopt = {threshold: [0.5] };
+    let projectserv = new IntersectionObserver(onEntry, projectopt);
+    for (let elm of projects) {projectserv.observe(elm);}
+    
 		clear.style.display=Object.keys(selectedFilters).length>0?"":"none";
 		var filteredResults = Array.from(document.querySelectorAll('.filter__item'));
 		Object.entries(selectedFilters).forEach(a=>{
@@ -588,12 +539,7 @@ if(!filtercategory){} else {
 				if(s)s=s.querySelector(".button__number");
 				if(s)s.textContent=Array.from(a.querySelectorAll("input")).reduce((a, b) => a + parseInt(b.dataset.c), 0);		 
 			});
-			[...filtervi].forEach(function (visible) {
-				let i = 0;
-				for (let [index, elemi] of [...visible.children].entries()){
-					elemi.style.setProperty('--inc-step', elemi.classList.contains("visible")?++i:0); 
-				}
-			});
+			[...filtervi].forEach(function (visible) {let i = 0;for (let [index, elemi] of [...visible.children].entries()){elemi.style.setProperty('--inc-step', elemi.classList.contains("visible")?++i:0);}});
 			let save = {};
 			filterCheckboxes.forEach(a=>save[a.id]=a.checked);
 			localStorage.setItem("save",JSON.stringify(save));
@@ -620,7 +566,106 @@ if(!filtercategory){} else {
 }
 // end filter projects
 
+// start filter public
+const filtercategorytwo = document.querySelector('.filter__category_two');
+if(!filtercategorytwo){} else {
+	var filterCheckboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+	var clears = document.querySelector("#clears");
+  [...filtervi].forEach(function (visible) {let i = 0;for (let [index, elemi] of [...visible.children].entries()){elemi.style.setProperty('--inc-step', elemi.classList.contains("visible")?++i:0);}});
+	var filterFunc = function(start=false){
+		var selectedFilters = {};
+		filterCheckboxes.filter(aa=>aa.checked).forEach(aa=>{
+			if (!selectedFilters.hasOwnProperty(aa.name)) {
+			  selectedFilters[aa.name] = [];
+        // let projectp = document.querySelector('.projects');
+        // if(!projectp){} else {
+        //   var pitem = document.querySelectorAll('.projects__item');
+        //   for (var i = 0; i < pitem.length; i++) {
+        //     pitem[i].classList.remove('animate');
+        //     pitem[i].setAttribute("style", "display:none");
+        //   }
+        //   document.querySelector('.projects__item_first').classList.add('animate');
+        //   setTimeout(() => {
+        //     function onEntryp(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        //     let projectaopt = {threshold: [0.5] };
+        //     let projectaserv = new IntersectionObserver(onEntryp, projectaopt);
+        //     for (let elm of pitem) {projectaserv.observe(elm);}
+        //   }, 700);
+        // }
+			}
+			selectedFilters[aa.name].push(aa.value);
+		});
+		clears.style.display=Object.keys(selectedFilters).length>0?"":"none";
+		var filteredResults = Array.from(document.querySelectorAll('.filter__item'));
+		Object.entries(selectedFilters).forEach(aa=>{
+			filteredResults = filteredResults.filter(bb=>{
+				var matched = false,
+				currentFilterValues = bb.getAttribute("data-category").split(' ');
+				currentFilterValues.forEach(currentFilterValue=>{
+					if (aa[1].indexOf(currentFilterValue) != -1) {
+						matched = true;
+						return false;
+					}
+				});
+			  return matched;
+			});
+		});
+		document.querySelectorAll('.filter__item').forEach(aa=>aa.style.display="none");
+		filteredResults.forEach(aa=>aa.style.display="");
+		if(this.tagName){
+			document.querySelectorAll(".button__number").forEach(aa=>{
+				let cll = aa.closest(".filter__category");
+				if(cll)cll.classList[cll.contains(this)?"add":"remove"]("active");	
+			});	
+			let thh = this.closest(".filter__label");
+			if(thh)thh.classList[this.checked?"add":"remove"]("active");
+			filterCheckboxes.forEach(aa=>{
+				let obb = aa.checked;
+				aa.checked=true;
+				let ll = aa.closest("label"); 
+				let rr = filterFunc();
+				aa.dataset.cc=rr.filter(cc=>cc.getAttribute("data-category").indexOf(aa.value)!=-1).length;
+				ll.classList[["add","remove"][Number(aa.dataset.cc>0)]]("hidden");
+				ll.classList[["remove","add"][Number(aa.dataset.cc>0)]]("visible");
+				ll=ll.querySelector(".button__number");
+				if(ll)ll.textContent=aa.dataset.cc;
+				aa.checked=obb;
+				filterFunc();
+			}); 
+			document.querySelectorAll('.filter__form').forEach(aa=>{
+				let ss = aa.previousElementSibling;
+				if(ss)ss=ss.querySelector(".button__number");
+				if(ss)ss.textContent=Array.from(aa.querySelectorAll("input")).reduce((aa, bb) => aa + parseInt(bb.dataset.cc), 0);		 
+			});
+			[...filtervi].forEach(function (visible) {let i = 0;for (let [index, elemi] of [...visible.children].entries()){elemi.style.setProperty('--inc-step', elemi.classList.contains("visible")?++i:0);}});
+			let saves = {};
+			filterCheckboxes.forEach(aa=>saves[aa.id]=aa.checked);
+			localStorage.setItem("saves",JSON.stringify(saves));
+
+		}
+		return filteredResults;
+	}
+
+	filterCheckboxes.forEach(aa=>aa.addEventListener('change', filterFunc));   
+	let cff = ()=>{
+		filterCheckboxes.forEach(aa=>aa.checked=false);
+		document.querySelectorAll(".active").forEach(aa=>aa.classList.remove("active"));
+		filterFunc.bind(clears)();
+	};
+	clears.addEventListener("click",cff);
+	let loadd = JSON.parse(localStorage.getItem('saves'));
+	for(let aa in loadd){
+		let ee = document.getElementById(aa);
+		ee.checked=loadd[aa];
+		filterFunc.bind(ee)();
+	}
+	let fbb = document.querySelectorAll(".filter__button");
+	fbb.forEach(aa=>aa.onclick=bb=>fbb.forEach(cc=>cc.parentNode.classList[cc==bb.target?"toggle":"remove"]("selected")));
+}
+// end filter public
+
 // start team photo slider
+const elsliderphoto = document.querySelector('.team__photo');
 if(!elsliderphoto){} else {
   const itemListParent = document.querySelector('.team__photo_slider');
   const itemList = document.querySelectorAll('.team__photo_item');
@@ -680,6 +725,7 @@ if(!elsliderphoto){} else {
 // end team photo slider
 
 // start team review slider
+const elsliderreview = document.querySelector('.team__review');
 if(!elsliderreview){} else {
   const sliderSelector = '.team__review',
   options = {
@@ -733,6 +779,7 @@ if(!elsliderreview){} else {
 // end team review slider
 
 // start certificates review slider
+const elslidercertificates = document.querySelector('.certificates__review');
 if(!elslidercertificates){} else {
   const sliderSelector = '.certificates__review',
   options = {
@@ -786,6 +833,10 @@ if(!elslidercertificates){} else {
 // end certificates review slider
 
 // start video
+const preview = document.querySelector('.showreel__button');
+const showreelvideo = document.getElementById('showreel__video');
+const showreelmodal = document.querySelector('.showreel__modal');
+const showreelmodalClose = document.querySelector('.showreel__modal_close');
 if(!showreelvideo){} else {
   preview.onclick = function(e) {
     e.preventDefault();
@@ -1187,6 +1238,7 @@ function addListenerMulti(element, eventNames, listener) {
 // end video
 
 // start year
+const year = document.querySelector('.footer__year');
 if(!year){} else {
 const currentYear = new Date().getFullYear();
 year.insertAdjacentText('beforebegin', currentYear);
@@ -1293,6 +1345,23 @@ document.addEventListener('DOMContentLoaded', function(){
         let footerinfoopt = {threshold: [0.5] };
         let footerinfoserv = new IntersectionObserver(onEntry, footerinfoopt);
         for (let elm of footerinfo) {footerinfoserv.observe(elm);}
+      }
+  let pfilter = document.querySelector('.projects__filter');
+  let pfilters = document.querySelectorAll('.projects__filter');
+  if(!pfilter){} else {
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let pfilteropt = {threshold: [0.5] };
+        let pfilterserv = new IntersectionObserver(onEntry, pfilteropt);
+        for (let elm of pfilters) {pfilterserv.observe(elm);}
+      }
+  let breadcrumb = document.querySelector('.breadcrumbs__item');
+  let breadcrumbs = document.querySelectorAll('.breadcrumbs__list');
+  if(!breadcrumb){} else {
+        function onEntry(entry) {entry.forEach(change => {if (change.isIntersecting) {change.target.classList.add('animate');}});}
+        let breadcrumbopt = {threshold: [0.5] };
+        let breadcrumbserv = new IntersectionObserver(onEntry, breadcrumbopt);
+        for (let elm of breadcrumbs) {breadcrumbserv.observe(elm);}
+        [...breadcrumbs].forEach(function (li) {for (let [index, elem] of [...li.children].entries()){elem.style.setProperty('--inc-step', index+1);}});
       }
 }, false);
 // end index animation
